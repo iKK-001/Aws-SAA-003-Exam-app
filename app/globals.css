@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --aws-navy: #232F3E;
+  --aws-blue: #146EB4;
+  --aws-blue-soft: #1E88E5;
+  --aws-bg: #F7F9FC;
+  --aws-blue-light: #E8F4FC;
+  --radius: 1rem;
+}
+
+/* 专注主题：冷色、略深背景，仅换主色与少量背景 */
+[data-theme="focus"] {
+  --aws-navy: #1e3a5f;
+  --aws-bg: #eef2f7;
+}
+[data-theme="focus"] body {
+  background-color: #eef2f7;
+}
+[data-theme="focus"] .bg-aws-slate-soft {
+  background-color: #eef2f7;
+}
+[data-theme="focus"] .bg-white {
+  background-color: #f0f4f8;
+}
+[data-theme="focus"] .border-aws-blue-deep\/30 {
+  border-color: rgba(13, 90, 158, 0.3);
+}
+[data-theme="focus"] .text-aws-blue-deep {
+  color: #0d5a9e;
+}
+[data-theme="focus"] .bg-aws-blue-light\/20,
+[data-theme="focus"] .bg-aws-blue-light\/50 {
+  background-color: rgba(224, 234, 245, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-aws-slate-soft text-aws-navy antialiased;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* 底部导航留白，避免被遮挡 */
+.pb-nav {
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* 桌面端左侧栏留白 */
+@media (min-width: 1024px) {
+  .pb-nav {
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* 抽屉滑出动画 */
+.drawer-enter {
+  animation: drawer-in 0.3s ease-out;
+}
+
+@keyframes drawer-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 选项错误时的摇晃动画（供 QuestionCard 使用） */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}

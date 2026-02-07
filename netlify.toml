@@ -1,0 +1,8 @@
+# Netlify 部署配置（Next.js 14 + PWA）
+# 连接仓库后 Netlify 会自动识别 Next.js，无需手动填 publish 目录
+
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
