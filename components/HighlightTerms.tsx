@@ -50,7 +50,7 @@ export function HighlightTerms({ text, terms, onTermClick, className = '' }: Pro
             key={`${i}-${seg.value}`}
             type="button"
             onClick={() => onTermClick(seg.value)}
-            className="rounded bg-aws-orange/20 px-0.5 font-medium text-aws-orange underline decoration-aws-orange/50 underline-offset-1 hover:bg-aws-orange/30"
+            className="cursor-pointer text-inherit underline decoration-aws-navy/40 underline-offset-2 hover:decoration-aws-navy/70"
           >
             {seg.value}
           </button>
