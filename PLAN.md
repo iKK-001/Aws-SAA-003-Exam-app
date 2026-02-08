@@ -61,8 +61,36 @@
 - **「随机 N 题再练」**：错题本/收藏页或首页在「有错题/有收藏」时展示入口，链接到 `/practice?filter=wrong|favorite&mode=order&sample=5`（或你的 N）。
 - **抽认卡入口**：百科页顶部 + 「我的」页「内容与记忆」区块，链接到抽认卡页，文案如「随机抽一个术语（抽认卡）」。
 
+## 数据清洗（从零：英文 PDF → 中英双语）
+
+### 原因
+
+- 此前题目数据来自**中文 PDF + pdfplumber** 提取，存在：(1) 中文 PDF 本身翻译质量不佳，题干/选项与原文不一致；(2) 选项与 PDF 不匹配导致后续 AI 解析出现偏差；(3) 无法支持 App 中英文切换。因此改为**英文 PDF 提取 + Gemini API 翻译**，从源头保证题干/选项正确性，并支持中英双语文案。
+
+### 步骤（详细见 scripts/DATA_CLEANING_PLAN.md）
+
+| 阶段 | 脚本 | 输入 | 输出 | 状态 |
+|------|------|------|------|------|
+| 1 | `extract_pdf_en.py` | 英文 PDF 路径 | `public/data/raw_questions_en.json`（仅英文，不抽社区讨论） | ✅ 已完成 |
+| 2 | `translate_en_to_cn.py` | `raw_questions_en.json` | `questions_bilingual.json`（中+英，术语保留英文，Gemini 2 Flash Lite） | 进行中 |
+| 3 | 可选 | `questions_bilingual.json` | 补全 tags、explanation、related_terms | 待做 |
+| 4 | `build_app_questions.py`（待写） | `questions_bilingual.json` | `questions_v2.json`（兼容现有 App，含中英字段） | 待做 |
+
+### 阶段 1 要点（已做）
+
+- **源 PDF**：`ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`。只抽取「Question #N、题干、选项 A.–D.、Correct Answer、Community vote distribution」，不抽取社区讨论（upvoted、Highly Voted、Selected Answer、用户评论等）。
+- **题块截断**：在「Correct Answer:」处切开，题干+选项只取前半段；讨论区特征（如 `upvoted X times`、`Highly Voted`、`X year ago`）出现时截断块，不纳入题干/选项。
+- **空字符修复**：PDF 提取中 `\u0000`（原为 "fi"）统一替换为 "fi"，修复 "files"、"Configure"、"profile" 等。
+
+### 阶段 2 要点（Gemini 翻译）
+
+- **模型**：Gemini 2 Flash Lite；API Key 从环境变量 `GEMINI_API_KEY` 读取。
+- **规则**：题干与选项翻译成简体中文，保持可读性与准确度；AWS 服务名、产品名、专有名词（如 Amazon S3、Lambda、DynamoDB、JSON、SQL、VPC）保留英文。
+
 ## Immediate Tasks
 
+- [ ] **translate_en_to_cn.py**：跑通阶段 2，生成 `questions_bilingual.json`
+- [ ] **build_app_questions.py**（可选）：阶段 4 输出 App 用 `questions_v2.json`
 - [ ] **refine_data.py**（可选）：拆解每个错误选项的详细解析；对 related_terms 去重或规范化
 - [ ] **generate_glossary.py**：若词库需增补或重跑，可调整后重新生成
 
@@ -76,6 +104,8 @@
 ## 数据与脚本位置（供新对话参考）
 
 - **题目与词库**：`public/data/questions_v2.json`、`glossary.json`；可选多选细化数据 `questions_v2_refined.json`
+- **数据清洗中间文件**：`public/data/raw_questions_en.json`（阶段 1 输出）、`public/data/questions_bilingual.json`（阶段 2 输出）
+- **数据清洗脚本与计划**：`scripts/DATA_CLEANING_PLAN.md`（从零清洗计划）、`scripts/extract_pdf_en.py`（阶段 1）、`scripts/translate_en_to_cn.py`（阶段 2）；英文 PDF 路径示例：`ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`
 - **脚本**：`scripts/refine_data.py` 等
 - **App 根目录**：工作区内的 `exam-app/`
 - **核心逻辑**：`lib/data.ts`（progress、错题/收藏、多选/判分、今日题数、里程碑、主题、音效、练习位置等）；题目卡片与选项：`components/QuestionCard.tsx`；练习页：`app/practice/page.tsx`；解析术语高亮：`components/HighlightTerms.tsx`；抽认卡页：`app/glossary/flashcard/page.tsx`；音效：`lib/sound.ts`

@@ -41,3 +41,8 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# 数据清洗进度（勿提交）
+public/data/.translate_progress.json
+public/data/.enrich_progress.json
+public/data/.enrich_parse_fail_log.txt

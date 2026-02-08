@@ -14,8 +14,15 @@ AWS SAA-C03 备考移动端 Web App。支持按题练习、按分类刷题、百
 
 ## 核心数据结构
 
-- **questions_v2.json**：题目列表。字段含 `id`, `question_cn`, `options_cn`, `best_answer`（单选为 string 如 `"A"`，多选可为 string 如 `"AB"` 或数组 `["A","B"]`）, `official_answer`, `tags`, `related_terms`, `explanation`（`analysis`, `why_correct`, `why_wrong`）。
+- **questions_v2.json**：题目列表。字段含 `id`, `question_cn`, `options_cn`, `best_answer`（单选为 string 如 `"A"`，多选可为 string 如 `"AB"` 或数组 `["A","B"]`）, `official_answer`, `tags`, `related_terms`, `explanation`（`analysis`, `why_correct`, `why_wrong`）。若做中英双语，可增加 `question_en`、`options_en`。
 - **glossary.json**：术语百科。键为术语名，值为 `definition`、`analogy`、`features` 数组。
+
+## 数据清洗（从零：英文 PDF → 中英双语）
+
+- **原因**：此前用中文 PDF + pdfplumber 提取，中文翻译本身不佳，题干/选项与 PDF 原文不一致，导致 AI 解析也出现偏差；且无法支持中英文切换。改为**英文 PDF 提取 + API 翻译**，可提高正确性并支持双语。
+- **步骤**：详见 `scripts/DATA_CLEANING_PLAN.md`。简要：(1) 阶段 1 用 `scripts/extract_pdf_en.py` 从英文 PDF 抽取题目+选项+正确答案+投票（不抽社区讨论）→ `public/data/raw_questions_en.json`；(2) 阶段 2 用 `scripts/translate_en_to_cn.py` 调用 Gemini 2 Flash Lite 将题干与选项翻译成中文（术语保留英文）→ `public/data/questions_bilingual.json`；(3) 阶段 3 可选打标与解析；(4) 阶段 4 输出 App 用 `questions_v2.json`（含中英字段）。
+- **源文件**：英文 PDF 路径如 `ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`；只抽「题目 ID、题干、选项 A–D、正确答案（社区投票率为准）」，不抽社区讨论（Selected Answer、upvoted、Highly Voted 等）。
+- **翻译**：Gemini API Key 从环境变量 `GEMINI_API_KEY` 读取；翻译时保持可读性与准确度，AWS 服务名、产品名、专有名词保留英文。
 
 ## 设计原则
 
