@@ -108,6 +108,25 @@ python3 scripts/build_app_questions.py public/data/questions_bilingual_enriched.
 
 ---
 
+## glossary_missing_terms.py（百科缺失词条）
+
+列出题目 `related_terms` 中在 `glossary.json` 里缺失的词条，便于补全百科；可选为缺失词条添加占位条目，避免 App 显示「暂无该术语解释」。
+
+```bash
+# 列出缺失词条，写入 public/data/missing_glossary_terms.txt
+python3 scripts/glossary_missing_terms.py
+
+# 指定输出文件
+python3 scripts/glossary_missing_terms.py --output my_missing.txt
+
+# 为所有缺失词条在 glossary.json 中添加占位条目（definition: "（待补充）"），后续可手动补全
+python3 scripts/glossary_missing_terms.py --add-stubs
+```
+
+补全词条时：在 `public/data/glossary.json` 中为对应键添加或修改 `definition`、`analogy`、`features` 即可。
+
+---
+
 ## refine_data.py
 
 将题目转换为**多选兼容格式**，供 App 支持单选/多选统一数据结构。

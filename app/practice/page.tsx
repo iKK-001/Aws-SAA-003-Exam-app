@@ -29,10 +29,11 @@ import {
   getSoundEnabled,
 } from '@/lib/data';
 import { playCorrectSound, playWrongSound } from '@/lib/sound';
-import { Heart, ChevronLeft, ChevronRight, ListOrdered, Shuffle, FolderOpen, BookOpen, Search, ArrowRight } from 'lucide-react';
+import { Heart, ChevronLeft, ChevronRight, ListOrdered, Shuffle, FolderOpen, BookOpen, Search, ArrowRight, LayoutGrid } from 'lucide-react';
 import type { Question } from '@/lib/data';
 import { PracticeSkeleton } from '@/components/Skeleton';
 import { QuestionCard } from '@/components/QuestionCard';
+import { AnswerSheet } from '@/components/AnswerSheet';
 import { HighlightTerms } from '@/components/HighlightTerms';
 import {
   explanationPhrases,
@@ -82,6 +83,8 @@ function PracticeContent() {
   const [mascotPhrasesEnabled, setMascotPhrasesEnabled] = useState(() => getMascotPhrasesEnabled());
   /** 题干/选项显示语言：中文 或 英文（有疑问时可切到英文看原题） */
   const [questionLang, setQuestionLang] = useState<'cn' | 'en'>('cn');
+  /** 答题卡抽屉是否打开 */
+  const [answerSheetOpen, setAnswerSheetOpen] = useState(false);
 
   useEffect(() => {
     const handler = () => setMascotPhrasesEnabled(getMascotPhrasesEnabled());
@@ -574,6 +577,14 @@ function PracticeContent() {
               从第一题开始
             </button>
           )}
+          <button
+            type="button"
+            onClick={() => setAnswerSheetOpen(true)}
+            className="flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium text-aws-blue-deep hover:bg-aws-blue-light/50"
+            aria-label="打开答题卡"
+          >
+            <LayoutGrid className="h-3.5 w-3.5" /> 答题卡
+          </button>
         </span>
         <button
           type="button"
@@ -688,6 +699,30 @@ function PracticeContent() {
           ) : null}
         </div>
       )}
+
+      <AnswerSheet
+        open={answerSheetOpen}
+        onClose={() => setAnswerSheetOpen(false)}
+        list={list}
+        currentIndex={index}
+        onSelectIndex={(i) => {
+          setIndex(i);
+          setSelected([]);
+          setShowExplanation(false);
+          setMascotPhrase(null);
+        }}
+        onClearProgress={() => {
+          if (mode === 'order') clearPracticeStateOrder();
+          else if (mode === 'topic' && tagParam)
+            clearPracticeStateTopic(tagParam);
+          setIndex(0);
+          setSelected([]);
+          setShowExplanation(false);
+          setMascotPhrase(null);
+          setToastMessage('已从第一题开始');
+          setTimeout(() => setToastMessage(null), 2000);
+        }}
+      />
 
       {toastMessage && (
         <div
