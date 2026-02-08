@@ -24,6 +24,9 @@
 - [x] **内容与记忆 — 解析内术语可点**：解析正文（analysis / why_correct / why_wrong）中术语高亮且可点击；`components/HighlightTerms.tsx` 接收 text、terms、onTermClick，按术语长度从长到短切分正文，术语渲染为可点击按钮，点击打开术语抽屉；练习页术语列表为 `q.related_terms` 与 glossary 键合并去重
 - [x] **视觉与音效 — 主题/皮肤**：`lib/data.ts` 增加 `getTheme()`/`setTheme('relaxed'|'focus')`、STORAGE_KEY；`app/globals.css` 用 `[data-theme="focus"]` 覆盖主色与少量背景（body、.bg-aws-slate-soft 等），专注偏冷色；LayoutClient 挂载时 `document.documentElement.dataset.theme = getTheme()`；设置抽屉内「主题/皮肤」两按钮（轻松 / 专注）；`clearAllLocalData` 后重置为 relaxed 并同步到 document
 - [x] **视觉与音效 — 轻音效**：`lib/data.ts` 增加 `getSoundEnabled()`/`setSoundEnabled(boolean)`，默认关闭；`lib/sound.ts` 用 Web Audio API 实现 `playCorrectSound()`/`playWrongSound()`（极短正弦波）；练习页在判对/错并 `setShowExplanation(true)` 前若 `getSoundEnabled()` 则调用对应音效；设置抽屉内「答对/答错音效」开关
+- [x] **数据清洗四阶段**：阶段 1 `extract_pdf_en.py` → raw_questions_en.json；阶段 2 `translate_en_to_cn.py`（Gemini，断点/重试/retry-failed）→ questions_bilingual.json；阶段 3 `add_tags_and_explanation.py`（打标+解析+related_terms，--fill-empty）→ questions_bilingual_enriched.json；阶段 4 `build_app_questions.py` → questions_v2.json；辅助脚本 `fix_options_en_mismatch.py`、`analyze_enrich_failures.py`
+- [x] **题干/选项中英切换**：`Question` 含 `question_en`、`options_en`；练习页「中文 | EN」toggle；QuestionCard 支持当前语言题干与选项显示
+- [x] **百科与可点词条说明**：百科词条来自 `glossary.json` 未在清洗中重新生成；题干/解析内可点词条 = 该题 `related_terms` ∪ glossary 键，清洗后可能增减（见 `public/data/README.md`）
 
 ## UX/UI 规范（已落地）
 
@@ -40,7 +43,7 @@
 
 ### 题目与练习
 
-- **题目数据结构**：`id`, `question_cn`（题干）, `options_cn`（选项键值）, `best_answer`（单选 string / 多选 string 如 "AB" 或数组）, `tags`（分类）, `related_terms`（解析中可高亮术语）, `explanation`（`analysis`, `why_correct`, `why_wrong`）。
+- **题目数据结构**：`id`, `question_cn`/`question_en`（题干中英）, `options_cn`/`options_en`（选项键值中英）, `best_answer`（单选 string / 多选 string 如 "AB" 或数组）, `tags`（分类）, `related_terms`（解析中可高亮术语）, `explanation`（`analysis`, `why_correct`, `why_wrong`）。练习页支持「中文 | EN」切换题干与选项。
 - **练习页 URL 约定**：`/practice?filter=wrong|favorite|all&mode=order|shuffle|topic&tag=分类名&sample=N`。`filter` 决定题源（错题/收藏/全部）；`mode` 决定顺序/乱序/按分类；`sample` 存在且合法时在 base 上先 shuffle 再 slice(0, N)，实现「随机抽 N 题再练」；有 filter 无 mode 时建议默认 `mode=order` 以便从「我的」/首页直达练习。
 - **列表构建顺序**：先按 filter 取 base（错题 id 列表 / 收藏 id 列表 / 全部）；再按 mode+tag 过滤（topic 时按 tag 筛）；再按 sample 随机截断；最后 order 模式按 id 排序、shuffle 模式打乱。
 
@@ -72,9 +75,11 @@
 | 阶段 | 脚本 | 输入 | 输出 | 状态 |
 |------|------|------|------|------|
 | 1 | `extract_pdf_en.py` | 英文 PDF 路径 | `public/data/raw_questions_en.json`（仅英文，不抽社区讨论） | ✅ 已完成 |
-| 2 | `translate_en_to_cn.py` | `raw_questions_en.json` | `questions_bilingual.json`（中+英，术语保留英文，Gemini 2 Flash Lite） | 进行中 |
-| 3 | 可选 | `questions_bilingual.json` | 补全 tags、explanation、related_terms | 待做 |
-| 4 | `build_app_questions.py`（待写） | `questions_bilingual.json` | `questions_v2.json`（兼容现有 App，含中英字段） | 待做 |
+| 2 | `translate_en_to_cn.py` | `raw_questions_en.json` | `questions_bilingual.json`（中+英，术语保留英文，Gemini 2 Flash Lite，--resume/--retry-failed） | ✅ 已完成 |
+| 3 | `add_tags_and_explanation.py` | `questions_bilingual.json` | `questions_bilingual_enriched.json`（tags、explanation、related_terms，每 15 题一批，--fill-empty） | ✅ 已完成 |
+| 4 | `build_app_questions.py` | `questions_bilingual_enriched.json` | `questions_v2.json`（兼容 App，含 question_en、options_en 等） | ✅ 已完成 |
+
+辅助：`fix_options_en_mismatch.py` 修复 options_en 与 options_cn 选项数不一致；`analyze_enrich_failures.py` 分析阶段 3 未完成题目的失败原因。
 
 ### 阶段 1 要点（已做）
 
@@ -86,13 +91,24 @@
 
 - **模型**：Gemini 2 Flash Lite；API Key 从环境变量 `GEMINI_API_KEY` 读取。
 - **规则**：题干与选项翻译成简体中文，保持可读性与准确度；AWS 服务名、产品名、专有名词（如 Amazon S3、Lambda、DynamoDB、JSON、SQL、VPC）保留英文。
+- **断点与重试**：每 50 题断点、`--resume`、`--retry-failed`（每 15 题一批）；429 重试与退避。
+
+### 阶段 3 要点（打标与解析）
+
+- **脚本**：`add_tags_and_explanation.py`；每 15 题一批调用 API；`--fill-empty` 仅补漏未完成题目。
+- **输出**：tags、explanation（analysis、why_correct、why_wrong）、related_terms；解析失败写 `.enrich_parse_fail_log.txt`。若 options_en 与 options_cn 选项数不一致，可先跑 `fix_options_en_mismatch.py`。
+
+### 阶段 4 要点（生成 App 用数据）
+
+- **脚本**：`build_app_questions.py` 从 `questions_bilingual_enriched.json` 生成 `questions_v2.json`，含 question_en、options_en 等，兼容现有 App。
 
 ## Immediate Tasks
 
-- [ ] **translate_en_to_cn.py**：跑通阶段 2，生成 `questions_bilingual.json`
-- [ ] **build_app_questions.py**（可选）：阶段 4 输出 App 用 `questions_v2.json`
+- [x] **translate_en_to_cn.py**：阶段 2 已跑通，生成 `questions_bilingual.json`
+- [x] **add_tags_and_explanation.py**：阶段 3 打标与解析，输出 `questions_bilingual_enriched.json`
+- [x] **build_app_questions.py**：阶段 4 已实现，输出 App 用 `questions_v2.json`
 - [ ] **refine_data.py**（可选）：拆解每个错误选项的详细解析；对 related_terms 去重或规范化
-- [ ] **generate_glossary.py**：若词库需增补或重跑，可调整后重新生成
+- [ ] **generate_glossary.py**（可选）：若词库需增补或重跑，可调整后重新生成
 
 ## Known Issues
 
@@ -103,10 +119,11 @@
 
 ## 数据与脚本位置（供新对话参考）
 
-- **题目与词库**：`public/data/questions_v2.json`、`glossary.json`；可选多选细化数据 `questions_v2_refined.json`
-- **数据清洗中间文件**：`public/data/raw_questions_en.json`（阶段 1 输出）、`public/data/questions_bilingual.json`（阶段 2 输出）
-- **数据清洗脚本与计划**：`scripts/DATA_CLEANING_PLAN.md`（从零清洗计划）、`scripts/extract_pdf_en.py`（阶段 1）、`scripts/translate_en_to_cn.py`（阶段 2）；英文 PDF 路径示例：`ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`
+- **题目与词库**：`public/data/questions_v2.json`（含 question_en、options_en）、`glossary.json`；可选多选细化数据 `questions_v2_refined.json`
+- **数据清洗中间文件**：`public/data/raw_questions_en.json`（阶段 1）、`public/data/questions_bilingual.json`（阶段 2）、`public/data/questions_bilingual_enriched.json`（阶段 3）
+- **数据清洗脚本与计划**：`scripts/DATA_CLEANING_PLAN.md`；`scripts/extract_pdf_en.py`（阶段 1）、`scripts/translate_en_to_cn.py`（阶段 2）、`scripts/add_tags_and_explanation.py`（阶段 3）、`scripts/build_app_questions.py`（阶段 4）；辅助：`scripts/fix_options_en_mismatch.py`、`scripts/analyze_enrich_failures.py`；英文 PDF 路径示例：`ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`
 - **脚本**：`scripts/refine_data.py` 等
 - **App 根目录**：工作区内的 `exam-app/`
-- **核心逻辑**：`lib/data.ts`（progress、错题/收藏、多选/判分、今日题数、里程碑、主题、音效、练习位置等）；题目卡片与选项：`components/QuestionCard.tsx`；练习页：`app/practice/page.tsx`；解析术语高亮：`components/HighlightTerms.tsx`；抽认卡页：`app/glossary/flashcard/page.tsx`；音效：`lib/sound.ts`
+- **核心逻辑**：`lib/data.ts`（progress、错题/收藏、多选/判分、今日题数、里程碑、主题、音效、练习位置等）；题目卡片与选项：`components/QuestionCard.tsx`（支持当前语言题干/选项）；练习页：`app/practice/page.tsx`（中文/EN toggle）；解析术语高亮：`components/HighlightTerms.tsx`；抽认卡页：`app/glossary/flashcard/page.tsx`；音效：`lib/sound.ts`
+- **百科与可点词条**：百科来自 `glossary.json` 未重生成；可点词条 = 题目 `related_terms` ∪ glossary 键（见 `public/data/README.md`）
 - **设置与主题**：设置抽屉 `components/Drawer.tsx`（关于、主题、音效、清除数据）；主题 CSS 覆盖在 `app/globals.css` 的 `[data-theme="focus"]`；LayoutClient 挂载时同步 `dataset.theme`

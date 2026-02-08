@@ -5,6 +5,8 @@ import type { Question } from '@/lib/data';
 
 type QuestionCardProps = {
   question: Question;
+  /** 当前展示的题干（中或英），不传则用 question.question_cn */
+  questionText?: string;
   options: [string, string][];
   selected: string[];
   showExplanation: boolean;
@@ -24,6 +26,7 @@ type QuestionCardProps = {
 
 export function QuestionCard({
   question: q,
+  questionText,
   options,
   selected,
   showExplanation,
@@ -83,7 +86,7 @@ export function QuestionCard({
           </p>
         )}
         <p className="whitespace-pre-wrap font-medium text-aws-navy pr-10">
-          {q.question_cn}
+          {questionText ?? q.question_cn}
         </p>
         {q.related_terms?.length ? (
           <div className="mt-3 flex flex-wrap gap-2">

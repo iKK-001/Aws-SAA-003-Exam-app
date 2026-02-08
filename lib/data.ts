@@ -1,7 +1,9 @@
 export type Question = {
   id: number;
   question_cn: string;
+  question_en?: string;
   options_cn: Record<string, string>;
+  options_en?: Record<string, string>;
   /** 单选为 string，多选兼容格式为 string[] */
   best_answer: string | string[];
   official_answer?: string | string[];

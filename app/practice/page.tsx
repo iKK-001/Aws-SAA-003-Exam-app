@@ -80,6 +80,8 @@ function PracticeContent() {
   const [justAnsweredCorrect, setJustAnsweredCorrect] = useState<boolean | null>(null);
   const [mascotPhrase, setMascotPhrase] = useState<string | null>(null);
   const [mascotPhrasesEnabled, setMascotPhrasesEnabled] = useState(() => getMascotPhrasesEnabled());
+  /** 题干/选项显示语言：中文 或 英文（有疑问时可切到英文看原题） */
+  const [questionLang, setQuestionLang] = useState<'cn' | 'en'>('cn');
 
   useEffect(() => {
     const handler = () => setMascotPhrasesEnabled(getMascotPhrasesEnabled());
@@ -468,7 +470,14 @@ function PracticeContent() {
     );
   }
 
-  const options = q.options_cn ? Object.entries(q.options_cn) : [];
+  const options =
+    questionLang === 'en' && q.options_en
+      ? Object.entries(q.options_en)
+      : q.options_cn
+        ? Object.entries(q.options_cn)
+        : [];
+  const questionDisplayText =
+    questionLang === 'en' ? (q.question_en ?? q.question_cn) : q.question_cn;
 
   return (
     <div className="mx-auto max-w-lg px-4 py-6">
@@ -508,10 +517,30 @@ function PracticeContent() {
           </span>
         )}
       </div>
-      <p className="mb-2 text-xs text-aws-navy/60">
-        {filter === 'wrong' ? '正在练习：错题本' : filter === 'favorite' ? '正在练习：收藏' : '正在练习：全部题目'}
-        {' · 共 '}{list.length} 题
-      </p>
+      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+        <p className="text-xs text-aws-navy/60">
+          {filter === 'wrong' ? '正在练习：错题本' : filter === 'favorite' ? '正在练习：收藏' : '正在练习：全部题目'}
+          {' · 共 '}{list.length} 题
+        </p>
+        <div className="flex items-center gap-1 rounded-xl bg-aws-blue-light/30 p-1">
+          <button
+            type="button"
+            onClick={() => setQuestionLang('cn')}
+            aria-label="题干选项显示中文"
+            className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-colors ${questionLang === 'cn' ? 'bg-aws-blue-deep text-white' : 'text-aws-navy/70 hover:bg-aws-blue-deep/10'}`}
+          >
+            中文
+          </button>
+          <button
+            type="button"
+            onClick={() => setQuestionLang('en')}
+            aria-label="题干选项显示英文"
+            className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-colors ${questionLang === 'en' ? 'bg-aws-blue-deep text-white' : 'text-aws-navy/70 hover:bg-aws-blue-deep/10'}`}
+          >
+            EN
+          </button>
+        </div>
+      </div>
       <div className="mb-2 h-1 w-full overflow-hidden rounded-full bg-aws-blue-light/30">
         <div
           className="h-full rounded-full bg-aws-blue-deep transition-[width] duration-200"
@@ -563,6 +592,7 @@ function PracticeContent() {
 
       <QuestionCard
         question={q}
+        questionText={questionDisplayText}
         options={options}
         selected={selected}
         showExplanation={showExplanation}
