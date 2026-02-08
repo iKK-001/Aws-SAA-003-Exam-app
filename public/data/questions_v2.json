@@ -23331,39 +23331,6 @@
     ]
   },
   {
-    "id": 555,
-    "topic": "",
-    "question_cn": "为 Amazon SQS 实施一个 VPC 终端节点。配置该终端节点以使用私有子网。为该终端节点添加一个安全组，该安全组包含一个入站访问规则，允许来自位于私有子网中的 EC2 实例的流量。",
-    "question_en": "Implement an interface VPC endpoint for Amazon SQS. Configure the endpoint to use the private subnets. Add to the endpoint a security group that has an inbound access rule that allows traffic from the EC2 instances that are in the private subnets.",
-    "options_cn": {
-      "A": "创建一个 IAM 策略，允许 EC2 实例访问 SQS。将此策略附加到 EC2 实例的 IAM 角色。",
-      "B": "创建一个 VPC 终端节点，并将它配置为使用私有子网。在终端节点的安全组中，添加一个允许来自私有子网中 EC2 实例的流量的入站规则。",
-      "C": "创建一个 NAT Gateway，以便 EC2 实例可以通过它访问 SQS。在 NAT Gateway 的安全组中，添加一个允许来自 EC2 实例的流量的入站规则。",
-      "D": "创建一个 Application Load Balancer，并将它配置为指向 SQS。在 ALB 的安全组中，添加一个允许来自 EC2 实例的流量的入站规则。"
-    },
-    "options_en": {},
-    "best_answer": "",
-    "official_answer": "",
-    "vote_percentage": "",
-    "tags": [
-      "SQS",
-      "VPC Endpoint",
-      "EC2"
-    ],
-    "explanation": {
-      "analysis": "该问题考查了如何使用 VPC 终端节点安全地访问 SQS 服务。VPC 终端节点允许从 VPC 内部通过私有连接访问 SQS，避免流量流出 VPC，提高安全性。安全组则控制流量的入站和出站规则。",
-      "why_correct": "该解决方案描述了如何创建一个 VPC 终端节点来连接到 SQS，以及如何配置安全组允许来自私有子网中的 EC2 实例的流量。这确保了 EC2 实例能够通过私有连接安全地访问 SQS。",
-      "why_wrong": "选项 A 仅提供了 IAM 策略，但没有说明如何通过私有连接访问 SQS。选项 C 使用了 NAT Gateway，这会使流量流出 VPC，与题目要求不符。选项 D 使用了 Application Load Balancer，这并非访问 SQS 的正确方式。"
-    },
-    "related_terms": [
-      "SQS",
-      "EC2",
-      "IAM",
-      "VPC Endpoint",
-      "Security Group"
-    ]
-  },
-  {
     "id": 563,
     "topic": "1",
     "question_cn": "一家公司在其 Amazon Elastic Kubernetes Service (Amazon EKS) 集群和本地 Kubernetes 集群上运行其应用程序。该公司希望从一个中心位置查看所有集群和工作负载。哪个解决方案将以最少的运营开销满足这些要求？",
@@ -36672,45 +36639,6 @@
       "Kinesis Data Firehose",
       "Kinesis Video Streams",
       "Kinesis Data Analytics"
-    ]
-  },
-  {
-    "id": 889,
-    "topic": "1",
-    "question_cn": "一家全球性公司在 AWS 上运行其工作负载。该公司的应用程序使用 Amazon S3 存储桶在不同的 AWS 区域中存储和分析敏感数据。该公司每天在多个 S3 存储桶中存储数百万个对象。该公司希望识别所有未启用版本控制的 S3 存储桶。哪种解决方案将满足这些要求？",
-    "question_en": "A global company runs its workloads on AWS. The company's application uses Amazon S3 buckets across AWS Regions for sensitive data storage and analysis. The company stores millions of objects in multiple S3 buckets daily. The company wants to identify all S3 buckets that are not versioning-enabled. Which solution will meet these requirements?",
-    "options_cn": {
-      "A": "设置一个 AWS CloudTrail 事件，该事件有一个规则来识别跨区域的所有未启用版本控制的 S3 存储桶。",
-      "B": "使用 Amazon S3 Storage Lens 来识别跨区域的所有未启用版本控制的 S3 存储桶。",
-      "C": "为 S3 启用 IAM Access Analyzer 以识别跨区域的所有未启用版本控制的 S3 存储桶。",
-      "D": "创建一个 S3 多区域访问点来识别所有未启用版本控制的 S3 存储桶。"
-    },
-    "options_en": {
-      "A": "Set up an AWS CloudTrail event that has a rule to identify all S3 buckets that are not versioning-enabled across Regions.",
-      "B": "Use Amazon S3 Storage Lens to identify all S3 buckets that are not versioning-enabled across Regions.",
-      "C": "Enable IAM Access Analyzer for S3 to identify all S3 buckets that are not versioning-enabled across Regions.",
-      "D": "Create an S3 Multi-Region Access Point to identify all S3 buckets that are not versioning-enabled across Regions."
-    },
-    "best_answer": "B",
-    "official_answer": "B",
-    "vote_percentage": "100%",
-    "tags": [
-      "S3",
-      "Storage Lens",
-      "Version Control"
-    ],
-    "explanation": {
-      "analysis": "此题考查了 S3 存储桶的版本控制检查。S3 Storage Lens 可以用于分析和识别没有启用版本控制的 S3 存储桶。",
-      "why_correct": "选项 B 正确，S3 Storage Lens 可以识别未启用版本控制的 S3 存储桶。",
-      "why_wrong": "选项 A 错误，CloudTrail 不提供对存储桶版本控制的检测。选项 C 错误，IAM Access Analyzer 用于识别访问权限问题。选项 D 错误，S3 多区域访问点不提供版本控制检查功能。"
-    },
-    "related_terms": [
-      "S3",
-      "CloudTrail",
-      "S3 多区域访问点",
-      "Storage Lens",
-      "IAM Access Analyzer",
-      "Version Control"
     ]
   },
   {
