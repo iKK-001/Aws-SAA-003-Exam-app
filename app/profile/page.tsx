@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import {
   getProgress,
   getWrongIds,
@@ -13,17 +14,26 @@ import {
   setNickname,
   getMascotPhrasesEnabled,
   setMascotPhrasesEnabled,
+  getTheme,
+  setTheme,
+  getSoundEnabled,
+  setSoundEnabled,
+  clearAllLocalData,
 } from '@/lib/data';
+import type { ThemeId } from '@/lib/data';
 import { useDrawer } from '@/lib/DrawerContext';
 import { useGlossary } from '@/lib/DataContext';
-import { Target, BookOpen, Heart, XCircle, Star, ChevronRight, User, MessageCircle, Layers } from 'lucide-react';
+import { Target, BookOpen, Heart, XCircle, Star, ChevronRight, User, MessageCircle, Layers, Info, Trash2 } from 'lucide-react';
 
 const MASCOT_PHRASES_TOGGLED = 'mascot-phrases-toggled';
 
 export default function ProfilePage() {
+  const router = useRouter();
   const [examDate, setExamDate] = useState('');
   const [nicknameInput, setNicknameInput] = useState('');
   const [mascotPhrasesOn, setMascotPhrasesOn] = useState(true);
+  const [theme, setThemeState] = useState<ThemeId>('relaxed');
+  const [soundOn, setSoundOn] = useState(false);
   const [savedToast, setSavedToast] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [favTerms, setFavTerms] = useState<string[]>([]);
@@ -35,6 +45,8 @@ export default function ProfilePage() {
     setExamDate(getExamDateTarget());
     setNicknameInput(getNickname());
     setMascotPhrasesOn(getMascotPhrasesEnabled());
+    setThemeState(getTheme());
+    setSoundOn(getSoundEnabled());
     setFavTerms(getFavoriteTerms());
   }, []);
 
@@ -132,6 +144,48 @@ export default function ProfilePage() {
       </section>
 
       <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
+        <h2 className="mb-2 flex items-center gap-2 text-lg font-semibold text-aws-navy">
+          <Info className="h-5 w-5 text-aws-blue-deep" /> 关于
+        </h2>
+        <p className="mb-4 text-sm text-aws-navy/70">
+          AWS SAA 备考 App，支持按题练习、按分类刷题、百科词库与错题/收藏。数据仅存于本机，可随时清除。
+        </p>
+        <h3 className="mb-2 text-sm font-medium text-aws-navy/90">主题 / 皮肤</h3>
+        <div className="mb-4 flex gap-2">
+          <button
+            type="button"
+            onClick={() => { setTheme('relaxed'); setThemeState('relaxed'); }}
+            className={`flex-1 rounded-xl py-2.5 text-sm font-medium transition-colors ${
+              theme === 'relaxed' ? 'bg-amber-100 text-amber-800 ring-2 ring-amber-400' : 'bg-aws-navy/10 text-aws-navy/80 hover:bg-aws-navy/20'
+            }`}
+          >
+            轻松
+          </button>
+          <button
+            type="button"
+            onClick={() => { setTheme('focus'); setThemeState('focus'); }}
+            className={`flex-1 rounded-xl py-2.5 text-sm font-medium transition-colors ${
+              theme === 'focus' ? 'bg-blue-100 text-blue-800 ring-2 ring-blue-400' : 'bg-aws-navy/10 text-aws-navy/80 hover:bg-aws-navy/20'
+            }`}
+          >
+            专注
+          </button>
+        </div>
+        <label className="flex cursor-pointer items-center justify-between gap-3 rounded-xl bg-aws-blue-light/20 py-3 pr-2">
+          <span className="text-sm text-aws-navy/90">答对 / 答错音效</span>
+          <button
+            type="button"
+            role="switch"
+            aria-checked={soundOn}
+            onClick={() => { const next = !soundOn; setSoundEnabled(next); setSoundOn(next); }}
+            className={`relative h-7 w-12 shrink-0 rounded-full transition-colors ${soundOn ? 'bg-aws-orange' : 'bg-aws-navy/20'}`}
+          >
+            <span className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow transition-transform ${soundOn ? 'left-6' : 'left-1'}`} />
+          </button>
+        </label>
+      </section>
+
+      <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
         <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-aws-navy">内容与记忆</h2>
         <Link
           href="/glossary/flashcard"
@@ -216,6 +270,36 @@ export default function ProfilePage() {
               <p className="text-xs text-aws-navy/70">收藏题数</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mb-6 rounded-3xl border border-red-200 bg-red-50/50 p-5 shadow-card">
+        <h2 className="mb-2 flex items-center gap-2 text-lg font-semibold text-aws-navy">
+          <Trash2 className="h-4 w-4 text-red-600" /> 清除本地数据
+        </h2>
+        <p className="mb-3 text-xs text-aws-navy/70">
+          将清除做题进度、错题、收藏题、收藏术语、考试日期目标。操作不可恢复。
+        </p>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => {}}
+            className="rounded-xl border border-aws-navy/20 bg-white px-4 py-2 text-sm font-medium text-aws-navy/80 hover:bg-aws-blue-light/30"
+          >
+            暂不
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.confirm('确定清除全部本地数据吗？做题进度、错题、收藏、考试日期、收藏术语将全部清空。')) {
+                clearAllLocalData();
+                router.refresh();
+              }
+            }}
+            className="rounded-xl bg-red-100 px-4 py-2 text-sm font-medium text-red-700 hover:bg-red-200"
+          >
+            确定清除
+          </button>
         </div>
       </section>
 

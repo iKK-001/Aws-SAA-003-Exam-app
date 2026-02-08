@@ -99,8 +99,19 @@ function PracticeContent() {
         new Date().getDate() % 4
       ];
 
-  /** 上位概念：取标签第一个词作为分类（如 ALB Health Checks → ALB） */
-  const tagToRoot = (tag: string) => tag.trim().split(/\s+/)[0] || tag;
+  /**
+   * 标签 → 考点：以服务/知识点为分类，不把 Amazon/AWS 当考点。
+   * 例：Amazon S3 → S3，AWS Lambda → Lambda，ALB Health Checks → ALB；
+   * 仅 "Amazon" / "AWS" 不单独成类（返回 null）。
+   */
+  const tagToRoot = (tag: string): string | null => {
+    const parts = tag.trim().split(/\s+/).filter(Boolean);
+    if (parts.length === 0) return null;
+    const first = parts[0];
+    if ((first === 'Amazon' || first === 'AWS') && parts.length > 1) return parts[1];
+    if (first === 'Amazon' || first === 'AWS') return null;
+    return first;
+  };
 
   const allTags = useMemo(() => {
     const set = new Set<string>();
@@ -108,12 +119,15 @@ function PracticeContent() {
     return Array.from(set).sort((a, b) => a.localeCompare(b));
   }, [questions]);
 
-  /** 按上位概念合并后的分类：root → 题目数 */
+  /** 按考点合并后的分类：root → 题目数（不含 Amazon/AWS 这种纯前缀） */
   const rootCounts = useMemo(() => {
     const map: Record<string, number> = {};
     questions.forEach((q) => {
       const roots = new Set<string>();
-      q.tags?.forEach((t) => roots.add(tagToRoot(t)));
+      q.tags?.forEach((t) => {
+        const r = tagToRoot(t);
+        if (r) roots.add(r);
+      });
       roots.forEach((r) => {
         map[r] = (map[r] || 0) + 1;
       });
@@ -145,9 +159,7 @@ function PracticeContent() {
     }
 
     if (mode === 'topic' && tagParam) {
-      base = base.filter((q) =>
-        q.tags?.some((t) => t === tagParam || t.startsWith(tagParam + ' '))
-      );
+      base = base.filter((q) => q.tags?.some((t) => tagToRoot(t) === tagParam));
     }
 
     if (sample != null && sample > 0 && base.length > 0) {
@@ -367,7 +379,7 @@ function PracticeContent() {
   if (mode === 'topic' && !tagParam) {
     return (
       <div className="mx-auto max-w-lg px-4 py-6">
-        <p className="mb-4 text-sm text-aws-navy/60">选择考点（以上位概念归类）后开始刷题</p>
+        <p className="mb-4 text-sm text-aws-navy/60">选择考点（按服务/知识点归类）后开始刷题</p>
         <div className="mb-4 flex gap-2">
           <button
             type="button"
@@ -395,7 +407,7 @@ function PracticeContent() {
           {sortedRoots.map((root) => {
             const totalForRoot = rootCounts[root] ?? 0;
             const doneForRoot = questions.filter((q) =>
-              q.tags?.some((t) => t === root || t.startsWith(root + ' '))
+              q.tags?.some((t) => tagToRoot(t) === root)
             ).filter((q) => getProgress()[q.id]).length;
             const percent = totalForRoot > 0 ? Math.round((doneForRoot / totalForRoot) * 100) : 0;
             return (

@@ -2,11 +2,10 @@
 
 import { createContext, useContext, useCallback, useState } from 'react';
 
-type DrawerVariant = 'term' | 'settings' | null;
+type DrawerVariant = 'term' | null;
 
 type DrawerContextValue = {
   openTermDrawer: (termKey: string) => void;
-  openSettingsDrawer: () => void;
   drawerOpen: boolean;
   drawerContent: DrawerVariant;
   drawerPayload: { termKey?: string } | null;
@@ -18,7 +17,6 @@ const DrawerContext = createContext<DrawerContextValue | null>(null);
 export function DrawerProvider({
   children,
   onOpenTerm,
-  onOpenSettings,
   open,
   content,
   payload,
@@ -26,7 +24,6 @@ export function DrawerProvider({
 }: {
   children: React.ReactNode;
   onOpenTerm: (termKey: string) => void;
-  onOpenSettings: () => void;
   open: boolean;
   content: DrawerVariant;
   payload: { termKey?: string } | null;
@@ -34,7 +31,6 @@ export function DrawerProvider({
 }) {
   const value: DrawerContextValue = {
     openTermDrawer: onOpenTerm,
-    openSettingsDrawer: onOpenSettings,
     drawerOpen: open,
     drawerContent: content,
     drawerPayload: payload,

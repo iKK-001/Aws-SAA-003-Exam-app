@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, BookOpen, ClipboardList, BookMarked, User, Menu } from 'lucide-react';
 import { DrawerProvider } from '@/lib/DrawerContext';
@@ -21,18 +22,12 @@ export function LayoutClient({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [drawerContent, setDrawerContent] = useState<'term' | 'settings' | null>(null);
+  const [drawerContent, setDrawerContent] = useState<'term' | null>(null);
   const [drawerPayload, setDrawerPayload] = useState<{ termKey?: string } | null>(null);
 
   const openTermDrawer = (termKey: string) => {
     setDrawerPayload({ termKey });
     setDrawerContent('term');
-    setDrawerOpen(true);
-  };
-
-  const openSettingsDrawer = () => {
-    setDrawerContent('settings');
-    setDrawerPayload(null);
     setDrawerOpen(true);
   };
 
@@ -49,7 +44,6 @@ export function LayoutClient({ children }: { children: React.ReactNode }) {
   return (
     <DrawerProvider
       onOpenTerm={openTermDrawer}
-      onOpenSettings={openSettingsDrawer}
       open={drawerOpen}
       content={drawerContent}
       payload={drawerPayload}
@@ -74,14 +68,13 @@ export function LayoutClient({ children }: { children: React.ReactNode }) {
               <Menu className="h-6 w-6" />
             </button>
             <span className="flex-1 text-center text-base font-semibold text-aws-navy">AWS SAA 备考</span>
-            <button
-              type="button"
-              onClick={openSettingsDrawer}
+            <Link
+              href="/profile"
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl text-aws-navy hover:bg-aws-blue-light/50"
-              aria-label="设置"
+              aria-label="我的"
             >
               <User className="h-5 w-5" />
-            </button>
+            </Link>
           </header>
 
           <main className="min-h-0 flex-1 overflow-y-auto pb-nav">{children}</main>
