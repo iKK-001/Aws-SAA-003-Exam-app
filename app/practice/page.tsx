@@ -482,77 +482,65 @@ function PracticeContent() {
   const questionDisplayText =
     questionLang === 'en' ? (q.question_en ?? q.question_cn) : q.question_cn;
 
+  const modeLabel =
+    mode === 'topic' && tagParam
+      ? `按分类 · ${tagParam}`
+      : mode === 'order'
+        ? '顺序 · 全部题目'
+        : '乱序 · 全部题目';
+  const filterLabel = filter === 'wrong' ? '错题本' : filter === 'favorite' ? '收藏' : null;
+
   return (
     <div className="mx-auto max-w-lg px-4 py-6">
-      <p className="mb-3 text-sm text-aws-navy/70">
+      <p className="mb-2 text-sm text-aws-navy/70">
         <span className="font-medium text-aws-orange">今日已练 {todayCount} 题</span>
         {' · '}
         <span className="text-aws-navy/80">{practiceGreeting}</span>
       </p>
-      <div className="mb-3 flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={() => setMode('order')}
-          aria-label="按顺序刷题"
-          className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm ${mode === 'order' ? 'bg-aws-blue-deep text-white' : 'bg-white text-aws-navy shadow-soft'}`}
-        >
-          <ListOrdered className="h-4 w-4" /> 顺序
-        </button>
-        <button
-          type="button"
-          onClick={() => setMode('shuffle')}
-          aria-label="乱序刷题"
-          className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm ${mode === 'shuffle' ? 'bg-aws-blue-deep text-white' : 'bg-white text-aws-navy shadow-soft'}`}
-        >
-          <Shuffle className="h-4 w-4" /> 乱序
-        </button>
-        <button
-          type="button"
-          onClick={() => setMode('topic')}
-          aria-label="按分类刷题"
-          className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm ${mode === 'topic' ? 'bg-aws-blue-deep text-white' : 'bg-white text-aws-navy shadow-soft'}`}
-        >
-          <FolderOpen className="h-4 w-4" /> 按分类
-        </button>
-        {mode === 'topic' && tagParam && (
-          <span className="rounded-xl bg-aws-blue-light/40 px-3 py-2 text-sm text-aws-blue-deep">
-            {tagParam}
-          </span>
-        )}
-      </div>
-      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <p className="text-xs text-aws-navy/60">
-          {filter === 'wrong' ? '正在练习：错题本' : filter === 'favorite' ? '正在练习：收藏' : '正在练习：全部题目'}
+          {filterLabel ? `${filterLabel} · ` : ''}{modeLabel}
           {' · 共 '}{list.length} 题
+          <button
+            type="button"
+            onClick={() => router.replace('/practice')}
+            className="ml-1.5 text-aws-blue-deep hover:underline"
+          >
+            切换
+          </button>
         </p>
-        <div className="flex items-center gap-1 rounded-xl bg-aws-blue-light/30 p-1">
+        <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={() => setQuestionLang('cn')}
-            aria-label="题干选项显示中文"
-            className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-colors ${questionLang === 'cn' ? 'bg-aws-blue-deep text-white' : 'text-aws-navy/70 hover:bg-aws-blue-deep/10'}`}
+            onClick={() => setAnswerSheetOpen(true)}
+            className="flex items-center gap-1.5 rounded-xl bg-white px-3 py-2 text-sm font-medium text-aws-blue-deep shadow-soft hover:shadow-card"
+            aria-label="打开答题卡"
           >
-            中文
+            <LayoutGrid className="h-4 w-4" /> 答题卡
           </button>
-          <button
-            type="button"
-            onClick={() => setQuestionLang('en')}
-            aria-label="题干选项显示英文"
-            className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-colors ${questionLang === 'en' ? 'bg-aws-blue-deep text-white' : 'text-aws-navy/70 hover:bg-aws-blue-deep/10'}`}
-          >
-            EN
-          </button>
+          <div className="flex items-center gap-0.5 rounded-xl bg-aws-blue-light/40 p-1">
+            <button
+              type="button"
+              onClick={() => setQuestionLang('cn')}
+              aria-label="题干选项显示中文"
+              className={`rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors ${questionLang === 'cn' ? 'bg-aws-blue-deep text-white' : 'text-aws-navy/70 hover:bg-aws-blue-deep/10'}`}
+            >
+              中文
+            </button>
+            <button
+              type="button"
+              onClick={() => setQuestionLang('en')}
+              aria-label="题干选项显示英文"
+              className={`rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors ${questionLang === 'en' ? 'bg-aws-blue-deep text-white' : 'text-aws-navy/70 hover:bg-aws-blue-deep/10'}`}
+            >
+              EN
+            </button>
+          </div>
         </div>
       </div>
-      <div className="mb-2 h-1 w-full overflow-hidden rounded-full bg-aws-blue-light/30">
-        <div
-          className="h-full rounded-full bg-aws-blue-deep transition-[width] duration-200"
-          style={{ width: `${list.length ? ((index + 1) / list.length) * 100 : 0}%` }}
-        />
-      </div>
-      <div className="mb-4 flex items-center justify-between gap-2">
-        <span className="flex flex-wrap items-center gap-2 text-sm text-aws-navy/60">
-          {index + 1} / {list.length}
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+        <span className="flex flex-wrap items-center gap-2 text-sm text-aws-navy/70">
+          <span className="font-medium">{index + 1} / {list.length}</span>
           {correctStreak >= 1 && (
             <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-700">
               🔥 连续 {correctStreak} 题
@@ -577,14 +565,6 @@ function PracticeContent() {
               从第一题开始
             </button>
           )}
-          <button
-            type="button"
-            onClick={() => setAnswerSheetOpen(true)}
-            className="flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium text-aws-blue-deep hover:bg-aws-blue-light/50"
-            aria-label="打开答题卡"
-          >
-            <LayoutGrid className="h-3.5 w-3.5" /> 答题卡
-          </button>
         </span>
         <button
           type="button"

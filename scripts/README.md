@@ -125,6 +125,27 @@ python3 scripts/glossary_missing_terms.py --add-stubs
 
 补全词条时：在 `public/data/glossary.json` 中为对应键添加或修改 `definition`、`analogy`、`features` 即可。
 
+### fill_glossary.py（批量用 Gemini 补全百科）
+
+用 Gemini 为「题目 related_terms 中缺失」或「glossary 里（待补充）」的词条批量生成释义，直接合并进 `glossary.json`。支持断点续跑、限流重试。
+
+```bash
+export GEMINI_API_KEY="你的API密钥"
+# 全量补全（约 818 条，每 15 条一批，断点存 .fill_glossary_progress.json）
+python3 scripts/fill_glossary.py
+
+# 先试跑 30 条
+python3 scripts/fill_glossary.py --limit 30
+
+# 中断后从上次进度继续
+python3 scripts/fill_glossary.py --resume
+
+# 只补 glossary 中已有但 definition 为「（待补充）」的条目（不补缺失词条）
+python3 scripts/fill_glossary.py --only-stubs
+```
+
+每批完成后会立即写回 `glossary.json`，中断后可用 `--resume` 继续。
+
 ---
 
 ## refine_data.py

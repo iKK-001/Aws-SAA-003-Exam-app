@@ -88,20 +88,6 @@ export function QuestionCard({
         <p className="whitespace-pre-wrap font-medium text-aws-navy pr-10">
           {questionText ?? q.question_cn}
         </p>
-        {q.related_terms?.length ? (
-          <div className="mt-3 flex flex-wrap gap-2">
-            {[...new Set(q.related_terms)].map((t) => (
-              <button
-                key={t}
-                type="button"
-                onClick={() => onTermClick(t)}
-                className="rounded-full bg-orange-100 px-3 py-1.5 text-xs font-medium text-orange-600 hover:bg-orange-200/80"
-              >
-                {t}
-              </button>
-            ))}
-          </div>
-        ) : null}
       </div>
 
       {/* 空闲小话：题目下方、选项上方，不挡题干 */}
@@ -173,6 +159,21 @@ export function QuestionCard({
           );
         })}
       </ul>
+      {q.related_terms?.length ? (
+        <div className="mt-4 flex flex-wrap gap-2">
+          <span className="mr-1 self-center text-xs text-aws-navy/50">关联词汇：</span>
+          {[...new Set(q.related_terms)].map((t) => (
+            <button
+              key={t}
+              type="button"
+              onClick={() => onTermClick(t)}
+              className="rounded-full bg-orange-100 px-3 py-1.5 text-xs font-medium text-orange-600 hover:bg-orange-200/80"
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

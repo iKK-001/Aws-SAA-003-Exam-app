@@ -41,12 +41,12 @@ export function AnswerSheet({
         onClick={onClose}
       />
       <div
-        className="fixed inset-x-0 bottom-0 z-50 max-h-[85vh] overflow-hidden rounded-t-3xl bg-white shadow-float"
+        className="fixed inset-x-0 bottom-0 z-50 flex max-h-[85vh] flex-col rounded-t-3xl bg-white shadow-float"
         role="dialog"
         aria-modal="true"
         aria-labelledby="answer-sheet-title"
       >
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-aws-navy/10 bg-white px-4 py-3">
+        <div className="flex shrink-0 items-center justify-between border-b border-aws-navy/10 bg-white px-4 py-3">
           <h2 id="answer-sheet-title" className="text-lg font-bold text-aws-navy">
             答题卡
           </h2>
@@ -71,7 +71,7 @@ export function AnswerSheet({
             </button>
           </div>
         </div>
-        <div className="overflow-y-auto p-4 pb-safe">
+        <div className="min-h-0 flex-1 overflow-y-auto p-4 pb-safe">
           <div className="grid grid-cols-5 gap-2">
             {list.map((_, i) => {
               const status = getStatus(i);

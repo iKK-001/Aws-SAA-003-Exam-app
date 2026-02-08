@@ -13314,5 +13314,7527 @@
       "RDS、ELB、EFS 等支持",
       "通常仅增加少量延迟"
     ]
+  },
+  ".NET": {
+    "definition": "微软开发的软件开发框架，用于构建 Windows 桌面应用、Web 应用和服务。",
+    "analogy": "就像一个为编写各种软件准备的工具箱。",
+    "features": [
+      "跨平台开发",
+      ".NET Framework、.NET Core 和 .NET 5+ 三种主要实现",
+      "包含 C# 语言"
+    ]
+  },
+  ".NET Core": {
+    "definition": ".NET 的一个跨平台、开源的实现，是 .NET 的现代化版本，可以在 Windows、macOS 和 Linux 上运行。",
+    "analogy": "就像 .NET 工具箱的简化版，可以在更多地方使用。",
+    "features": [
+      "跨平台",
+      "开源",
+      "高性能",
+      "模块化"
+    ]
+  },
+  "0.0.0.0/0": {
+    "definition": "CIDR 标记，表示所有 IPv4 地址，即允许任何 IP 地址访问。",
+    "analogy": "就像对所有访客都敞开大门。",
+    "features": [
+      "表示整个 IPv4 地址空间",
+      "常用于安全组和网络访问控制列表",
+      "应谨慎使用"
+    ]
+  },
+  "1 Gbps": {
+    "definition": "1 千兆比特每秒，表示网络传输速率，即每秒传输 10 亿比特的数据。",
+    "analogy": "就像一条足够宽敞的高速公路，每秒钟可以运送大量数据。",
+    "features": [
+      "网络带宽的度量单位",
+      "影响数据传输速度",
+      "常用于衡量网络性能"
+    ]
+  },
+  "403": {
+    "definition": "HTTP 状态码，表示“禁止访问”，服务器拒绝了客户端的请求。",
+    "analogy": "就像门上的一个标志，写着“禁止入内”。",
+    "features": [
+      "表示服务器拒绝访问",
+      "常见于权限不足或配置错误",
+      "用于 HTTP 响应"
+    ]
+  },
+  "A2C": {
+    "definition": "Actor-Critic 方法，一种深度强化学习算法，用于训练智能体在复杂环境中做出决策。",
+    "analogy": "就像同时雇用一个演员（负责行动）和一个评论家（评估行动）来优化表演。",
+    "features": [
+      "强化学习算法",
+      "包含 Actor 和 Critic 两个部分",
+      "用于训练智能体"
+    ]
+  },
+  "ACU": {
+    "definition": "Amazon EC2 计算单元，衡量不同 EC2 实例性能的相对指标。",
+    "analogy": "就像衡量不同型号汽车性能的指标，比如马力。",
+    "features": [
+      "衡量 EC2 实例的计算能力",
+      "不同实例类型有不同的 ACU 值",
+      "有助于选择合适的 EC2 实例"
+    ]
+  },
+  "AI": {
+    "definition": "人工智能，指让计算机模拟人类智能的技术，例如学习、推理和解决问题。",
+    "analogy": "就像赋予机器人类思考的能力。",
+    "features": [
+      "涉及机器学习、深度学习等领域",
+      "目标是让机器能够像人类一样思考",
+      "广泛应用于各个行业"
+    ]
+  },
+  "AMIs": {
+    "definition": "Amazon Machine Images，在 Amazon EC2 中用于启动实例的模板，包含操作系统、应用程序服务器和应用程序。",
+    "analogy": "就像一个预先配置好的虚拟机镜像，可以直接用于启动服务器。",
+    "features": [
+      "包含启动实例所需的配置信息",
+      "可自定义",
+      "支持多种操作系统",
+      "可共享"
+    ]
+  },
+  "API Gateway Lambda Authorizer": {
+    "definition": "API Gateway 的功能，使用 Lambda 函数对 API 请求进行授权，实现自定义的访问控制逻辑。",
+    "analogy": "就像在 API 的入口处设置一个自定义的门卫，检查用户的身份和权限。",
+    "features": [
+      "使用 Lambda 函数进行授权",
+      "提供自定义的访问控制",
+      "支持多种授权方式"
+    ]
+  },
+  "API Key": {
+    "definition": "用于身份验证和访问 API 的唯一标识符，通常用于跟踪 API 使用情况。",
+    "analogy": "就像访问 API 的一把钥匙，可以识别你的身份。",
+    "features": [
+      "用于身份验证",
+      "用于跟踪 API 使用情况",
+      "可以限制 API 访问"
+    ]
+  },
+  "API Keys": {
+    "definition": "多个 API Key 的集合，用于 API 访问控制和身份验证。",
+    "analogy": "多把 API Key，用于不同用户的身份认证。",
+    "features": [
+      "用于 API 身份验证",
+      "用于 API 使用限制",
+      "用于用户授权"
+    ]
+  },
+  "APIGateway": {
+    "definition": "Amazon API Gateway，用于创建、发布、维护、监控和保护 API 的服务。",
+    "analogy": "就像 API 的一个管理中心，负责 API 的创建和管理。",
+    "features": [
+      "创建 API",
+      "管理 API",
+      "监控 API",
+      "安全保护"
+    ]
+  },
+  "AS2": {
+    "definition": "Applicability Statement 2，一种用于在互联网上安全传输 B2B 数据的协议。",
+    "analogy": "就像在公司间传递重要文件的安全邮寄服务。",
+    "features": [
+      "用于安全地交换 B2B 数据",
+      "基于 HTTPS",
+      "支持数字签名和加密"
+    ]
+  },
+  "ASP.NET": {
+    "definition": "微软开发的用于构建 Web 应用程序的框架，是 .NET Framework 的一部分。",
+    "analogy": "就像一个专门用于创建网站的工具。",
+    "features": [
+      "用于开发 Web 应用程序",
+      "包含 Web Forms、MVC 和 Web API 等编程模型",
+      "基于 .NET 框架"
+    ]
+  },
+  "AWS Account": {
+    "definition": "AWS 账户是您在 AWS 上拥有资源的唯一标识。每个账户都有独立的资源隔离和计费。",
+    "analogy": "就像您的银行账户，用于存储资金和进行交易。",
+    "features": [
+      "资源隔离",
+      "计费独立",
+      "身份和访问管理(IAM)配置"
+    ]
+  },
+  "AWS Account Factory": {
+    "definition": "AWS Account Factory 是 AWS Control Tower 中的一项功能，用于自动化创建和配置符合组织策略的 AWS 账户。",
+    "analogy": "就像工厂批量生产标准化的产品，这里的“产品”就是 AWS 账户。",
+    "features": [
+      "账户自动化创建",
+      "账户配置标准化",
+      "与 AWS Control Tower 集成"
+    ]
+  },
+  "AWS App Mesh": {
+    "definition": "AWS App Mesh 是一项服务网格，用于构建、运行和管理微服务。它提供服务之间的流量管理、监控和控制。",
+    "analogy": "就像城市交通管理系统，控制着各个服务之间的“交通”流量。",
+    "features": [
+      "服务间通信管理",
+      "流量控制",
+      "服务监控"
+    ]
+  },
+  "AWS App Runner": {
+    "definition": "AWS App Runner 是一种快速部署容器化 Web 应用程序和 API 的服务。它提供从源代码或容器映像到生产环境的直接部署。",
+    "analogy": "就像一个快速的邮递员，将您的代码或容器快速送到用户手中。",
+    "features": [
+      "简单部署",
+      "自动扩展",
+      "支持多种编程语言和容器"
+    ]
+  },
+  "AWS App2Container": {
+    "definition": "AWS App2Container 是一个用于将现有应用程序迁移到容器化应用程序的工具。它简化了将应用程序打包到 Docker 容器的过程。",
+    "analogy": "就像一个厨师，将您的传统“菜品”重新包装成更方便运输的“外卖”。",
+    "features": [
+      "应用程序容器化",
+      "简化迁移流程",
+      "支持多种应用程序类型"
+    ]
+  },
+  "AWS AppConfig": {
+    "definition": "AWS AppConfig 是一项功能，使您能够快速、安全地部署应用程序配置。它帮助您在运行时更改配置，而无需重新部署应用程序。",
+    "analogy": "就像为您的应用程序配备了一个“遥控器”，可以动态调整其行为。",
+    "features": [
+      "配置发布和回滚",
+      "实时配置更新",
+      "安全配置管理"
+    ]
+  },
+  "AWS AppSync": {
+    "definition": "AWS AppSync 是一项用于构建可扩展的 GraphQL API 的服务。它简化了构建和管理数据驱动的应用程序。",
+    "analogy": "就像一个超级高效的“数据中间人”，将用户请求和数据连接起来。",
+    "features": [
+      "GraphQL API 构建",
+      "实时数据同步",
+      "数据源集成"
+    ]
+  },
+  "AWS Application Discovery Service": {
+    "definition": "AWS Application Discovery Service 帮助您收集有关本地服务器的详细信息，简化迁移评估。",
+    "analogy": "就像一名侦探，帮助您了解您本地服务器的“底细”，为迁移做准备。",
+    "features": [
+      "服务器发现",
+      "依赖关系分析",
+      "迁移规划支持"
+    ]
+  },
+  "AWS Application Migration Service": {
+    "definition": "AWS Application Migration Service (MGN) 是一项服务，用于将服务器迁移到 AWS。它通过最小化停机时间来简化和加速迁移过程。",
+    "analogy": "就像一个专业的搬家公司，帮助您将服务器快速且安全地搬到云端。",
+    "features": [
+      "服务器迁移",
+      "最小化停机时间",
+      "自动转换"
+    ]
+  },
+  "AWS Auto Scaling": {
+    "definition": "AWS Auto Scaling 是一种服务，可以根据定义的条件自动调整您的 AWS 资源，以确保稳定性和成本效益。",
+    "analogy": "就像一个“智能助手”，根据需要自动增加或减少您的资源，保持最佳状态。",
+    "features": [
+      "自动扩展",
+      "弹性伸缩",
+      "提高可用性"
+    ]
+  },
+  "AWS Billing and Cost Management": {
+    "definition": "AWS Billing and Cost Management 提供关于 AWS 账单、成本和使用情况的详细信息，帮助您进行预算和优化。",
+    "analogy": "就像您的财务管理工具，帮助您了解 AWS 的账单明细并进行预算控制。",
+    "features": [
+      "账单管理",
+      "成本分析",
+      "预算设置"
+    ]
+  },
+  "AWS Certificate Manager": {
+    "definition": "AWS Certificate Manager (ACM) 是一种服务，用于预置、管理和部署 SSL/TLS 证书，用于保护您的网站和应用程序。",
+    "analogy": "就像为您网站提供“安全锁”，确保数据传输的安全性。",
+    "features": [
+      "SSL/TLS 证书管理",
+      "自动续期",
+      "免费证书"
+    ]
+  },
+  "AWS Client VPN": {
+    "definition": "AWS Client VPN 是一项托管的 VPN 服务，允许您从任何位置安全地访问您的 AWS 资源。",
+    "analogy": "就像为您的云资源建立了一个“秘密通道”，让您安全地访问。",
+    "features": [
+      "安全访问",
+      "远程连接",
+      "与 VPC 集成"
+    ]
+  },
+  "AWS CloudHSM": {
+    "definition": "AWS CloudHSM 是一项硬件安全模块 (HSM) 服务，用于生成、存储和管理加密密钥。",
+    "analogy": "就像一个保险箱，安全地存储您的加密密钥。",
+    "features": [
+      "硬件安全模块",
+      "密钥管理",
+      "符合法规要求"
+    ]
+  },
+  "AWS CloudHSM 集群": {
+    "definition": "AWS CloudHSM 集群是一组高度可用的 CloudHSM 实例，用于增强安全性，提供更高的可用性和吞吐量。",
+    "analogy": "就像一组互联的保险箱，提供更强的安全性和可靠性。",
+    "features": [
+      "高可用性",
+      "密钥管理",
+      "集群配置"
+    ]
+  },
+  "AWS Cognito": {
+    "definition": "一个身份验证、授权和用户管理服务，支持用户注册、登录，以及用户身份信息的存储和管理。",
+    "analogy": "就像你手机里的账号管理，帮你记住密码，管理登录状态。",
+    "features": [
+      "用户身份验证",
+      "用户池",
+      "身份验证流程",
+      "支持社交登录"
+    ]
+  },
+  "AWS Cost Anomaly Detection": {
+    "definition": "一个自动检测 AWS 成本异常的服务，通过机器学习技术分析成本数据，并在发现异常时发出通知。",
+    "analogy": "你的信用卡账单监控系统，一旦发现异常消费，立即提醒你。",
+    "features": [
+      "成本异常检测",
+      "机器学习驱动",
+      "实时通知",
+      "可自定义的阈值"
+    ]
+  },
+  "AWS Cost and Usage Reports": {
+    "definition": "一个详细的 AWS 成本和使用情况报告服务，提供关于 AWS 资源使用和费用的详细信息。",
+    "analogy": "你的详细账单，告诉你钱花在了哪里，花了多少。",
+    "features": [
+      "详细的成本和使用情况数据",
+      "S3 存储",
+      "可自定义的报告",
+      "支持多种数据格式"
+    ]
+  },
+  "AWS DMS Serverless": {
+    "definition": "一个无需管理服务器的、用于数据库迁移的服务，简化了数据迁移流程，减轻了运维负担。",
+    "analogy": "无需手动搬家的自动搬家服务。",
+    "features": [
+      "无需管理服务器",
+      "数据库迁移",
+      "数据复制",
+      "支持多种数据源和目标"
+    ]
+  },
+  "AWS Data Exchange": {
+    "definition": "一个用于查找、订阅和使用第三方数据产品的服务，简化了数据的共享和交易。",
+    "analogy": "数据界的淘宝，方便你购买和订阅第三方数据。",
+    "features": [
+      "数据产品市场",
+      "数据订阅",
+      "数据共享",
+      "支持多种数据格式"
+    ]
+  },
+  "AWS Data Pipeline": {
+    "definition": "一个用于构建数据驱动工作流程的服务，用于数据移动和转换，简化了数据处理流程。",
+    "analogy": "自动化生产线，将原材料（数据）加工成成品。",
+    "features": [
+      "数据提取、转换和加载 (ETL)",
+      "数据调度",
+      "依赖关系管理",
+      "错误处理"
+    ]
+  },
+  "AWS Directory Service for Microsoft Active Directory": {
+    "definition": "一个托管的 Active Directory 服务，允许你使用 Microsoft Active Directory 与其他 AWS 服务。",
+    "analogy": "你公司的内部电话本，用于管理员工账号和权限。",
+    "features": [
+      "托管的 Active Directory",
+      "与 AWS 服务的集成",
+      "用户身份验证",
+      "权限管理"
+    ]
+  },
+  "AWS Elastic Disaster Recovery": {
+    "definition": "一个用于灾难恢复的服务，允许你将服务器快速恢复到 AWS。",
+    "analogy": "保险，在发生意外时，能帮你快速恢复损失。",
+    "features": [
+      "灾难恢复",
+      "服务器复制",
+      "快速恢复",
+      "自动化流程"
+    ]
+  },
+  "AWS Elastic IP": {
+    "definition": "一个静态 IPv4 地址，可以分配给你的 EC2 实例，用于保持服务器的固定 IP 地址。",
+    "analogy": "你的固定电话号码，无论你搬到哪里，别人都可以找到你。",
+    "features": [
+      "静态 IP 地址",
+      "与 EC2 实例关联",
+      "支持多种实例类型",
+      "免费（如果未被使用）"
+    ]
+  },
+  "AWS Glue DataBrew": {
+    "definition": "一个可视化数据准备工具，简化了数据清洗和转换流程，无需编写代码。",
+    "analogy": "数据版的 PS，可以图形化地编辑和美化数据。",
+    "features": [
+      "数据清洗",
+      "数据转换",
+      "可视化界面",
+      "无代码操作"
+    ]
+  },
+  "AWS Glue DynamoDB Export Connector": {
+    "definition": "一个用于将 DynamoDB 表数据导出到其他数据存储的服务。",
+    "analogy": "一个数据搬运工，负责将 DynamoDB 的数据运送到其他地方。",
+    "features": [
+      "DynamoDB 数据导出",
+      "数据转换",
+      "多种目标存储",
+      "与 AWS Glue 集成"
+    ]
+  },
+  "AWS Glue Studio": {
+    "definition": "一个用于构建和运行 ETL 作业的服务，提供了可视化的界面来创建数据转换流程。",
+    "analogy": "可视化 ETL 作业编辑器，像画流程图一样定义数据处理流程。",
+    "features": [
+      "ETL 作业构建",
+      "可视化界面",
+      "代码生成",
+      "作业调度"
+    ]
+  },
+  "AWS Hosted Connection Direct Connect Program": {
+    "definition": "一个 AWS Direct Connect 的托管服务，允许合作伙伴提供 Direct Connect 连接。",
+    "analogy": "提供专属线路连接 AWS 的服务，就像租用专线连接到互联网。",
+    "features": [
+      "Direct Connect 连接",
+      "托管服务",
+      "合作伙伴提供",
+      "更低的延迟"
+    ]
+  },
+  "AWS IAM Identity Center (AWS Single Sign-On)": {
+    "definition": "一个用于集中管理用户身份和访问权限的服务，支持单点登录。",
+    "analogy": "公司门禁系统，一次登录，通行所有房间。",
+    "features": [
+      "单点登录 (SSO)",
+      "用户身份管理",
+      "访问权限管理",
+      "与 AWS 服务的集成"
+    ]
+  },
+  "AWS Identity and Access Management (IAM) Access Analyzer": {
+    "definition": "一个用于分析 IAM 权限配置，并帮助你识别和修复潜在安全风险的服务。",
+    "analogy": "安全审计员，检查你的权限设置是否有漏洞。",
+    "features": [
+      "权限分析",
+      "安全风险评估",
+      "可访问性检查",
+      "合规性保障"
+    ]
+  },
+  "AWS Load Balancer Controller": {
+    "definition": "用于在 Kubernetes 集群中自动配置和管理 AWS 负载均衡器的控制器。它简化了将流量路由到 Kubernetes 服务的过程。",
+    "analogy": "就像 Kubernetes 社区里的“交通警察”，负责指挥云端的车辆（流量）进入正确的服务（Pod）。",
+    "features": [
+      "自动创建和管理 ELB 和 ALB",
+      "与 Kubernetes Service 整合",
+      "支持多种负载均衡器类型",
+      "简化负载均衡器配置"
+    ]
+  },
+  "AWS Local Zones": {
+    "definition": "将 AWS 基础设施放置在更靠近人口中心或行业中心的位置，以实现低延迟访问 AWS 服务的计算、存储、数据库等服务。",
+    "analogy": "就像在城市里设立的 AWS 小型服务站，方便本地用户快速访问。",
+    "features": [
+      "低延迟",
+      "适用于需要低延迟的应用",
+      "与特定 AWS Region 关联",
+      "提供计算、存储、数据库等服务"
+    ]
+  },
+  "AWS Managed IAM Policy": {
+    "definition": "AWS 提供的 IAM 策略，由 AWS 管理和更新。提供预定义的权限，用于常见的使用场景。",
+    "analogy": "相当于 AWS 帮你准备好的各种权限套餐，你直接拿来用，省时省力。",
+    "features": [
+      "AWS 维护和更新",
+      "涵盖常见使用场景",
+      "简化权限管理",
+      "可以附加到 IAM 角色或用户"
+    ]
+  },
+  "AWS Managed Key": {
+    "definition": "由 AWS 创建、存储和管理的加密密钥，用于保护数据。 用户无需直接管理密钥。",
+    "analogy": "就像银行保险箱里的钥匙，由银行（AWS）保管，你只能用它来存取你的物品（数据）。",
+    "features": [
+      "由 AWS 维护",
+      "用于加密数据",
+      "无需用户管理密钥",
+      "集成于多项 AWS 服务"
+    ]
+  },
+  "AWS Managed Services (AMS)": {
+    "definition": "由 AWS 专家运营和管理的云基础设施、操作系统、数据库和应用程序。帮助客户将日常 IT 运营任务外包给 AWS。",
+    "analogy": "就像雇佣专业的管家，帮你管理云端的一切事务，你只需要专注于业务创新。",
+    "features": [
+      "基础设施管理",
+      "操作系统管理",
+      "应用程序管理",
+      "专家支持"
+    ]
+  },
+  "AWS Management Console": {
+    "definition": "用于访问和管理 AWS 服务的基于 Web 的用户界面。",
+    "analogy": "相当于云服务的“控制面板”，你可以通过它控制和配置所有 AWS 资源。",
+    "features": [
+      "Web 界面",
+      "图形化管理",
+      "访问所有 AWS 服务",
+      "用户友好的操作体验"
+    ]
+  },
+  "AWS Mitigation Hub Refactor Spaces": {
+    "definition": "用于构建和运行新的应用程序架构，将现有单体应用程序分解为微服务。简化了应用程序现代化过程。",
+    "analogy": "就像装修公司，帮助你把老房子（单体应用）改造成多个新房间（微服务）。",
+    "features": [
+      "简化应用现代化",
+      "逐步迁移",
+      "减少风险",
+      "支持多云和混合云环境"
+    ]
+  },
+  "AWS Network Firewall": {
+    "definition": "一种托管的网络防火墙服务，用于保护虚拟私有云（VPC）中的流量。提供入侵检测和防御功能。",
+    "analogy": "就像为你的 VPC 安装的“门卫”，负责监控进出的流量，防止恶意攻击。",
+    "features": [
+      "状态防火墙",
+      "入侵检测和防御",
+      "基于规则的策略",
+      "支持 VPC 和 Internet 网关"
+    ]
+  },
+  "AWS ParallelCluster": {
+    "definition": "一个用于在 AWS 上轻松部署和管理高性能计算 (HPC) 集群的工具。支持多种计算环境。",
+    "analogy": "就像为你搭建一个“超算工厂”，用于处理大规模的计算任务。",
+    "features": [
+      "自动配置HPC集群",
+      "支持多种计算环境",
+      "易于部署和管理",
+      "支持多种调度程序"
+    ]
+  },
+  "AWS Pricing Calculator": {
+    "definition": "一个用于估算 AWS 服务成本的工具。用户可以根据自己的需求配置不同的服务，并获取相应的价格。",
+    "analogy": "相当于一个“云费用计算器”，帮助你预估使用 AWS 服务的开销。",
+    "features": [
+      "估算成本",
+      "支持多种 AWS 服务",
+      "自定义配置",
+      "可视化结果"
+    ]
+  },
+  "AWS Region": {
+    "definition": "一个地理区域，包含多个可用区。AWS 将服务部署在不同的 Region 中，以提供高可用性和容错能力。",
+    "analogy": "就像一个国家，包含多个城市（可用区），提供各种服务。",
+    "features": [
+      "地理区域",
+      "包含多个可用区",
+      "独立于其他 Region",
+      "提供高可用性和容错能力"
+    ]
+  },
+  "AWS Resource Groups": {
+    "definition": "允许你将 AWS 资源组织到组中，以便更容易地管理和监控。资源可以基于标签或其他条件进行分组。",
+    "analogy": "就像文件分类整理，方便你更容易地找到和管理云端资源。",
+    "features": [
+      "资源分组",
+      "基于标签或其他条件",
+      "简化资源管理",
+      "支持监控和自动化"
+    ]
+  },
+  "AWS Schema Conversion Tool": {
+    "definition": "用于将数据库模式从一种数据库引擎转换为另一种数据库引擎的工具。帮助用户迁移数据库。",
+    "analogy": "就像一个“翻译官”，帮你把数据库的“语言”翻译成另一种语言，以便在不同数据库之间迁移数据。",
+    "features": [
+      "数据库模式转换",
+      "支持多种数据库引擎",
+      "简化数据库迁移",
+      "生成详细的转换报告"
+    ]
+  },
+  "AWS Shield Standard": {
+    "definition": "一种 AWS 的 DDoS 保护服务，用于保护您的 AWS 资源免受常见的 DDoS 攻击。免费提供。",
+    "analogy": "就像为你的房子安装的“防盗门”，免费保护你免受常见的攻击。",
+    "features": [
+      "DDoS 保护",
+      "免费提供",
+      "自动检测和缓解攻击",
+      "保护常见的 AWS 服务"
+    ]
+  },
+  "AWS Single Sign-On": {
+    "definition": "一种云服务，可让你集中管理对多个 AWS 账户和应用程序的用户访问权限。简化了用户身份验证过程。",
+    "analogy": "就像一个“通行证”，用户只需要一个用户名和密码，就可以访问多个 AWS 服务。",
+    "features": [
+      "集中身份管理",
+      "单点登录",
+      "支持 SAML 2.0",
+      "简化用户管理"
+    ]
+  },
+  "AWS Site-to-Site VPN": {
+    "definition": "在您的数据中心和 Amazon VPC 之间建立安全的 IPsec VPN 连接。允许您通过公网安全地传输数据。",
+    "analogy": "就像在你的办公室和云端之间建立一条安全的隧道。",
+    "features": [
+      "加密数据传输",
+      "支持多种 VPN 设备",
+      "可配置路由"
+    ]
+  },
+  "AWS Systems Manager Patch Manager": {
+    "definition": "自动化对 Amazon EC2 实例、边缘设备和本地服务器的补丁管理。简化补丁评估和部署过程。",
+    "analogy": "就像为你的电脑自动更新系统补丁。",
+    "features": [
+      "支持多种操作系统",
+      "自定义补丁审批",
+      "补丁部署自动化"
+    ]
+  },
+  "AWS Systems Manager Session Manager": {
+    "definition": "通过一个交互式的 shell 访问您的 EC2 实例，无需 SSH 或堡垒主机，且无需开放入站端口。",
+    "analogy": "就像一个通过网页浏览器安全地远程连接到你的电脑的工具。",
+    "features": [
+      "无需 SSH 密钥",
+      "基于 IAM 的访问控制",
+      "会话日志记录"
+    ]
+  },
+  "AWS Systems Manager State Manager": {
+    "definition": "确保您的 EC2 实例保持一致配置的工具。定义配置模板，并定期应用到实例。",
+    "analogy": "就像确保你的所有电脑都使用相同的操作系统和应用程序版本。",
+    "features": [
+      "配置模板管理",
+      "合规性审计",
+      "持续配置执行"
+    ]
+  },
+  "AWS Transfer for SFTP": {
+    "definition": "一个完全托管的 SFTP (SSH File Transfer Protocol) 服务，用于安全地将文件传输到 Amazon S3。",
+    "analogy": "就像一个安全的 FTP 服务，用于将文件上传到你的云存储空间。",
+    "features": [
+      "无需管理 SFTP 服务器",
+      "与 Amazon S3 集成",
+      "用户身份验证"
+    ]
+  },
+  "AWS Wavelength Zones": {
+    "definition": "在运营商的移动网络中部署的 AWS 基础设施，为移动设备提供超低延迟的应用程序。",
+    "analogy": "就像在你的手机信号塔旁边架设 AWS 服务器，实现更快的响应速度。",
+    "features": [
+      "超低延迟",
+      "移动网络集成",
+      "适用于边缘计算"
+    ]
+  },
+  "AWS managed keys": {
+    "definition": "由 AWS 创建、管理和使用的加密密钥。用于加密您的数据，例如在 Amazon S3 中。",
+    "analogy": "就像 AWS 为你保管的、用于加密数据的安全钥匙。",
+    "features": [
+      "AWS 负责密钥的创建、存储和轮换",
+      "无需管理密钥",
+      "支持多种 AWS 服务"
+    ]
+  },
+  "AWS owned keys": {
+    "definition": "AWS 服务拥有的加密密钥。这些密钥在 AWS 服务的内部使用，您无法直接管理。",
+    "analogy": "就像 AWS 用于保护内部系统的私有钥匙。",
+    "features": [
+      "由 AWS 服务拥有和管理",
+      "您无法控制密钥的使用",
+      "用于保护 AWS 服务内部数据"
+    ]
+  },
+  "AWSEC2-PatchLoadBalanacerInstance": {
+    "definition": "使用 EC2 实例作为负载均衡器的目标，实现补丁更新过程中服务的高可用性。",
+    "analogy": "就像在维修过程中使用备用车辆来保证交通畅通。",
+    "features": [
+      "蓝绿部署",
+      "滚动更新",
+      "实现服务高可用"
+    ]
+  },
+  "Accept-Language": {
+    "definition": "HTTP 请求头字段，用于指定客户端（例如浏览器）首选的语言环境。",
+    "analogy": "就像你在餐厅点餐时告诉服务员你想要中文菜单。",
+    "features": [
+      "浏览器发送",
+      "告知服务器首选语言",
+      "用于内容本地化"
+    ]
+  },
+  "Access Point": {
+    "definition": "Amazon S3 的一个功能，允许您创建具有特定策略的 S3 对象的访问入口点。",
+    "analogy": "就像你的 S3 存储桶里的一扇特殊入口，你可以控制谁能通过它访问。",
+    "features": [
+      "简化数据访问管理",
+      "支持 IAM 策略",
+      "可用于共享数据集"
+    ]
+  },
+  "Account": {
+    "definition": "您在 AWS 上的一个独立且隔离的环境。包含您的所有 AWS 资源。",
+    "analogy": "就像你在 AWS 的一个独立的“房子”，所有东西都在你的控制之下。",
+    "features": [
+      "拥有唯一的账户 ID",
+      "隔离资源",
+      "用于计费和管理"
+    ]
+  },
+  "Account Drift": {
+    "definition": "指基础设施配置与预定义的规范或 IaC 模板之间存在的差异。",
+    "analogy": "就像房子里的实际装修与最初的设计蓝图不一致。",
+    "features": [
+      "配置漂移检测",
+      "不一致的资源状态",
+      "影响合规性"
+    ]
+  },
+  "Active Directory Connector": {
+    "definition": "在您的 AWS 环境和您的本地 Active Directory 之间建立连接。允许您使用现有的用户目录。",
+    "analogy": "就像一个桥梁，连接你的本地用户目录到云端，方便用户登录。",
+    "features": [
+      "无需部署 EC2 实例",
+      "支持 Active Directory 身份验证",
+      "简化用户管理"
+    ]
+  },
+  "ActiveMQ": {
+    "definition": "一个开源的消息代理和消息队列服务，支持多种消息传递协议。",
+    "analogy": "就像一个邮局，处理应用程序之间发送和接收消息。",
+    "features": [
+      "支持多种消息协议",
+      "可靠的消息传递",
+      "可扩展"
+    ]
+  },
+  "AdministratorAccess": {
+    "definition": "AWS IAM 中的一种策略，授予用户对 AWS 账户中所有资源的完全访问权限。",
+    "analogy": "就像拥有你家的所有钥匙，你可以随意进出任何房间。",
+    "features": [
+      "允许完全控制",
+      "权限管理核心",
+      "适用于管理员角色"
+    ]
+  },
+  "All Upfront reserved database instance": {
+    "definition": "Amazon RDS 中的一种数据库实例购买选项，需要一次性支付所有预留实例的费用。",
+    "analogy": "相当于一次性付清一年的健身房会员费，通常可以享受最大的折扣。",
+    "features": [
+      "价格最低",
+      "预留实例类型",
+      "一次性支付"
+    ]
+  },
+  "Amazon AMI": {
+    "definition": "Amazon Web Services (AWS) 提供的用于创建 Amazon EC2 实例的预配置镜像。",
+    "analogy": "就像一个预装了操作系统的光盘，你可以用它来快速启动你的电脑。",
+    "features": [
+      "启动 EC2 实例的模板",
+      "包含操作系统、应用程序等",
+      "支持自定义 AMI"
+    ]
+  },
+  "Amazon Aurora Global Database": {
+    "definition": "Amazon Aurora 的一项功能，允许您在一个 Amazon Aurora 数据库中跨多个 AWS 区域运行单一数据库。",
+    "analogy": "就像一个全球连锁店的数据库，无论你在哪个分店，都能访问相同的数据。",
+    "features": [
+      "跨区域数据库",
+      "快速跨区域读取",
+      "灾难恢复解决方案"
+    ]
+  },
+  "Amazon Aurora Serverless": {
+    "definition": "一种按需使用的 Amazon Aurora 数据库，它根据应用程序的需求自动启动、关闭和扩展数据库容量。",
+    "analogy": "就像一家可以根据顾客多少自动调整大小的餐厅。",
+    "features": [
+      "自动扩展",
+      "按使用量付费",
+      "无需管理数据库容量"
+    ]
+  },
+  "Amazon Aurora Serverless for MySQL": {
+    "definition": "针对 MySQL 数据库引擎的 Amazon Aurora Serverless 版本。",
+    "analogy": "就像为 MySQL 数据库定制的按需服务器。",
+    "features": [
+      "MySQL 兼容",
+      "自动扩展",
+      "按使用量付费"
+    ]
+  },
+  "Amazon Aurora Serverless v2": {
+    "definition": "Amazon Aurora Serverless 的第二代版本，提供更精细的容量伸缩和性能。",
+    "analogy": "就像是 Aurora Serverless 的升级版，性能更强，伸缩更灵活。",
+    "features": [
+      "更精细的容量控制",
+      "更快的伸缩速度",
+      "更好的性能"
+    ]
+  },
+  "Amazon CloudWatch Events": {
+    "definition": "一种事件驱动的服务，可以近乎实时的响应 AWS 资源的变化。",
+    "analogy": "就像一个报警系统，当你的系统出现异常时，会立即触发相应的操作。",
+    "features": [
+      "近实时事件处理",
+      "事件触发",
+      "可以触发 Lambda 函数等操作"
+    ]
+  },
+  "Amazon Cognito Identity Pools": {
+    "definition": "Amazon Cognito 的一项功能，用于管理用户身份，提供对 AWS 资源的临时访问权限。",
+    "analogy": "就像一个停车场，你可以通过你的身份证明（例如车牌）来获得进入停车场的权限。",
+    "features": [
+      "身份验证",
+      "授权",
+      "提供临时凭证"
+    ]
+  },
+  "Amazon DLM": {
+    "definition": "Amazon Data Lifecycle Manager 的简称，用于自动化管理 Amazon EBS 快照的生命周期。",
+    "analogy": "就像一个自动备份管理工具，可以定期创建、保留和删除你的数据备份。",
+    "features": [
+      "快照生命周期管理",
+      "自动备份",
+      "降低 EBS 存储成本"
+    ]
+  },
+  "Amazon Data Lifecycle Manager": {
+    "definition": "用于自动化管理 Amazon EBS 快照的生命周期的服务，简化备份管理流程。",
+    "analogy": "就像一个自动备份管理器，根据您设置的策略创建、保留和删除 EBS 卷的快照。",
+    "features": [
+      "EBS 快照自动化",
+      "策略驱动",
+      "提高数据保护"
+    ]
+  },
+  "Amazon Data Lifecycle Manager (Amazon DLM)": {
+    "definition": "Amazon DLM 的全称，用于自动化管理 EBS 快照的创建、保留和删除等操作。",
+    "analogy": "就像是云端的自动数据备份管家。",
+    "features": [
+      "简化 EBS 快照管理",
+      "策略配置",
+      "成本优化"
+    ]
+  },
+  "Amazon Detective": {
+    "definition": "一种安全服务，可以帮助你分析、调查和快速识别安全问题或潜在的安全威胁。",
+    "analogy": "就像一个侦探，可以分析你的 AWS 环境中的各种活动，找出可疑之处。",
+    "features": [
+      "安全调查",
+      "威胁检测",
+      "可视化分析"
+    ]
+  },
+  "Amazon DocumentDB": {
+    "definition": "一种与 MongoDB 兼容的数据库服务，允许你使用现有的 MongoDB 驱动程序和工具。",
+    "analogy": "就像一个兼容 MongoDB 的数据库，你可以使用你熟悉的工具和技术。",
+    "features": [
+      "MongoDB 兼容",
+      "NoSQL 数据库",
+      "高性能"
+    ]
+  },
+  "Amazon EC2 Auto Scaling": {
+    "definition": "一种用于自动调整 Amazon EC2 实例数量的服务，以满足应用程序的需求。",
+    "analogy": "就像一个智能助手，可以根据你的需求自动增加或减少服务器数量。",
+    "features": [
+      "自动扩展",
+      "弹性伸缩",
+      "提高可用性"
+    ]
+  },
+  "Amazon EC2 On-Demand Instances": {
+    "definition": "按需实例是 Amazon EC2 提供的最基本的实例类型，无需长期承诺，按小时付费。",
+    "analogy": "就像你去餐厅点菜，点多少吃多少，结账时按实际消费付费。",
+    "features": [
+      "无需预付",
+      "无长期承诺",
+      "按小时计费",
+      "适用于可预测的工作负载"
+    ]
+  },
+  "Amazon EC2 Spot Instances": {
+    "definition": "竞价实例是 Amazon EC2 提供的实例类型，允许您以折扣价竞价未使用的 EC2 容量。",
+    "analogy": "就像你在拍卖会上竞拍商品，出价最高者获得。",
+    "features": [
+      "价格浮动",
+      "最大折扣",
+      "中断风险",
+      "适用于容错性工作负载"
+    ]
+  },
+  "Amazon EC2 实例存储": {
+    "definition": "实例存储为 EC2 实例提供临时的、块级别的存储。数据在实例终止时丢失。",
+    "analogy": "就像电脑的临时内存，关闭电脑后数据会丢失。",
+    "features": [
+      "高性能 I/O",
+      "临时存储",
+      "数据在实例停止时丢失",
+      "免费提供"
+    ]
+  },
+  "Amazon ECS Anywhere": {
+    "definition": "Amazon ECS Anywhere 允许您使用 Amazon ECS 管理在您自己的基础设施上运行的容器。",
+    "analogy": "就像你在自己家里搭建了游乐设施，然后用云服务来管理。",
+    "features": [
+      "管理本地容器",
+      "与 ECS 相同体验",
+      "无需迁移基础设施",
+      "支持多种操作系统"
+    ]
+  },
+  "Amazon ElastiCache for Memcached": {
+    "definition": "ElastiCache for Memcached 是一种完全托管的内存缓存服务，用于提高 Web 应用程序的性能。",
+    "analogy": "就像你家的客厅，方便快速地拿取常用物品。",
+    "features": [
+      "高性能缓存",
+      "易于部署和管理",
+      "支持 Memcached 协议",
+      "提升数据库性能"
+    ]
+  },
+  "Amazon Elastic Block Store (Amazon EBS)": {
+    "definition": "Amazon EBS 提供持久性块存储卷，可用于 Amazon EC2 实例。",
+    "analogy": "就像你电脑的硬盘，可以存储数据，即使电脑关机数据也还在。",
+    "features": [
+      "持久性存储",
+      "块级别存储",
+      "高性能",
+      "多种卷类型"
+    ]
+  },
+  "Amazon Elastic Container Service (Amazon ECS)": {
+    "definition": "Amazon ECS 是一种高度可扩展的容器编排服务，用于运行、停止和管理容器。",
+    "analogy": "就像一个智能的调度员，帮你管理和协调集装箱的运输。",
+    "features": [
+      "容器编排",
+      "易于使用",
+      "高度可扩展",
+      "与 AWS 服务集成"
+    ]
+  },
+  "Amazon Elastic File System (Amazon EFS)": {
+    "definition": "Amazon EFS 是一种可扩展的、弹性的文件存储服务，用于与 EC2 实例共享数据。",
+    "analogy": "就像一个共享的储物柜，大家都可以存取文件。",
+    "features": [
+      "弹性扩展",
+      "共享文件系统",
+      "易于访问",
+      "POSIX 兼容"
+    ]
+  },
+  "Amazon Elastic Kubernetes Service (Amazon EKS)": {
+    "definition": "Amazon EKS 是一种完全托管的 Kubernetes 服务，用于在 AWS 上运行 Kubernetes。",
+    "analogy": "就像一个专业的团队，帮你管理复杂的 Kubernetes 部署。",
+    "features": [
+      "完全托管",
+      "Kubernetes 兼容",
+      "高度可扩展",
+      "简化集群管理"
+    ]
+  },
+  "Amazon Elastic Transcoder": {
+    "definition": "Elastic Transcoder 是一种媒体转码服务，用于将视频和音频文件转换为不同的格式。",
+    "analogy": "就像一个专业的翻译员，把视频从一种语言翻译成另一种语言。",
+    "features": [
+      "媒体转码",
+      "易于使用",
+      "按使用量付费",
+      "支持多种格式"
+    ]
+  },
+  "Amazon EventBridge Scheduler": {
+    "definition": "Amazon EventBridge Scheduler 是一种无服务器计划程序，允许您在预定的时间调用目标。",
+    "analogy": "就像一个自动闹钟，在特定时间触发事件。",
+    "features": [
+      "计划任务",
+      "无服务器",
+      "支持多种目标",
+      "事件驱动"
+    ]
+  },
+  "Amazon FSx for NetApp ONTAP": {
+    "definition": "Amazon FSx for NetApp ONTAP 允许您使用 NetApp ONTAP 文件系统在 AWS 上启动和运行。",
+    "analogy": "就像在 AWS 上使用 NetApp 的专业存储系统。",
+    "features": [
+      "完全托管",
+      "NetApp ONTAP 文件系统",
+      "高性能",
+      "支持多种协议"
+    ]
+  },
+  "Amazon FSx for OpenZFS": {
+    "definition": "Amazon FSx for OpenZFS 允许您使用 OpenZFS 文件系统在 AWS 上启动和运行。",
+    "analogy": "就像在 AWS 上使用开源的 ZFS 文件系统。",
+    "features": [
+      "完全托管",
+      "OpenZFS 文件系统",
+      "高性能",
+      "开源"
+    ]
+  },
+  "Amazon Kinesis": {
+    "definition": "Amazon Kinesis 是一组用于实时处理流数据的服务。",
+    "analogy": "就像一个数据传送带，快速处理海量数据。",
+    "features": [
+      "实时数据处理",
+      "流数据",
+      "易于扩展",
+      "多个组件（Kinesis Streams, Kinesis Firehose, Kinesis Video Streams, Kinesis Data Analytics）"
+    ]
+  },
+  "Amazon Kinesis Agent": {
+    "definition": "Kinesis Agent 是一种轻量级的代理程序，用于将数据从各种来源（如服务器日志）发送到 Kinesis 流。",
+    "analogy": "就像数据采集的快递员，负责把数据打包发送到 Kinesis 传送带。",
+    "features": [
+      "数据采集",
+      "日志收集",
+      "自动重试",
+      "简化数据发送"
+    ]
+  },
+  "Amazon Kinesis Data Stream": {
+    "definition": "Amazon Kinesis Data Streams 是一项可扩展且持久的实时数据流服务，可以摄取、处理和分析大规模数据流。",
+    "analogy": "就像高速公路上的车道，数据流通过它进行实时传输。",
+    "features": [
+      "实时数据摄取",
+      "可扩展性",
+      "数据处理与分析",
+      "数据持久性"
+    ]
+  },
+  "Amazon Lightsail": {
+    "definition": "Amazon Lightsail 是一款易于使用的云服务，提供虚拟服务器、容器、数据库和 CDN 等，适合快速部署应用程序。",
+    "analogy": "像是预先打包好的套餐，让你快速拥有自己的网站或应用。",
+    "features": [
+      "简化云计算",
+      "易于部署",
+      "价格合理",
+      "预配置资源"
+    ]
+  },
+  "Amazon Linux": {
+    "definition": "Amazon Linux 是由 AWS 提供的基于 Linux 的操作系统，专为在 AWS 上使用而设计，提供安全、稳定且高性能的运行环境。",
+    "analogy": "AWS 官方定制的操作系统，就像是为你的 AWS 基础设施量身定制的工具。",
+    "features": [
+      "AWS 优化",
+      "安全更新",
+      "长期支持",
+      "易于集成"
+    ]
+  },
+  "Amazon MSK": {
+    "definition": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) 是一项完全托管的 Apache Kafka 服务，可让你轻松构建和运行实时流式传输应用程序。",
+    "analogy": "就像一个托管的管道系统，用于处理和传输大量实时数据流。",
+    "features": [
+      "完全托管",
+      "Kafka 兼容",
+      "高可用性",
+      "安全性"
+    ]
+  },
+  "Amazon Machine Image": {
+    "definition": "Amazon Machine Image (AMI) 是一种预先配置的虚拟机镜像，用于在 Amazon EC2 上启动实例。",
+    "analogy": "就像一个模板，用来创建你的虚拟服务器的蓝图。",
+    "features": [
+      "启动实例的模板",
+      "包含操作系统和配置",
+      "可定制",
+      "存储在 Amazon S3"
+    ]
+  },
+  "Amazon Machine Image (AMI)": {
+    "definition": "Amazon Machine Image (AMI) 是一种预配置的虚拟机镜像，用于在 Amazon EC2 上启动实例。",
+    "analogy": "就像一个模板，用来创建你的虚拟服务器的蓝图。",
+    "features": [
+      "启动实例的模板",
+      "包含操作系统和配置",
+      "可定制",
+      "存储在 Amazon S3"
+    ]
+  },
+  "Amazon Machine Images": {
+    "definition": "Amazon Machine Images (AMIs) 是用于在 Amazon EC2 上启动实例的预配置虚拟机镜像。",
+    "analogy": "就像一系列不同类型的建筑图纸，可以用来建造各种不同的建筑物（EC2 实例）。",
+    "features": [
+      "启动实例的模板",
+      "包含操作系统和配置",
+      "可定制",
+      "存储在 Amazon S3"
+    ]
+  },
+  "Amazon Machine Images (AMIs)": {
+    "definition": "Amazon Machine Images (AMIs) 是用于在 Amazon EC2 上启动实例的预配置虚拟机镜像。",
+    "analogy": "就像一系列不同类型的建筑图纸，可以用来建造各种不同的建筑物（EC2 实例）。",
+    "features": [
+      "启动实例的模板",
+      "包含操作系统和配置",
+      "可定制",
+      "存储在 Amazon S3"
+    ]
+  },
+  "Amazon OpenSearch Service (Amazon Elasticsearch Service)": {
+    "definition": "Amazon OpenSearch Service 是一项托管服务，用于运行、扩展和管理 OpenSearch 集群。",
+    "analogy": "像一个强大的搜索引擎，可以快速搜索和分析大量的文本数据。",
+    "features": [
+      "完全托管",
+      "可扩展性",
+      "搜索与分析",
+      "数据可视化"
+    ]
+  },
+  "Amazon QLDB": {
+    "definition": "Amazon QLDB (Quantum Ledger Database) 是一种完全托管的账本数据库，用于提供透明、不可变且加密验证的交易历史记录。",
+    "analogy": "就像一个安全、不可篡改的账本，记录所有交易的细节。",
+    "features": [
+      "不可变性",
+      "审计追踪",
+      "加密验证",
+      "完全托管"
+    ]
+  },
+  "Amazon RDS Custom for Oracle": {
+    "definition": "Amazon RDS Custom for Oracle 允许你访问底层数据库服务器，并自定义数据库环境，适用于对数据库配置有特殊要求的场景。",
+    "analogy": "像是为你量身定制的数据库，你可以完全控制它的设置。",
+    "features": [
+      "自定义数据库配置",
+      "数据库实例访问",
+      "Oracle 数据库",
+      "支持特定需求"
+    ]
+  },
+  "Amazon RDS MySQL": {
+    "definition": "Amazon RDS MySQL 是一项托管的 MySQL 数据库服务，简化了 MySQL 数据库的设置、操作和扩展。",
+    "analogy": "像一个托管的 MySQL 数据库，AWS 帮你处理日常维护。",
+    "features": [
+      "托管数据库",
+      "MySQL 兼容",
+      "可扩展性",
+      "高可用性"
+    ]
+  },
+  "Amazon RDS for MySQL": {
+    "definition": "Amazon RDS for MySQL 是一项托管的 MySQL 数据库服务，简化了 MySQL 数据库的设置、操作和扩展。",
+    "analogy": "像一个托管的 MySQL 数据库，AWS 帮你处理日常维护。",
+    "features": [
+      "托管数据库",
+      "MySQL 兼容",
+      "可扩展性",
+      "高可用性"
+    ]
+  },
+  "Amazon Redshift Serverless": {
+    "definition": "Amazon Redshift Serverless 允许你运行和扩展数据仓库，而无需管理基础设施。",
+    "analogy": "像一个即用即付的数据仓库，你只需专注于数据分析，而无需担心服务器管理。",
+    "features": [
+      "无服务器",
+      "数据仓库",
+      "按需扩展",
+      "高性能"
+    ]
+  },
+  "Amazon Redshift Spectrum": {
+    "definition": "Amazon Redshift Spectrum 允许你直接查询存储在 Amazon S3 中的数据，而无需将数据加载到 Redshift 集群中。",
+    "analogy": "就像一个数据分析的桥梁，可以直接读取 S3 上的数据，进行分析。",
+    "features": [
+      "直接查询 S3 数据",
+      "无需加载数据",
+      "数据湖分析",
+      "Redshift 集成"
+    ]
+  },
+  "Amazon S3 File Gateway": {
+    "definition": "Amazon S3 File Gateway 是一种混合云存储服务，将本地文件共享连接到 Amazon S3。它使您可以使用标准文件协议（如 SMB 和 NFS）访问 S3 存储桶中的数据。",
+    "analogy": "就像您家里的网络硬盘，可以访问云端的存储，但感觉就像本地文件一样。",
+    "features": [
+      "本地缓存",
+      "支持 SMB 和 NFS 协议",
+      "与 S3 无缝集成"
+    ]
+  },
+  "Amazon S3 Glacier Deep Archive": {
+    "definition": "Amazon S3 Glacier Deep Archive 是 Amazon S3 存储类，提供最便宜的长期数据存档存储。适用于不经常访问的数据。",
+    "analogy": "就像图书馆的古籍书库，虽然内容重要，但很少用到，所以存储成本最低。",
+    "features": [
+      "最低存储成本",
+      "检索时间较长（12 小时内）",
+      "适用于长期存档"
+    ]
+  },
+  "Amazon S3 Glacier Flexible Retrieval": {
+    "definition": "Amazon S3 Glacier Flexible Retrieval (以前称为 S3 Glacier) 是一个低成本的云存储服务，用于数据存档。支持多种检索选项。",
+    "analogy": "就像邮局的包裹寄存服务，您可以在需要时取回包裹，费用较低，但需要等待一定时间。",
+    "features": [
+      "低成本",
+      "标准、批量和加速检索选项",
+      "适合不经常访问的存档数据"
+    ]
+  },
+  "Amazon S3 Glacier Instant Retrieval": {
+    "definition": "Amazon S3 Glacier Instant Retrieval 是一个 S3 存储类，提供快速数据检索，同时保持较低的存储成本，适用于需要快速访问的存档数据。",
+    "analogy": "就像您购买了紧急文件，随时可以从存档中快速取回。",
+    "features": [
+      "快速检索（毫秒级）",
+      "低存储成本",
+      "适用于需要快速访问的存档数据"
+    ]
+  },
+  "Amazon S3 网站终端节点": {
+    "definition": "Amazon S3 网站终端节点允许您将 Amazon S3 存储桶配置为托管静态网站，用户可以通过访问特定 URL 来访问您的网站内容。",
+    "analogy": "就像租用了一个服务器空间，您可以在那里放置网站的静态文件，让人们访问。",
+    "features": [
+      "托管静态网站",
+      "简单配置",
+      "通过 HTTP 访问"
+    ]
+  },
+  "Amazon Simple Notification Service (Amazon SNS)": {
+    "definition": "Amazon SNS 是一种 Web 服务，用于发布和订阅消息。它允许应用程序发送消息给订阅者或其它应用程序。",
+    "analogy": "就像一个信息广播站，将消息同时发送给多个订阅者。",
+    "features": [
+      "发布/订阅消息",
+      "支持多种协议（例如 HTTP, SMS, email）",
+      "高可用性"
+    ]
+  },
+  "Amazon Simple Queue Service (Amazon SQS)": {
+    "definition": "Amazon SQS 是一种完全托管的消息队列服务。它允许不同组件之间异步通信。",
+    "analogy": "就像一个排队系统，应用程序将任务放入队列，然后由工作者异步处理。",
+    "features": [
+      "异步消息队列",
+      "解耦应用程序",
+      "高可用性和持久性"
+    ]
+  },
+  "Amazon Transcribe Medical": {
+    "definition": "Amazon Transcribe Medical 是一种语音转文本服务，专门用于医疗保健领域，可以转录医疗录音。",
+    "analogy": "就像一个智能医生助理，可以将医患对话自动转录成文字记录。",
+    "features": [
+      "医疗领域专用",
+      "高准确率",
+      "支持多种音频格式"
+    ]
+  },
+  "Amazon VPC": {
+    "definition": "Amazon VPC (Virtual Private Cloud) 允许您在 AWS 云中创建一个隔离的网络，您可以完全控制该网络。",
+    "analogy": "就像您在云中建立了自己的私有网络，您可以自由地配置网络环境。",
+    "features": [
+      "隔离网络",
+      "自定义 IP 地址范围",
+      "控制网络访问"
+    ]
+  },
+  "Amplify": {
+    "definition": "AWS Amplify 是一个前端和移动应用程序开发平台，简化了构建和部署云支持的应用程序。",
+    "analogy": "就像一个万能工具箱，可以帮助您快速构建和部署云支持的移动和 Web 应用程序。",
+    "features": [
+      "简化前端开发",
+      "后端服务集成",
+      "快速部署"
+    ]
+  },
+  "Amplify Hosting": {
+    "definition": "Amplify Hosting 是 AWS Amplify 的一部分，用于快速部署和托管 Web 应用程序。",
+    "analogy": "就像您使用 Amplify 构建完网站后，Amplify Hosting 帮助您轻松地发布到互联网上。",
+    "features": [
+      "快速部署",
+      "自动构建和部署",
+      "全球 CDN"
+    ]
+  },
+  "Apache Parquet": {
+    "definition": "Apache Parquet 是一种列式存储文件格式，优化了在 Hadoop 等大数据系统中的读取性能。",
+    "analogy": "就像专门为数据仓库设计的存储格式，可以加快数据分析的速度。",
+    "features": [
+      "列式存储",
+      "压缩",
+      "适合大数据分析"
+    ]
+  },
+  "Apache Spark SQL": {
+    "definition": "Apache Spark SQL 是 Spark 框架的一部分，用于处理结构化数据。它支持使用 SQL 查询数据。",
+    "analogy": "就像您使用 SQL 语言查询 Spark 中的数据，非常方便。",
+    "features": [
+      "SQL 支持",
+      "结构化数据处理",
+      "与 Spark 框架集成"
+    ]
+  },
+  "Apache SparkSQL": {
+    "definition": "Apache SparkSQL 是 Apache Spark 提供的用于处理结构化数据的模块，提供 SQL 查询接口。",
+    "analogy": "同 Apache Spark SQL",
+    "features": [
+      "SQL 查询",
+      "结构化数据分析",
+      "集成 Spark 生态系统"
+    ]
+  },
+  "AppFlow": {
+    "definition": "Amazon AppFlow 是一种完全托管的服务，用于在 AWS 和 SaaS 应用程序之间安全地交换数据。",
+    "analogy": "就像一个数据管道工，可以安全地将数据从各种 SaaS 应用传输到 AWS 服务。",
+    "features": [
+      "数据集成",
+      "数据转换",
+      "安全的数据传输"
+    ]
+  },
+  "Application Auto Scaling": {
+    "definition": "AWS 服务，根据定义的指标自动调整应用程序资源的数量，以应对流量变化，确保应用程序的可用性和性能。",
+    "analogy": "就像一个自动调节水龙头，根据用水量自动调整出水量。",
+    "features": [
+      "支持多种 AWS 服务",
+      "基于 CloudWatch 指标",
+      "预测性扩展",
+      "自动伸缩策略"
+    ]
+  },
+  "Application Load Balancer (ALB)": {
+    "definition": "一种负载均衡器，用于在多个目标（如 EC2 实例、容器）之间分配 HTTP 和 HTTPS 流量，并提供高级请求路由功能。",
+    "analogy": "就像一个智能分流器，根据内容将邮件分发到不同收件人的邮箱。",
+    "features": [
+      "支持 HTTP/2 和 WebSocket",
+      "基于内容的路由",
+      "集成 AWS WAF",
+      "高可用性"
+    ]
+  },
+  "Application Manager": {
+    "definition": "用于管理和部署应用程序的服务，提供用于管理应用程序资源的工具。",
+    "analogy": "",
+    "features": [
+      "可用于管理服务",
+      "包括 CloudFormation",
+      "可以部署更新"
+    ]
+  },
+  "Architecture": {
+    "definition": "系统或应用程序的设计和组织结构，包括组件、它们之间的关系以及它们如何协作以满足需求。",
+    "analogy": "就像建筑蓝图，规划了房屋的结构和功能。",
+    "features": [
+      "定义组件",
+      "定义组件关系",
+      "考虑可扩展性",
+      "考虑安全性"
+    ]
+  },
+  "AssumeRole": {
+    "definition": "IAM 中的一项操作，允许一个 IAM 实体（用户或角色）临时获取另一个角色的权限。",
+    "analogy": "就像借用别人的钥匙，暂时拥有访问特定房间的权限。",
+    "features": [
+      "跨账户访问",
+      "权限委托",
+      "提升权限",
+      "无需长期访问密钥"
+    ]
+  },
+  "Athena DynamoDB Connector": {
+    "definition": "允许 Amazon Athena 查询存储在 Amazon DynamoDB 中的数据的连接器。",
+    "analogy": "就像一个翻译器，让 Athena 能够理解和查询 DynamoDB 的数据。",
+    "features": [
+      "无需预先加载数据",
+      "支持 SQL 查询",
+      "按需查询",
+      "简化数据分析"
+    ]
+  },
+  "Audit Manager": {
+    "definition": "AWS 服务，帮助用户持续审计 AWS 资源的使用情况，以满足合规性要求。",
+    "analogy": "就像一个审计员，检查你的财务记录是否符合法规。",
+    "features": [
+      "自动化证据收集",
+      "自定义控制",
+      "生成审计报告",
+      "支持多种合规框架"
+    ]
+  },
+  "Aurora Clone": {
+    "definition": "Amazon Aurora 数据库的一个功能，允许快速复制数据库，用于开发、测试和灾难恢复。",
+    "analogy": "就像快速复制一份文件，用于不同的用途。",
+    "features": [
+      "快速复制",
+      "减少存储成本",
+      "独立使用克隆",
+      "零停机克隆"
+    ]
+  },
+  "Aurora I/O-Optimized": {
+    "definition": "Amazon Aurora 数据库的一个配置选项，旨在通过优化 I/O 性能来降低成本。",
+    "analogy": "就像为你的车选择了更省油的配置，在保证性能的同时减少了开销。",
+    "features": [
+      "降低 I/O 成本",
+      "优化数据库性能",
+      "适用于 I/O 密集型工作负载",
+      "与现有 Aurora 实例兼容"
+    ]
+  },
+  "Aurora Replicas": {
+    "definition": "Amazon Aurora 数据库的只读副本，用于提高读取性能和可用性。",
+    "analogy": "就像多个图书馆，提供同一本书的副本，减轻了单个图书馆的压力。",
+    "features": [
+      "提高读取性能",
+      "增强可用性",
+      "故障转移",
+      "自动故障检测"
+    ]
+  },
+  "Aurora 全局数据库": {
+    "definition": "Amazon Aurora 数据库的一项功能，允许将一个 Aurora 数据库集群的数据复制到全球多个 AWS 区域，实现全球低延迟读取。",
+    "analogy": "就像建立全球连锁店，每个店都有库存，服务于当地客户。",
+    "features": [
+      "全球低延迟读取",
+      "灾难恢复",
+      "快速数据库克隆",
+      "跨区域数据同步"
+    ]
+  },
+  "Authentication": {
+    "definition": "验证用户或系统身份的过程，确保用户是其所声称的身份。",
+    "analogy": "就像出示身份证，证明你的身份。",
+    "features": [
+      "验证身份",
+      "密码、多因素身份验证",
+      "单点登录",
+      "控制访问"
+    ]
+  },
+  "Authorization": {
+    "definition": "确定经过身份验证的用户或系统是否有权访问特定资源或执行特定操作的过程。",
+    "analogy": "就像获得钥匙，授权你进入特定的房间。",
+    "features": [
+      "访问控制",
+      "权限管理",
+      "基于角色的访问控制",
+      "细粒度控制"
+    ]
+  },
+  "Automatic rotation": {
+    "definition": "定期自动更新密钥、密码或证书的过程，以提高安全性。",
+    "analogy": "就像定期更换锁芯，防止未授权访问。",
+    "features": [
+      "密钥轮换",
+      "增强安全性",
+      "减少安全风险",
+      "自动化流程"
+    ]
+  },
+  "BYOL": {
+    "definition": "Bring Your Own License，自带许可证，指在 AWS 上使用您已拥有的软件许可证。",
+    "analogy": "就像自带食材去餐厅，厨师为你烹饪。",
+    "features": [
+      "节省成本",
+      "满足特定许可证要求",
+      "迁移现有许可证",
+      "完全控制软件"
+    ]
+  },
+  "Babelfish": {
+    "definition": "Amazon RDS 的一个翻译层，允许对 Aurora PostgreSQL 使用 MariaDB 协议，使得使用 MariaDB 客户端和工具连接到 Aurora PostgreSQL 成为可能。",
+    "analogy": "就像一个翻译器，让你可以用不同的语言与数据库交流。",
+    "features": [
+      "兼容 MariaDB 协议",
+      "用于 Aurora PostgreSQL",
+      "简化数据库迁移"
+    ]
+  },
+  "Backup Vault Lock": {
+    "definition": "AWS Backup 中的一个特性，允许你配置备份保险库，以防止删除或修改备份，从而帮助保护数据免受意外删除或恶意攻击。",
+    "analogy": "就像保险柜的密码锁定，只有拥有正确权限的人才能解锁。",
+    "features": [
+      "数据不可变性",
+      "防止意外删除",
+      "保护备份数据"
+    ]
+  },
+  "Backup plan": {
+    "definition": "AWS Backup 中用于定义备份策略的模板，包括备份频率、保留期和目标保险库等，帮助你自动化备份流程。",
+    "analogy": "就像为你的重要文件设置的备份时间表。",
+    "features": [
+      "定义备份频率",
+      "设置数据保留期",
+      "指定备份目标"
+    ]
+  },
+  "Bastion Host": {
+    "definition": "一种安全管理实例，用作访问私有子网中实例的跳板机，提供对私有实例的安全 SSH 或 RDP 访问。",
+    "analogy": "就像通往城堡的桥梁，经过严格的检查后才能进入。",
+    "features": [
+      "SSH/RDP 访问",
+      "位于公有子网",
+      "安全访问私有实例"
+    ]
+  },
+  "BatchGetSecretValue API": {
+    "definition": "AWS Secrets Manager 的 API 操作，允许你一次检索多个 Secret 的值，提高效率。",
+    "analogy": "就像一次性从多个抽屉里取出你需要的钥匙。",
+    "features": [
+      "批量检索 Secret 值",
+      "提高效率",
+      "减少 API 调用次数"
+    ]
+  },
+  "Billing": {
+    "definition": "AWS 服务的计费过程，包括成本的计算、账单的生成和支付。",
+    "analogy": "就像你使用水电煤气服务后的账单。",
+    "features": [
+      "成本计算",
+      "账单生成",
+      "支付管理"
+    ]
+  },
+  "Billing and Cost Management": {
+    "definition": "AWS 提供的服务，用于管理和监控你的 AWS 费用，包括查看账单、设置预算和分析成本。",
+    "analogy": "就像你的财务管理工具，帮助你追踪支出和预算。",
+    "features": [
+      "查看账单",
+      "设置预算",
+      "成本分析"
+    ]
+  },
+  "Budgets": {
+    "definition": "AWS Billing and Cost Management 的一个功能，允许你设置自定义预算，并在超过预算时收到通知。",
+    "analogy": "就像设置消费上限，防止超支。",
+    "features": [
+      "设置预算",
+      "预算超支预警",
+      "成本控制"
+    ]
+  },
+  "C 系列实例": {
+    "definition": "Amazon EC2 提供的计算优化型实例，适用于计算密集型工作负载，如高性能计算、批处理工作负载等。",
+    "analogy": "就像专为跑步设计的跑鞋，专注于高性能。",
+    "features": [
+      "计算优化",
+      "适用于 HPC",
+      "批处理工作负载"
+    ]
+  },
+  "CAPEX": {
+    "definition": "资本支出，是指用于购买、升级和维护固定资产（如服务器、数据中心）的费用。",
+    "analogy": "就像购买房屋的费用，一次性支出。",
+    "features": [
+      "固定资产投入",
+      "一次性支出",
+      "长期投资"
+    ]
+  },
+  "CMK": {
+    "definition": "Customer Managed Key，指由客户在 AWS Key Management Service (KMS) 中创建和管理的加密密钥。",
+    "analogy": "就像你自己的私人保险柜钥匙，用于保护你的数据。",
+    "features": [
+      "客户管理密钥",
+      "加密",
+      "AWS KMS"
+    ]
+  },
+  "CMS": {
+    "definition": "内容管理系统，用于管理和发布网站内容，例如 WordPress 或 Drupal。",
+    "analogy": "就像一个数字图书馆，管理你的网站内容。",
+    "features": [
+      "内容管理",
+      "网站发布",
+      "例如 WordPress"
+    ]
+  },
+  "CNAME": {
+    "definition": "Canonical Name，DNS 记录类型，用于将一个域名指向另一个域名。",
+    "analogy": "就像一个别名，一个指向另一个名字的昵称。",
+    "features": [
+      "域名指向",
+      "DNS 记录",
+      "别名"
+    ]
+  },
+  "CNI": {
+    "definition": "Container Network Interface，容器网络接口，用于在容器化环境中配置网络连接。",
+    "analogy": "就像容器的网线，让容器可以连接到网络。",
+    "features": [
+      "容器网络配置",
+      "Kubernetes",
+      "Docker"
+    ]
+  },
+  "COTS": {
+    "definition": "商用现货，指预先构建的、可供购买和使用的软件或硬件产品。",
+    "analogy": "就像直接从商店购买的现成产品。",
+    "features": [
+      "现成产品",
+      "预先构建",
+      "快速部署"
+    ]
+  },
+  "CPU Utilization": {
+    "definition": "CPU 利用率衡量了中央处理器（CPU）在给定时间内的工作负载。它是衡量 CPU 处理能力被使用的程度的指标。",
+    "analogy": "就像你在学习时，用脑力进行思考的程度。",
+    "features": [
+      "百分比表示",
+      "影响性能",
+      "监控指标"
+    ]
+  },
+  "CPU utilization": {
+    "definition": "同“CPU 利用率”。衡量 CPU 处理能力被使用的程度，以百分比表示。",
+    "analogy": "",
+    "features": [
+      "同“CPU 利用率”"
+    ]
+  },
+  "CPU 利用率": {
+    "definition": "CPU 的使用率，衡量 CPU 执行任务的繁忙程度。",
+    "analogy": "就像工厂里机器的运转率，越高表示机器越忙。",
+    "features": [
+      "衡量 CPU 负载",
+      "百分比",
+      "重要性能指标"
+    ]
+  },
+  "CSE-Custom": {
+    "definition": "客户端自定义加密，允许用户使用他们自己的加密密钥在客户端加密数据，然后上传到 Amazon S3。",
+    "analogy": "自己用一把锁锁上你的包裹，然后邮寄出去。",
+    "features": [
+      "客户管理密钥",
+      "客户端加密",
+      "支持自定义算法"
+    ]
+  },
+  "CSE-KMS": {
+    "definition": "客户端使用 AWS Key Management Service (KMS) 管理的密钥对数据进行加密，然后上传到 Amazon S3。",
+    "analogy": "用银行保管的钥匙锁上你的保险箱。",
+    "features": [
+      "使用 KMS 密钥",
+      "客户端加密",
+      "简化密钥管理"
+    ]
+  },
+  "CSI": {
+    "definition": "容器存储接口，是云原生计算基金会（CNCF）的一部分，定义了容器编排系统（如 Kubernetes）与存储系统之间的标准接口。",
+    "analogy": "将货运卡车的标准接口，统一到不同的集装箱码头。",
+    "features": [
+      "存储接口",
+      "Kubernetes 集成",
+      "标准化"
+    ]
+  },
+  "CSS": {
+    "definition": "层叠样式表 (CSS) 是一种样式表语言，用于描述 HTML 或 XML（包括 SVG、XHTML）文档的呈现。",
+    "analogy": "网页的装饰和排版规则，定义了网页的外观。",
+    "features": [
+      "样式定义",
+      "网页外观",
+      "与 HTML 配合"
+    ]
+  },
+  "CUR": {
+    "definition": "AWS 成本和使用情况报告 (CUR) 包含有关您 AWS 账户的最详细的信息，包括使用情况、成本和配置数据。",
+    "analogy": "就像一份详细的账单，告诉你每个月你的水电煤费用明细。",
+    "features": [
+      "详细成本信息",
+      "账单数据",
+      "可定制"
+    ]
+  },
+  "Cache": {
+    "definition": "缓存是一种存储常用数据的技术，以便将来快速访问。例如，用于加速网站和应用程序。",
+    "analogy": "就像图书馆的参考书，放在容易拿取的地方，方便经常查找。",
+    "features": [
+      "存储常用数据",
+      "提高访问速度",
+      "减少延迟"
+    ]
+  },
+  "CacheControl": {
+    "definition": "HTTP 响应标头，用于指定如何缓存 HTTP 响应。它控制着浏览器和代理服务器等缓存的行为。",
+    "analogy": "就像告诉快递员，你的包裹可以放多久再扔掉。",
+    "features": [
+      "HTTP 标头",
+      "缓存行为控制",
+      "浏览器和代理缓存"
+    ]
+  },
+  "CachingDisabled": {
+    "definition": "禁用缓存是指关闭数据缓存功能，数据每次都需要从原始来源重新获取。",
+    "analogy": "就像每次都要重新从图书馆借书，而不是保留在你的书桌上。",
+    "features": [
+      "关闭缓存",
+      "每次重新获取数据",
+      "降低性能"
+    ]
+  },
+  "CapacityReservation": {
+    "definition": "容量预留允许您在特定可用区中为 Amazon EC2 实例预留容量。这可以帮助您确保在需要时拥有所需的计算能力。",
+    "analogy": "就像提前预定演唱会的门票，确保你能在特定的时间进入会场。",
+    "features": [
+      "预留 EC2 容量",
+      "特定可用区",
+      "保证计算能力"
+    ]
+  },
+  "Certificate": {
+    "definition": "数字证书用于验证网站或服务的身份。它们包含有关证书颁发机构、网站所有者和其他重要信息。",
+    "analogy": "就像你的身份证，证明你的身份。",
+    "features": [
+      "身份验证",
+      "SSL/TLS",
+      "加密"
+    ]
+  },
+  "Clickstream data": {
+    "definition": "点击流数据是指用户在网站或应用程序中的交互信息，包括点击、浏览页面和购买等行为数据。",
+    "analogy": "用户在网站上的足迹，记录了用户在网站上的活动。",
+    "features": [
+      "用户行为数据",
+      "网站分析",
+      "营销和优化"
+    ]
+  },
+  "Client-Side Encryption": {
+    "definition": "客户端加密是指在将数据上传到云存储（如 Amazon S3）之前，在客户端进行加密。",
+    "analogy": "在寄信之前，先用密码锁上你的信件，确保只有收件人才能打开。",
+    "features": [
+      "客户端加密",
+      "保护数据安全",
+      "Amazon S3"
+    ]
+  },
+  "CloudFront Field-Level Encryption": {
+    "definition": "CloudFront 的一项安全特性，允许您在 CloudFront 边缘位置加密敏感数据字段，以便在传输过程中保护这些数据。",
+    "analogy": "就像为包裹内的特定物品（如身份证）单独加密一样。",
+    "features": [
+      "对敏感数据字段进行加密",
+      "在边缘位置执行加密",
+      "增强数据安全"
+    ]
+  },
+  "CloudFront Functions": {
+    "definition": "CloudFront 的无服务器计算功能，允许您在 CloudFront 边缘位置执行轻量级的 JavaScript 函数，从而自定义 HTTP 请求和响应。",
+    "analogy": "就像在快递分发中心为每个包裹添加定制化的标签一样。",
+    "features": [
+      "轻量级 JavaScript 函数",
+      "边缘位置执行",
+      "自定义 HTTP 请求/响应",
+      "低延迟"
+    ]
+  },
+  "CloudFront Origin Access Identity (OAI)": {
+    "definition": "CloudFront 的一个特性，用于限制用户直接访问您的 Amazon S3 存储桶，确保用户只能通过 CloudFront 访问您的内容。",
+    "analogy": "就像只允许通过你的门禁卡才能进入你的房子。",
+    "features": [
+      "限制直接访问 S3",
+      "确保通过 CloudFront 访问内容",
+      "增强 S3 内容的安全性"
+    ]
+  },
+  "CloudFront Signed Cookies": {
+    "definition": "CloudFront 的一个功能，用于限制对您内容的访问，通过设置加密的 cookie，允许用户访问特定的内容，即使他们没有通过其他安全措施进行验证。",
+    "analogy": "就像是VIP通行证，拥有此通行证的人才能进入专属区域。",
+    "features": [
+      "使用加密 Cookie 进行访问控制",
+      "适用于多个文件",
+      "更灵活的访问控制方式"
+    ]
+  },
+  "CloudFront Signed URLs": {
+    "definition": "CloudFront 的一个功能，用于限制对您内容的访问，通过生成包含特定到期时间和 URL 的加密 URL，允许用户在特定时间内访问内容。",
+    "analogy": "就像电影票，在规定的时间和地点才能观看。",
+    "features": [
+      "使用加密 URL 进行访问控制",
+      "针对单个文件",
+      "受时间限制的访问"
+    ]
+  },
+  "CloudFront logs": {
+    "definition": "CloudFront 提供的日志，记录了您的 CDN 请求，包括详细信息，例如请求时间、客户端 IP 地址、HTTP 状态代码等。",
+    "analogy": "就像快递记录，记录了每个包裹的配送详情。",
+    "features": [
+      "详细的请求记录",
+      "用于监控和故障排除",
+      "提供访问数据分析"
+    ]
+  },
+  "CloudFront 签名 URL": {
+    "definition": "同 CloudFront Signed URLs",
+    "analogy": "",
+    "features": []
+  },
+  "CloudHSM": {
+    "definition": "AWS 的硬件安全模块服务，用于生成、存储和管理加密密钥，保护敏感数据。",
+    "analogy": "就像银行的金库，用于存储贵重的物品。",
+    "features": [
+      "硬件安全模块",
+      "密钥管理",
+      "保护敏感数据",
+      "满足合规性要求"
+    ]
+  },
+  "CloudWatch Alarm": {
+    "definition": "Amazon CloudWatch 的一个特性，用于监控指标，当指标超出预定阈值时触发通知或执行操作。",
+    "analogy": "就像你手机的电量报警，当电量低时提醒你充电。",
+    "features": [
+      "监控指标",
+      "阈值触发",
+      "触发通知",
+      "自动化操作"
+    ]
+  },
+  "CloudWatch Logs Insights": {
+    "definition": "Amazon CloudWatch Logs 的一个功能，允许您使用查询分析日志数据，进行故障排除、性能监控等。",
+    "analogy": "就像一个搜索引擎，让你快速找到日志中你想要的信息。",
+    "features": [
+      "日志数据查询",
+      "分析日志数据",
+      "故障排除",
+      "性能监控"
+    ]
+  },
+  "CloudWatch Logs subscription": {
+    "definition": "允许您将 CloudWatch Logs 中的日志数据实时传输到其他 AWS 服务，例如 Lambda 函数或 Kinesis Data Streams。",
+    "analogy": "就像订阅新闻，将信息自动推送到你的邮箱。",
+    "features": [
+      "实时日志数据传输",
+      "与其他服务集成",
+      "用于数据处理和分析"
+    ]
+  },
+  "CloudWatch Metrics": {
+    "definition": "Amazon CloudWatch 提供的指标，用于监控您的 AWS 资源和应用程序的性能。",
+    "analogy": "就像你身体的各项健康指标，如体温、心率等。",
+    "features": [
+      "监控资源性能",
+      "实时数据",
+      "可用于报警和可视化"
+    ]
+  },
+  "CloudWatchReadOnlyAccess": {
+    "definition": "一个 AWS IAM 托管策略，授予对 CloudWatch 服务的只读访问权限。",
+    "analogy": "就像一个游客证，只允许你查看展览，不能更改任何东西。",
+    "features": [
+      "只读访问",
+      "监控指标",
+      "查看日志",
+      "保护数据安全"
+    ]
+  },
+  "Cognito Identity Pools": {
+    "definition": "Amazon Cognito 的一项功能，用于授予用户对 AWS 资源的临时访问权限，支持身份验证和授权。",
+    "analogy": "就像一个通行证，允许你访问特定的 AWS 资源。",
+    "features": [
+      "身份验证",
+      "授权",
+      "临时访问权限",
+      "支持多种身份提供商"
+    ]
+  },
+  "Cognito User Pools": {
+    "definition": "Amazon Cognito 的一项功能，用于管理用户注册、登录和用户配置文件。",
+    "analogy": "就像一个会员管理系统，管理你的用户账号。",
+    "features": [
+      "用户注册",
+      "用户登录",
+      "用户管理",
+      "安全的用户目录"
+    ]
+  },
+  "Composite Alarm": {
+    "definition": "监控多个 CloudWatch 告警并根据其状态组合触发告警，简化复杂监控场景的告警管理。 多个告警的逻辑组合，例如AND, OR, NOT。",
+    "analogy": "相当于一个班级里的班长，负责综合各个科代表的报告，判断班级整体情况。",
+    "features": [
+      "基于多个告警状态",
+      "支持逻辑组合",
+      "简化告警管理",
+      "减少告警噪音"
+    ]
+  },
+  "Comprehend": {
+    "definition": "Amazon Comprehend 是一项使用自然语言处理 (NLP) 来理解文本内容的托管服务，可分析文本中的情感、关键短语、实体等。",
+    "analogy": "就像一个智能阅读助理，帮你快速理解文章的情感和重点。",
+    "features": [
+      "情感分析",
+      "实体识别",
+      "主题建模",
+      "关键短语提取"
+    ]
+  },
+  "Compute Optimizer": {
+    "definition": "使用机器学习分析您的计算资源，例如 EC2 实例，并提供优化建议，帮助您降低成本和提高性能。",
+    "analogy": "就像一个健身教练，根据你的身体状况（EC2 实例）给出优化建议。",
+    "features": [
+      "资源利用率分析",
+      "性能瓶颈识别",
+      "成本优化建议",
+      "EC2 实例大小调整建议"
+    ]
+  },
+  "Compute Savings Plan": {
+    "definition": "一种灵活的定价模式，可在您承诺使用量时为您提供 Amazon EC2、AWS Lambda 和 Amazon Fargate 的折扣，以换取承诺的持续使用量。",
+    "analogy": "就像购买电话套餐，预付费用的越多，每分钟通话费用越便宜。",
+    "features": [
+      "灵活的使用期限",
+      "自动应用到符合条件的用量",
+      "最高可节省高达 72% 的费用",
+      "涵盖 EC2, Lambda, Fargate"
+    ]
+  },
+  "Concurrency": {
+    "definition": "在同一时间段内，Lambda 函数处理请求的数量限制。 控制 Lambda 函数的并发执行数量，避免资源耗尽。",
+    "analogy": "就像一个停车场，限制同时进入的车辆数量，避免交通拥堵。",
+    "features": [
+      "Lambda 函数并发执行",
+      "避免资源耗尽",
+      "可配置的最大并发",
+      "影响函数性能"
+    ]
+  },
+  "Config": {
+    "definition": "AWS Config 是一项服务，可让您评估、审核和评估 AWS 资源的配置。跟踪资源配置变更并支持合规性审计。",
+    "analogy": "就像一个审计员，记录和追踪公司所有资产的配置变更。",
+    "features": [
+      "资源配置跟踪",
+      "配置变更历史",
+      "合规性评估",
+      "支持自定义规则"
+    ]
+  },
+  "Connect": {
+    "definition": "Amazon Connect 是一种云联络中心服务，可以帮助企业快速构建和管理客户服务。",
+    "analogy": "就像一个云端的电话客服中心，方便企业处理客户来电。",
+    "features": [
+      "云联络中心",
+      "语音和聊天",
+      "呼叫路由",
+      "报告和分析"
+    ]
+  },
+  "Container": {
+    "definition": "一种软件打包和运行的方式，将应用程序及其所有依赖项打包在一个独立的单元中。 可以提高应用程序的可移植性和一致性。",
+    "analogy": "就像一个集装箱，将货物（应用程序）打包在一起，方便运输。",
+    "features": [
+      "轻量级",
+      "可移植性",
+      "隔离性",
+      "资源效率"
+    ]
+  },
+  "Container Insights": {
+    "definition": "用于监控容器化应用程序（例如在 Amazon ECS、Amazon EKS 或 Kubernetes 上运行的应用程序）的服务，提供性能指标和日志。",
+    "analogy": "就像容器世界的监控雷达，帮助你了解容器的运行状况。",
+    "features": [
+      "性能指标",
+      "日志分析",
+      "ECS/EKS 监控",
+      "应用程序性能监控"
+    ]
+  },
+  "Containerization": {
+    "definition": "将应用程序及其依赖项打包到容器中的过程。 通过容器化，应用程序可以在不同的环境中一致地运行。",
+    "analogy": "就像把货物装进集装箱的过程。",
+    "features": [
+      "应用程序打包",
+      "环境一致性",
+      "可移植性",
+      "简化部署"
+    ]
+  },
+  "Control Tower": {
+    "definition": "用于设置和管理多账户 AWS 环境的服务，提供一套用于治理的蓝图，简化多账户的管理。",
+    "analogy": "就像一个云端指挥中心，统一管理多个 AWS 账户。",
+    "features": [
+      "多账户管理",
+      "账户自动化",
+      "合规性管理",
+      "安全控制"
+    ]
+  },
+  "Cookies": {
+    "definition": "存储在用户计算机上的少量数据，用于跟踪用户会话和偏好设置。",
+    "analogy": "就像网站的小贴士，帮助记住你的浏览习惯。",
+    "features": [
+      "跟踪用户会话",
+      "存储用户偏好",
+      "提高用户体验",
+      "由网站设置"
+    ]
+  },
+  "Copy Object": {
+    "definition": "Amazon S3 中的一个操作，用于将一个对象复制到另一个位置，例如不同的存储桶或不同的键。",
+    "analogy": "就像复印文件，复制一份到另一个地方。",
+    "features": [
+      "复制 S3 对象",
+      "支持不同存储桶",
+      "支持不同键名",
+      "创建对象副本"
+    ]
+  },
+  "Corporate Network": {
+    "definition": "企业内部使用的网络，通常用于连接员工的计算机和服务器。 指企业内部使用的网络环境，如办公网。",
+    "analogy": "就像一个公司内部的局域网。",
+    "features": [
+      "内部网络",
+      "连接员工设备",
+      "提供网络服务",
+      "安全性控制"
+    ]
+  },
+  "Cost Allocation Tags": {
+    "definition": "您可以将标签应用于 AWS 资源，然后使用这些标签组织和跟踪您的 AWS 成本。 通过标签来分配和管理 AWS 成本。",
+    "analogy": "就像给账单贴标签，方便知道钱花在了哪里。",
+    "features": [
+      "成本跟踪",
+      "成本分配",
+      "资源分组",
+      "提高成本透明度"
+    ]
+  },
+  "Cost Explorer": {
+    "definition": "AWS Cost Explorer 是一个用于可视化、理解和管理 AWS 成本的服务。你可以使用它来分析你的成本和使用情况。",
+    "analogy": "就像你的个人财务管理软件，帮你追踪每一笔 AWS 花费。",
+    "features": [
+      "可视化成本数据",
+      "按服务、区域等维度分析",
+      "预测未来成本",
+      "创建预算和警报"
+    ]
+  },
+  "Cost Optimization": {
+    "definition": "Cost Optimization 指的是通过各种策略和实践来降低 AWS 云环境中的成本，同时保持或提高性能和效率。",
+    "analogy": "就像优化你的出行路线，既省钱又快速到达目的地。",
+    "features": [
+      "选择合适的实例类型",
+      "使用保留实例",
+      "删除未使用的资源",
+      "利用按需实例和 Spot 实例"
+    ]
+  },
+  "Cost and Usage Report": {
+    "definition": "AWS Cost and Usage Report (CUR) 是一个包含你 AWS 账户最详细的成本和使用情况信息的报告。",
+    "analogy": "就像银行提供的详细账单，列出每一笔支出和收入。",
+    "features": [
+      "详细的成本和使用数据",
+      "可自定义报告内容",
+      "存储在 Amazon S3",
+      "支持多种数据格式"
+    ]
+  },
+  "CreateAccount": {
+    "definition": "CreateAccount API 用于以编程方式创建 AWS 账户。",
+    "analogy": "就像使用一个自动化工具创建新的社交媒体账号。",
+    "features": [
+      "程序化创建 AWS 账户",
+      "与 AWS Organizations 集成",
+      "用于自动化部署"
+    ]
+  },
+  "CreateImage API": {
+    "definition": "CreateImage API 允许你创建 Amazon Elastic Compute Cloud (EC2) 实例的 Amazon Machine Image (AMI)。",
+    "analogy": "就像拍照给你的电脑做一个快照，方便以后快速恢复。",
+    "features": [
+      "创建自定义 AMI",
+      "从运行的 EC2 实例创建",
+      "用于备份和灾难恢复",
+      "可用于自动化部署"
+    ]
+  },
+  "Cross-Account Access": {
+    "definition": "Cross-Account Access 允许你在不同的 AWS 账户之间安全地共享资源和数据。",
+    "analogy": "就像你在不同的银行账户之间转移资金。",
+    "features": [
+      "使用 IAM 角色进行访问控制",
+      "支持多种 AWS 服务",
+      "安全可靠",
+      "减少冗余资源"
+    ]
+  },
+  "Cross-Region Replication": {
+    "definition": "Cross-Region Replication (CRR) 允许你将 Amazon S3 存储桶中的对象自动复制到另一个 AWS 区域的存储桶中。",
+    "analogy": "就像将你的重要文件自动备份到异地。",
+    "features": [
+      "实现灾难恢复",
+      "降低延迟",
+      "满足合规性要求",
+      "自动复制数据"
+    ]
+  },
+  "Cross-account access": {
+    "definition": "同 Cross-Account Access。",
+    "analogy": "",
+    "features": []
+  },
+  "Cross-site scripting": {
+    "definition": "Cross-site scripting (XSS) 是一种常见的 Web 应用程序安全漏洞，攻击者通过注入恶意脚本到网站中来窃取用户数据或劫持用户会话。",
+    "analogy": "就像黑客在你的网站上偷偷放置钓鱼链接。",
+    "features": [
+      "攻击者注入恶意脚本",
+      "窃取用户数据",
+      "劫持用户会话",
+      "常见安全威胁"
+    ]
+  },
+  "Custom Domain Name": {
+    "definition": "Custom Domain Name 允许你使用自己的域名访问你的 AWS 资源，例如 Amazon CloudFront 分发或 Amazon S3 托管的网站。",
+    "analogy": "就像你租用一个门牌号，方便用户通过你的域名访问你的网站。",
+    "features": [
+      "使用自己的域名",
+      "提高品牌知名度",
+      "简化用户访问",
+      "易于配置"
+    ]
+  },
+  "Custom Endpoint": {
+    "definition": "Custom Endpoint 允许你为特定的 AWS 服务或资源配置自定义的访问点，例如使用 VPC 端点或私有 DNS。",
+    "analogy": "就像为你的网站设置一个专用的入口，方便用户访问。",
+    "features": [
+      "控制访问路径",
+      "增强安全性",
+      "提高网络性能",
+      "支持 VPC 内部访问"
+    ]
+  },
+  "Customer Gateway": {
+    "definition": "Customer Gateway 是你网络上的一个物理或软件设备，用于建立与 AWS 的 VPN 连接。",
+    "analogy": "就像你公司与 AWS 数据中心之间的安全桥梁。",
+    "features": [
+      "建立 VPN 连接",
+      "连接你的网络和 AWS",
+      "配置静态或动态路由",
+      "支持多种设备"
+    ]
+  },
+  "Customer Managed Key": {
+    "definition": "Customer Managed Key (CMK) 是由客户在 AWS Key Management Service (KMS) 中创建、管理和拥有的加密密钥。",
+    "analogy": "就像你保管自己的保险柜钥匙，用于加密和保护你的数据。",
+    "features": [
+      "客户完全控制密钥",
+      "用于加密数据",
+      "与多种 AWS 服务集成",
+      "满足合规性要求"
+    ]
+  },
+  "Customer managed keys": {
+    "definition": "同 Customer Managed Key。",
+    "analogy": "",
+    "features": []
+  },
+  "DRT": {
+    "definition": "DRT (Dedicated Regional Teams) 指的是 AWS 提供的专门团队，为特定的 AWS 服务或客户提供专业支持和解决方案。",
+    "analogy": "就像拥有一个专门的技术顾问团队，帮你解决特定问题。",
+    "features": [
+      "专业技术支持",
+      "针对特定服务",
+      "定制解决方案",
+      "帮助优化云环境"
+    ]
+  },
+  "Data Center": {
+    "definition": "数据中心，集中存放服务器、网络设备等设施的场所，用于存储、处理和分发数据。",
+    "analogy": "就像大型仓库，储存和管理各种物资。",
+    "features": [
+      "高可用性",
+      "安全性",
+      "冗余",
+      "可扩展性"
+    ]
+  },
+  "Data Encryption": {
+    "definition": "数据加密，将数据转换为不可读的密文，以保护其机密性，防止未经授权的访问。",
+    "analogy": "给你的秘密日记上锁。",
+    "features": [
+      "保护数据隐私",
+      "防止数据泄露",
+      "提高安全性",
+      "常见加密算法如 AES"
+    ]
+  },
+  "Data Filter": {
+    "definition": "数据过滤，从数据集中选择符合特定条件的数据子集，排除不需要或不相关的信息。",
+    "analogy": "筛米，把不需要的沙子和杂物筛掉。",
+    "features": [
+      "数据清洗",
+      "提高分析效率",
+      "减少存储空间",
+      "基于规则或条件"
+    ]
+  },
+  "Data Migration": {
+    "definition": "数据迁移，将数据从一个存储系统或数据库移动到另一个，可能涉及数据格式转换。",
+    "analogy": "搬家，把你的东西从旧房子搬到新房子。",
+    "features": [
+      "系统升级",
+      "数据整合",
+      "容量规划",
+      "减少停机时间"
+    ]
+  },
+  "Data Transfer": {
+    "definition": "数据传输，通过网络或其他媒介在不同设备或系统之间移动数据。",
+    "analogy": "邮递员送信，把信件从邮局送到收件人的手中。",
+    "features": [
+      "网络传输",
+      "文件传输",
+      "数据流",
+      "安全传输协议"
+    ]
+  },
+  "Data lake": {
+    "definition": "数据湖，集中存储各种格式的原始数据，为后续分析和处理提供灵活的数据源。",
+    "analogy": "一个巨大的湖泊，汇聚了来自不同河流的各种水，你可以从中提取你需要的水。",
+    "features": [
+      "存储原始数据",
+      "支持多种数据格式",
+      "可扩展性",
+      "灵活性"
+    ]
+  },
+  "Data sharing": {
+    "definition": "数据共享，允许多个用户或应用程序访问和使用相同的数据。",
+    "analogy": "图书馆，大家可以共享书籍。",
+    "features": [
+      "促进协作",
+      "提高效率",
+      "数据一致性",
+      "权限管理"
+    ]
+  },
+  "DataBrew": {
+    "definition": "Amazon DataBrew，一款可视化数据准备服务，简化数据清洗和转换过程。",
+    "analogy": "数据厨房，帮助你将杂乱的数据变成美味的菜肴。",
+    "features": [
+      "可视化界面",
+      "无需编写代码",
+      "数据清洗",
+      "数据转换"
+    ]
+  },
+  "Database Cluster": {
+    "definition": "数据库集群，由多个数据库服务器组成的集合，共同提供数据库服务，提高可用性和性能。",
+    "analogy": "一个由多个厨师组成的团队，一起制作更美味的菜肴。",
+    "features": [
+      "高可用性",
+      "负载均衡",
+      "并行处理",
+      "故障转移"
+    ]
+  },
+  "Database Connection Pooling": {
+    "definition": "数据库连接池，复用数据库连接，避免频繁创建和关闭连接，提高性能。",
+    "analogy": "酒店的员工，随时准备接待客人，而不是每次客人都需要重新招聘。",
+    "features": [
+      "提高性能",
+      "减少资源消耗",
+      "缩短响应时间",
+      "连接复用"
+    ]
+  },
+  "Database Credentials": {
+    "definition": "数据库凭据，用于访问数据库的用户名、密码等身份验证信息。",
+    "analogy": "你的数据库通行证。",
+    "features": [
+      "用户名",
+      "密码",
+      "访问权限",
+      "安全存储"
+    ]
+  },
+  "Database Encryption": {
+    "definition": "数据库加密，对存储在数据库中的数据进行加密，以保护其机密性。",
+    "analogy": "给你的数据库上锁，防止未经授权的访问。",
+    "features": [
+      "数据保护",
+      "防止数据泄露",
+      "安全性增强",
+      "静态数据加密"
+    ]
+  },
+  "Database Instance": {
+    "definition": "数据库实例，在特定计算资源上运行的数据库引擎的运行实例。",
+    "analogy": "你的数据库的“活动副本”，准备好处理请求。",
+    "features": [
+      "计算资源",
+      "存储资源",
+      "数据库引擎",
+      "独立运行"
+    ]
+  },
+  "Database Migration": {
+    "definition": "数据库迁移，将数据库从一个环境（如旧版本、不同数据库系统）迁移到另一个。",
+    "analogy": "将你的数据库从一个房子搬到另一个房子。",
+    "features": [
+      "数据库升级",
+      "平台变更",
+      "数据转换",
+      "数据一致性"
+    ]
+  },
+  "Database Replication": {
+    "definition": "数据库复制，创建数据库的多个副本，提高可用性、可靠性和性能。",
+    "analogy": "制作数据库的多个备份，以备不时之需。",
+    "features": [
+      "高可用性",
+      "数据备份",
+      "负载均衡",
+      "数据同步"
+    ]
+  },
+  "Database Snapshot": {
+    "definition": "数据库快照是数据库在特定时间点的备份，用于数据恢复或测试。",
+    "analogy": "就像给你的文件拍一张照片，方便日后恢复。",
+    "features": [
+      "数据库时间点备份",
+      "支持恢复到特定时间点",
+      "通常用于数据安全和灾难恢复"
+    ]
+  },
+  "Database snapshot": {
+    "definition": "数据库快照是数据库在特定时间点的备份，用于数据恢复或测试。",
+    "analogy": "就像给你的文件拍一张照片，方便日后恢复。",
+    "features": [
+      "数据库时间点备份",
+      "支持恢复到特定时间点",
+      "通常用于数据安全和灾难恢复"
+    ]
+  },
+  "Dead-letter queue": {
+    "definition": "死信队列是一种存储无法被处理的消息的队列，常用于排查消息处理失败的原因。",
+    "analogy": "就像邮局的退信箱，处理不了的信件会放进去。",
+    "features": [
+      "用于存储无法被处理的消息",
+      "用于排查消息处理失败原因",
+      "通常与消息队列服务（如 Amazon SQS）一起使用"
+    ]
+  },
+  "Decryption": {
+    "definition": "解密是指将加密后的数据恢复成原始数据的过程。",
+    "analogy": "就像打开一个密码锁，把锁起来的秘密信息拿出来。",
+    "features": [
+      "将密文转换回明文",
+      "需要使用密钥",
+      "保障数据隐私和安全"
+    ]
+  },
+  "Dedicated Hosts": {
+    "definition": "独享宿主机是你在 AWS 物理服务器上的 EC2 实例，用于满足特定的合规性和安全要求。",
+    "analogy": "就像租了一栋私人别墅，完全属于你使用。",
+    "features": [
+      "物理服务器独享",
+      "满足合规性要求",
+      "提高安全性",
+      "实例类型和操作系统灵活"
+    ]
+  },
+  "Dedicated Instance": {
+    "definition": "独享实例是在 AWS 基础设施中运行的 EC2 实例，但它运行在专用的硬件上。",
+    "analogy": "就像在酒店租了一个房间，你和你的朋友使用，但硬件还是酒店的。",
+    "features": [
+      "实例运行在专用的硬件上",
+      "与共享实例相比，安全性更高",
+      "不与其他 AWS 客户共享硬件"
+    ]
+  },
+  "Dedicated Instances": {
+    "definition": "独享实例是在 AWS 基础设施中运行的 EC2 实例，但它运行在专用的硬件上。",
+    "analogy": "就像在酒店租了一个房间，你和你的朋友使用，但硬件还是酒店的。",
+    "features": [
+      "实例运行在专用的硬件上",
+      "与共享实例相比，安全性更高",
+      "不与其他 AWS 客户共享硬件"
+    ]
+  },
+  "Dedicated On-Demand Hosts": {
+    "definition": "随需应变的独享宿主机是按需租用的独享宿主机。",
+    "analogy": "就像按需租用私人别墅。",
+    "features": [
+      "按需计费",
+      "独享物理服务器",
+      "满足合规性和安全要求"
+    ]
+  },
+  "Dedicated On-Demand Instances": {
+    "definition": "随需应变的独享实例是按需运行的 EC2 实例，部署在专用的硬件上。",
+    "analogy": "就像按需租用酒店房间。",
+    "features": [
+      "按需计费",
+      "独享硬件",
+      "与其他实例隔离"
+    ]
+  },
+  "Dedicated Reserved Hosts": {
+    "definition": "预留独享宿主机是预先预留的独享宿主机，提供更低的成本。",
+    "analogy": "就像提前预订了私人别墅，可以享受折扣。",
+    "features": [
+      "预付费",
+      "成本较低",
+      "独享物理服务器",
+      "预留期限"
+    ]
+  },
+  "Dedicated Reserved Instances": {
+    "definition": "预留独享实例是预先预留的 EC2 实例，部署在专用的硬件上，提供更低的成本。",
+    "analogy": "就像提前预订了酒店房间，可以享受折扣。",
+    "features": [
+      "预付费",
+      "成本较低",
+      "独享硬件",
+      "预留期限"
+    ]
+  },
+  "Dedicated tenancy": {
+    "definition": "独占租户模式是指在 Amazon EC2 中，实例运行在专用的物理硬件上。",
+    "analogy": "就像拥有你自己的独立房屋。",
+    "features": [
+      "实例运行在专用硬件上",
+      "满足合规性要求",
+      "提高安全性"
+    ]
+  },
+  "Delete Protection": {
+    "definition": "删除保护是一种安全措施，用于防止意外删除资源，例如 Amazon S3 存储桶。",
+    "analogy": "就像给你的东西上了一把锁，防止误操作导致丢失。",
+    "features": [
+      "防止意外删除资源",
+      "需要手动禁用才能删除资源",
+      "提高数据保护级别"
+    ]
+  },
+  "DeleteKey": {
+    "definition": "删除密钥指在 AWS KMS 中删除加密密钥的操作，密钥删除后数据将无法解密。",
+    "analogy": "就像销毁了打开宝箱的钥匙，宝箱里的东西就再也拿不出来了。",
+    "features": [
+      "删除 KMS 密钥",
+      "无法恢复",
+      "数据无法解密",
+      "谨慎操作"
+    ]
+  },
+  "Directory Service": {
+    "definition": "目录服务是一种管理用户身份和权限的服务，比如 AWS Directory Service。",
+    "analogy": "就像一个大型通讯录，管理着谁可以使用哪些资源。",
+    "features": [
+      "管理用户身份",
+      "管理访问权限",
+      "支持多种目录类型，比如 Microsoft AD"
+    ]
+  },
+  "Directory Service for Microsoft Active Directory": {
+    "definition": "AWS 的托管 Active Directory 服务，允许您在云中运行 Microsoft Active Directory，或将其与您的本地 Active Directory 集成。",
+    "analogy": "就像把你的 Windows 域控制器搬到 AWS 上，由 AWS 帮你维护。",
+    "features": [
+      "与本地 AD 集成",
+      "支持 Kerberos 身份验证",
+      "完全托管"
+    ]
+  },
+  "Disaster Recovery": {
+    "definition": "灾难恢复，指在发生故障或灾难时，恢复数据和业务运营的策略和流程。在 AWS 上，通常涉及备份、复制和快速恢复服务。",
+    "analogy": "就像购买了保险，在出现意外时，你的业务能快速恢复。",
+    "features": [
+      "备份",
+      "复制",
+      "故障转移",
+      "恢复时间目标（RTO）",
+      "恢复点目标（RPO）"
+    ]
+  },
+  "DocumentDB": {
+    "definition": "与 MongoDB 兼容的文档数据库服务，提供高性能、可扩展性和高可用性。它允许您存储、查询和索引 JSON 文档。",
+    "analogy": "类似 MongoDB，但运行在 AWS 上，并且与 AWS 的其他服务集成得更好。",
+    "features": [
+      "与 MongoDB 兼容",
+      "JSON 文档存储",
+      "高可用性",
+      "可扩展性"
+    ]
+  },
+  "Dynamic Scaling": {
+    "definition": "动态扩展，根据负载情况自动调整资源的数量。在 AWS 中，通常指通过 CloudWatch 监控指标，并由 Auto Scaling 组自动增加或减少 EC2 实例的数量。",
+    "analogy": "就像酒店的入住率，入住率高就增加房间，入住率低就减少房间，自动调整资源。",
+    "features": [
+      "基于指标自动调整",
+      "弹性伸缩",
+      "提高资源利用率",
+      "降低成本"
+    ]
+  },
+  "DynamoDB Auto Scaling": {
+    "definition": "DynamoDB 的自动伸缩功能，根据您表的使用情况自动调整 DynamoDB 表的读写容量，以应对流量变化。",
+    "analogy": "像一个智能助手，根据顾客进店的多少，自动调整 DynamoDB 的接待能力。",
+    "features": [
+      "自动调整读写容量",
+      "响应流量变化",
+      "降低成本",
+      "提高性能"
+    ]
+  },
+  "DynamoDB Backup": {
+    "definition": "DynamoDB 的备份功能，允许您创建 DynamoDB 表的备份，以便在数据丢失或损坏时恢复。",
+    "analogy": "就像为你的 DynamoDB 表格做一份安全副本，以防万一。",
+    "features": [
+      "按需备份",
+      "连续备份",
+      "备份和恢复",
+      "数据保护"
+    ]
+  },
+  "DynamoDB Capacity Mode": {
+    "definition": "DynamoDB 的容量模式，决定了 DynamoDB 表的容量管理方式，分为 Provisioned 和 On-Demand 两种。",
+    "analogy": "就像选择电话套餐，Provisioned 类似于包月，On-Demand 类似于按需付费。",
+    "features": [
+      "Provisioned（预置容量）",
+      "On-Demand（按需容量）",
+      "决定容量管理方式"
+    ]
+  },
+  "DynamoDB On-Demand": {
+    "definition": "DynamoDB 的按需容量模式，您无需预先规划容量，DynamoDB 会根据实际使用情况自动扩展容量，适合流量不可预测的应用。",
+    "analogy": "像按次付费的水电，用多少付多少，不用预先规划。",
+    "features": [
+      "无需预置容量",
+      "自动扩展",
+      "适合流量波动",
+      "按实际使用付费"
+    ]
+  },
+  "DynamoDB On-Demand Mode": {
+    "definition": "与“DynamoDB On-Demand” 相同。指 DynamoDB 的按需容量模式。",
+    "analogy": "",
+    "features": [
+      "无需预置容量",
+      "自动扩展",
+      "适合流量波动",
+      "按实际使用付费"
+    ]
+  },
+  "DynamoDB Provisioned Mode": {
+    "definition": "DynamoDB 的预置容量模式，您需要提前指定 DynamoDB 表的读写容量，适合流量可预测的应用。",
+    "analogy": "像包月流量，预先购买一定的容量。",
+    "features": [
+      "提前预置容量",
+      "容量可控",
+      "适合流量稳定",
+      "成本可预测"
+    ]
+  },
+  "DynamoDB Reserved Capacity": {
+    "definition": "DynamoDB 的预留容量，允许您以折扣价购买 DynamoDB 的读写容量，用于长期稳定的工作负载。",
+    "analogy": "类似批量购买车票，提前预订可以享受折扣。",
+    "features": [
+      "折扣价",
+      "长期承诺",
+      "适合稳定负载",
+      "降低成本"
+    ]
+  },
+  "DynamoDB Standard": {
+    "definition": "DynamoDB 的标准存储类，适合大多数应用场景，提供高性能和高可用性。",
+    "analogy": "就像普通级别的硬盘存储，性能好，稳定可靠。",
+    "features": [
+      "高性能",
+      "高可用性",
+      "适合各种负载",
+      "默认存储类"
+    ]
+  },
+  "DynamoDB Standard-IA": {
+    "definition": "DynamoDB 的标准-IA (Infrequent Access) 存储类，适合不经常访问的数据，提供较低的存储成本。",
+    "analogy": "就像一个低速硬盘，不常用，但是存储成本更低。",
+    "features": [
+      "低存储成本",
+      "不常用访问",
+      "适合冷数据",
+      "访问时收费"
+    ]
+  },
+  "DynamoDB 表导出": {
+    "definition": "允许您将 DynamoDB 表中的数据导出到 Amazon S3，以便进行数据分析、备份或迁移。",
+    "analogy": "就像将你的 DynamoDB 数据拷贝一份到 S3 上，方便你后续使用。",
+    "features": [
+      "数据导出到 S3",
+      "数据分析",
+      "备份",
+      "数据迁移"
+    ]
+  },
+  "EBS Direct API": {
+    "definition": "EBS Direct API 是一组 API，允许您直接访问 EBS 卷的快照数据，用于数据恢复、备份和数据分析等操作。",
+    "analogy": "就像直接访问 EBS 硬盘的内部数据，进行更精细的操作。",
+    "features": [
+      "直接访问快照数据",
+      "数据恢复",
+      "数据分析",
+      "备份"
+    ]
+  },
+  "EBS Multi-Attach": {
+    "definition": "Amazon EBS (Elastic Block Storage) 的一项功能，允许多个 EC2 实例同时附加到一个 EBS 卷。仅支持 io1 和 io2 卷类型。",
+    "analogy": "就像一个共享的硬盘，允许多个电脑同时访问。",
+    "features": [
+      "多实例共享存储",
+      "仅限部分卷类型",
+      "用于集群和高可用性应用"
+    ]
+  },
+  "EBS Snapshots": {
+    "definition": "Amazon EBS 的数据备份功能，创建 EBS 卷的 point-in-time 副本，用于数据保护、灾难恢复和迁移。",
+    "analogy": "就像给你的文件拍一张照片，保存当时的快照。",
+    "features": [
+      "point-in-time 备份",
+      "跨区域复制",
+      "支持卷加密"
+    ]
+  },
+  "EBS Snapshots Archive": {
+    "definition": "Amazon EBS 快照的低成本存储层，适用于长期存储不频繁访问的快照。提供比标准快照更低的存储成本。",
+    "analogy": "就像把你的照片快照放到一个更便宜的、但访问速度慢的相册里。",
+    "features": [
+      "低成本存储",
+      "适用于长期备份",
+      "访问速度较慢"
+    ]
+  },
+  "EBS Volume": {
+    "definition": "Amazon EC2 实例使用的持久性块存储。类似于计算机的硬盘。",
+    "analogy": "就像电脑的硬盘，用于存储数据。",
+    "features": [
+      "持久性存储",
+      "可附加到 EC2 实例",
+      "多种卷类型"
+    ]
+  },
+  "EBS 快速快照恢复": {
+    "definition": "Amazon EBS 快照的特性，通过预热快照数据，加快从快照创建卷的速度。提高恢复时间。",
+    "analogy": "就像预先准备好你的备用硬盘，以便快速启动。",
+    "features": [
+      "加速卷创建",
+      "提高恢复速度",
+      "适用于关键业务应用"
+    ]
+  },
+  "EC2 Auto Recovery": {
+    "definition": "Amazon EC2 的一项功能，当 EC2 实例由于硬件故障等问题而无法访问时，自动恢复实例。依赖于实例使用 EC2 监控。",
+    "analogy": "就像你的电脑崩溃了，系统会自动重启并尝试恢复。",
+    "features": [
+      "自动实例恢复",
+      "检测硬件问题",
+      "基于 EC2 监控"
+    ]
+  },
+  "EC2 Auto Scaling Group": {
+    "definition": "一组 Amazon EC2 实例，可以根据定义的条件自动扩展或缩减，以满足应用的需求。",
+    "analogy": "就像一个根据需求自动增减员工的团队。",
+    "features": [
+      "自动扩展和缩减",
+      "提高可用性",
+      "基于定义的指标"
+    ]
+  },
+  "EC2 Dedicated Host": {
+    "definition": "在 AWS 硬件上运行的专用 EC2 实例，允许用户完全控制实例的放置，满足合规性和许可要求。",
+    "analogy": "就像租用一台专属于你的服务器，而不是与他人共享。",
+    "features": [
+      "专用硬件",
+      "控制实例放置",
+      "满足合规性要求"
+    ]
+  },
+  "EC2 Instance": {
+    "definition": "Amazon Elastic Compute Cloud (EC2) 中的虚拟服务器。提供各种计算能力。",
+    "analogy": "就像一台虚拟的电脑，你可以在上面运行程序。",
+    "features": [
+      "虚拟服务器",
+      "多种实例类型",
+      "可配置计算资源"
+    ]
+  },
+  "EC2 Instance Connect": {
+    "definition": "一种连接到 EC2 实例的安全方式，无需使用 SSH 密钥或堡垒主机。使用 IAM 权限进行身份验证。",
+    "analogy": "就像一个通过身份验证直接访问实例的通道。",
+    "features": [
+      "无密钥连接",
+      "基于 IAM 权限",
+      "简化访问"
+    ]
+  },
+  "EC2 Instance Savings Plans": {
+    "definition": "一种灵活的定价模式，提供 EC2 实例、Lambda 和 Fargate 的折扣，承诺一定的计算使用量。",
+    "analogy": "就像批量购买优惠券，你可以用在不同的商品上。",
+    "features": [
+      "灵活的定价模式",
+      "承诺计算使用量",
+      "覆盖多种服务"
+    ]
+  },
+  "EC2 Instances": {
+    "definition": "EC2 实例的统称，指在 Amazon Elastic Compute Cloud 上运行的虚拟服务器。",
+    "analogy": "就像多台虚拟的电脑，用于运行各种应用程序。",
+    "features": [
+      "多种实例类型",
+      "可用于各种应用场景",
+      "按需、预留、竞价等多种定价方式"
+    ]
+  },
+  "EC2 On-Demand Instances": {
+    "definition": "按需付费的 EC2 实例。无需长期承诺，适合短期工作负载或测试。",
+    "analogy": "就像按需租车，需要时随时租用。",
+    "features": [
+      "按小时计费",
+      "无需预先承诺",
+      "灵活适用"
+    ]
+  },
+  "EC2 Reserved Instances": {
+    "definition": "预先支付 EC2 实例的使用费用，以获得比按需实例更低的折扣。适合于有稳定工作负载的应用。",
+    "analogy": "就像提前购买了电影票，享受折扣价。",
+    "features": [
+      "预先承诺使用时长",
+      "大幅折扣",
+      "适用于稳定工作负载"
+    ]
+  },
+  "EC2 Savings Plans": {
+    "definition": "一种灵活的定价模式，提供 EC2、Lambda 和 Fargate 实例的折扣，承诺一定的计算使用量。",
+    "analogy": "就像购买套餐，可以灵活使用不同服务。",
+    "features": [
+      "灵活的定价模式",
+      "覆盖多种服务",
+      "承诺计算使用量"
+    ]
+  },
+  "EC2 Spot Instances": {
+    "definition": "Amazon EC2 Spot 实例允许您请求未使用的 EC2 容量，通常以比按需实例更低的价格。您可以为 Spot 实例设置最高价格。",
+    "analogy": "就像拍卖会上购买服务器的剩余算力，价低者得。",
+    "features": [
+      "价格浮动",
+      "容量可能中断",
+      "适用于容错性好的任务"
+    ]
+  },
+  "EC2 instance profile": {
+    "definition": "EC2 实例配置文件是一种容器，用于在 EC2 实例启动时向其传递 IAM 角色。它简化了管理实例访问 AWS 资源的方式。",
+    "analogy": "给 EC2 实例颁发的身份证明，允许其安全地访问其他 AWS 服务。",
+    "features": [
+      "与 IAM 角色关联",
+      "简化权限管理",
+      "安全访问其他 AWS 服务"
+    ]
+  },
+  "EC2 instance types": {
+    "definition": "EC2 实例类型定义了 EC2 实例的硬件配置，包括 CPU、内存、存储和网络性能。不同的实例类型适用于不同的工作负载。",
+    "analogy": "就像电脑的不同配置，有游戏本、办公本等，满足不同的应用场景。",
+    "features": [
+      "不同配置的 CPU",
+      "不同大小的内存",
+      "不同的存储选项",
+      "网络性能差异"
+    ]
+  },
+  "EC2 instances": {
+    "definition": "Amazon Elastic Compute Cloud (EC2) 实例是 AWS 提供的虚拟服务器。您可以在 EC2 实例上运行各种应用程序。",
+    "analogy": "就像您租用的虚拟服务器，可以在上面安装和运行软件。",
+    "features": [
+      "可配置的计算资源",
+      "按需使用",
+      "灵活的操作系统选择"
+    ]
+  },
+  "EFS One Zone-IA": {
+    "definition": "Amazon EFS One Zone-IA 是一种存储类，用于将不常访问的数据存储在单个可用区中，价格比标准存储更低，但可用性较低。",
+    "analogy": "把不常用的东西放在离家近的仓库里，降低成本，但万一仓库出问题，东西可能也受影响。",
+    "features": [
+      "单可用区存储",
+      "低访问频率数据存储",
+      "成本较低"
+    ]
+  },
+  "EFS Standard": {
+    "definition": "Amazon Elastic File System (EFS) 的标准存储类，提供高可用性和持久性，适用于经常访问的数据。",
+    "analogy": "就像家里的常用物品，随时可以拿取，确保安全可靠。",
+    "features": [
+      "高可用性",
+      "多可用区存储",
+      "适用于常用数据"
+    ]
+  },
+  "EFS Standard-IA": {
+    "definition": "Amazon Elastic File System (EFS) 的标准-IA (Infrequent Access) 存储类，适用于访问频率较低的数据，价格比标准存储更低。",
+    "analogy": "就像家里不常用的东西放在储藏室，降低成本，但需要时可能需要花费一点时间取出来。",
+    "features": [
+      "低访问频率数据存储",
+      "价格比标准存储低",
+      "支持多可用区"
+    ]
+  },
+  "EFS to EFS backup": {
+    "definition": "Amazon EFS to EFS 备份允许您将 EFS 文件系统的数据备份到另一个 EFS 文件系统，实现数据的保护和恢复。",
+    "analogy": "为您的 EFS 文件系统创建副本，防止数据丢失。",
+    "features": [
+      "文件系统级别备份",
+      "支持跨账户备份",
+      "用于数据保护和恢复"
+    ]
+  },
+  "EMR File System (EMRFS)": {
+    "definition": "EMR File System (EMRFS) 是一种与 Amazon EMR 集成的文件系统，允许 EMR 集群直接访问 Amazon S3 中的数据。",
+    "analogy": "方便 EMR 集群直接访问 S3 上的数据，无需复制到本地存储。",
+    "features": [
+      "与 EMR 集成",
+      "访问 S3 数据",
+      "简化数据处理"
+    ]
+  },
+  "Egress-only Internet Gateway": {
+    "definition": "Egress-only Internet Gateway 允许 VPC 中的实例发起出站 IPv6 流量到 Internet，但不允许 Internet 发起入站连接。",
+    "analogy": "就像只允许您主动给外面打电话，但外面不能给您打电话。",
+    "features": [
+      "支持 IPv6",
+      "仅允许出站流量",
+      "用于加强安全性"
+    ]
+  },
+  "ElastiCache for Memcached": {
+    "definition": "Amazon ElastiCache for Memcached 是一种内存缓存服务，用于提高 Web 应用程序的性能。它基于 Memcached 协议。",
+    "analogy": "就像电脑的缓存，加速应用程序的数据访问速度。",
+    "features": [
+      "内存缓存",
+      "提高应用程序性能",
+      "基于 Memcached"
+    ]
+  },
+  "Elastic Block Store": {
+    "definition": "Amazon Elastic Block Store (EBS) 是一种为 EC2 实例提供的块存储服务。您可以创建、附加、分离 EBS 卷，并且可以对其进行快照备份。",
+    "analogy": "就像给您的 EC2 实例添加一块硬盘。",
+    "features": [
+      "块存储",
+      "可附加到 EC2 实例",
+      "快照备份",
+      "多种卷类型"
+    ]
+  },
+  "Elastic Container Service (ECS)": {
+    "definition": "Amazon Elastic Container Service (ECS) 是一种高度可扩展的容器编排服务，用于运行和管理 Docker 容器。",
+    "analogy": "就像一个指挥家，负责管理和协调您的 Docker 容器。",
+    "features": [
+      "容器编排",
+      "高度可扩展",
+      "支持 Docker",
+      "与 AWS 服务集成"
+    ]
+  },
+  "Elastic Fabric Adapter (EFA)": {
+    "definition": "Amazon Elastic Fabric Adapter (EFA) 是一种网络设备，用于为 EC2 实例提供增强的 RDMA 功能，适用于高性能计算和机器学习工作负载。",
+    "analogy": "给您的 EC2 实例配备一个加速网络连接的专用接口，适合需要快速数据传输的应用。",
+    "features": [
+      "增强网络性能",
+      "RDMA 支持",
+      "适用于高性能计算",
+      "低延迟网络"
+    ]
+  },
+  "Elastic IP Address": {
+    "definition": "Elastic IP 地址是静态公网 IP 地址，您可以将其与 EC2 实例关联，以便实例具有固定的公网 IP 地址。",
+    "analogy": "就像您的固定电话号码，即使您搬家，号码也不会改变。",
+    "features": [
+      "静态公网 IP",
+      "可与 EC2 实例关联",
+      "用于持久化公网访问"
+    ]
+  },
+  "Elasticity": {
+    "definition": "弹性指系统根据需求自动伸缩资源的能力，无需人工干预。在 AWS 中，弹性体现在计算、存储等多个方面。",
+    "analogy": "就像橡皮筋，可以根据拉伸的力度自动伸缩。",
+    "features": [
+      "自动扩展",
+      "自动缩减",
+      "按需付费",
+      "提高资源利用率"
+    ]
+  },
+  "Email": {
+    "definition": "用于在互联网上发送和接收消息的服务，常用于通知、营销等场景。在 AWS 中，可以使用 Amazon SES 等服务。",
+    "analogy": "就像电子邮箱，方便用户发送和接收信件。",
+    "features": [
+      "消息发送",
+      "消息接收",
+      "邮件列表管理",
+      "发送数据分析"
+    ]
+  },
+  "Email validation": {
+    "definition": "验证电子邮件地址真实性的过程，确保地址有效且可接收邮件。常用于防止垃圾邮件和提高邮件送达率。",
+    "analogy": "就像邮局验证邮寄地址的有效性。",
+    "features": [
+      "地址格式校验",
+      "域名校验",
+      "邮件服务器验证",
+      "实时验证"
+    ]
+  },
+  "Encryption Key": {
+    "definition": "用于加密和解密数据的密钥，保障数据的安全性和隐私性。在 AWS 中，可以使用 KMS (Key Management Service) 来管理。",
+    "analogy": "就像保险箱的钥匙，用于保护贵重物品的安全。",
+    "features": [
+      "加密",
+      "解密",
+      "密钥管理",
+      "密钥轮换"
+    ]
+  },
+  "Endpoint": {
+    "definition": "网络服务提供的访问点，用于发起 API 调用或者访问资源。在 AWS 中，许多服务都通过 Endpoint 提供访问。",
+    "analogy": "就像一家商店的入口，用户通过入口访问商品。",
+    "features": [
+      "网络地址",
+      "API 访问点",
+      "服务入口",
+      "配置灵活性"
+    ]
+  },
+  "Environment Variables": {
+    "definition": "在程序运行时配置的变量，用于存储配置信息，如数据库连接字符串等。方便代码在不同环境中使用。",
+    "analogy": "就像程序的身份证信息，用于表明程序在什么环境下运行。",
+    "features": [
+      "配置信息",
+      "运行时变量",
+      "环境隔离",
+      "灵活性"
+    ]
+  },
+  "EventBridge Scheduler": {
+    "definition": "AWS 的服务，允许您按计划调用 AWS 服务或调用自定义 API。用于定时任务的调度。",
+    "analogy": "就像闹钟，按预设的时间执行任务。",
+    "features": [
+      "定时任务",
+      "事件触发",
+      "服务集成",
+      "可扩展性"
+    ]
+  },
+  "Express.js": {
+    "definition": "Node.js 平台下的一个快速、开放、极简的 Web 应用开发框架，常用于构建 Web 应用和 API。",
+    "analogy": "就像一个快速搭建网站的模板。",
+    "features": [
+      "Node.js 框架",
+      "Web 应用开发",
+      "API 构建",
+      "中间件支持"
+    ]
+  },
+  "Extended Client Library": {
+    "definition": "扩展客户端库，提供了 AWS 服务的更多功能和便利性，通常是针对特定编程语言的 SDK 的一部分。",
+    "analogy": "就像为普通工具添加更多附件，使其更强大。",
+    "features": [
+      "SDK 功能扩展",
+      "便利性提升",
+      "特定语言支持",
+      "简化开发流程"
+    ]
+  },
+  "FIFO queue": {
+    "definition": "先进先出（First-In, First-Out）队列，消息按照发送的顺序被处理。常用于需要严格消息顺序的场景，例如金融交易。",
+    "analogy": "就像排队买票，先到的人先买到票。",
+    "features": [
+      "消息顺序",
+      "严格顺序",
+      "并发受限",
+      "单消费者或有限消费者"
+    ]
+  },
+  "FSBP": {
+    "definition": "Amazon FSx for Lustre 的一个功能，全称为 File System Backup and Restore（文件系统备份和恢复）。",
+    "analogy": "就像给你的重要文件做备份。",
+    "features": [
+      "文件系统备份",
+      "数据保护",
+      "快速恢复",
+      "Lustre 文件系统"
+    ]
+  },
+  "FSx File Gateway": {
+    "definition": "将本地存储连接到 Amazon FSx 的服务，允许混合云环境中的文件访问。提供本地访问 FSx 文件系统的方式。",
+    "analogy": "就像一个桥梁，连接你的本地存储和云端存储。",
+    "features": [
+      "混合云存储",
+      "文件访问",
+      "本地缓存",
+      "FSx 集成"
+    ]
+  },
+  "FSx for ONTAP": {
+    "definition": "Amazon FSx 的一种，提供完全托管的、与 ONTAP 兼容的存储，适用于各种工作负载，尤其是企业级应用。",
+    "analogy": "就像一个企业级的云存储解决方案，提供丰富的功能。",
+    "features": [
+      "ONTAP 兼容",
+      "企业级存储",
+      "数据管理",
+      "高可用性"
+    ]
+  },
+  "Failover Routing": {
+    "definition": "一种路由策略，当主线路或资源不可用时，自动将流量切换到备用线路或资源。保证服务的高可用性。",
+    "analogy": "就像航班备降，主航线关闭时自动切换到备用航线。",
+    "features": [
+      "高可用性",
+      "故障转移",
+      "自动切换",
+      "健康检查"
+    ]
+  },
+  "Fargate Spot": {
+    "definition": "在 Fargate 上运行的一种计算模式，利用未使用的 EC2 容量，提供更低的成本。适合可中断的任务。",
+    "analogy": "就像拍卖中的捡漏，以更低的成本获得计算资源。",
+    "features": [
+      "低成本",
+      "可中断性",
+      "Fargate 集成",
+      "容器运行"
+    ]
+  },
+  "Fast Snapshot Restore": {
+    "definition": "快速快照恢复（FSR）允许您从 Amazon EBS 快照创建完全预置的磁盘卷，无需先从快照恢复数据。适用于需要快速启动的场景。",
+    "analogy": "就像事先准备好的即时面条，需要时只需加热即可使用，无需漫长的煮制过程。",
+    "features": [
+      "减少I/O延迟",
+      "支持快速启动",
+      "适用于高IOPS需求"
+    ]
+  },
+  "Federated Query": {
+    "definition": "联合查询允许您使用 SQL 从多个数据存储（包括 Amazon S3、DynamoDB 和关系数据库）中查询数据。无需将数据集中到单一存储中。",
+    "analogy": "像一个数据经纪人，可以从不同的来源收集信息，供你一次性查询。",
+    "features": [
+      "支持多种数据源",
+      "使用标准SQL",
+      "简化数据分析"
+    ]
+  },
+  "File Gateway": {
+    "definition": "Amazon Storage Gateway 中的文件网关将本地文件共享连接到 Amazon S3。它将本地文件共享转换为 S3 对象，并提供低延迟的数据访问。",
+    "analogy": "像一个桥梁，连接你的本地文件系统和云端的 Amazon S3。",
+    "features": [
+      "将本地文件存储到S3",
+      "缓存常用文件",
+      "简化云端备份"
+    ]
+  },
+  "File System": {
+    "definition": "文件系统是一种组织和存储数据的结构。在 AWS 中，它包括 Amazon Elastic File System (EFS) 和 Amazon FSx等。",
+    "analogy": "就像你的电脑硬盘上的文件夹和文件，用于整理和管理数据。",
+    "features": [
+      "提供文件存储服务",
+      "支持各种协议",
+      "可扩展性强"
+    ]
+  },
+  "Firewall Manager": {
+    "definition": "AWS Firewall Manager 简化了跨多个账户和应用程序部署和管理防火墙规则的任务，例如 AWS WAF 和 AWS Network Firewall。",
+    "analogy": "像一个安全经理，负责在整个公司范围内统一管理防火墙策略。",
+    "features": [
+      "集中管理防火墙规则",
+      "简化多账户部署",
+      "提高安全合规性"
+    ]
+  },
+  "Function Scaling": {
+    "definition": "函数伸缩指的是云函数（例如 Lambda）根据传入请求自动调整其并发执行实例数量的能力，以处理负载。",
+    "analogy": "就像一家餐厅可以根据顾客数量，自动增加或减少厨师和餐桌的数量。",
+    "features": [
+      "自动调整并发",
+      "按需扩缩",
+      "无需手动干预"
+    ]
+  },
+  "GPS": {
+    "definition": "全球定位系统（GPS）是一种基于卫星的导航系统，用于确定地球上任何位置的地理位置。",
+    "analogy": "就像你手机上的定位功能，告诉你现在在哪里。",
+    "features": [
+      "提供地理位置信息",
+      "全球覆盖",
+      "依赖卫星信号"
+    ]
+  },
+  "GWLB": {
+    "definition": "Gateway Load Balancer (GWLB) 是一种负载均衡器，用于在虚拟网络设备（如防火墙和入侵检测系统）之间分配流量。",
+    "analogy": "像一个交通警察，智能地将车辆（网络流量）导向不同的安全检查站（网络设备）。",
+    "features": [
+      "高可用性",
+      "支持网络设备",
+      "自动伸缩"
+    ]
+  },
+  "Gateway Endpoint": {
+    "definition": "Gateway 终端节点用于访问 Amazon S3 和 DynamoDB，它们不使用 Internet，而是通过 AWS 内部网络连接。",
+    "analogy": "像一条秘密通道，让你可以安全快速地访问 Amazon S3 和 DynamoDB，无需经过公开道路（Internet）。",
+    "features": [
+      "访问 S3 和 DynamoDB",
+      "不使用 Internet",
+      "提高安全性"
+    ]
+  },
+  "Gateway Load Balancer": {
+    "definition": "Gateway Load Balancer 是一种负载均衡器，用于将网络流量分配给虚拟网络设备，例如防火墙和入侵检测系统。",
+    "analogy": "类似交通枢纽，将车辆（网络流量）分发给不同的安全检查站（网络设备）。",
+    "features": [
+      "高可用性",
+      "支持网络设备",
+      "自动伸缩"
+    ]
+  },
+  "Gateway Load Balancer (GWLB)": {
+    "definition": "Gateway Load Balancer 是一种负载均衡器，用于将网络流量分配给虚拟网络设备。",
+    "analogy": "类似于一个交通枢纽，智能地将网络流量引导至各种网络安全设备。",
+    "features": [
+      "高可用性",
+      "支持第三方设备",
+      "自动扩展"
+    ]
+  },
+  "Gateway VPC Endpoint": {
+    "definition": "Gateway VPC 终端节点允许您通过私有连接访问 Amazon S3 和 DynamoDB，无需使用 Internet。",
+    "analogy": "就像一条私密隧道，让你在 VPC 内安全、快速地访问 Amazon S3 和 DynamoDB。",
+    "features": [
+      "访问 S3 和 DynamoDB",
+      "不经过 Internet",
+      "提高安全性和性能"
+    ]
+  },
+  "General Purpose": {
+    "definition": "通用型实例是 AWS 提供的一类实例，适用于各种工作负载，提供计算、内存和网络资源之间的平衡。",
+    "analogy": "就像一把瑞士军刀，功能全面，适用于多种任务。",
+    "features": [
+      "平衡的计算、内存和网络",
+      "适用于多样工作负载",
+      "灵活性高"
+    ]
+  },
+  "General Purpose SSD (gp2)": {
+    "definition": "通用型 SSD (gp2) 卷是一种 Amazon EBS 存储卷，提供平衡的性能，适用于各种工作负载。",
+    "analogy": "就像一个可靠的硬盘，可以满足你日常电脑使用的需求。",
+    "features": [
+      "平衡的性能",
+      "适用于各种应用",
+      "性价比高"
+    ]
+  },
+  "Geo-restriction": {
+    "definition": "地理限制是指根据用户的地理位置限制对内容的访问，例如使用 Amazon CloudFront 设置地理限制。",
+    "analogy": "就像电视台根据地区播放不同的节目，只有特定区域的观众才能观看。",
+    "features": [
+      "限制内容访问",
+      "基于地理位置",
+      "用于内容分发"
+    ]
+  },
+  "Geolocation Routing": {
+    "definition": "一种 Route 53 路由策略，基于用户来源的地理位置，将流量定向到特定的资源。",
+    "analogy": "就像根据你所在的城市，导航软件会推荐你附近的餐厅。",
+    "features": [
+      "基于地理位置的流量定向",
+      "支持国家、州/省级别",
+      "可用于内容本地化"
+    ]
+  },
+  "Geolocation Routing Policy": {
+    "definition": "Route 53 的一种路由策略，允许您基于用户来源的地理位置（国家/地区）为 DNS 查询提供不同的响应。",
+    "analogy": "根据你的 IP 地址所在的国家，网站显示不同的语言版本。",
+    "features": [
+      "精确的地理位置定向",
+      "提高用户体验",
+      "适用于多语言网站"
+    ]
+  },
+  "GetSessionToken": {
+    "definition": "AWS Security Token Service (STS) 的一个 API 操作，用于获取临时的安全凭证，以便对 AWS 资源进行访问。",
+    "analogy": "就像向银行申请临时通行证，用于访问保险箱。",
+    "features": [
+      "生成临时安全凭证",
+      "控制访问权限",
+      "支持多因素身份验证"
+    ]
+  },
+  "GiB": {
+    "definition": "吉比，是二进制信息单位，等于 2 的 30 次方字节，即 1024 MiB，常用于存储容量的计量。",
+    "analogy": "相当于 10 亿字节，类似于电脑硬盘或云存储的容量大小单位。",
+    "features": [
+      "存储容量单位",
+      "1 GiB = 1024 MiB",
+      "用于计算存储空间"
+    ]
+  },
+  "Global Database": {
+    "definition": "Amazon Aurora 数据库的一种特性，允许您在多个 AWS 区域之间复制数据库，以实现全球读操作。",
+    "analogy": "就像把你的笔记复制到全球各地的图书馆，方便随时随地阅读。",
+    "features": [
+      "跨区域数据库复制",
+      "低延迟读操作",
+      "高可用性"
+    ]
+  },
+  "Global Secondary Index": {
+    "definition": "DynamoDB 中的一种索引，允许您在不同于主键的属性上进行查询，并且可以在多个分区中跨越。",
+    "analogy": "就像图书馆里的分类索引卡片，可以根据书名、作者等多种方式查找图书。",
+    "features": [
+      "二级索引",
+      "支持多种查询方式",
+      "加速查询性能"
+    ]
+  },
+  "Global Tables": {
+    "definition": "DynamoDB 的一种特性，允许您在多个 AWS 区域中创建 DynamoDB 表，并自动复制数据。",
+    "analogy": "就像拥有全球连锁的餐厅，每家店都实时更新菜单和库存信息。",
+    "features": [
+      "跨区域数据复制",
+      "实现高可用性",
+      "低延迟读写操作"
+    ]
+  },
+  "GraphQL": {
+    "definition": "一种用于 API 的查询语言，允许客户端精确地请求所需的数据。",
+    "analogy": "就像你点餐时直接告诉服务员你需要什么，而不是点套餐里你不需要的东西。",
+    "features": [
+      "数据获取效率高",
+      "更灵活的数据请求",
+      "减少过度获取数据"
+    ]
+  },
+  "Group": {
+    "definition": "AWS Identity and Access Management (IAM) 中的一种实体，用于将用户集合在一起，并为其分配权限。",
+    "analogy": "就像一个班级，老师（IAM 管理员）可以为整个班级（组）分配学习任务（权限）。",
+    "features": [
+      "管理用户权限",
+      "简化权限管理",
+      "提高效率"
+    ]
+  },
+  "HTML": {
+    "definition": "超文本标记语言，用于创建网页的标准标记语言。",
+    "analogy": "就像网页的骨架和结构，定义了网页的各个元素及其布局。",
+    "features": [
+      "网页结构定义",
+      "语义化标签",
+      "浏览器解析"
+    ]
+  },
+  "HTTP APIs": {
+    "definition": "API Gateway 的一种 API 类型，适用于构建低延迟、成本效益高的 HTTP API。",
+    "analogy": "就像一条高速公路，能够更快更便宜地运送货物（数据）。",
+    "features": [
+      "低延迟",
+      "成本优化",
+      "适用于 HTTP 流量"
+    ]
+  },
+  "HTTP Header": {
+    "definition": "HTTP 请求和响应中的一部分，包含了关于请求或响应的元数据。",
+    "analogy": "就像信封上的地址，告诉收件人是谁，以及信件来自哪里。",
+    "features": [
+      "元数据传递",
+      "控制请求/响应行为",
+      "关键信息传递"
+    ]
+  },
+  "Hadoop": {
+    "definition": "一个开源的分布式计算框架，用于处理大规模数据集。",
+    "analogy": "就像一个大型工厂，将数据拆分成多个部分，分配给不同的工人（服务器）并行处理。",
+    "features": [
+      "分布式存储和处理",
+      "处理大数据",
+      "高可靠性"
+    ]
+  },
+  "Health Check": {
+    "definition": "用于监控资源的健康状态，例如服务器的运行状况。",
+    "analogy": "就像医生的体检，用于检查服务器是否正常工作。",
+    "features": [
+      "监控资源状态",
+      "自动故障转移",
+      "提高可用性"
+    ]
+  },
+  "Hibernate": {
+    "definition": "一个 Java 对象关系映射（ORM）框架，用于简化 Java 应用与数据库的交互。",
+    "analogy": "就像一个翻译，负责将 Java 代码翻译成数据库可以理解的语言，以及将数据库的数据翻译成 Java 对象。",
+    "features": [
+      "ORM 框架",
+      "简化数据库访问",
+      "提高开发效率"
+    ]
+  },
+  "High Availability": {
+    "definition": "高可用性是指系统在一定时间内持续提供服务的能力。它通过冗余、容错等技术，减少停机时间，确保业务的连续性。",
+    "analogy": "就像拥有备用发电机，即使停电也能继续供电。",
+    "features": [
+      "减少停机时间",
+      "提供服务冗余",
+      "提高系统弹性",
+      "依赖自动故障转移"
+    ]
+  },
+  "Hive": {
+    "definition": "Hive 是一个基于 Hadoop 的数据仓库工具，用于提供数据汇总、查询和分析功能，支持类似 SQL 的查询语言。",
+    "analogy": "就像一个数据仓库，你可以用 SQL 语言提取和分析存储在 Hadoop 中的数据。",
+    "features": [
+      "基于 Hadoop",
+      "SQL-like 查询",
+      "数据汇总和分析",
+      "易于扩展"
+    ]
+  },
+  "Horizontal Pod Autoscaling (HPA)": {
+    "definition": "水平 Pod 自动伸缩（HPA）是 Kubernetes 的一个功能，用于根据 CPU 使用率或其他指标自动扩展或缩减 Pod 数量。",
+    "analogy": "就像一个停车场，根据车辆数量自动增加或减少停车位。",
+    "features": [
+      "自动伸缩 Pod 数量",
+      "基于 CPU 等指标",
+      "Kubernetes 原生功能",
+      "动态调整资源分配"
+    ]
+  },
+  "IA": {
+    "definition": "IA 指的是基础设施即代码（Infrastructure as Code）。通过代码定义和管理基础设施，实现自动化部署和版本控制。",
+    "analogy": "就像用蓝图建造房屋，而不是手动建造。",
+    "features": [
+      "基础设施自动化",
+      "版本控制",
+      "提高部署效率",
+      "减少人为错误"
+    ]
+  },
+  "IAM Access Analyzer": {
+    "definition": "IAM Access Analyzer 用于帮助您识别您的 AWS 账户和资源中的外部访问权限。它可以分析IAM策略和资源策略，并生成安全建议。",
+    "analogy": "就像一个安全审计员，检查您的云资源是否被不该访问的人访问。",
+    "features": [
+      "识别外部访问权限",
+      "分析 IAM 策略",
+      "生成安全建议",
+      "提高安全性"
+    ]
+  },
+  "IAM Group": {
+    "definition": "IAM 组是 IAM 账户的集合，用于简化权限管理。您可以将用户添加到组，并向组分配权限。",
+    "analogy": "就像一个团队，你给整个团队分配相同的权限，而不是单独给每个人分配。",
+    "features": [
+      "简化权限管理",
+      "用户集合",
+      "权限批量分配",
+      "提高管理效率"
+    ]
+  },
+  "IAM Identity Center (AWS Single Sign-On)": {
+    "definition": "IAM Identity Center (AWS Single Sign-On) 允许您集中管理对多个 AWS 账户和应用程序的访问，实现单点登录（SSO）。",
+    "analogy": "就像一个总钥匙，可以用它打开所有你需要的门（应用程序和 AWS 账户）。",
+    "features": [
+      "单点登录（SSO）",
+      "集中身份管理",
+      "多账户访问控制",
+      "简化用户管理"
+    ]
+  },
+  "IAM Policy": {
+    "definition": "IAM 策略定义了权限，允许或拒绝对 AWS 资源的访问。它们以 JSON 文档的形式存在，您可以将它们附加到用户、组或角色。",
+    "analogy": "就像通行证，定义了您可以在哪里和做什么。",
+    "features": [
+      "定义访问权限",
+      "JSON 格式",
+      "可附加到用户、组或角色",
+      "控制资源访问"
+    ]
+  },
+  "IAM Role for Service Accounts": {
+    "definition": "IAM 角色用于授予 AWS 服务（如 Lambda 函数或 EC2 实例）访问 AWS 资源的权限，而不是直接使用用户凭证。",
+    "analogy": "就像给服务一个委托，它可以使用你的权限去做事情，而你不需要亲自操作。",
+    "features": [
+      "赋予服务访问权限",
+      "避免使用用户凭证",
+      "提高安全性",
+      "简化权限管理"
+    ]
+  },
+  "IAM Roles": {
+    "definition": "IAM 角色是具有特定权限的身份。 它们类似于用户，但用于需要临时安全凭证的应用程序、服务或用户。",
+    "analogy": "就像一个工作角色，赋予您在工作中执行特定任务的权限。",
+    "features": [
+      "提供临时安全凭证",
+      "用于服务和应用程序",
+      "易于管理",
+      "提高安全性"
+    ]
+  },
+  "IAM Trust Relationship": {
+    "definition": "IAM 信任关系定义了谁可以担任 IAM 角色。它指定了哪些实体（如 AWS 账户、服务或用户）可以访问该角色。",
+    "analogy": "就像授权书，指定了谁可以代表你行事。",
+    "features": [
+      "定义谁可以扮演角色",
+      "JSON 格式",
+      "控制角色访问",
+      "增强安全性"
+    ]
+  },
+  "IAM User": {
+    "definition": "IAM 用户是 AWS 账户中的一个实体，用于代表个人或应用程序。每个用户都有自己的凭证（用户名和密码或访问密钥）。",
+    "analogy": "就像一个员工账号，用于访问公司的资源。",
+    "features": [
+      "代表个人或应用程序",
+      "拥有凭证",
+      "管理访问权限",
+      "控制对 AWS 资源的访问"
+    ]
+  },
+  "IAM database authentication": {
+    "definition": "IAM 数据库身份验证允许您使用 IAM 用户或角色来连接到数据库，而不是使用数据库用户名和密码。",
+    "analogy": "就像使用你的 AWS 身份来登录数据库，而不是单独的账号密码。",
+    "features": [
+      "使用 IAM 凭证登录数据库",
+      "提高安全性",
+      "简化凭证管理",
+      "支持多种数据库引擎"
+    ]
+  },
+  "IAM 实例配置文件": {
+    "definition": "IAM 实例配置文件是 IAM 角色和 EC2 实例之间的桥梁。它允许您将 IAM 角色分配给 EC2 实例，以便实例可以使用该角色的权限。",
+    "analogy": "就像把一个角色“穿”到 EC2 实例上，让它拥有执行特定任务的权限。",
+    "features": [
+      "将 IAM 角色关联到 EC2 实例",
+      "启用角色权限",
+      "简化实例权限管理",
+      "提高安全性"
+    ]
+  },
+  "IP Address": {
+    "definition": "IP 地址是分配给连接到计算机网络的设备的数字标签，用于标识和定位设备。",
+    "analogy": "就像邮寄地址，用于在网络上找到特定的设备。",
+    "features": [
+      "标识网络设备",
+      "用于数据传输",
+      "IPv4 和 IPv6",
+      "用于路由和寻址"
+    ]
+  },
+  "IP 地址类型": {
+    "definition": "用于在网络中标识设备的数字地址，分为公有 IP 和私有 IP 等。AWS 中资源分配 IP 地址的方式多样。",
+    "analogy": "就像门牌号一样，区分不同的房子。",
+    "features": [
+      "公有 IP 可用于互联网访问",
+      "私有 IP 用于 VPC 内通信",
+      "AWS 支持动态和静态 IP 分配"
+    ]
+  },
+  "IPsec": {
+    "definition": "互联网协议安全 (IPsec) 是一种用于在 IP 网络上提供安全通信的协议套件，通常用于 VPN。",
+    "analogy": "给数据加上密码锁，确保传输安全。",
+    "features": [
+      "提供数据加密",
+      "提供数据完整性",
+      "支持身份验证"
+    ]
+  },
+  "IPsec VPN": {
+    "definition": "使用 IPsec 协议建立的 VPN 连接，用于在 VPC 与其他网络之间创建加密的、安全的隧道。",
+    "analogy": "在两个办公地点之间建立一个加密的秘密通道。",
+    "features": [
+      "在 VPC 和其他网络间创建加密隧道",
+      "使用 IPsec 协议",
+      "提供数据安全传输"
+    ]
+  },
+  "IPv4": {
+    "definition": "互联网协议版本 4，是一种广泛使用的 IP 地址协议，用于标识网络上的设备。使用 32 位地址。",
+    "analogy": "就像早期的邮政编码，可以定位到具体地址。",
+    "features": [
+      "32 位地址空间",
+      "广泛使用",
+      "已被 IPv6 逐步取代"
+    ]
+  },
+  "ISCSI": {
+    "definition": "互联网小型计算机系统接口（iSCSI），一种基于 IP 的存储网络标准，用于通过 IP 网络传输 SCSI 指令。",
+    "analogy": "通过网络连接到存储服务器的硬盘。",
+    "features": [
+      "基于 IP 的存储协议",
+      "允许通过网络访问存储",
+      "常用于 SAN (存储区域网络)"
+    ]
+  },
+  "IdP": {
+    "definition": "身份提供商（IdP），负责验证用户身份并向服务提供身份声明。在 AWS 中，IdP 可以是企业目录服务或第三方身份提供商。",
+    "analogy": "就像一个认证中心，验证你的身份并给你通行证。",
+    "features": [
+      "管理用户身份",
+      "提供身份验证",
+      "支持单点登录"
+    ]
+  },
+  "Inline Policy": {
+    "definition": "直接嵌入到 IAM 用户、组或角色中的策略，用于定义权限。",
+    "analogy": "直接写在员工名牌上的权限。",
+    "features": [
+      "直接附加到单个用户、组或角色",
+      "权限定义与用户紧密耦合",
+      "不便于权限复用"
+    ]
+  },
+  "Instance Metadata Service Version 2 (IMDSv2)": {
+    "definition": "AWS 实例元数据服务版本 2 (IMDSv2) 是 Instance Metadata Service (IMDS) 的增强版本，旨在提高安全性。",
+    "analogy": "升级版的身份验证系统，更安全地获取实例信息。",
+    "features": [
+      "提高安全性",
+      "通过会话限制获取元数据",
+      "减少了潜在的 SSRF 漏洞"
+    ]
+  },
+  "Instance Profile": {
+    "definition": "一种用于将 IAM 角色传递给 EC2 实例的容器。 实例配置文件包含 IAM 角色。",
+    "analogy": "给 EC2 实例配一个员工证，赋予它访问其他 AWS 服务的权限。",
+    "features": [
+      "包含 IAM 角色",
+      "用于向 EC2 实例提供凭证",
+      "简化了对其他 AWS 服务的访问"
+    ]
+  },
+  "Instance Savings Plans": {
+    "definition": "一种灵活的定价模式，可在 EC2 实例上实现显著的成本节约，通过承诺在一段时间内使用特定量的计算能力来获得折扣。",
+    "analogy": "预付费电话套餐，承诺一定时间的通话时长来获得折扣。",
+    "features": [
+      "提供更灵活的定价",
+      "承诺一定量的计算能力使用",
+      "适用于 EC2 和 Fargate"
+    ]
+  },
+  "Instance Scheduler": {
+    "definition": "一种用于自动启动和停止 EC2 实例的解决方案，以优化成本。",
+    "analogy": "定时开关，自动控制 EC2 实例的运行时间。",
+    "features": [
+      "基于时间表的实例启动和停止",
+      "优化成本",
+      "提高资源利用率"
+    ]
+  },
+  "Instance Store": {
+    "definition": "提供临时块级别存储的存储设备，连接到 EC2 实例。当实例停止或终止时，实例存储中的数据将丢失。",
+    "analogy": "就像电脑的临时存储，关机后数据会丢失。",
+    "features": [
+      "临时块级别存储",
+      "数据在实例停止或终止时丢失",
+      "高性能，低延迟"
+    ]
+  },
+  "Instances": {
+    "definition": "EC2 实例是 AWS 云中的虚拟服务器，提供计算能力。",
+    "analogy": "云中的电脑。",
+    "features": [
+      "虚拟服务器",
+      "提供计算能力",
+      "按需创建和管理"
+    ]
+  },
+  "Interface Endpoint": {
+    "definition": "一种使用私有 IP 地址访问 AWS 服务的方式。 通过使用私有连接，流量不会离开 VPC。",
+    "analogy": "VPC 内部的专用通道，可以直接访问 AWS 服务，避免公网访问。",
+    "features": [
+      "使用私有 IP 地址",
+      "流量不离开 VPC",
+      "安全访问 AWS 服务"
+    ]
+  },
+  "Interface VPC Endpoint": {
+    "definition": "一种 VPC 终端节点，允许您通过私有 IP 地址安全地访问支持的 AWS 服务。 流量不会离开您的 VPC。",
+    "analogy": "VPC 内部的专用通道，可以直接访问 AWS 服务，避免公网访问。",
+    "features": [
+      "使用私有 IP 地址访问 AWS 服务",
+      "流量不离开 VPC",
+      "安全访问，无需 Internet 网关"
+    ]
+  },
+  "Internet bandwidth": {
+    "definition": "互联网带宽是指网络连接的数据传输速率，通常以每秒传输的比特数（bps）来衡量。",
+    "analogy": "就像高速公路的车道数量，决定了单位时间内能通过的车辆多少。",
+    "features": [
+      "衡量数据传输速率",
+      "影响网络性能",
+      "通常由 ISP 提供",
+      "单位为 bps (bits per second)"
+    ]
+  },
+  "InviteAccountToOrganization": {
+    "definition": "AWS Organizations 的一个功能，用于邀请现有 AWS 账户加入组织，使其可以统一管理。",
+    "analogy": "邀请朋友加入一个俱乐部，然后可以一起享受俱乐部的福利和规则。",
+    "features": [
+      "将 AWS 账户整合到组织中",
+      "管理员控制",
+      "账户之间共享资源和设置",
+      "实现集中管理和计费"
+    ]
+  },
+  "JDBC": {
+    "definition": "Java Database Connectivity，Java 应用程序访问数据库的标准 API。",
+    "analogy": "Java 程序连接到数据库的通用适配器，方便不同的数据库系统。",
+    "features": [
+      "Java 数据库连接的标准",
+      "定义了接口和类",
+      "实现数据库操作",
+      "支持多种数据库"
+    ]
+  },
+  "JS": {
+    "definition": "JavaScript 的简称，一种广泛用于 Web 开发的脚本语言，主要用于在浏览器中添加交互功能。",
+    "analogy": "网页的骨架是 HTML，JS 是赋予其生命力的肌肉和神经。",
+    "features": [
+      "前端脚本语言",
+      "用于网页交互",
+      "在浏览器中运行",
+      "支持事件驱动编程"
+    ]
+  },
+  "JSON Web Token (JWT)": {
+    "definition": "一种用于在客户端和服务端之间安全传输信息的开放标准 (RFC 7519)。",
+    "analogy": "一个带有数字签名的身份证明卡，可以安全地验证用户身份。",
+    "features": [
+      "用于身份验证和授权",
+      "包含声明 (claims)",
+      "通常用于 REST API",
+      "基于 JSON 格式"
+    ]
+  },
+  "Java Spring Boot": {
+    "definition": "一个用于创建独立的，生产级别的基于 Spring 框架的 Java 应用程序的框架。",
+    "analogy": "一个快速搭建 Java Web 应用的脚手架，让开发者专注于业务逻辑。",
+    "features": [
+      "简化 Spring 应用开发",
+      "提供依赖管理",
+      "快速启动和配置",
+      "支持微服务架构"
+    ]
+  },
+  "JavaScript": {
+    "definition": "一种广泛用于 Web 开发的脚本语言，主要用于在浏览器中添加交互功能。",
+    "analogy": "网页的骨架是 HTML，JS 是赋予其生命力的肌肉和神经。",
+    "features": [
+      "前端脚本语言",
+      "用于网页交互",
+      "在浏览器中运行",
+      "支持事件驱动编程"
+    ]
+  },
+  "KMS Key Policy": {
+    "definition": "Amazon KMS (Key Management Service) 密钥的访问控制策略，定义了哪些 IAM 用户或角色可以使用该密钥。",
+    "analogy": "一把锁的说明书，规定了谁可以用钥匙打开这把锁。",
+    "features": [
+      "定义密钥的使用权限",
+      "基于 IAM 策略",
+      "控制对密钥的访问",
+      "保护密钥的安全"
+    ]
+  },
+  "KPL": {
+    "definition": "Kinesis Producer Library (KPL) 是一个用于简化将数据写入 Amazon Kinesis Data Streams 的库。",
+    "analogy": "一个数据打包和发送的工具，提高向 Kinesis 写入数据的效率。",
+    "features": [
+      "提高写入 Kinesis 的吞吐量",
+      "自动批处理记录",
+      "减少网络开销",
+      "支持多种编程语言"
+    ]
+  },
+  "Key Rotation": {
+    "definition": "定期更换加密密钥以增强安全性的过程。",
+    "analogy": "定期更换你的密码，防止你的帐户被盗用。",
+    "features": [
+      "提高安全性",
+      "减少密钥泄露的风险",
+      "符合法规要求",
+      "周期性更换密钥"
+    ]
+  },
+  "Kinesis Agent": {
+    "definition": "一个预配置的 Java 应用程序，用于收集、聚合和将数据推送到 Amazon Kinesis Data Streams。",
+    "analogy": "一个数据收集和转发的中间人，将数据从各种来源传输到 Kinesis。",
+    "features": [
+      "简化数据采集",
+      "支持多种数据源",
+      "自动重试和错误处理",
+      "开源"
+    ]
+  },
+  "Kubernetes Cluster Autoscaler": {
+    "definition": "Kubernetes 的一个组件，用于自动调整集群中运行的 Pod 数量以满足应用程序的需求。",
+    "analogy": "一个自动增减员工的经理，根据工作量调整员工数量，保持高效运作。",
+    "features": [
+      "自动扩展和缩减集群规模",
+      "基于资源利用率",
+      "提高资源利用率",
+      "减少运维成本"
+    ]
+  },
+  "Kubernetes Metrics Server": {
+    "definition": "Kubernetes 集群的一个组件，用于收集 CPU 和内存等资源使用情况的指标。",
+    "analogy": "一个实时汇报资源使用情况的报告员，帮助你了解集群的负载情况。",
+    "features": [
+      "收集资源利用率指标",
+      "用于 Horizontal Pod Autoscaler",
+      "提供 API 接口",
+      "监控 Pod 和节点资源"
+    ]
+  },
+  "Kubernetes Secrets": {
+    "definition": "Kubernetes 中的一种对象，用于存储敏感信息，如密码、API 密钥等。",
+    "analogy": "一个安全的保险箱，用于存放应用程序的敏感信息。",
+    "features": [
+      "存储敏感信息",
+      "与 Pod 分离",
+      "提高安全性",
+      "通过挂载 Volume 使用"
+    ]
+  },
+  "Kubernetes 服务帐户": {
+    "definition": "Kubernetes 集群中代表 Pod 的身份，用于访问集群 API 和其他资源。",
+    "analogy": "每个 Pod 的身份证明，用于在 Kubernetes 集群中进行身份验证和授权。",
+    "features": [
+      "授权 Pod 访问资源",
+      "关联 IAM 角色",
+      "用于身份验证",
+      "用于 Pod 间通信"
+    ]
+  },
+  "LVM": {
+    "definition": "逻辑卷管理器 (LVM) 是一种逻辑卷管理工具，允许动态调整存储卷的大小。它提供灵活的存储管理，可以跨越多个物理磁盘。",
+    "analogy": "就像乐高积木一样，可以组合成不同的形状（卷），而且可以随时增加或减少积木数量（容量）。",
+    "features": [
+      "弹性存储",
+      "快照",
+      "在线调整容量",
+      "跨磁盘卷组"
+    ]
+  },
+  "Lambda Event Source Mapping": {
+    "definition": "Lambda 事件源映射是 Lambda 函数的配置，用于从各种 AWS 服务（如 Amazon SQS, DynamoDB）读取事件并触发函数执行。它将事件源与 Lambda 函数连接。",
+    "analogy": "就像一个邮递员，接收来自不同来源（事件源）的邮件（事件），然后分发给相应的住户（Lambda 函数）。",
+    "features": [
+      "连接事件源",
+      "异步调用",
+      "批量处理",
+      "错误处理"
+    ]
+  },
+  "Lambda Function URL": {
+    "definition": "Lambda Function URL 是一种便捷的方式，用于通过 HTTPS 协议访问 Lambda 函数。它为每个 Lambda 函数提供一个唯一的 URL。",
+    "analogy": "就像一个门牌号，让你可以直接通过地址（URL）访问特定的房屋（Lambda 函数）。",
+    "features": [
+      "无需 API Gateway",
+      "简单易用",
+      "HTTPS endpoint",
+      "支持 IAM 身份验证"
+    ]
+  },
+  "Lambda Provisioned Concurrency": {
+    "definition": "Lambda 预置并发是一种配置，用于确保 Lambda 函数在收到请求时能快速响应，通过预先初始化 Lambda 函数实例来减少延迟。",
+    "analogy": "就像提前准备好了一批货物，以便客户下单后立即发货，避免等待。",
+    "features": [
+      "降低冷启动",
+      "提升性能",
+      "控制并发",
+      "高可用"
+    ]
+  },
+  "Lambda Reserved Concurrency": {
+    "definition": "Lambda 保留并发是一种配置，用于限制 Lambda 函数可以使用的最大并发执行数量。它可以防止某个函数占用所有可用并发。",
+    "analogy": "就像预留了一块场地，确保某个活动（函数）有足够的空间，而不会被其他活动（函数）挤占。",
+    "features": [
+      "隔离函数",
+      "防止资源耗尽",
+      "控制成本",
+      "性能优化"
+    ]
+  },
+  "Lambda SnapStart": {
+    "definition": "Lambda SnapStart 是一项功能，通过使用快照加速函数启动，提高性能。它为 Java 语言的 Lambda 函数提供更快的启动速度。",
+    "analogy": "就像为游戏提前载入场景，当你开始游戏时，它已经准备好了，从而减少启动时间。",
+    "features": [
+      "降低冷启动",
+      "Java 支持",
+      "性能提升",
+      "快照复用"
+    ]
+  },
+  "Lambda cold start": {
+    "definition": "Lambda 冷启动是指 Lambda 函数在第一次调用或一段时间不活动后启动所需的时间，通常比已预热的函数更慢。",
+    "analogy": "就像冷车启动，需要预热才能正常运行。",
+    "features": [
+      "启动时间长",
+      "性能影响",
+      "影响响应时间",
+      "可以通过预置并发优化"
+    ]
+  },
+  "Lambda pre-provisioned concurrency": {
+    "definition": "Lambda 预先配置的并发是Lambda Provisioned Concurrency的另一种说法， 预先配置Lambda函数实例，以减少冷启动时间。",
+    "analogy": "就像提前准备好了一批货物，以便客户下单后立即发货，避免等待。",
+    "features": [
+      "降低冷启动",
+      "提升性能",
+      "控制并发",
+      "高可用"
+    ]
+  },
+  "Latency": {
+    "definition": "延迟是指从发送请求到接收响应之间的时间间隔，通常用于衡量网络或系统性能。",
+    "analogy": "就像你点了一份外卖，从下单到收到外卖的时间就是延迟。",
+    "features": [
+      "响应时间",
+      "网络延迟",
+      "系统延迟",
+      "性能指标"
+    ]
+  },
+  "Latency Routing": {
+    "definition": "延迟路由是一种 DNS 路由策略，将用户流量定向到延迟最低的资源，以提高用户体验。",
+    "analogy": "就像导航系统总是选择最快（延迟最低）的路线。",
+    "features": [
+      "提高用户体验",
+      "基于延迟",
+      "自动选择最佳资源",
+      "使用 DNS 服务"
+    ]
+  },
+  "Latency Routing Policy": {
+    "definition": "延迟路由策略是一种配置，用于在 DNS 服务中实现延迟路由。它根据每个资源的延迟情况选择最优的路由。",
+    "analogy": "就像一个地图，标明了不同道路的拥堵情况（延迟），帮助选择最快的路线。",
+    "features": [
+      "配置延迟路由",
+      "选择最佳资源",
+      "基于延迟",
+      "DNS 服务"
+    ]
+  },
+  "Latency-Based Routing": {
+    "definition": "基于延迟的路由是一种流量路由策略，它根据对资源的延迟测量，将用户流量路由到响应速度最快的资源。",
+    "analogy": "类似于选择网络上最快响应的服务器来访问网站。",
+    "features": [
+      "优化用户体验",
+      "减少延迟",
+      "动态路由",
+      "监控延迟"
+    ]
+  },
+  "Launch Permissions": {
+    "definition": "启动权限定义了哪些用户或账户有权使用启动模板来启动实例。它控制了启动实例的访问权限。",
+    "analogy": "就像一把钥匙，只有拥有钥匙的人（启动权限）才能打开门（启动实例）。",
+    "features": [
+      "控制启动权限",
+      "基于 IAM",
+      "保护资源",
+      "安全合规"
+    ]
+  },
+  "Launch Template": {
+    "definition": "启动模板是一个包含启动实例所需信息的蓝图，包括 AMI、实例类型、安全组等配置信息。它可以用于多次启动实例。",
+    "analogy": "就像一个模具，可以用来创建相同形状的饼干（实例）。",
+    "features": [
+      "定义启动配置",
+      "版本控制",
+      "简化实例启动",
+      "可复用性"
+    ]
+  },
+  "Lazy Loading": {
+    "definition": "延迟加载是一种优化技术，只有在需要时才加载资源，例如图像或代码，以提高页面加载速度。",
+    "analogy": "就像按需点菜，只有当你需要吃的时候才做饭，避免浪费时间和资源。",
+    "features": [
+      "提高页面加载速度",
+      "减少带宽消耗",
+      "优化性能",
+      "按需加载"
+    ]
+  },
+  "LeaveOrganization": {
+    "definition": "离开组织，指用户从 AWS Organizations 中脱离，不再受组织策略管理。",
+    "analogy": "就像你离开了一个公司，不再受到公司规章制度的约束。",
+    "features": [
+      "停止访问组织资源",
+      "管理员可以设置限制，阻止成员离开",
+      "成员帐户独立"
+    ]
+  },
+  "Legal Hold": {
+    "definition": "法律保留，指为了满足法律或法规要求，对存储在 Amazon S3 中的对象设置保留期，防止其被删除。",
+    "analogy": "就像法院下令冻结资产，在调查结束前不能动。",
+    "features": [
+      "防止对象被删除",
+      "支持多种保留期",
+      "审计追踪"
+    ]
+  },
+  "Lex": {
+    "definition": "Amazon Lex 是一项用于构建对话式界面的服务，支持语音和文本。",
+    "analogy": "就像一个智能聊天机器人，可以理解你的问题并给出回答。",
+    "features": [
+      "语音识别",
+      "自然语言理解",
+      "对话管理",
+      "多语言支持"
+    ]
+  },
+  "Lifecycle": {
+    "definition": "生命周期，指数据在存储生命周期中的管理策略，例如数据的创建、访问、过期和删除。",
+    "analogy": "就像人类的生命周期，从出生到死亡。",
+    "features": [
+      "管理数据存储成本",
+      "自动化数据管理",
+      "提高数据安全性"
+    ]
+  },
+  "Lifecycle Configuration": {
+    "definition": "生命周期配置，用于在 Amazon S3 存储桶上定义数据生命周期管理策略。",
+    "analogy": "就像为你的文件制定一个管理计划，规定它们何时移动到不同的存储等级或被删除。",
+    "features": [
+      "应用于整个存储桶或特定前缀",
+      "定义过渡和过期规则",
+      "支持多个规则"
+    ]
+  },
+  "Lifecycle Hooks": {
+    "definition": "生命周期钩子，指在 EC2 实例生命周期中的特定时刻触发的操作，例如启动、停止、终止等。",
+    "analogy": "就像在工厂流水线上安装的传感器，当产品经过时，触发特定的动作。",
+    "features": [
+      "启动钩子",
+      "终止钩子",
+      "在实例生命周期中执行自定义操作"
+    ]
+  },
+  "Lifecycle Policies": {
+    "definition": "生命周期策略，用于管理 Amazon S3 对象的存储生命周期，例如过渡到不同的存储类或删除。",
+    "analogy": "就像给你的文件设定一个时间表，让它们在不同的存储位置之间移动。",
+    "features": [
+      "自动管理存储成本",
+      "根据数据访问频率移动数据",
+      "支持对象过期"
+    ]
+  },
+  "Lifecycle Policy": {
+    "definition": "生命周期策略，与 Lifecycle Policies 相同，是用于管理 Amazon S3 对象的存储生命周期。",
+    "analogy": "",
+    "features": [
+      "自动管理存储成本",
+      "根据数据访问频率移动数据",
+      "支持对象过期"
+    ]
+  },
+  "Lifecycle policy": {
+    "definition": "生命周期策略，与 Lifecycle Policies 相同，是用于管理 Amazon S3 对象的存储生命周期。",
+    "analogy": "",
+    "features": [
+      "自动管理存储成本",
+      "根据数据访问频率移动数据",
+      "支持对象过期"
+    ]
+  },
+  "Lifecycle rules": {
+    "definition": "生命周期规则，是定义在 Amazon S3 生命周期配置中的具体规则，指定对象应该如何过渡或过期。",
+    "analogy": "就像你的文件的时间表中的具体条目，说明它们应该在何时何地移动或被删除。",
+    "features": [
+      "指定过渡到不同存储类",
+      "指定对象过期时间",
+      "应用于特定前缀"
+    ]
+  },
+  "Linux EC2": {
+    "definition": "在 Amazon EC2 上运行的基于 Linux 的实例，提供可扩展的计算能力。",
+    "analogy": "就像租用一台 Linux 电脑，可以根据需要增加或减少配置。",
+    "features": [
+      "多种 Linux 发行版支持",
+      "可自定义配置",
+      "按需付费"
+    ]
+  },
+  "Lustre": {
+    "definition": "Amazon FSx for Lustre 是一项高性能、可扩展的并行文件系统服务，适用于计算密集型工作负载。",
+    "analogy": "就像一个超级快速的共享文件夹，可以供许多人同时访问和处理大量数据。",
+    "features": [
+      "高性能并行文件系统",
+      "与 S3 集成",
+      "适用于 HPC 工作负载"
+    ]
+  },
+  "M5": {
+    "definition": "M5 实例，是 Amazon EC2 提供的一种通用型实例，适用于各种工作负载。",
+    "analogy": "就像一台多功能的电脑，可以胜任各种任务。",
+    "features": [
+      "平衡的计算、内存和网络性能",
+      "多种大小规格",
+      "成本效益高"
+    ]
+  },
+  "MFA Delete": {
+    "definition": "MFA 删除，指通过多因素身份验证 (MFA) 来保护 Amazon S3 存储桶中的对象删除操作。",
+    "analogy": "就像你需要输入密码和动态验证码才能删除重要文件。",
+    "features": [
+      "增加数据删除的安全性",
+      "防止未经授权的删除",
+      "需要 MFA 才能执行删除操作"
+    ]
+  },
+  "MQ": {
+    "definition": "Amazon MQ 是一项托管的消息队列服务，支持各种消息代理，例如 ActiveMQ 和 RabbitMQ。",
+    "analogy": "就像一个邮局，负责在不同的应用程序之间传递消息。",
+    "features": [
+      "兼容行业标准消息协议",
+      "托管消息代理",
+      "简化消息队列设置"
+    ]
+  },
+  "MSP": {
+    "definition": "MSP（Managed Service Provider，托管服务提供商）是指提供全面托管 IT 服务的公司，涵盖基础设施、应用程序和支持。",
+    "analogy": "就像雇佣一个专业的管家团队，负责你家里的所有维护和管理。",
+    "features": [
+      "提供全面 IT 服务",
+      "涵盖基础设施、应用和支持",
+      "减轻企业 IT 负担",
+      "通常按订阅模式收费"
+    ]
+  },
+  "Managed Node Groups": {
+    "definition": "Amazon Elastic Kubernetes Service (EKS) 中的一种功能，用于简化和自动化 Kubernetes 集群中节点组的管理。",
+    "analogy": "相当于 Kubernetes 集群里的自动驾驶出租车队，帮你管理和维护集群里的计算资源。",
+    "features": [
+      "简化节点组管理",
+      "自动缩放和更新",
+      "支持多种实例类型",
+      "与 EKS 集成"
+    ]
+  },
+  "Management Account": {
+    "definition": "AWS Organizations 中的一个账户，用于创建和管理组织中的所有其他账户。",
+    "analogy": "就像一家公司的总部，负责管理和协调所有分公司。",
+    "features": [
+      "组织中的根账户",
+      "集中管理账单",
+      "配置 IAM 策略",
+      "管理组织结构"
+    ]
+  },
+  "Management VPC": {
+    "definition": "在一个多账户环境中，用于管理和控制网络连接的集中式 Virtual Private Cloud (VPC)。",
+    "analogy": "相当于一个大型社区的中央网络枢纽，控制着所有住户的网络连接。",
+    "features": [
+      "集中管理网络",
+      "控制跨账户的连接",
+      "简化网络配置",
+      "增强安全性"
+    ]
+  },
+  "MariaDB": {
+    "definition": "一个开源关系数据库管理系统，是 MySQL 的一个分支。",
+    "analogy": "可以类比为一位非常能干的图书管理员，负责整理和管理所有数据信息。",
+    "features": [
+      "开源",
+      "关系型数据库",
+      "与 MySQL 兼容",
+      "支持高可用性"
+    ]
+  },
+  "Mbps": {
+    "definition": "Mbps（Megabits per second），表示每秒传输的百万位比特数据量，衡量网络带宽。",
+    "analogy": "就像一条高速公路， Mbps 数值越高，每秒钟能通过的汽车就越多。",
+    "features": [
+      "衡量网络带宽",
+      "单位为每秒百万位比特",
+      "影响数据传输速度",
+      "用于衡量网络性能"
+    ]
+  },
+  "Memcached": {
+    "definition": "一个高性能的分布式内存对象缓存系统，用于加速动态Web应用程序。",
+    "analogy": "就像餐馆里的服务员，把经常点餐的菜品提前准备好，缩短顾客等待时间。",
+    "features": [
+      "分布式缓存系统",
+      "用于缓存数据",
+      "提高应用程序性能",
+      "基于内存"
+    ]
+  },
+  "Memory Utilization": {
+    "definition": "衡量系统内存使用量，通常以百分比表示。",
+    "analogy": "就像一个水桶，Memory Utilization 越高，水桶里的水就越多。",
+    "features": [
+      "衡量内存使用量",
+      "以百分比表示",
+      "影响系统性能",
+      "用于监控系统资源"
+    ]
+  },
+  "Microservices": {
+    "definition": "一种软件架构风格，将应用程序构建为一系列小型、独立部署的服务。",
+    "analogy": "就像一家连锁餐厅，由多个独立的厨房组成，每个厨房负责不同的菜品。",
+    "features": [
+      "独立部署",
+      "小型服务",
+      "松耦合",
+      "易于扩展和维护"
+    ]
+  },
+  "Microsoft Active Directory": {
+    "definition": "微软的目录服务，用于管理用户、设备和安全策略。",
+    "analogy": "就像公司的员工花名册和权限管理系统，控制着谁可以访问哪些资源。",
+    "features": [
+      "目录服务",
+      "用户和设备管理",
+      "安全策略",
+      "身份验证和授权"
+    ]
+  },
+  "Microsoft Windows Server": {
+    "definition": "微软的服务器操作系统，用于运行各种应用程序和服务。",
+    "analogy": "就像一个高效的管理人员，负责协调和管理服务器上的各种任务。",
+    "features": [
+      "服务器操作系统",
+      "运行应用程序和服务",
+      "提供网络功能",
+      "支持 Active Directory"
+    ]
+  },
+  "Mount Target": {
+    "definition": "Amazon Elastic File System (EFS) 中用于访问文件系统的网络接口。",
+    "analogy": "就像一个文件系统的大门，你需要通过它才能访问里面的文件。",
+    "features": [
+      "EFS 的网络接口",
+      "提供文件系统访问",
+      "属于特定可用区",
+      "通过安全组控制访问"
+    ]
+  },
+  "Multi-Attach": {
+    "definition": "一种功能，允许多个 EC2 实例同时附加到一个 EBS 卷。",
+    "analogy": "就像一个共享的硬盘，多个电脑可以同时访问它。",
+    "features": [
+      "允许多个 EC2 实例附加 EBS 卷",
+      "并发读写",
+      "支持特定的 EBS 卷类型",
+      "用于集群和高可用性场景"
+    ]
+  },
+  "Multi-Region Access Points": {
+    "definition": "Amazon S3 的功能，允许用户通过单个端点从多个 AWS 区域访问 S3 对象，而无需更改应用程序代码。",
+    "analogy": "就像一个全球统一的邮政编码，无论你在哪里，都可以通过它访问你的邮件。",
+    "features": [
+      "S3 的功能",
+      "单个端点访问多区域对象",
+      "简化应用程序代码",
+      "提高可用性和性能"
+    ]
+  },
+  "Multi-region secret replication": {
+    "definition": "在 AWS Secrets Manager 中，将密钥复制到多个区域，以提高可用性和容错能力。",
+    "analogy": "就像把你的保险柜的钥匙复制到多个地方，以确保在紧急情况下仍然可以访问你的资产。",
+    "features": [
+      "复制密钥到多个区域",
+      "提高可用性",
+      "增强容错能力",
+      "用于跨区域应用程序"
+    ]
+  },
+  "Multipart Uploads": {
+    "definition": "Amazon S3 的一种上传机制，将大文件分割成多个部分并发上传，提高上传速度和容错性。",
+    "analogy": "就像快递公司把大件货物拆分成多个包裹分别运输。",
+    "features": [
+      "提高大文件上传效率",
+      "支持断点续传",
+      "增强容错性"
+    ]
+  },
+  "Multivalue Answer Routing Policy": {
+    "definition": "Amazon Route 53 的路由策略，允许根据健康检查，返回多个可用资源的 IP 地址。",
+    "analogy": "类似医院急诊科，多个医生同时接诊，加快诊疗速度。",
+    "features": [
+      "基于健康检查",
+      "返回多个 IP 地址",
+      "实现高可用性"
+    ]
+  },
+  "MySQL to Aurora": {
+    "definition": "将 MySQL 数据库迁移到 Amazon Aurora 数据库服务。",
+    "analogy": "将旧款汽车的发动机更换为更高效的发动机。",
+    "features": [
+      "数据库迁移",
+      "提高性能",
+      "兼容 MySQL"
+    ]
+  },
+  "NAT Instance": {
+    "definition": "一种运行在 Amazon EC2 中的实例，用于提供私有子网的实例访问 Internet 的功能，但并不接受来自 Internet 的主动连接。",
+    "analogy": "就像是小区门口的门卫，允许住户出去，但不允许外面的人直接进来。",
+    "features": [
+      "允许私有子网实例访问 Internet",
+      "不支持 Internet 主动连接",
+      "需要手动配置和管理"
+    ]
+  },
+  "NIST": {
+    "definition": "美国国家标准与技术研究院，发布了多种网络安全标准和指南，如 NIST 800-53。",
+    "analogy": "就像制定了安全规范的国家标准化机构。",
+    "features": [
+      "提供安全标准",
+      "政府机构",
+      "用于合规"
+    ]
+  },
+  "Neptune": {
+    "definition": "Amazon 的完全托管图数据库服务，用于构建和运行需要处理大量关联数据的应用程序。",
+    "analogy": "就像一个专门用来存储和分析复杂人际关系的网络图。",
+    "features": [
+      "图数据库",
+      "支持 Gremlin 和 SPARQL 查询",
+      "完全托管"
+    ]
+  },
+  "Neptune Streams": {
+    "definition": "Amazon Neptune 的数据变更流功能，允许应用程序实时订阅和处理 Neptune 数据库中的变更。",
+    "analogy": "就像监控摄像头实时记录数据库的变化。",
+    "features": [
+      "数据变更流",
+      "实时处理",
+      "用于数据同步和触发器"
+    ]
+  },
+  "Network": {
+    "definition": "指计算机网络，将设备连接在一起，以实现数据交换和资源共享。",
+    "analogy": "就像城市里的道路，连接了不同的建筑物。",
+    "features": [
+      "数据传输",
+      "资源共享",
+      "设备连接"
+    ]
+  },
+  "Network Bandwidth": {
+    "definition": "网络带宽是指在一定时间内通过网络传输的数据量，通常以比特每秒（bps）为单位。",
+    "analogy": "就像高速公路的车道数量，决定了单位时间内通过的车辆数量。",
+    "features": [
+      "数据传输速率",
+      "单位bps",
+      "影响网络性能"
+    ]
+  },
+  "Network Load Balancer (NLB)": {
+    "definition": "一种负载均衡器，用于在 OSI 模型第 4 层（TCP/UDP）进行负载均衡。",
+    "analogy": "就像交通信号灯，将流量均匀分配到不同的车道上。",
+    "features": [
+      "第4层负载均衡",
+      "高吞吐量",
+      "低延迟"
+    ]
+  },
+  "NetworkACL": {
+    "definition": "网络访问控制列表，一种在子网级别控制进出流量的防火墙。",
+    "analogy": "就像小区门口的保安，可以根据规则拦截进出的人员。",
+    "features": [
+      "子网级别",
+      "无状态",
+      "允许或拒绝流量"
+    ]
+  },
+  "Node.js": {
+    "definition": "一个基于 Chrome V8 引擎的 JavaScript 运行环境，用于构建可伸缩的网络应用程序。",
+    "analogy": "就像一个专门为 JavaScript 写的服务器端程序。",
+    "features": [
+      "JavaScript 运行环境",
+      "异步编程",
+      "用于服务器端应用开发"
+    ]
+  },
+  "OAC": {
+    "definition": "Amazon OpenSearch Service 的访问控制配置，用于控制对 OpenSearch 集群的访问。",
+    "analogy": "就像为图书馆设置门禁系统。",
+    "features": [
+      "访问控制配置",
+      "保护 OpenSearch 集群",
+      "控制用户权限"
+    ]
+  },
+  "OIDC": {
+    "definition": "开放身份验证互联协议，是一种基于 OAuth 2.0 的身份验证层，用于验证用户身份。",
+    "analogy": "就像一个护照，证明了你的身份。",
+    "features": [
+      "身份验证",
+      "基于 OAuth 2.0",
+      "用于用户认证"
+    ]
+  },
+  "ONTAP": {
+    "definition": "NetApp 公司的存储操作系统，提供数据存储和管理功能。",
+    "analogy": "就像一个高级的文件管理系统。",
+    "features": [
+      "NetApp 存储操作系统",
+      "数据存储",
+      "数据管理"
+    ]
+  },
+  "Object Lambda": {
+    "definition": "Amazon S3 的一项功能，允许您使用 Lambda 函数处理来自 S3 对象的请求。",
+    "analogy": "就像在读取文件前，先用你的代码处理一下文件内容。",
+    "features": [
+      "使用 Lambda 函数进行数据转换",
+      "支持 GET、HEAD 请求",
+      "无需复制数据"
+    ]
+  },
+  "Object Lock": {
+    "definition": "Amazon S3 提供的一种对象存储功能，用于防止对象被删除或覆盖。",
+    "analogy": "就像给你的文件加了锁，只有在锁定的时间到期后才能修改。",
+    "features": [
+      "保护对象免受意外删除",
+      "支持合规性要求",
+      "提供保质期管理"
+    ]
+  },
+  "On-Demand Capacity Mode": {
+    "definition": "Amazon DynamoDB 的一种付费模式，无需预先规划容量，按实际使用的读写请求付费。",
+    "analogy": "就像按需点外卖，想吃多少就点多少，不用提前预定。",
+    "features": [
+      "无需管理容量",
+      "自动扩展",
+      "适合流量不稳定的应用"
+    ]
+  },
+  "On-Demand Instances": {
+    "definition": "Amazon EC2 的一种实例购买选项，按小时付费，无需长期承诺。",
+    "analogy": "就像租车，想用多久就租多久，用完就还。",
+    "features": [
+      "灵活性高",
+      "适合短期工作负载",
+      "无预付款"
+    ]
+  },
+  "On-Demand Mode": {
+    "definition": "Amazon RDS 的一种数据库部署选项，允许按需创建和使用数据库实例。",
+    "analogy": "类似按需租用存储空间，需要时开通，不需要时释放。",
+    "features": [
+      "灵活的数据库部署方式",
+      "无需预先规划容量",
+      "按小时计费"
+    ]
+  },
+  "One Zone-IA": {
+    "definition": "Amazon S3 的存储类别，数据存储在单个可用区，适用于不经常访问的数据，成本较低。",
+    "analogy": "就像把文件放在你家附近的一个仓库里，方便取用，但不如存在多个仓库里安全。",
+    "features": [
+      "成本低于标准存储",
+      "数据存储在单个 AZ",
+      "适用于不经常访问的数据"
+    ]
+  },
+  "One Zone-Infrequent Access (One Zone-IA)": {
+    "definition": "同 One Zone-IA",
+    "analogy": "",
+    "features": []
+  },
+  "OpenAPI": {
+    "definition": "一种用于描述 RESTful API 的规范，允许机器可读的接口定义。",
+    "analogy": "就像 API 版本的蓝图，方便开发者了解和使用API。",
+    "features": [
+      "描述 API 接口",
+      "支持多种编程语言",
+      "方便 API 文档生成"
+    ]
+  },
+  "OpenZFS": {
+    "definition": "一种开源的，高级文件系统，提供了数据存储和管理功能。",
+    "analogy": "就像一个高级的图书馆管理系统，可以帮助你管理和保护数据。",
+    "features": [
+      "数据完整性",
+      "存储池管理",
+      "快照和克隆"
+    ]
+  },
+  "OpsCenter": {
+    "definition": "AWS Systems Manager 的一个功能，用于集中查看、调查和解决操作问题。",
+    "analogy": "就像一个监控室，集中显示所有服务器的健康状况和问题。",
+    "features": [
+      "集中式操作仪表板",
+      "问题分析",
+      "问题解决建议"
+    ]
+  },
+  "Oracle APEX": {
+    "definition": "Oracle Application Express 的简称，是一个低代码开发平台，用于构建可扩展的 Web 应用程序。",
+    "analogy": "就像一个快速搭建网站的工具，让你无需编写大量代码就能创建应用程序。",
+    "features": [
+      "快速应用开发",
+      "基于数据库",
+      "用户界面友好"
+    ]
+  },
+  "Oracle Database": {
+    "definition": "一种关系型数据库管理系统，提供企业级的数据管理和存储。",
+    "analogy": "就像一个大型图书馆，用来存储和管理大量数据。",
+    "features": [
+      "高可用性",
+      "数据安全",
+      "性能优化"
+    ]
+  },
+  "Organizations": {
+    "definition": "AWS 的一项服务，用于集中管理多个 AWS 账户。",
+    "analogy": "就像一个公司总部，管理着所有的分公司。",
+    "features": [
+      "集中账户管理",
+      "统一计费",
+      "安全策略实施"
+    ]
+  },
+  "PITR": {
+    "definition": "Point-in-Time Recovery 的缩写，数据库的基于时间点的数据恢复功能。",
+    "analogy": "就像时光机，可以让你回到过去某个时间点恢复数据。",
+    "features": [
+      "数据恢复到特定时间点",
+      "防止数据丢失",
+      "数据备份与还原"
+    ]
+  },
+  "PL/SQL": {
+    "definition": "Oracle 数据库的编程语言，用于编写数据库存储过程、函数和触发器。",
+    "analogy": "就像给 Oracle 数据库编写的脚本语言，用来控制数据库的行为。",
+    "features": [
+      "数据库编程",
+      "存储过程编写",
+      "提高数据库性能"
+    ]
+  },
+  "Packet Loss": {
+    "definition": "数据包丢失指数据在网络传输过程中未能成功到达目的地。这会降低网络通信的可靠性和效率。",
+    "analogy": "就像快递包裹在运输途中不小心丢失一样。",
+    "features": [
+      "影响网络性能",
+      "可能导致数据传输不完整",
+      "需要重传机制来弥补"
+    ]
+  },
+  "Parquet": {
+    "definition": "一种为 Apache Hadoop 生态系统设计的列式存储格式，特别适用于大数据分析场景，可以高效存储和读取数据。",
+    "analogy": "类似于超市货架上按商品种类整齐摆放的商品，方便查找。",
+    "features": [
+      "列式存储",
+      "高压缩比",
+      "高效的查询性能",
+      "与 Hadoop 生态系统兼容"
+    ]
+  },
+  "PartiQL": {
+    "definition": "一种与 SQL 兼容的查询语言，用于查询各种数据存储，包括关系型数据库和 NoSQL 数据存储。",
+    "analogy": "类似于一个万能的翻译器，能用 SQL 的语法来查询不同类型的数据。",
+    "features": [
+      "兼容 SQL",
+      "支持多种数据存储",
+      "统一的查询接口",
+      "简化数据访问"
+    ]
+  },
+  "Patch Manager": {
+    "definition": "AWS 的一项服务，用于自动化修补 Amazon EC2 实例和其他 AWS 资源上的操作系统和软件。",
+    "analogy": "就像是IT管理员，负责给电脑安装补丁，保证安全。",
+    "features": [
+      "自动化补丁安装",
+      "支持多种操作系统",
+      "可定制的补丁策略",
+      "合规性报告"
+    ]
+  },
+  "Patching": {
+    "definition": "为解决软件漏洞或改进功能，对软件进行更新或修改的过程。它包括下载、安装补丁。",
+    "analogy": "就像给你的手机更新系统一样，修复漏洞，优化性能。",
+    "features": [
+      "修复安全漏洞",
+      "改进软件功能",
+      "提高系统稳定性",
+      "避免安全风险"
+    ]
+  },
+  "Payment Processing": {
+    "definition": "处理在线交易的流程，包括授权、结算等环节，确保交易的顺利完成。",
+    "analogy": "类似于银行处理你购物的支付流程。",
+    "features": [
+      "处理信用卡和其他支付方式",
+      "保证交易安全",
+      "提供交易报告",
+      "管理退款"
+    ]
+  },
+  "Performance": {
+    "definition": "衡量系统或应用程序执行任务的效率和响应速度的指标。",
+    "analogy": "就像跑车的速度，越快越好。",
+    "features": [
+      "响应时间",
+      "吞吐量",
+      "资源利用率",
+      "延迟"
+    ]
+  },
+  "Performance Insights": {
+    "definition": "Amazon RDS 的一项功能，用于帮助你评估和优化数据库性能，提供性能瓶颈的可视化信息。",
+    "analogy": "就像数据库的健康体检，帮你找出哪儿“生病”了。",
+    "features": [
+      "性能仪表板",
+      "可视化性能指标",
+      "性能问题诊断",
+      "提供优化建议"
+    ]
+  },
+  "Permissions": {
+    "definition": "定义用户或服务可以访问 AWS 资源以及可以执行的操作的设置。",
+    "analogy": "类似于门禁卡，决定你能进入哪些房间，能做什么。",
+    "features": [
+      "控制资源访问",
+      "基于身份的策略",
+      "基于资源的策略",
+      "IAM 管理"
+    ]
+  },
+  "Permissions Boundary": {
+    "definition": "一种高级 IAM 功能，用于设置用户或角色可以拥有的最大权限。它限制了用户或角色可以获得的权限范围。",
+    "analogy": "就像是门禁系统的额外限制，即使你拥有卡，也只能进入指定的区域。",
+    "features": [
+      "限制用户权限",
+      "防止权限蔓延",
+      "简化权限管理",
+      "提高安全性"
+    ]
+  },
+  "Pilot Light": {
+    "definition": "一种灾难恢复策略，准备好关键系统，但不运行所有系统。类似于备用资源处于“预热”状态。",
+    "analogy": "就像厨房里的燃气灶，主火关了，但有小火苗保持着温度。",
+    "features": [
+      "成本低于 Warm Standby",
+      "恢复时间较快",
+      "预先配置资源",
+      "需要定期测试"
+    ]
+  },
+  "Placement Group": {
+    "definition": "在 Amazon EC2 中，定义实例放置策略。帮助优化网络性能和实例间的通信。",
+    "analogy": "类似于在演唱会中把喜欢摇滚的观众放在一起。",
+    "features": [
+      "集群计算",
+      "分区放置",
+      "扩展放置",
+      "优化网络性能"
+    ]
+  },
+  "Placement Groups": {
+    "definition": "Amazon EC2 提供的一种逻辑分组，用于控制 EC2 实例在 AWS 基础设施中的放置方式，以满足特定的性能、可用性或成本需求。",
+    "analogy": "类似于一个大型办公室里的不同工作区，将团队成员聚集在一起。",
+    "features": [
+      "优化网络性能",
+      "提高可用性",
+      "支持密集计算",
+      "包括集群、分区和扩展放置组"
+    ]
+  },
+  "Point-in-time Recovery": {
+    "definition": "一种数据恢复技术，允许将数据库恢复到指定时间点的状态，用于应对数据丢失或损坏。",
+    "analogy": "就像时光机，可以把你带回某个时间点，恢复过去的数据。",
+    "features": [
+      "恢复到特定时间点",
+      "防止数据丢失",
+      "数据备份与恢复",
+      "提高数据安全性"
+    ]
+  },
+  "Point-in-time Recovery, PITR": {
+    "definition": "简称 PITR，是一种数据恢复机制，允许将数据库恢复到过去的任意时间点，以应对数据损坏或错误。",
+    "analogy": "就像时光倒流功能，可以让你回到过去纠正错误，或查看之前的数据状态。",
+    "features": [
+      "数据库时间点恢复",
+      "防止数据丢失",
+      "数据安全保障",
+      "灵活的恢复时间点选择"
+    ]
+  },
+  "Point-in-time recovery": {
+    "definition": "Amazon RDS 提供的数据库时间点恢复功能，允许你将数据库恢复到指定时间点的状态。",
+    "analogy": "时光机，可以让你回到过去修正错误。",
+    "features": [
+      "数据备份",
+      "按需恢复",
+      "最小化数据丢失"
+    ]
+  },
+  "Policy": {
+    "definition": "AWS 中用于控制用户、组或角色对资源的访问权限的文档，通常以 JSON 格式定义。",
+    "analogy": "公司里的规章制度，规定了员工可以做什么和不可以做什么。",
+    "features": [
+      "基于身份的策略",
+      "基于资源的策略",
+      "精细的权限控制"
+    ]
+  },
+  "PowerUsers": {
+    "definition": "在 AWS IAM 中，预定义的托管策略之一，允许用户进行广泛的 AWS 服务操作，但不允许管理用户和组。",
+    "analogy": "公司里的部门主管，拥有大部分权限，但不能管人事。",
+    "features": [
+      "管理大部分服务",
+      "无用户管理权限",
+      "简化权限配置"
+    ]
+  },
+  "Pre-provisioned Concurrency": {
+    "definition": "为 Lambda 函数预先分配一定数量的并发执行环境，以缩短冷启动时间，提高响应速度。",
+    "analogy": "提前准备好一定数量的厨师，以应对高峰时段的用餐需求，避免等待时间过长。",
+    "features": [
+      "降低延迟",
+      "减少冷启动",
+      "提高性能"
+    ]
+  },
+  "Predictive Scaling": {
+    "definition": "基于历史数据和机器学习，预测负载并提前调整计算资源，例如 EC2 实例数量。",
+    "analogy": "天气预报，预测未来天气变化，提前做好准备。",
+    "features": [
+      "预测负载",
+      "自动伸缩",
+      "优化成本"
+    ]
+  },
+  "Private Subnet": {
+    "definition": "VPC 中的子网，没有直接的 Internet 连接，通常用于部署数据库等内部服务。",
+    "analogy": "公司内部网络，只有公司员工才能访问。",
+    "features": [
+      "无公网 IP",
+      "隔离性强",
+      "通过 NAT Gateway 或 NAT Instance 访问 Internet"
+    ]
+  },
+  "Production VPC": {
+    "definition": "专为生产环境设计的 VPC（Virtual Private Cloud），需要高可用性、安全性和可靠性。",
+    "analogy": "公司的总部大楼，需要严格的安全措施和稳定的基础设施。",
+    "features": [
+      "高可用性",
+      "安全性",
+      "容错性"
+    ]
+  },
+  "Provisioned": {
+    "definition": "预先配置的资源状态，例如预先分配 EC2 实例或数据库容量。",
+    "analogy": "提前订购的餐点，准备好随时享用。",
+    "features": [
+      "资源预分配",
+      "性能稳定",
+      "成本预测"
+    ]
+  },
+  "Provisioned Capacity Mode": {
+    "definition": "DynamoDB 的一种容量模式，允许你预先为表配置所需的读写容量。",
+    "analogy": "提前预订剧院的座位数量，保证观众有座位。",
+    "features": [
+      "容量预留",
+      "性能稳定",
+      "成本可预测"
+    ]
+  },
+  "Provisioned IOPS": {
+    "definition": "预先配置的数据库或存储设备的每秒输入/输出操作次数，用于确保性能。",
+    "analogy": "预先准备好一定数量的传送带，确保货物快速运输。",
+    "features": [
+      "性能保证",
+      "I/O 性能控制",
+      "适用于高性能需求"
+    ]
+  },
+  "Provisioned IOPS SSD (io2)": {
+    "definition": "AWS EBS (Elastic Block Storage) 的一种卷类型，提供高性能的 IOPS，适用于 I/O 密集型工作负载。",
+    "analogy": "高速公路，能够快速通行大量车辆。",
+    "features": [
+      "高性能存储",
+      "高 IOPS",
+      "适用于关键业务应用"
+    ]
+  },
+  "Provisioned Mode": {
+    "definition": "指预先分配资源的方式，例如在 DynamoDB 中预先分配读写容量。",
+    "analogy": "提前准备好的食材，用于制作餐点。",
+    "features": [
+      "资源预留",
+      "性能保证",
+      "成本可预测"
+    ]
+  },
+  "Public Subnet": {
+    "definition": "VPC 中的子网，拥有 Internet 网关，其中的资源可以与 Internet 直接通信。",
+    "analogy": "公司前台，可以直接接待外部访客。",
+    "features": [
+      "有公网 IP",
+      "可访问 Internet",
+      "通常用于 Web 服务器"
+    ]
+  },
+  "PutObject": {
+    "definition": "Amazon S3 的 API 操作，用于将对象（例如文件）上传到存储桶中。",
+    "analogy": "将文件放入储物柜中。",
+    "features": [
+      "上传文件",
+      "存储数据",
+      "S3 核心操作"
+    ]
+  },
+  "PySpark": {
+    "definition": "Apache Spark 的 Python API，用于大规模数据处理和分析。",
+    "analogy": "使用 Python 分析海量数据。",
+    "features": [
+      "数据处理",
+      "机器学习",
+      "分布式计算"
+    ]
+  },
+  "Python": {
+    "definition": "一种流行的通用高级编程语言，广泛应用于各种领域，包括云计算、数据科学和机器学习。",
+    "analogy": "就像一把瑞士军刀，拥有各种工具，能解决各种问题。",
+    "features": [
+      "易于学习和使用",
+      "丰富的库和框架",
+      "跨平台",
+      "解释型语言"
+    ]
+  },
+  "Query": {
+    "definition": "在数据库中检索或操作数据的请求，通常使用结构化查询语言（SQL）。",
+    "analogy": "相当于向图书馆管理员提出检索特定书籍的要求。",
+    "features": [
+      "用于从数据库读取数据",
+      "可以筛选、排序和聚合数据",
+      "支持各种数据库系统",
+      "性能取决于查询优化"
+    ]
+  },
+  "Queue": {
+    "definition": "一种先进先出的数据结构，常用于异步消息传递，例如 AWS SQS。",
+    "analogy": "就像超市的排队，先来先服务。",
+    "features": [
+      "解耦应用程序组件",
+      "提高系统弹性",
+      "异步处理任务",
+      "支持消息持久化"
+    ]
+  },
+  "QuickSight SPICE": {
+    "definition": "Amazon QuickSight 的一个内存计算引擎，用于加速数据分析，提供快速的查询性能。",
+    "analogy": "就像给你的分析报告配一个加速器，让它跑得更快。",
+    "features": [
+      "内存存储",
+      "快速查询性能",
+      "可伸缩性",
+      "支持多种数据源"
+    ]
+  },
+  "R5": {
+    "definition": "AWS EC2 实例家族，专门为计算密集型任务优化，基于 Intel Xeon 可扩展处理器。",
+    "analogy": "就像一台高性能的赛车，专为速度而生。",
+    "features": [
+      "计算优化",
+      "高性价比",
+      "适用于内存密集型应用程序",
+      "多种实例大小"
+    ]
+  },
+  "RBAC": {
+    "definition": "基于角色的访问控制，一种授权机制，允许用户基于其角色访问资源，例如 AWS IAM。",
+    "analogy": "就像公司里的职位，不同职位的人有不同的权限。",
+    "features": [
+      "简化权限管理",
+      "提高安全性",
+      "易于管理用户访问",
+      "遵循最小权限原则"
+    ]
+  },
+  "RDS API": {
+    "definition": "Amazon RDS 提供的应用程序接口，用于管理和操作数据库实例。",
+    "analogy": "就像遥控器，可以控制你的 RDS 数据库。",
+    "features": [
+      "创建、修改、删除数据库实例",
+      "管理数据库快照",
+      "监控数据库指标",
+      "自动化数据库操作"
+    ]
+  },
+  "RDS Blue/Green deployments": {
+    "definition": "Amazon RDS 提供的一种部署策略，允许在不影响生产环境的情况下更新数据库实例。",
+    "analogy": "就像在不影响现有建筑的情况下，建造一个新的大楼。",
+    "features": [
+      "零停机时间数据库更新",
+      "减少风险",
+      "快速回滚",
+      "简化数据库版本升级"
+    ]
+  },
+  "RDS Custom": {
+    "definition": "Amazon RDS 的一个功能，允许自定义配置和管理 RDS 数据库实例，提供更大的灵活性。",
+    "analogy": "就像定制你的数据库，使其更符合你的需求。",
+    "features": [
+      "自定义数据库配置",
+      "控制操作系统和数据库引擎",
+      "支持更广泛的数据库配置",
+      "更高级的数据库管理控制"
+    ]
+  },
+  "RDS Storage Auto Scaling": {
+    "definition": "Amazon RDS 提供的自动存储扩展功能，可以根据数据库的需求自动增加存储空间。",
+    "analogy": "就像一个可以自动扩展的储物柜，空间不够时会自动增大。",
+    "features": [
+      "自动扩展存储容量",
+      "减少手动管理",
+      "提高数据库性能",
+      "避免存储空间不足"
+    ]
+  },
+  "RDS for Microsoft SQL Server": {
+    "definition": "Amazon RDS 提供的托管 Microsoft SQL Server 数据库服务。",
+    "analogy": "就像托管的 Microsoft SQL Server，你不用操心硬件。",
+    "features": [
+      "托管数据库",
+      "自动备份",
+      "高可用性",
+      "支持各种 SQL Server 版本"
+    ]
+  },
+  "RDS for MySQL": {
+    "definition": "Amazon RDS 提供的托管 MySQL 数据库服务。",
+    "analogy": "就像托管的 MySQL 数据库，你不用操心运维。",
+    "features": [
+      "托管数据库",
+      "自动备份",
+      "高可用性",
+      "支持数据库版本"
+    ]
+  },
+  "RDS for PostgreSQL": {
+    "definition": "Amazon RDS 提供的托管 PostgreSQL 数据库服务。",
+    "analogy": "就像托管的 PostgreSQL 数据库，你不用操心底层细节。",
+    "features": [
+      "托管数据库",
+      "自动备份",
+      "高可用性",
+      "支持数据库版本"
+    ]
+  },
+  "REST APIs": {
+    "definition": "使用 REST 架构风格构建的 API，用于客户端和服务端之间的通信，通常使用 HTTP 协议。",
+    "analogy": "就像餐厅的菜单，列出了可以请求的服务。",
+    "features": [
+      "使用 HTTP 方法",
+      "无状态",
+      "客户端-服务器架构",
+      "易于理解和使用"
+    ]
+  },
+  "RESTful API": {
+    "definition": "遵循 REST 原则的 API，设计用于在客户端和服务端之间进行数据交换和资源操作。",
+    "analogy": "就像遵循一套规则的菜单设计，让点餐更简单。",
+    "features": [
+      "使用 HTTP 方法",
+      "无状态",
+      "客户端-服务器架构",
+      "可缓存"
+    ]
+  },
+  "RESTful APIs": {
+    "definition": "遵循 REST 架构风格的 API 接口，用于通过 HTTP 协议进行数据交换和资源操作。",
+    "analogy": "就像你去餐厅点餐，服务员（API）通过菜单（资源定义）接收你的请求，厨房（服务器）准备食物并送给你。",
+    "features": [
+      "基于 HTTP 协议",
+      "使用标准 HTTP 方法（GET, POST, PUT, DELETE）",
+      "无状态性",
+      "资源导向"
+    ]
+  },
+  "RESTful Web 服务": {
+    "definition": "构建在 RESTful API 之上的 Web 服务，允许客户端通过 HTTP 协议访问和操作资源。",
+    "analogy": "类似于用手机（客户端）访问网站（Web 服务），通过点击链接（API 调用）来获取信息。",
+    "features": [
+      "使用 HTTP 协议",
+      "资源通过 URI 标识",
+      "使用 JSON 或 XML 格式的数据",
+      "无状态性"
+    ]
+  },
+  "RTMP": {
+    "definition": "实时消息传输协议，由 Adobe 开发，用于在互联网上传输音频、视频和数据流。",
+    "analogy": "就像电视台的信号发射，把节目内容实时传输给观众。",
+    "features": [
+      "基于 TCP 协议",
+      "用于实时流媒体传输",
+      "支持音频、视频和数据",
+      "Adobe 公司的协议"
+    ]
+  },
+  "Read Capacity": {
+    "definition": "Amazon DynamoDB 表的预置读取能力，以读取单元 (RCU) 的形式衡量，决定了每秒可以执行的读取操作数量。",
+    "analogy": "就像图书馆能同时接待多少读者，取决于图书馆的座位数量（RCU）。",
+    "features": [
+      "影响 DynamoDB 的读取性能",
+      "以 RCU (Read Capacity Units) 衡量",
+      "预置容量，需提前规划",
+      "可以自动伸缩"
+    ]
+  },
+  "Read Replicas": {
+    "definition": "数据库的只读副本，用于分担读取负载，提高读取性能和可用性。",
+    "analogy": "就像图书馆里的复印机，读者可以复印书籍（数据），减少对原书（主数据库）的访问压力。",
+    "features": [
+      "用于提升读取性能",
+      "分担主数据库的负载",
+      "数据通常异步复制",
+      "可用于灾难恢复"
+    ]
+  },
+  "ReadIOPS": {
+    "definition": "每秒的读取 I/O 操作数，衡量存储系统的读取性能。",
+    "analogy": "",
+    "features": [
+      "衡量存储系统的读取吞吐量",
+      "单位为 IOPS (Input/Output Operations Per Second)",
+      "影响读取响应时间",
+      "常用于数据库和文件存储"
+    ]
+  },
+  "Reader Endpoint": {
+    "definition": "Amazon Aurora 数据库集群中用于读取操作的终端节点，指向只读副本。",
+    "analogy": "就像图书馆的借阅台，读者通过它来借阅书籍（数据），而不会影响到书籍的存储（主数据库）。",
+    "features": [
+      "用于负载均衡读取操作",
+      "指向 Aurora 的只读副本",
+      "提高读取性能和可用性",
+      "提供更快的读取速度"
+    ]
+  },
+  "Recovery": {
+    "definition": "从故障或数据丢失中恢复的过程，包括备份、恢复和故障转移等操作。",
+    "analogy": "就像从硬盘损坏中恢复文件，需要备份文件并进行恢复。",
+    "features": [
+      "数据备份",
+      "数据恢复",
+      "灾难恢复",
+      "高可用性保障"
+    ]
+  },
+  "Redshift ML": {
+    "definition": "Amazon Redshift 的一项功能，允许用户使用 SQL 语句直接创建、训练和部署机器学习模型。",
+    "analogy": "就像在 Excel 中可以直接使用高级函数（机器学习模型）来分析数据。",
+    "features": [
+      "简化机器学习模型的构建",
+      "基于 SQL 接口",
+      "在 Redshift 集群内训练和部署模型",
+      "提供多种模型选择"
+    ]
+  },
+  "Regional Reserved Instances": {
+    "definition": "针对特定可用区内的 EC2 实例预留容量的计费方式，提供折扣优惠。",
+    "analogy": "就像提前预订酒店房间，可以享受折扣价格，并且保证有房间。",
+    "features": [
+      "提供折扣价格",
+      "适用于特定区域内的实例",
+      "预留实例容量",
+      "灵活的实例类型选择"
+    ]
+  },
+  "Regions": {
+    "definition": "AWS 的地理位置，由多个可用区组成，提供计算、存储、数据库等服务。",
+    "analogy": "就像世界上的不同国家，每个国家（Region）有不同的城市（Availability Zone）",
+    "features": [
+      "独立的地理区域",
+      "包含多个可用区",
+      "提供高可用性和容错能力",
+      "选择就近区域以降低延迟"
+    ]
+  },
+  "RemoveAccountFromOrganization": {
+    "definition": "从 AWS Organizations 中移除成员账户的操作。",
+    "analogy": "就像从公司组织结构中移除一个员工的账号。",
+    "features": [
+      "从 Organizations 中删除账户",
+      "账户不再受组织策略管理",
+      "账户变为独立账户",
+      "删除账户后，账户内的资源依旧存在"
+    ]
+  },
+  "Requester Pays": {
+    "definition": "Amazon S3 的一种计费模式，由请求访问存储桶中对象的客户支付数据传输费用。",
+    "analogy": "就像租车，租车人支付燃油费和过路费。",
+    "features": [
+      "由请求者承担数据传输费用",
+      "适用于开放数据",
+      "减少存储桶拥有者的费用",
+      "必须在 S3 桶上启用"
+    ]
+  },
+  "Reserved": {
+    "definition": "AWS 的一种定价模型，预先购买计算资源，以获得更低的长期成本。",
+    "analogy": "就像长期订阅杂志，可以享受折扣价。",
+    "features": [
+      "提供折扣价格",
+      "适用于稳定的工作负载",
+      "需承诺使用时长",
+      "提前预留容量"
+    ]
+  },
+  "Reserved Instance": {
+    "definition": "购买的 EC2 实例预留容量，以获得折扣价，并确保实例的可用性。",
+    "analogy": "就像提前预订酒店房间，可以享受折扣价格，并且保证有房间。",
+    "features": [
+      "提供折扣价格",
+      "预留实例容量",
+      "适用于稳定的工作负载",
+      "按需实例的替代方案"
+    ]
+  },
+  "Reserved Instance Marketplace": {
+    "definition": "预留实例（Reserved Instance，简称 RI）的交易市场，允许用户买卖闲置的 RI，实现资源优化和成本控制。",
+    "analogy": "就像二手车市场，可以买到便宜的 RI。",
+    "features": [
+      "提供 RI 的买卖平台",
+      "帮助用户优化 RI 使用",
+      "降低计算成本"
+    ]
+  },
+  "Reserved Instances": {
+    "definition": "预留实例，用户预先支付一定费用以换取特定 EC2 实例的容量预留，获得折扣，适合长期稳定负载。",
+    "analogy": "相当于提前买好演唱会的门票，享受优惠。",
+    "features": [
+      "提供折扣",
+      "预留计算容量",
+      "适用于稳定的工作负载"
+    ]
+  },
+  "Resolver": {
+    "definition": "AWS 中的 DNS 解析器，用于将域名转换为 IP 地址，支持递归查询和转发。",
+    "analogy": "就像互联网上的电话簿，把网站名称翻译成电脑能识别的地址。",
+    "features": [
+      "解析域名",
+      "支持递归查询",
+      "可以转发 DNS 查询"
+    ]
+  },
+  "Resource Access Manager": {
+    "definition": "AWS 资源访问管理器，用于在多个 AWS 账户之间安全地共享资源，例如 VPC 子网、Transit Gateway 等。",
+    "analogy": "类似于一个资源共享的管家，管理不同账户之间的资源分配。",
+    "features": [
+      "共享 AWS 资源",
+      "跨账户共享",
+      "安全可靠的资源管理"
+    ]
+  },
+  "Resource Groups Tag Editor": {
+    "definition": "资源组标签编辑器，允许用户一次性编辑多个 AWS 资源的标签，方便资源管理和成本分配。",
+    "analogy": "就像给一群文件批量添加标签，方便分类和管理。",
+    "features": [
+      "批量编辑标签",
+      "简化资源管理",
+      "提高效率"
+    ]
+  },
+  "Resource Policy": {
+    "definition": "资源策略，用于控制对 AWS 资源的访问权限，如 S3 存储桶策略、IAM 策略等。",
+    "analogy": "就像大门的通行证，规定谁能进出某个资源。",
+    "features": [
+      "控制资源访问",
+      "定义访问权限",
+      "安全控制的关键组成部分"
+    ]
+  },
+  "Response Header": {
+    "definition": "HTTP 响应头，包含服务器返回给客户端的元信息，例如内容类型、缓存控制等。",
+    "analogy": "就像快递单上的信息，包含邮寄物品的详细信息。",
+    "features": [
+      "包含元信息",
+      "控制浏览器行为",
+      "用于缓存控制等"
+    ]
+  },
+  "Restore": {
+    "definition": "恢复，指从备份中将数据或系统恢复到之前的状态。",
+    "analogy": "就像电脑的恢复出厂设置，让系统回到之前的样子。",
+    "features": [
+      "从备份中恢复",
+      "数据恢复",
+      "系统恢复"
+    ]
+  },
+  "Role": {
+    "definition": "IAM 角色，定义了 AWS 服务的身份，并授予其访问 AWS 资源的权限。",
+    "analogy": "就像员工的工作职责，规定了可以做什么和不可以做什么。",
+    "features": [
+      "定义服务身份",
+      "授予权限",
+      "提高安全性"
+    ]
+  },
+  "Route 53 Geolocation Routing": {
+    "definition": "Route 53 的地理位置路由，根据用户的地理位置将流量路由到不同的资源。",
+    "analogy": "就像地图导航，根据你的位置给你指引不同的路线。",
+    "features": [
+      "基于地理位置的路由",
+      "提高用户体验",
+      "支持全球部署"
+    ]
+  },
+  "Route 53 Resolver DNS Firewall": {
+    "definition": "Route 53 解析器 DNS 防火墙，用于保护 VPC 中的 DNS 查询，通过过滤恶意域名来增强安全性。",
+    "analogy": "就像 DNS 的门卫，过滤掉有害的网址。",
+    "features": [
+      "保护 DNS 查询",
+      "过滤恶意域名",
+      "增强安全性"
+    ]
+  },
+  "Route Table": {
+    "definition": "路由表，定义了在 VPC 中将网络流量导向何处的规则。",
+    "analogy": "就像邮局的分拣表，告诉邮件应该发往哪里。",
+    "features": [
+      "定义路由规则",
+      "控制流量走向",
+      "位于 VPC 中"
+    ]
+  },
+  "Route Tables": {
+    "definition": "路由表，定义了在 VPC 中将网络流量导向何处的规则。一个 VPC 中可以有多个路由表。",
+    "analogy": "就像邮局的分拣表，告诉邮件应该发往哪里，一个邮局可以有多个分拣表。",
+    "features": [
+      "定义路由规则",
+      "控制流量走向",
+      "位于 VPC 中"
+    ]
+  },
+  "Routing Table": {
+    "definition": "路由表，定义了在 VPC 中将网络流量导向何处的规则。",
+    "analogy": "就像邮局的分拣表，告诉邮件应该发往哪里。",
+    "features": [
+      "定义路由规则",
+      "控制流量走向",
+      "位于 VPC 中"
+    ]
+  },
+  "Routing Tables": {
+    "definition": "路由表，定义了在 VPC 中将网络流量导向何处的规则。一个 VPC 中可以有多个路由表。",
+    "analogy": "就像邮局的分拣表，告诉邮件应该发往哪里，一个邮局可以有多个分拣表。",
+    "features": [
+      "定义路由规则",
+      "控制流量走向",
+      "位于 VPC 中"
+    ]
+  },
+  "Run Command": {
+    "definition": "AWS Systems Manager 的一项功能，用于在 EC2 实例或其他 AWS 资源上远程执行命令。无需 SSH 登录，即可进行批量操作。",
+    "analogy": "就像遥控器一样，可以远程控制你的服务器。",
+    "features": [
+      "远程执行命令",
+      "支持多种操作系统",
+      "安全性高",
+      "可审计性"
+    ]
+  },
+  "S3 Access Points": {
+    "definition": "Amazon S3 的一个功能，允许您为 S3 存储桶创建具有特定访问权限和网络隔离的访问点，简化了共享数据集的管理。",
+    "analogy": "就像为你的 S3 存储桶创建多个入口，每个入口有不同的权限。",
+    "features": [
+      "简化数据共享",
+      "网络隔离",
+      "细粒度权限控制",
+      "易于管理大规模数据集"
+    ]
+  },
+  "S3 Batch Operations": {
+    "definition": "Amazon S3 的一项功能，允许您对存储在 Amazon S3 中的数百万或数十亿个对象执行大规模操作，如复制、删除等。",
+    "analogy": "就像一个批量处理工厂，可以高效地处理 S3 中的海量文件。",
+    "features": [
+      "大规模对象操作",
+      "支持多种操作",
+      "自动重试",
+      "报告和监控"
+    ]
+  },
+  "S3 Bucket Policy": {
+    "definition": "Amazon S3 的访问控制策略，用于控制对存储桶及其内容的访问权限。使用 JSON 格式定义规则。",
+    "analogy": "就像为你的 S3 存储桶设置安全守卫，控制谁可以进入。",
+    "features": [
+      "基于身份的访问控制",
+      "基于资源的访问控制",
+      "支持多种条件",
+      "JSON 格式"
+    ]
+  },
+  "S3 Cross-Region Replication": {
+    "definition": "Amazon S3 的功能，用于自动将对象从一个 S3 存储桶复制到另一个 S3 存储桶（跨区域）。",
+    "analogy": "就像异地备份，确保数据在不同地区都有副本，增强容灾能力。",
+    "features": [
+      "数据备份",
+      "灾难恢复",
+      "延迟降低",
+      "合规性"
+    ]
+  },
+  "S3 Deep Archive": {
+    "definition": "Amazon S3 的存储类，用于长期数据归档，成本最低。适用于不经常访问的数据。",
+    "analogy": "就像图书馆的档案室，存放着长期保存的文件。",
+    "features": [
+      "成本最低",
+      "适用于不经常访问的数据",
+      "数据耐久性高",
+      "检索时间较长"
+    ]
+  },
+  "S3 Default Encryption": {
+    "definition": "Amazon S3 的功能，允许您对新上传到存储桶的对象进行默认加密，增强数据安全。",
+    "analogy": "就像为你的文件加上保险锁，确保安全。",
+    "features": [
+      "默认加密",
+      "支持多种加密方式",
+      "简化安全配置",
+      "增强数据保护"
+    ]
+  },
+  "S3 Expedited retrievals": {
+    "definition": "Amazon S3 Glacier 的检索选项，提供最快的检索速度，通常在几分钟内即可访问数据。",
+    "analogy": "就像紧急取回档案，可以快速拿到所需数据。",
+    "features": [
+      "最快检索速度",
+      "几分钟内完成",
+      "适用于紧急情况",
+      "费用较高"
+    ]
+  },
+  "S3 File Gateway": {
+    "definition": "一种混合云存储服务，用于将本地应用程序连接到 Amazon S3。提供文件接口访问 S3 对象。",
+    "analogy": "就像一个翻译器，将本地文件转换成 S3 存储的对象。",
+    "features": [
+      "文件接口访问 S3",
+      "缓存功能",
+      "混合云存储",
+      "支持多种协议"
+    ]
+  },
+  "S3 Glacier Instant Retrieval": {
+    "definition": "Amazon S3 Glacier 的存储类，提供即时数据检索，适用于需要快速访问的归档数据。",
+    "analogy": "就像即时存档，数据随时可取。",
+    "features": [
+      "即时数据检索",
+      "适用于归档数据",
+      "成本较低",
+      "适用于需要快速访问的场景"
+    ]
+  },
+  "S3 Glacier Select": {
+    "definition": "Amazon S3 Glacier 的一项功能，允许您直接从 Glacier 存储中检索数据的特定部分，无需先恢复整个对象。",
+    "analogy": "就像从档案中提取关键信息，而不是整个文档。",
+    "features": [
+      "无需恢复整个对象",
+      "检索特定数据",
+      "节省时间和成本",
+      "支持多种数据格式"
+    ]
+  },
+  "S3 Inventory": {
+    "definition": "Amazon S3 的一项功能，定期提供存储桶中对象的清单文件，用于审计和管理。",
+    "analogy": "就像一个仓库的库存清单，让你了解存储桶里有什么。",
+    "features": [
+      "对象清单",
+      "定期生成",
+      "用于审计和管理",
+      "支持多种格式"
+    ]
+  },
+  "S3 Lifecycle": {
+    "definition": "Amazon S3 的一种功能，允许您定义规则来自动管理对象在其生命周期中的存储类别转换或删除。",
+    "analogy": "就像管理文件的生命周期，决定它们在不同阶段的命运。",
+    "features": [
+      "自动管理对象",
+      "存储类别转换",
+      "对象删除",
+      "节省成本"
+    ]
+  },
+  "S3 Lifecycle Policies": {
+    "definition": "Amazon S3 中用于管理对象生命周期的规则集合，定义对象如何从一个存储类别转移到另一个，或在何时删除。",
+    "analogy": "一组规则，指导你的 S3 对象如何度过它们的生命。",
+    "features": [
+      "定义存储类别转换",
+      "定义删除规则",
+      "基于对象属性",
+      "节省存储成本"
+    ]
+  },
+  "S3 Lifecycle Policy": {
+    "definition": "单个 S3 生命周期规则，用于管理特定存储桶或对象前缀的生命周期行为。",
+    "analogy": "一个单独的生命周期管理指令。",
+    "features": [
+      "管理特定存储桶或前缀",
+      "定义存储类别转换",
+      "定义删除规则",
+      "基于时间或对象属性"
+    ]
+  },
+  "S3 Lifecycle policies": {
+    "definition": "Amazon S3 生命周期策略允许您定义规则，在对象生命周期中自动执行操作，如将对象转移到更经济的存储类，或在特定时间后删除对象。",
+    "analogy": "就像给你的文件设定了过期日期，到期后自动处理。",
+    "features": [
+      "基于时间或对象前缀管理",
+      "自动转移对象到不同存储类",
+      "自动删除对象",
+      "节省存储成本"
+    ]
+  },
+  "S3 Multi-Region Access Point": {
+    "definition": "Amazon S3 多区域访问点简化了在不同 AWS 区域中跨存储桶运行应用程序的复杂性，并提高了应用程序的可用性。",
+    "analogy": "就像一个全球范围的快递站点，无论你在哪里下单，都能快速找到离你最近的仓库。",
+    "features": [
+      "全局端点",
+      "自动故障转移",
+      "提高应用程序可用性",
+      "加快访问速度"
+    ]
+  },
+  "S3 Multipart Upload": {
+    "definition": "Amazon S3 分段上传允许您将大型对象分解成多个部分，然后并行上传这些部分，从而提高上传速度和可靠性。",
+    "analogy": "就像快递公司将大包裹拆分成几个小包裹分批运送。",
+    "features": [
+      "提高上传速度",
+      "支持大型对象",
+      "断点续传",
+      "增强可靠性"
+    ]
+  },
+  "S3 Object Lock": {
+    "definition": "Amazon S3 对象锁定通过在存储桶级别或对象级别配置存储保留期来保护对象，防止意外删除或更改。",
+    "analogy": "就像给你的文件上了锁，在指定时间内只有你能打开。",
+    "features": [
+      "保护对象不被删除",
+      "符合监管要求",
+      "两种模式：保留期和法律保留",
+      "版本控制兼容"
+    ]
+  },
+  "S3 One Zone-IA": {
+    "definition": "Amazon S3 One Zone-IA 是一个存储类，用于存储不常访问的数据，这些数据对可用性要求不高，但需要快速访问。",
+    "analogy": "就像把你的备用资料放在一个不容易坏掉，但万一需要也能很快找到的地方。",
+    "features": [
+      "低成本存储",
+      "单可用区冗余",
+      "快速访问",
+      "适合不常访问的数据"
+    ]
+  },
+  "S3 One Zone-Infrequent Access": {
+    "definition": "Amazon S3 One Zone-Infrequent Access 是 Amazon S3 的一个存储类，为不常访问的数据提供低成本存储。",
+    "analogy": "同上",
+    "features": [
+      "同上"
+    ]
+  },
+  "S3 One Zone-Infrequent Access (S3 One Zone-IA)": {
+    "definition": "Amazon S3 One Zone-IA 是一个存储类，用于存储不常访问的数据，这些数据对可用性要求不高，但需要快速访问。",
+    "analogy": "就像把你的备用资料放在一个不容易坏掉，但万一需要也能很快找到的地方。",
+    "features": [
+      "低成本存储",
+      "单可用区冗余",
+      "快速访问",
+      "适合不常访问的数据"
+    ]
+  },
+  "S3 PUT events": {
+    "definition": "Amazon S3 PUT 事件是指在 S3 存储桶中创建新对象时触发的事件，可以触发 Lambda 函数、SNS 通知等。",
+    "analogy": "就像你在邮箱里放了一封信，邮局就会通知收信人。",
+    "features": [
+      "对象创建触发",
+      "与其他 AWS 服务集成",
+      "用于自动化工作流程",
+      "支持 Lambda、SNS 等"
+    ]
+  },
+  "S3 Replication": {
+    "definition": "Amazon S3 复制允许您将 S3 存储桶中的对象自动复制到另一个 S3 存储桶，可以位于相同的 AWS 区域或不同的区域。",
+    "analogy": "就像给你的文件做了一个备份，放在另一个安全的地方。",
+    "features": [
+      "跨区域备份",
+      "灾难恢复",
+      "合规性",
+      "支持跨账户复制"
+    ]
+  },
+  "S3 Standard": {
+    "definition": "Amazon S3 Standard 是 Amazon S3 的通用存储类，适用于需要高可用性和高性能的频繁访问数据。",
+    "analogy": "就像你家里常用的东西，随时都能拿出来用。",
+    "features": [
+      "高可用性",
+      "高性能",
+      "频繁访问数据",
+      "通用存储"
+    ]
+  },
+  "S3 Standard retrievals": {
+    "definition": "Amazon S3 Standard retrievals 指的是从 S3 Standard 存储类中检索数据的操作，没有额外的检索费用。",
+    "analogy": "就像从你的书架上拿书，不需要额外付费。",
+    "features": [
+      "无检索费用",
+      "快速访问",
+      "高可用性",
+      "与 S3 Standard 结合使用"
+    ]
+  },
+  "S3 Standard-Infrequent Access": {
+    "definition": "Amazon S3 Standard-Infrequent Access 是 Amazon S3 的一个存储类，适用于需要快速访问，但访问频率较低的数据。",
+    "analogy": "就像你把不常用的东西放在方便拿取的地方。",
+    "features": [
+      "低存储成本",
+      "快速访问",
+      "数据检索需要付费",
+      "适合不经常访问的数据"
+    ]
+  },
+  "S3 Standard-Infrequent Access (S3 Standard-IA)": {
+    "definition": "Amazon S3 Standard-IA 是 Amazon S3 的一个存储类，适用于需要快速访问，但访问频率较低的数据。",
+    "analogy": "就像你把不常用的东西放在方便拿取的地方。",
+    "features": [
+      "低存储成本",
+      "快速访问",
+      "数据检索需要付费",
+      "适合不经常访问的数据"
+    ]
+  },
+  "S3 Storage Lens": {
+    "definition": "Amazon S3 Storage Lens 提供了对 Amazon S3 存储使用情况和活动的可见性，包括存储容量、增长趋势和访问模式等。",
+    "analogy": "就像你的S3存储的账本，告诉你存储了什么、花了多少钱、怎么用的。",
+    "features": [
+      "存储使用情况指标",
+      "活动指标",
+      "推荐",
+      "导出数据"
+    ]
+  },
+  "S3 VPC endpoint": {
+    "definition": "Amazon S3 VPC 终端节点允许您从您的 VPC 私密地访问 Amazon S3，而无需使用公共 Internet。",
+    "analogy": "就像你从自家后院可以直接走到S3的仓库，不需要通过公共道路。",
+    "features": [
+      "私有访问 S3",
+      "提高安全性",
+      "避免数据传输产生 Internet 费用",
+      "利用 VPC 安全组控制访问"
+    ]
+  },
+  "S3 Versioning": {
+    "definition": "Amazon S3 的版本控制功能，允许您在同一存储桶中保留对象的多个版本，实现数据保护和恢复。",
+    "analogy": "就像文件管理软件的时光机，可以恢复到过去的版本。",
+    "features": [
+      "数据备份与恢复",
+      "保护意外删除",
+      "版本隔离"
+    ]
+  },
+  "S3 lifecycle": {
+    "definition": "Amazon S3 的生命周期管理功能，允许您定义规则，自动在 S3 存储的不同存储类别之间迁移对象或删除对象。",
+    "analogy": "像管理衣柜，把当季衣服放在方便拿取的地方，过季衣服收纳到储藏室。",
+    "features": [
+      "降低存储成本",
+      "自动数据迁移",
+      "数据生命周期管理"
+    ]
+  },
+  "S3 lifecycle policy": {
+    "definition": "用于定义 Amazon S3 对象生命周期行为的规则，例如将对象从标准存储转移到不频繁访问存储，或者删除旧版本对象。",
+    "analogy": "定义了衣柜整理的规则，例如“三个月不穿的衣服收纳进储藏室”。",
+    "features": [
+      "基于时间的规则",
+      "针对对象前缀",
+      "多种存储类之间的转换与删除"
+    ]
+  },
+  "S3 pre-signed URL": {
+    "definition": "允许您向其他人提供对 Amazon S3 对象的临时访问权限的 URL，即使他们没有 AWS 账户或存储桶的访问权限。",
+    "analogy": "像是一个通行证，持有者在有效期内可以访问特定地点。",
+    "features": [
+      "临时访问",
+      "权限控制",
+      "细粒度访问控制"
+    ]
+  },
+  "S3 同区域复制": {
+    "definition": "在同一 AWS 区域内的不同 Amazon S3 存储桶之间自动、异步地复制对象。",
+    "analogy": "像在一个城市里复制文件到不同的办公楼，方便不同部门的人使用。",
+    "features": [
+      "数据冗余",
+      "低延迟访问",
+      "满足合规性要求"
+    ]
+  },
+  "S3 存储桶": {
+    "definition": "Amazon S3 中存储对象的容器，您可以将文件上传到存储桶中并进行管理。",
+    "analogy": "就像一个文件夹，用于组织和存储文件。",
+    "features": [
+      "对象存储",
+      "全球访问",
+      "可配置权限"
+    ]
+  },
+  "S3 存储桶策略": {
+    "definition": "一种基于资源的访问策略，您可以在 Amazon S3 存储桶上附加该策略，以控制对存储桶及其内容的访问。",
+    "analogy": "像大门上的门禁系统，控制谁可以进入和访问存储桶的内容。",
+    "features": [
+      "访问控制",
+      "IAM 用户的权限",
+      "基于条件的访问"
+    ]
+  },
+  "S3 批量操作": {
+    "definition": "Amazon S3 提供的功能，允许您对 S3 对象执行大规模操作，如复制、删除或恢复。",
+    "analogy": "就像用批量操作工具，一次性处理大量文件。",
+    "features": [
+      "批量复制",
+      "批量删除",
+      "大规模操作"
+    ]
+  },
+  "S3 服务器访问日志记录": {
+    "definition": "Amazon S3 提供的一种功能，用于记录对存储桶的访问请求，包括请求的来源、时间和操作类型等。",
+    "analogy": "像是一个监控摄像头，记录谁访问了你的文件以及何时访问。",
+    "features": [
+      "访问审计",
+      "安全分析",
+      "性能监控"
+    ]
+  },
+  "S3 标准-不频繁访问": {
+    "definition": "Amazon S3 提供的一种存储类，适用于访问频率较低但仍需要快速访问的数据。",
+    "analogy": "像仓库里的物品，虽然不常用，但需要时也能快速取出来。",
+    "features": [
+      "低存储成本",
+      "快速访问",
+      "适用于不常访问的数据"
+    ]
+  },
+  "S3 清单": {
+    "definition": "Amazon S3 的一项功能，提供存储桶中对象的列表信息，包括元数据，以 CSV、ORC 或 Parquet 格式输出。",
+    "analogy": "像是一个货物清单，列出了仓库里有什么东西以及它们的详细信息。",
+    "features": [
+      "对象清单",
+      "数据分析",
+      "简化数据管理"
+    ]
+  },
+  "S3 版本控制": {
+    "definition": "Amazon S3 的版本控制功能，允许您在同一存储桶中保留对象的多个版本，实现数据保护和恢复。",
+    "analogy": "类似于一个版本管理系统，跟踪文件的所有变更。",
+    "features": [
+      "数据恢复",
+      "保护意外删除",
+      "回滚到特定版本"
+    ]
+  },
+  "S3 生命周期": {
+    "definition": "Amazon S3 的生命周期管理功能，允许您定义规则，自动在 S3 存储的不同存储类别之间迁移对象或删除对象。",
+    "analogy": "像管理货物的库存，根据时间变化调整存储方式。",
+    "features": [
+      "自动迁移",
+      "存储成本优化",
+      "数据保留管理"
+    ]
+  },
+  "S3 生命周期规则": {
+    "definition": "用于定义 Amazon S3 对象生命周期行为的规则，例如将对象从标准存储转移到不频繁访问存储，或者删除旧版本对象。",
+    "analogy": "类似于企业制定的 IT 策略，规定了不同数据的生命周期。",
+    "features": [
+      "基于时间",
+      "基于前缀",
+      "自动化操作"
+    ]
+  },
+  "S3 签名 Cookie": {
+    "definition": "一种使用签名 URL 的方式，用于向用户提供对 Amazon CloudFront 和 Amazon S3 对象的访问权限。",
+    "analogy": "就像为特定用户发放的通行证，允许他们在一段时间内访问某些资源。",
+    "features": [
+      "访问控制",
+      "安全访问",
+      "时间限制"
+    ]
+  },
+  "S3 访问点": {
+    "definition": "Amazon S3 访问点是数据访问点，简化了对共享数据集的访问管理。它与桶关联，使用自定义策略，实现精细访问控制。",
+    "analogy": "就像给你的储物柜设置不同的钥匙，方便不同的人使用里面的东西。",
+    "features": [
+      "与桶关联",
+      "自定义访问策略",
+      "简化访问控制",
+      "适用于大规模共享数据集"
+    ]
+  },
+  "SCPS": {
+    "definition": "安全配置合规性包 (SCPS) 提供基于行业标准的配置基线。它用于帮助强化基础设施的安全性和合规性。",
+    "analogy": "没有合适的类比。",
+    "features": [
+      "预配置安全基线",
+      "合规性自动化",
+      "易于部署",
+      "支持多个行业标准"
+    ]
+  },
+  "SCPs": {
+    "definition": "服务控制策略 (SCP) 是用于 AWS Organizations 的一种策略类型，用于控制组织中账户可以执行的操作。",
+    "analogy": "就像公司里的规章制度，规定了员工能做什么，不能做什么。",
+    "features": [
+      "用于 Organizations",
+      "IAM 委托人没有权限时，允许或拒绝访问",
+      "不影响根用户权限",
+      "对组织中的所有账户生效"
+    ]
+  },
+  "SCT": {
+    "definition": "AWS Schema Conversion Tool (SCT) 可以帮助您将数据库架构和代码从一个数据库引擎转换为另一个数据库引擎。",
+    "analogy": "就像一个翻译器，帮你把不同的语言（数据库语言）翻译成另一种语言。",
+    "features": [
+      "架构转换",
+      "代码转换",
+      "数据库评估",
+      "支持多种数据库引擎"
+    ]
+  },
+  "SMB File Server": {
+    "definition": "SMB 文件服务器是一种使用 Server Message Block (SMB) 协议的文件共享服务，允许多个客户端访问存储的文件。",
+    "analogy": "就像一个公共的共享文件夹，大家可以把文件放在里面，也可以从里面拿走文件。",
+    "features": [
+      "基于 SMB 协议",
+      "文件共享",
+      "访问控制",
+      "适用于 Windows 环境"
+    ]
+  },
+  "SMTP": {
+    "definition": "简单邮件传输协议 (SMTP) 是一种用于发送电子邮件的标准协议。",
+    "analogy": "就像邮局，用于投递你的电子邮件。",
+    "features": [
+      "发送电子邮件协议",
+      "广泛支持",
+      "可靠的邮件传输",
+      "用于应用程序发送邮件"
+    ]
+  },
+  "SQL Injection": {
+    "definition": "SQL 注入是一种代码注入技术，攻击者可以通过它将恶意 SQL 语句插入到应用程序中，以操纵数据库。",
+    "analogy": "就像在蛋糕里偷偷加进坏东西，导致整个蛋糕都不能吃。",
+    "features": [
+      "代码注入",
+      "操纵数据库",
+      "数据泄露风险",
+      "利用输入验证漏洞"
+    ]
+  },
+  "SQL injection": {
+    "definition": "SQL 注入是一种代码注入技术，攻击者可以通过它将恶意 SQL 语句插入到应用程序中，以操纵数据库。",
+    "analogy": "就像在蛋糕里偷偷加进坏东西，导致整个蛋糕都不能吃。",
+    "features": [
+      "代码注入",
+      "操纵数据库",
+      "数据泄露风险",
+      "利用输入验证漏洞"
+    ]
+  },
+  "SQL注入": {
+    "definition": "SQL 注入是一种代码注入技术，攻击者可以通过它将恶意 SQL 语句插入到应用程序中，以操纵数据库。",
+    "analogy": "就像在蛋糕里偷偷加进坏东西，导致整个蛋糕都不能吃。",
+    "features": [
+      "代码注入",
+      "操纵数据库",
+      "数据泄露风险",
+      "利用输入验证漏洞"
+    ]
+  },
+  "SQS FIFO": {
+    "definition": "Amazon SQS FIFO（先进先出）队列保证消息的顺序，并提供一次且仅一次的处理。",
+    "analogy": "就像排队买票，先到的人先买到，而且每个人只能买一次。",
+    "features": [
+      "消息顺序",
+      "一次且仅一次处理",
+      "高吞吐量",
+      "适合需要严格顺序的应用"
+    ]
+  },
+  "SQS Standard": {
+    "definition": "Amazon SQS Standard（标准）队列提供高吞吐量、几乎无限的容量和至少一次的交付。",
+    "analogy": "就像一个普通的邮筒，邮件可能会按顺序投递，但也有可能出现重复或延迟。",
+    "features": [
+      "高吞吐量",
+      "几乎无限容量",
+      "至少一次交付",
+      "消息可能乱序，偶尔重复"
+    ]
+  },
+  "SSE-SQS": {
+    "definition": "SSE-SQS (SQS 服务端加密) 通过使用由 AWS KMS 托管的密钥对 Amazon SQS 中的消息进行加密。",
+    "analogy": "就像给你的邮件上锁，只有拥有钥匙的人才能打开。",
+    "features": [
+      "服务端加密",
+      "使用 KMS 密钥",
+      "保护消息内容",
+      "确保数据安全"
+    ]
+  },
+  "SSL 终止": {
+    "definition": "SSL 终止是指在服务器端解密 SSL/TLS 加密流量的过程，以便服务器可以处理未加密的数据。",
+    "analogy": "就像在机场安检，检查你的行李是否安全，然后才能让你通过。",
+    "features": [
+      "解密 SSL/TLS 流量",
+      "服务器端处理未加密数据",
+      "保护后端服务器",
+      "常用在负载均衡器上"
+    ]
+  },
+  "SSL/TLS certificates": {
+    "definition": "SSL/TLS 证书用于在客户端和服务器之间建立加密的连接，以确保数据的安全传输。",
+    "analogy": "就像一个身份证，证明你的身份，并保证信息的安全传输。",
+    "features": [
+      "加密通信",
+      "身份验证",
+      "数据完整性",
+      "保护网站安全"
+    ]
+  },
+  "SUSE Linux Enterprise Server": {
+    "definition": "SUSE Linux Enterprise Server 是一款企业级 Linux 操作系统，专为服务器工作负载设计。",
+    "analogy": "就像一个可靠的工作伙伴，为你提供稳定的服务器环境。",
+    "features": [
+      "企业级 Linux 发行版",
+      "服务器操作系统",
+      "高可靠性",
+      "支持多种硬件平台"
+    ]
+  },
+  "SageMaker Pipelines": {
+    "definition": "Amazon SageMaker Pipelines 允许您构建、自动化、执行和管理用于构建机器学习 (ML) 模型的完整 ML 工作流。",
+    "analogy": "就像工厂里的装配线，将数据处理、模型训练和部署流程串联起来。",
+    "features": [
+      "构建 ML 工作流程",
+      "自动化 ML 流程",
+      "跟踪模型版本",
+      "提高 ML 开发效率"
+    ]
+  },
+  "Salesforce": {
+    "definition": "Salesforce 是一家客户关系管理 (CRM) 服务提供商，提供基于云的软件和服务，帮助企业管理客户互动和销售流程。",
+    "analogy": "一家大型的客户信息管理中心，帮助企业了解和维护客户关系。",
+    "features": [
+      "CRM 服务",
+      "销售自动化",
+      "客户服务管理",
+      "市场营销自动化"
+    ]
+  },
+  "Savings Plan": {
+    "definition": "AWS 储蓄计划是一种灵活的定价模式，可在您承诺在 1 年或 3 年内使用 AWS 服务的情况下，为您提供较低的价格。",
+    "analogy": "就像您提前购买了手机套餐，可以更便宜地使用服务。",
+    "features": [
+      "降低云服务成本",
+      "按小时承诺使用量",
+      "支持多种 AWS 服务",
+      "灵活的期限选择"
+    ]
+  },
+  "Savings Plans": {
+    "definition": "AWS 储蓄计划是一种灵活的定价模式，可在您承诺在 1 年或 3 年内使用 AWS 服务的情况下，为您提供较低的价格。",
+    "analogy": "就像您提前购买了手机套餐，可以更便宜地使用服务。",
+    "features": [
+      "降低云服务成本",
+      "按小时承诺使用量",
+      "支持多种 AWS 服务",
+      "灵活的期限选择"
+    ]
+  },
+  "Scalability": {
+    "definition": "可扩展性是指系统根据需求调整其资源的能力，以处理不断增长的负载。",
+    "analogy": "就像水管可以根据用水量调整水流大小。",
+    "features": [
+      "自动调整资源",
+      "提高系统可用性",
+      "应对流量高峰",
+      "弹性伸缩"
+    ]
+  },
+  "Scaling Policy": {
+    "definition": "缩放策略定义了系统在什么条件下应该增加或减少资源。在 AWS 中，通常用于 Auto Scaling。",
+    "analogy": "就像交通信号灯，根据车流量调整红绿灯的时长。",
+    "features": [
+      "定义扩缩规则",
+      "基于指标进行扩缩",
+      "自动触发扩缩操作",
+      "控制资源数量"
+    ]
+  },
+  "Scheduled Actions": {
+    "definition": "计划操作允许您在特定时间或定期运行操作，例如启动、停止或终止 EC2 实例或 Auto Scaling 组。",
+    "analogy": "就像设置闹钟，在特定时间触发操作。",
+    "features": [
+      "定时启动/停止资源",
+      "定期进行维护",
+      "资源利用率优化",
+      "基于时间进行扩缩"
+    ]
+  },
+  "Scheduled Reserved Instances": {
+    "definition": "预留实例的一种类型，允许您在预定的时间段内预留计算容量，从而降低成本。",
+    "analogy": "就像预定了某个时段的健身房私教课程。",
+    "features": [
+      "预留指定时间段的实例容量",
+      "降低成本",
+      "适用于周期性负载",
+      "可以控制实例类型"
+    ]
+  },
+  "Scheduled Scaling": {
+    "definition": "计划缩放允许您根据预先定义的计划调整资源，例如在高峰时段增加服务器数量。",
+    "analogy": "就像根据天气预报增减衣服。",
+    "features": [
+      "基于时间表的扩缩",
+      "预测性扩缩",
+      "优化资源利用率",
+      "提高系统弹性"
+    ]
+  },
+  "Security": {
+    "definition": "安全是指保护系统和数据免受未经授权的访问、使用、披露、破坏、修改或丢失。",
+    "analogy": "就像为您的房屋安装门锁和报警系统。",
+    "features": [
+      "访问控制",
+      "数据加密",
+      "威胁检测",
+      "合规性管理"
+    ]
+  },
+  "Security Configuration": {
+    "definition": "安全配置是指用于定义和管理系统安全设置的各种策略、流程和工具。",
+    "analogy": "就像您家中的安防设置手册，指导您如何保护您的家。",
+    "features": [
+      "定义安全策略",
+      "配置安全工具",
+      "实施安全最佳实践",
+      "持续监控安全状态"
+    ]
+  },
+  "Security Groups": {
+    "definition": "安全组是一种虚拟防火墙，用于控制进出 EC2 实例的网络流量。",
+    "analogy": "就像您家门口的门卫，只允许特定的人进入。",
+    "features": [
+      "控制入站和出站流量",
+      "基于协议、端口和 IP 地址进行过滤",
+      "与 EC2 实例关联",
+      "无状态"
+    ]
+  },
+  "Security Hub": {
+    "definition": "AWS Security Hub 提供了一个集中的安全状态查看和管理平台，帮助您监控和改进 AWS 环境的安全状况。",
+    "analogy": "就像一个安全仪表板，显示您家庭的安全状况。",
+    "features": [
+      "安全状态集中视图",
+      "自动安全检查",
+      "合规性报告",
+      "威胁检测"
+    ]
+  },
+  "Security Lake": {
+    "definition": "AWS Security Lake 是一种安全数据湖，可自动从多个来源收集、整理和存储安全数据，帮助您更好地分析和响应安全事件。",
+    "analogy": "就像一个数据仓库，存储来自不同安全源的数据，以便进行分析。",
+    "features": [
+      "安全数据集中存储",
+      "自动化数据收集",
+      "标准化数据格式",
+      "安全分析和调查"
+    ]
+  },
+  "Security Token Service": {
+    "definition": "AWS Security Token Service (STS) 是一种 Web 服务，它允许您请求临时凭证来访问 AWS 资源。",
+    "analogy": "就像酒店的钥匙卡，允许您在特定时间内进入您的房间。",
+    "features": [
+      "生成临时安全凭证",
+      "支持 IAM 角色",
+      "用于跨账户访问",
+      "提高安全性"
+    ]
+  },
+  "Server-Side Encryption": {
+    "definition": "服务器端加密指在 Amazon S3 等服务中，由 AWS 或您管理密钥对数据进行加密。保护存储在服务器上的静态数据。",
+    "analogy": "相当于把保险箱里的文件锁上。",
+    "features": [
+      "数据在服务器端加密",
+      "支持多种加密算法",
+      "提供密钥管理选项",
+      "保护静态数据"
+    ]
+  },
+  "Serverless v2": {
+    "definition": "适用于数据库的 Serverless v2 提供了自动伸缩容量、按需付费的数据库服务。简化数据库管理。",
+    "analogy": "像无需自己购买和管理服务器的云端数据库。",
+    "features": [
+      "自动伸缩",
+      "按需付费",
+      "简化管理",
+      "支持数据库负载"
+    ]
+  },
+  "Service Auto Scaling": {
+    "definition": "服务自动伸缩可以根据负载自动调整 AWS 资源的数量，以确保应用程序具有所需的性能，并降低成本。",
+    "analogy": "就像一个自动调节的空调，根据房间温度自动调节制冷量。",
+    "features": [
+      "自动调整资源",
+      "优化性能",
+      "降低成本",
+      "支持多种 AWS 服务"
+    ]
+  },
+  "Service Catalog": {
+    "definition": "服务目录帮助组织创建和管理 IT 服务目录，允许用户自助部署批准的 AWS 服务。",
+    "analogy": "像企业内部的云服务超市，员工可以自助选择和部署已批准的服务。",
+    "features": [
+      "自助服务",
+      "简化部署",
+      "统一管理",
+      "提高合规性"
+    ]
+  },
+  "Service Control Policies (SCP)": {
+    "definition": "服务控制策略是一种组织级别的策略，用于控制 AWS Organizations 中的成员账户可以执行的操作。",
+    "analogy": "就像为组织设置的安全围栏，限制员工可以访问的资源。",
+    "features": [
+      "组织级别策略",
+      "控制账户权限",
+      "精细访问控制",
+      "提高安全性"
+    ]
+  },
+  "Service Control Policies (SCPs)": {
+    "definition": "同 Service Control Policies。",
+    "analogy": "",
+    "features": []
+  },
+  "Session Manager": {
+    "definition": "会话管理器允许您通过 AWS Management Console 或 AWS CLI 安全地管理您的 EC2 实例。提供交互式 shell。",
+    "analogy": "像一个安全的远程控制台，您可以通过它安全地访问和管理服务器。",
+    "features": [
+      "安全的 shell 访问",
+      "无需公网 IP",
+      "集中管理",
+      "审计日志"
+    ]
+  },
+  "Session State": {
+    "definition": "会话状态指的是在 Web 应用程序中，用户与服务器交互期间保存的数据。用于跟踪用户状态。",
+    "analogy": "就像用户在网站上的“个人档案”，记录了用户的登录状态、购物车内容等信息。",
+    "features": [
+      "跟踪用户会话",
+      "保存用户数据",
+      "维护用户状态",
+      "支持多种存储方式"
+    ]
+  },
+  "Shared Storage": {
+    "definition": "共享存储允许多个计算实例访问相同的数据。例如 Amazon EFS, Amazon FSx。",
+    "analogy": "就像一个大家共享的公共文件夹，每个人都可以访问和修改里面的文件。",
+    "features": [
+      "多实例访问",
+      "数据共享",
+      "提高协作效率",
+      "支持多种文件系统"
+    ]
+  },
+  "Shared tenancy": {
+    "definition": "共享租赁指的是多个客户的实例共享同一物理服务器。通过共享资源降低成本。",
+    "analogy": "就像住在同一栋公寓楼里的邻居，大家共享一些公共设施。",
+    "features": [
+      "成本效益",
+      "共享资源",
+      "性能可能受限",
+      "适用于非关键负载"
+    ]
+  },
+  "Shield": {
+    "definition": "AWS Shield 是一种 DDoS 保护服务，用于保护在 AWS 上运行的应用程序。",
+    "analogy": "就像一个安全卫士，保护你的网站免受恶意流量的攻击。",
+    "features": [
+      "DDoS 保护",
+      "自动检测",
+      "自动缓解",
+      "免费提供基本版"
+    ]
+  },
+  "Shield Advanced": {
+    "definition": "Shield Advanced 提供了高级的 DDoS 保护，包括更精细的保护和对 AWS 支持的访问。",
+    "analogy": "就像安全卫士的升级版，提供更全面的防护和专业的支持。",
+    "features": [
+      "高级 DDoS 保护",
+      "精细化配置",
+      "专家支持",
+      "响应团队"
+    ]
+  },
+  "Signed URL": {
+    "definition": "签名 URL 允许您授予对 Amazon S3 对象的临时访问权限。受限访问 URL。",
+    "analogy": "就像一张临时的通行证，允许您在一定时间内访问特定的资源。",
+    "features": [
+      "临时访问",
+      "受限访问",
+      "控制访问权限",
+      "安全访问 Amazon S3 对象"
+    ]
+  },
+  "Simple Email Service": {
+    "definition": "简单邮件服务 (SES) 是一种云电子邮件发送服务，旨在帮助数字营销人员和应用程序开发人员发送电子邮件。",
+    "analogy": "就像一个批量邮件发送平台，可以快速、可靠地发送电子邮件。",
+    "features": [
+      "邮件发送服务",
+      "高可扩展性",
+      "成本效益",
+      "用于营销和通知"
+    ]
+  },
+  "Simple Routing Policy": {
+    "definition": "简单路由策略是 Amazon Route 53 中的一种路由策略，用于将流量路由到单个资源。",
+    "analogy": "就像只有一个目的地的 GPS 导航，直接带你到目的地。",
+    "features": [
+      "将流量路由到单个资源",
+      "最简单的路由方式",
+      "适用于单实例部署",
+      "易于配置"
+    ]
+  },
+  "Single-AZ": {
+    "definition": "单可用区 (AZ) 部署，资源仅存在于一个可用区内。如果该可用区发生故障，资源将不可用。",
+    "analogy": "就像把你的所有东西都放在一个房间里，房间出事了就全没了。",
+    "features": [
+      "成本较低",
+      "可用性较低",
+      "适用于不关键的应用"
+    ]
+  },
+  "SnapMirror": {
+    "definition": "NetApp 的数据复制技术，用于在 NetApp 存储系统之间复制数据。",
+    "analogy": "类似于数据仓库的镜像，保证在主仓库发生故障时，可以从镜像仓库恢复数据。",
+    "features": [
+      "基于块级复制",
+      "异步复制",
+      "灾难恢复解决方案"
+    ]
+  },
+  "Snapshots": {
+    "definition": "Amazon EBS（Elastic Block Storage）的快照，是 EBS 卷的 point-in-time 备份。",
+    "analogy": "就像给你的硬盘做一个“复印件”，可以随时恢复到那个时间点。",
+    "features": [
+      "增量备份",
+      "支持跨区域复制",
+      "用于数据保护和灾难恢复"
+    ]
+  },
+  "Snowmobile": {
+    "definition": "AWS 的大规模数据迁移服务，通过卡车运输装有存储设备的集装箱将大量数据迁移到云端。",
+    "analogy": "就像用一辆巨型卡车搬家，专门用来搬运大量数据。",
+    "features": [
+      "TB/PB 级数据迁移",
+      "物理安全",
+      "适用于网络带宽受限的情况"
+    ]
+  },
+  "Spot Blocks": {
+    "definition": "Spot 实例的一种，提供最高 6 小时的中断预测。您可以在指定的持续时间内运行 Spot 实例，而不会中断。",
+    "analogy": "可以预先购买电影票，保证观看时间，但价格比普通票便宜。",
+    "features": [
+      "固定持续时间",
+      "无法提前终止",
+      "适用于可中断的工作负载"
+    ]
+  },
+  "Spot Fleet": {
+    "definition": "用于管理 Spot 实例的工具，可根据您的需求自动启动和管理一组 Spot 实例，并跨多个可用区和实例类型。",
+    "analogy": "就像雇佣一个舰队来完成任务，舰队可以根据实际情况自动调整规模。",
+    "features": [
+      "自动扩展",
+      "多种实例类型",
+      "跨多个可用区部署"
+    ]
+  },
+  "Spot Instance": {
+    "definition": "Amazon EC2 提供的一种实例类型，以竞价的方式提供，价格由供需决定，通常比按需实例便宜。",
+    "analogy": "就像拍卖商品，价格可能会波动，但通常比原价便宜。",
+    "features": [
+      "价格浮动",
+      "可能被中断",
+      "高性价比"
+    ]
+  },
+  "Spot Instances": {
+    "definition": "Spot Instance 的复数形式，指竞价方式提供的 EC2 实例。",
+    "analogy": "多个竞价商品。",
+    "features": [
+      "价格低廉",
+      "可被中断",
+      "适用于容错性高的工作负载"
+    ]
+  },
+  "Spot instances": {
+    "definition": "与 Spot Instances 相同。",
+    "analogy": "",
+    "features": [
+      "与 Spot Instances 相同"
+    ]
+  },
+  "Spread Placement Group": {
+    "definition": "Amazon EC2 上的放置组，将实例放置在不同的硬件上，以减少硬件故障的影响。",
+    "analogy": "就像把你的资产分散到不同的银行，降低风险。",
+    "features": [
+      "高可用性",
+      "有限的实例数量",
+      "适用于关键任务应用"
+    ]
+  },
+  "Standard Reserved Instances": {
+    "definition": "Amazon EC2 的预留实例，提供折扣价格，并承诺在一段时间内使用特定实例。",
+    "analogy": "就像提前预订酒店房间，可以享受折扣价。",
+    "features": [
+      "折扣价格",
+      "承诺使用时长",
+      "实例规格固定"
+    ]
+  },
+  "Standard queue": {
+    "definition": "Amazon SQS 的标准队列，提供几乎无限的可伸缩性和高吞吐量。",
+    "analogy": "就像一个高速公路，可以处理大量车辆（消息）。",
+    "features": [
+      "高吞吐量",
+      "几乎无限的存储量",
+      "支持消息延迟"
+    ]
+  },
+  "State Manager": {
+    "definition": "AWS Systems Manager 的一项功能，用于管理 EC2 实例的配置。",
+    "analogy": "就像一个智能管家，负责管理你的房子里的各种设备和设置。",
+    "features": [
+      "配置管理",
+      "合规性",
+      "自动修复"
+    ]
+  },
+  "Static Website Hosting": {
+    "definition": "在 Amazon S3 上托管静态网站，例如 HTML、CSS 和 JavaScript 文件。",
+    "analogy": "就像在网上展示你的相册或者个人简历。",
+    "features": [
+      "高可用性",
+      "低成本",
+      "易于部署"
+    ]
+  },
+  "Storage": {
+    "definition": "存储数据的地方，在 AWS 中包括 Amazon S3、EBS、EFS 等服务。",
+    "analogy": "就像一个巨大的仓库，用来存放各种物品（数据）。",
+    "features": [
+      "数据持久性",
+      "多种存储类型",
+      "高可用性"
+    ]
+  },
+  "Storage Gateway File Gateway": {
+    "definition": "Amazon Storage Gateway 的一种配置，用于将本地文件系统连接到 Amazon S3。它将本地文件共享转换为云端对象存储。",
+    "analogy": "就像一个本地的“文件快递员”，帮你把文件送到云端的仓库里。",
+    "features": [
+      "支持 SMB/NFS 文件共享协议",
+      "将文件存储为 S3 对象",
+      "缓存常用文件，提高访问速度"
+    ]
+  },
+  "Storage Gateway Tape Gateway": {
+    "definition": "Amazon Storage Gateway 的一种配置，允许你将本地备份数据存储到 Amazon S3 的虚拟磁带库 (VTL)。",
+    "analogy": "虚拟的磁带机，帮你把数据备份到云端，替代实体磁带，方便又省空间。",
+    "features": [
+      "支持常用的备份软件",
+      "兼容 VTL 接口",
+      "将数据存储为虚拟磁带"
+    ]
+  },
+  "Storage Gateway Volume Gateway": {
+    "definition": "Amazon Storage Gateway 的一种配置，用于将本地应用程序连接到云端的块存储。提供两种存储卷类型：缓存卷和存储卷。",
+    "analogy": "连接本地服务器和云端存储的桥梁，提供块存储服务。",
+    "features": [
+      "两种卷类型：缓存卷、存储卷",
+      "iSCSI 接口",
+      "将数据存储在 S3 或 EBS 中"
+    ]
+  },
+  "Storage Gateway for files": {
+    "definition": "指通过 File Gateway 方式连接到 Amazon S3 的文件共享方式。",
+    "analogy": "通过“文件快递员”访问云端 S3 的文件。",
+    "features": [
+      "基于文件协议访问",
+      "将文件存储为 S3 对象",
+      "适合文件数据管理"
+    ]
+  },
+  "Storage Gateway for volumes": {
+    "definition": "指通过 Volume Gateway 方式提供的块存储服务，用于将本地应用程序连接到云端的块存储。",
+    "analogy": "通过“桥梁”将本地服务器的存储扩展到云端。",
+    "features": [
+      "块存储接口 (iSCSI)",
+      "支持两种卷类型 (缓存卷/存储卷)",
+      "适合数据库、应用服务器"
+    ]
+  },
+  "Storage Gateway卷网关": {
+    "definition": "同 Storage Gateway Volume Gateway。",
+    "analogy": "",
+    "features": [
+      "提供块存储服务",
+      "iSCSI 接口",
+      "支持缓存和存储卷"
+    ]
+  },
+  "Storage Lens": {
+    "definition": "Amazon S3 Storage Lens 是一个云存储分析工具，提供关于 Amazon S3 存储的组织范围的可见性。",
+    "analogy": "就像一个“存储数据分析师”，帮助你了解 S3 存储的各项指标。",
+    "features": [
+      "提供存储使用情况的可视化",
+      "发现成本优化机会",
+      "基于指标的报警和监控"
+    ]
+  },
+  "StorageClass": {
+    "definition": "Amazon S3 中用于存储对象的不同存储类别。不同的存储类别有不同的访问频率、可用性和成本。",
+    "analogy": "S3 存储的“房间类型”，决定了存储的成本和特性。",
+    "features": [
+      "多种存储类别：标准、IA、Glacier 等",
+      "决定了存储的可用性、成本和访问频率",
+      "可设置对象的生命周期策略进行自动转换"
+    ]
+  },
+  "Streams": {
+    "definition": "在某些 AWS 服务中，如 Kinesis 和 DynamoDB 中，数据以流的形式进行处理。",
+    "analogy": "数据的“河流”，持续不断地流动，供应用程序处理。",
+    "features": [
+      "支持实时数据处理",
+      "数据有序",
+      "可进行并行处理"
+    ]
+  },
+  "Sub-millisecond latency": {
+    "definition": "指服务响应时间在毫秒级别以下，通常用于衡量高性能应用程序的延迟。",
+    "analogy": "极速的响应时间，仿佛光速一般。",
+    "features": [
+      "极低延迟",
+      "适用于高响应要求的应用",
+      "例如：实时游戏、交易系统"
+    ]
+  },
+  "Synchronous workflow": {
+    "definition": "一个工作流程，其中任务按顺序执行，一个任务完成后才会启动下一个任务。",
+    "analogy": "就像排队购物，一个一个来，等待前一个顾客结账后才能轮到你。",
+    "features": [
+      "按顺序执行任务",
+      "依赖于前一个任务的完成",
+      "例如：API 调用"
+    ]
+  },
+  "SystemAdministrator": {
+    "definition": "负责管理和维护计算机系统和网络的人员。",
+    "analogy": "系统管理员是“IT 领域的管家”，负责维护系统的正常运行。",
+    "features": [
+      "负责系统配置",
+      "负责安全管理",
+      "负责用户管理"
+    ]
+  },
+  "Systems Manager Session Manager": {
+    "definition": "AWS Systems Manager 的一项功能，允许你通过浏览器安全地连接到 EC2 实例，而无需 SSH 或 RDP。",
+    "analogy": "一个安全的“远程控制台”，让你通过浏览器管理 EC2 实例，无需开放端口。",
+    "features": [
+      "基于 IAM 的访问控制",
+      "无需开放 SSH 或 RDP 端口",
+      "增强的安全性"
+    ]
+  },
+  "T 系列实例": {
+    "definition": "Amazon EC2 的一种实例类型，提供突增性能能力，适用于需要阶段性峰值的通用工作负载。",
+    "analogy": "像个“蓄电池”，平时用电少，需要时可以提供爆发性的性能。",
+    "features": [
+      "突增性能",
+      "成本效益高",
+      "适用于开发、测试环境，web应用等"
+    ]
+  },
+  "T3": {
+    "definition": "T 系列 EC2 实例的第三代，提供突增性能。",
+    "analogy": "更强的“蓄电池”，性能更强，性价比更高。",
+    "features": [
+      "CPU 积分系统",
+      "平衡性能和成本",
+      "适用于大多数通用工作负载"
+    ]
+  },
+  "TLSv1.3": {
+    "definition": "传输层安全协议（TLS）的最新版本，用于保护数据在互联网上的传输安全。提供更强的加密和安全性，并提升了连接速度。",
+    "analogy": "相当于互联网通信的最新加密信封，确保你的邮件在传输过程中不会被窃取。",
+    "features": [
+      "更快的连接速度",
+      "更强的加密算法",
+      "更安全的协议版本"
+    ]
+  },
+  "Tag Policies": {
+    "definition": "AWS 标签策略，用于强制实施组织内 AWS 资源的标签标准。帮助规范标签的使用，以便更好地进行资源管理和成本控制。",
+    "analogy": "就像公司统一的着装规范，确保所有员工都按标准着装，便于识别和管理。",
+    "features": [
+      "强制标签合规性",
+      "简化资源管理",
+      "提高成本分配准确性"
+    ]
+  },
+  "Tagging": {
+    "definition": "在 AWS 资源上添加标签，以便于组织、搜索、过滤和管理资源。标签由键值对组成，可以自定义。",
+    "analogy": "给你的书籍贴上标签，方便你根据主题、作者等进行分类整理。",
+    "features": [
+      "资源组织",
+      "成本分配",
+      "自动化管理",
+      "访问控制"
+    ]
+  },
+  "Tape Gateway": {
+    "definition": "AWS Storage Gateway 的一种配置，用于将本地备份数据存储到 Amazon S3 的虚拟磁带库。提供了一种将本地备份迁移到云端的解决方案。",
+    "analogy": "把你的旧录像带数字化并存储在云端，方便随时访问和管理。",
+    "features": [
+      "虚拟磁带库",
+      "数据持久性",
+      "与现有备份工具集成",
+      "低成本归档"
+    ]
+  },
+  "Target Tracking": {
+    "definition": "Amazon EC2 Auto Scaling 策略的一种类型，根据指定的指标（如 CPU 利用率）来调整 Auto Scaling 组的规模，以保持目标值的稳定。",
+    "analogy": "自动调节空调，当室温高于设定值时，增加制冷量；当室温低于设定值时，减少制冷量。",
+    "features": [
+      "基于指标的自动伸缩",
+      "配置简单",
+      "响应速度快",
+      "稳定性能"
+    ]
+  },
+  "Task Definition": {
+    "definition": "Amazon ECS 和 AWS Fargate 中的一个蓝图，描述了容器化应用程序的配置。包括容器镜像、CPU、内存、环境变量等。",
+    "analogy": "一份菜谱，详细说明了菜品需要的食材、配料和烹饪步骤。",
+    "features": [
+      "容器配置",
+      "版本管理",
+      "任务启动",
+      "资源定义"
+    ]
+  },
+  "Task Role": {
+    "definition": "在 Amazon ECS 和 AWS Fargate 中，赋予任务访问 AWS 资源的权限。 通过 IAM 角色来实现。",
+    "analogy": "赋予厨师访问厨房食材和设备的权限的通行证。",
+    "features": [
+      "访问 AWS 资源",
+      "安全性",
+      "权限管理"
+    ]
+  },
+  "Time Point Recovery": {
+    "definition": "数据库的特定时间点恢复功能。例如，允许将数据库恢复到某个时间点的状态，避免数据丢失。",
+    "analogy": "时光机，可以将数据库恢复到过去某个时间点的状态。",
+    "features": [
+      "数据保护",
+      "灾难恢复",
+      "时间点恢复",
+      "数据回滚"
+    ]
+  },
+  "Traffic Mirroring": {
+    "definition": "AWS 的服务，用于将 Amazon EC2 实例的网络流量复制到另一个实例或网络设备，用于监控、安全分析等。",
+    "analogy": "交通监控摄像头，记录车辆的通行情况，方便交通管理和事故分析。",
+    "features": [
+      "网络流量复制",
+      "安全监控",
+      "性能分析",
+      "故障排查"
+    ]
+  },
+  "Transfer Acceleration": {
+    "definition": "Amazon S3 的一个特性，使用 AWS 全球网络加速数据传输速度。通过将数据传输到 AWS 边缘站点，再传输到 Amazon S3 存储桶，从而缩短传输时间。",
+    "analogy": "使用高速公路运输货物，而不是普通道路，加快运输速度。",
+    "features": [
+      "全球网络加速",
+      "提高传输速度",
+      "S3 集成",
+      "减少延迟"
+    ]
+  },
+  "Transfer for SFTP": {
+    "definition": "AWS Transfer Family 的一项服务，允许通过 SFTP 协议安全地传输文件到 Amazon S3。简化了与外部合作伙伴的文件交换。",
+    "analogy": "通过安全的邮局，将文件安全地邮寄到 S3。",
+    "features": [
+      "SFTP 支持",
+      "S3 集成",
+      "安全文件传输",
+      "简化文件交换"
+    ]
+  },
+  "Transit VPC": {
+    "definition": "一个中心化的 VPC，用于连接多个 VPC 和本地网络。提供了一种集中管理网络连接的方案。",
+    "analogy": "一个大型的交通枢纽，连接着不同的城市和地区，方便人员和物资的流通。",
+    "features": [
+      "网络连接集中管理",
+      "减少网络管理复杂性",
+      "高可用性",
+      "安全隔离"
+    ]
+  },
+  "URLs": {
+    "definition": "统一资源定位符（URLs），用于定位互联网上的资源，如网页、图片等。",
+    "analogy": "互联网上的地址，用于找到特定的资源。",
+    "features": [
+      "资源定位",
+      "网页访问",
+      "协议标识"
+    ]
+  },
+  "User Data": {
+    "definition": "在启动 Amazon EC2 实例时，可以提供给实例的配置信息。通常用于在实例启动时安装软件或运行脚本。",
+    "analogy": "启动电脑时自动运行的初始化脚本。",
+    "features": [
+      "实例初始化",
+      "自动化配置",
+      "软件安装",
+      "脚本执行"
+    ]
+  },
+  "User-Agent": {
+    "definition": "HTTP 请求头的一部分，用于标识发起请求的客户端。例如，浏览器或其他应用程序。",
+    "analogy": "客户端的身份证明文件，告诉服务器客户端是什么类型的。",
+    "features": [
+      "客户端标识",
+      "浏览器识别",
+      "流量分析",
+      "版本检测"
+    ]
+  },
+  "VPC Flow Logs": {
+    "definition": "VPC Flow Logs 是捕获关于您的 VPC 中网络流量的信息的功能。它将流量数据记录到 Amazon CloudWatch Logs 中。",
+    "analogy": "就像给你的 VPC 装上一个摄像头，记录所有进出的车辆（数据包）。",
+    "features": [
+      "记录网络流量的元数据",
+      "流量日志存储于 CloudWatch Logs",
+      "可用于安全审计和故障排查"
+    ]
+  },
+  "VPC Interconnection": {
+    "definition": "VPC Interconnection 指的是将不同的 VPC 连接起来的技术，例如 VPC 对等连接、Transit Gateway等。",
+    "analogy": "就像修建高速公路，连接两个独立的城市（VPC）。",
+    "features": [
+      "实现 VPC 之间的网络互通",
+      "支持 VPC 对等连接、Transit Gateway",
+      "简化网络管理"
+    ]
+  },
+  "VPC Lattice": {
+    "definition": "VPC Lattice 是一种服务到服务的连接和流量管理服务。它简化了服务之间的网络连接和安全性。",
+    "analogy": "就像一个智能交通控制系统，管理 VPC 内各个服务之间的交通流量。",
+    "features": [
+      "服务到服务的连接",
+      "细粒度的访问控制",
+      "内置服务发现"
+    ]
+  },
+  "VPC endpoint": {
+    "definition": "VPC endpoint 允许您私密地连接到支持的服务，而无需使用互联网网关、NAT 设备、VPN 连接或 AWS Direct Connect。",
+    "analogy": "就像为你的 VPC 打开一扇秘密通道，直接连接到其他 AWS 服务。",
+    "features": [
+      "私密连接到 AWS 服务",
+      "无需公网 IP",
+      "支持 Gateway endpoint 和 Interface endpoint"
+    ]
+  },
+  "VPC gateway endpoint": {
+    "definition": "VPC gateway endpoint 是一种 VPC endpoint，支持访问 Amazon S3 和 DynamoDB。流量通过 AWS 网络传输，不产生额外费用。",
+    "analogy": "就像 VPC 中的一个专用出口，用于访问 Amazon S3 和 DynamoDB，且不收取高速公路通行费。",
+    "features": [
+      "用于访问 Amazon S3 和 DynamoDB",
+      "不经过 Internet Gateway",
+      "不产生额外费用"
+    ]
+  },
+  "VPC 网关终端节点": {
+    "definition": "VPC 网关终端节点，同 VPC gateway endpoint。",
+    "analogy": "",
+    "features": []
+  },
+  "Version Control": {
+    "definition": "版本控制是一种管理对文件所做更改的系统。它跟踪代码、文档等的修改历史。",
+    "analogy": "就像时光机，可以让你回到过去的版本，查看和恢复历史修改。",
+    "features": [
+      "跟踪文件更改",
+      "多人协作",
+      "版本回溯"
+    ]
+  },
+  "Virtual Machine": {
+    "definition": "Virtual Machine (VM) 是在物理服务器上运行的模拟计算机，提供操作系统和应用程序的运行环境。",
+    "analogy": "就像在你的电脑里安装了一个模拟的电脑，可以运行另一个操作系统。",
+    "features": [
+      "模拟硬件资源",
+      "运行独立的操作系统",
+      "资源隔离"
+    ]
+  },
+  "Virtual Private Gateway": {
+    "definition": "Virtual Private Gateway (VGW) 是在 VPC 一侧用于建立 VPN 连接的组件。",
+    "analogy": "就像你的 VPC 里的一个接收器，用于接收来自你本地网络的 VPN 连接。",
+    "features": [
+      "用于建立 VPN 连接",
+      "位于 VPC 侧",
+      "支持加密通信"
+    ]
+  },
+  "Virtual Private Gateway (VGW)": {
+    "definition": "Virtual Private Gateway (VGW) 是在 VPC 一侧用于建立 VPN 连接的组件。",
+    "analogy": "",
+    "features": []
+  },
+  "Volume Gateway": {
+    "definition": "Volume Gateway 是一种混合云存储服务，将本地应用程序连接到基于云的存储。",
+    "analogy": "就像一座桥梁，连接你的本地数据中心和 Amazon S3，实现数据备份和恢复。",
+    "features": [
+      "提供 iSCSI 接口",
+      "支持文件网关、卷网关、磁带网关",
+      "与 Amazon S3 集成"
+    ]
+  },
+  "Vulnerability scanning": {
+    "definition": "Vulnerability scanning 是一种识别系统、应用程序或网络中安全弱点的过程。",
+    "analogy": "就像给你的房子做体检，找出潜在的漏洞。",
+    "features": [
+      "识别安全漏洞",
+      "定期扫描",
+      "生成报告"
+    ]
+  },
+  "WCU": {
+    "definition": "WCU（Write Capacity Units）是 DynamoDB 中用于衡量写入操作吞吐量的单位。",
+    "analogy": "可以理解为 DynamoDB 表可以每秒处理的写操作数量。",
+    "features": [
+      "用于衡量写入吞吐量",
+      "影响 DynamoDB 的性能",
+      "根据需求配置"
+    ]
+  },
+  "Warm Standby": {
+    "definition": "Warm Standby 是一种灾备策略，其中预先配置的备用系统（通常是数据库）已启动，但未完全运行，准备在主系统出现故障时快速切换。",
+    "analogy": "就像一个已经热身完毕的替补队员，随时准备上场。",
+    "features": [
+      "比冷备更快的恢复时间",
+      "备用系统部分启动",
+      "需要持续维护成本"
+    ]
+  },
+  "Web Application": {
+    "definition": "Web Application 是通过互联网访问的应用程序，通常使用浏览器作为界面。",
+    "analogy": "就像你在浏览器里打开的各种网站，例如新闻网站、社交网站等。",
+    "features": [
+      "通过互联网访问",
+      "使用浏览器界面",
+      "用户交互"
+    ]
+  },
+  "Web Application Server": {
+    "definition": "运行 Web 应用的服务器，提供对动态内容的生成和管理，通常包含应用程序服务器和 Web 服务器。",
+    "analogy": "相当于酒店的厨房，处理来自餐厅的订单（Web 请求），并准备菜肴（动态内容）。",
+    "features": [
+      "处理动态内容",
+      "支持多种编程语言",
+      "提供应用逻辑框架",
+      "与数据库交互"
+    ]
+  },
+  "Web Server": {
+    "definition": "处理 HTTP 请求的服务器，主要负责接收来自客户端的请求，并返回静态内容（如 HTML、CSS、图片）",
+    "analogy": "相当于酒店的前台，接收客人（客户端）的请求，并提供房间钥匙（静态内容）。",
+    "features": [
+      "处理 HTTP 请求",
+      "提供静态内容",
+      "支持 SSL/TLS",
+      "常见软件如 Apache、Nginx"
+    ]
+  },
+  "Web application": {
+    "definition": "通过 Web 浏览器访问的应用程序，通常提供交互式功能，如在线购物、社交媒体等。",
+    "analogy": "就像手机上的一个应用，但运行在浏览器里，无需安装。",
+    "features": [
+      "基于浏览器运行",
+      "提供交互式体验",
+      "需要服务器端支持",
+      "常使用 HTML、CSS、JavaScript"
+    ]
+  },
+  "Web server": {
+    "definition": "同 Web Server。",
+    "analogy": "",
+    "features": []
+  },
+  "WebSocket API": {
+    "definition": "一种双向通信协议，允许服务器和客户端之间建立持久连接，实现实时数据传输。",
+    "analogy": "类似于电话，可以实现客户端和服务器之间持续的、实时的对话。",
+    "features": [
+      "双向通信",
+      "实时数据传输",
+      "低延迟",
+      "适用于聊天、实时游戏等"
+    ]
+  },
+  "Website Hosting": {
+    "definition": "托管网站文件的服务，使网站可以在互联网上被访问。",
+    "analogy": "就像租用一块土地来建造你的房子（网站）。",
+    "features": [
+      "存储网站文件",
+      "提供网络访问",
+      "管理服务器",
+      "常见的有虚拟主机、VPS 和云主机"
+    ]
+  },
+  "Weighted Routing": {
+    "definition": "基于加权比例的流量分配策略，用于将流量分发到不同的资源上，如多个服务器实例。",
+    "analogy": "类似于分流，按照一定的比例将水流分到不同的渠道。",
+    "features": [
+      "根据权重分配流量",
+      "实现负载均衡",
+      "支持 A/B 测试",
+      "提高可用性"
+    ]
+  },
+  "Windows container": {
+    "definition": "在 Windows 操作系统上运行的容器化技术，用于打包和隔离应用程序。",
+    "analogy": "类似于在 Windows 系统上安装的虚拟环境，用于运行特定的应用程序。",
+    "features": [
+      "基于 Windows 操作系统",
+      "隔离应用程序",
+      "提高资源利用率",
+      "支持 Docker 容器"
+    ]
+  },
+  "WorkMail": {
+    "definition": "Amazon 提供的企业级电子邮件和日历服务，安全可靠且易于管理。",
+    "analogy": "相当于为企业提供的电子邮件系统，类似于 Outlook 或 Gmail for Business。",
+    "features": [
+      "企业级邮件服务",
+      "安全可靠",
+      "集成日历",
+      "易于管理"
+    ]
+  },
+  "Worker": {
+    "definition": "在后台执行任务的程序或服务，通常处理异步操作，例如发送邮件、处理图片等。",
+    "analogy": "相当于工厂里的工人，负责处理流水线上的一些任务。",
+    "features": [
+      "后台处理",
+      "异步操作",
+      "提高应用程序性能",
+      "常见的如消息队列消费者"
+    ]
+  },
+  "Workload Discovery": {
+    "definition": "识别和分析 IT 环境中的工作负载，为迁移和优化提供信息。",
+    "analogy": "类似于探险家勘测一片未知的土地，了解地形和资源分布。",
+    "features": [
+      "识别工作负载",
+      "分析资源使用",
+      "帮助迁移决策",
+      "优化 IT 基础设施"
+    ]
+  },
+  "Write Capacity": {
+    "definition": "数据库或存储服务每秒可以处理的写操作数量。",
+    "analogy": "类似于工厂的生产线，决定了每秒钟可以生产多少个产品。",
+    "features": [
+      "衡量写性能",
+      "影响数据库吞吐量",
+      "需要根据需求配置",
+      "影响成本"
+    ]
+  },
+  "Write-Through": {
+    "definition": "一种缓存策略，数据同时写入缓存和后端存储。",
+    "analogy": "类似于同时把笔记抄在草稿纸上和记事本上，保证数据的同步性。",
+    "features": [
+      "数据一致性",
+      "写操作延迟高",
+      "读取速度快",
+      "数据持久化保障"
+    ]
+  },
+  "X-API-Key": {
+    "definition": "用于身份验证和授权的 API 密钥，通常在 HTTP 请求头中传递。",
+    "analogy": "相当于进入一个俱乐部的通行证，只有持有密钥才能进入。",
+    "features": [
+      "身份验证",
+      "授权",
+      "保护 API 安全",
+      "用于计量使用量"
+    ]
+  },
+  "XSS": {
+    "definition": "跨站脚本攻击，一种 Web 应用程序安全漏洞，攻击者注入恶意脚本到网页中。",
+    "analogy": "类似于在你的信件中植入病毒，当别人阅读时就会受到攻击。",
+    "features": [
+      "跨站脚本攻击",
+      "注入恶意脚本",
+      "窃取用户数据",
+      "破坏网站功能"
+    ]
+  },
+  "ZDR": {
+    "definition": "零宕机部署（Zero Downtime Deployment）的简称，指在不中断服务的情况下进行应用部署更新的技术。",
+    "analogy": "就像给汽车换轮胎，车辆仍在行驶。",
+    "features": [
+      "减少服务中断时间",
+      "提高用户体验",
+      "需要一定的基础设施和部署策略支持"
+    ]
+  },
+  "ap-northeast-3": {
+    "definition": "AWS 的亚太地区（首尔）区域，用于部署和托管 AWS 资源。",
+    "analogy": "就像你在韩国开设的店铺，使用 AWS 在韩国的数据中心。",
+    "features": [
+      "地理位置：韩国首尔",
+      "可用的 AWS 服务",
+      "与其他区域的网络延迟"
+    ]
+  },
+  "ap-southeast-1": {
+    "definition": "AWS 的亚太地区（新加坡）区域，用于部署和托管 AWS 资源。",
+    "analogy": "就像你在新加坡开设的店铺，使用 AWS 在新加坡的数据中心。",
+    "features": [
+      "地理位置：新加坡",
+      "可用的 AWS 服务",
+      "与其他区域的网络延迟"
+    ]
+  },
+  "ap-southeast-2": {
+    "definition": "AWS 的亚太地区（悉尼）区域，用于部署和托管 AWS 资源。",
+    "analogy": "就像你在澳大利亚开设的店铺，使用 AWS 在澳大利亚的数据中心。",
+    "features": [
+      "地理位置：澳大利亚悉尼",
+      "可用的 AWS 服务",
+      "与其他区域的网络延迟"
+    ]
+  },
+  "aws:PrincipalOrgID": {
+    "definition": "IAM 策略中用于标识 AWS Organizations 中成员账户的条件键。",
+    "analogy": "就像公司的组织架构图里，每个员工都属于不同的部门。",
+    "features": [
+      "用于控制对组织内资源的访问",
+      "基于组织 ID 进行授权",
+      "简化跨账户的管理"
+    ]
+  },
+  "aws:PrincipalOrgPaths": {
+    "definition": "IAM 策略中用于标识 AWS Organizations 成员账户在组织内层级路径的条件键。",
+    "analogy": "就像公司组织架构里，你所在的部门层级关系。",
+    "features": [
+      "更精细的访问控制",
+      "基于组织层级进行授权",
+      "适用于大型组织"
+    ]
+  },
+  "aws:PrincipalTag": {
+    "definition": "IAM 策略中用于根据用户的标签进行授权的条件键。",
+    "analogy": "就像给员工贴上不同的标签（例如，工程师、经理），根据标签赋予不同的权限。",
+    "features": [
+      "基于用户或角色的标签进行授权",
+      "动态访问控制",
+      "提高可管理性"
+    ]
+  },
+  "aws:SecureTransport": {
+    "definition": "IAM 策略中用于强制要求使用安全传输（HTTPS）访问 AWS 资源的条件键。",
+    "analogy": "就像使用加密的信封寄信，确保信息安全。",
+    "features": [
+      "提高数据传输的安全性",
+      "防止数据被截获",
+      "保护敏感信息"
+    ]
+  },
+  "aws_s3 extension": {
+    "definition": "一些编辑器或工具使用的扩展，用于直接访问和操作 Amazon S3 上的文件。",
+    "analogy": "就像在电脑上安装的插件，可以方便地上传、下载和管理 S3 存储桶里的文件。",
+    "features": [
+      "简化 S3 文件的管理",
+      "提高开发效率",
+      "通常支持各种文件格式"
+    ]
+  },
+  "backup": {
+    "definition": "创建数据的副本，以便在数据丢失或损坏时恢复。",
+    "analogy": "就像给你的重要文件备份一份，以防丢失。",
+    "features": [
+      "保护数据免受损失",
+      "提高数据可用性",
+      "灾难恢复的重要组成部分"
+    ]
+  },
+  "binlog": {
+    "definition": "数据库的二进制日志（Binary Log），记录了数据库的所有更改操作，用于数据复制和恢复。",
+    "analogy": "就像数据库操作的流水账，记录了每一笔交易。",
+    "features": [
+      "数据复制",
+      "数据恢复",
+      "审计数据库操作"
+    ]
+  },
+  "blob": {
+    "definition": "二进制大型对象（Binary Large Object），用于存储大量二进制数据，例如图片、视频或文档。",
+    "analogy": "就像一个巨大的容器，可以存放各种类型的文件。",
+    "features": [
+      "存储非结构化数据",
+      "适用于多媒体文件",
+      "通常与对象存储服务结合使用"
+    ]
+  },
+  "canary release": {
+    "definition": "一种部署策略，将新版本的应用发布给一小部分用户，以便在全面发布前测试。",
+    "analogy": "就像矿工带金丝雀下井，如果金丝雀中毒，说明环境有问题，及时撤退。",
+    "features": [
+      "风险较低的发布",
+      "快速反馈",
+      "降低部署失败的影响"
+    ]
+  },
+  "cron job": {
+    "definition": "一个在预定时间自动运行的程序或脚本。通常用于自动化任务。",
+    "analogy": "就像定时闹钟，按时提醒你做某件事。",
+    "features": [
+      "任务自动化",
+      "定时执行",
+      "可以配置执行频率"
+    ]
+  },
+  "crontab": {
+    "definition": "用于配置和管理 cron 任务的配置文件。",
+    "analogy": "就像你的日程表，记录了你需要定时完成的任务。",
+    "features": [
+      "配置 cron 任务",
+      "指定执行时间",
+      "管理自动化任务的配置"
+    ]
+  },
+  "database": {
+    "definition": "数据库，用于存储和管理结构化数据的系统，例如关系型数据库（如 MySQL、PostgreSQL）或 NoSQL 数据库（如 MongoDB）。",
+    "analogy": "就像一个超级大的图书馆，存放着各种资料。",
+    "features": [
+      "数据存储",
+      "数据检索",
+      "数据更新",
+      "数据管理"
+    ]
+  },
+  "database clone": {
+    "definition": "数据库克隆是指创建数据库的完整副本，通常用于测试、备份或减轻主数据库的负载。",
+    "analogy": "就像复印一份你的作业，你可以随意修改，不用担心影响原件。",
+    "features": [
+      "数据复制",
+      "独立访问",
+      "数据备份",
+      "性能测试"
+    ]
+  },
+  "database instance": {
+    "definition": "数据库实例是数据库软件运行的特定环境，包含计算资源、存储和网络连接，用于执行数据库操作。",
+    "analogy": "就像一台安装了数据库软件的电脑。",
+    "features": [
+      "计算资源",
+      "存储资源",
+      "网络访问",
+      "数据库引擎运行"
+    ]
+  },
+  "endpoint": {
+    "definition": "终端节点是用于访问特定服务或资源的网络地址，通常是 URL 或 IP 地址。",
+    "analogy": "就像是房屋的门牌号，告诉你如何找到这个服务。",
+    "features": [
+      "访问点",
+      "URL",
+      "IP 地址",
+      "服务接入"
+    ]
+  },
+  "eu-central-1": {
+    "definition": "AWS 位于法兰克福区域的数据中心，提供 AWS 基础设施服务。",
+    "analogy": "欧洲的 AWS 数据中心之一，就像欧洲的超级计算中心。",
+    "features": [
+      "AWS 区域",
+      "法兰克福",
+      "数据中心",
+      "服务可用性"
+    ]
+  },
+  "eu-west-1": {
+    "definition": "AWS 位于爱尔兰区域的数据中心，提供 AWS 基础设施服务。",
+    "analogy": "欧洲的 AWS 数据中心之一，就像欧洲的超级计算中心。",
+    "features": [
+      "AWS 区域",
+      "爱尔兰",
+      "数据中心",
+      "服务可用性"
+    ]
+  },
+  "eu-west-2": {
+    "definition": "AWS 位于伦敦区域的数据中心，提供 AWS 基础设施服务。",
+    "analogy": "欧洲的 AWS 数据中心之一，就像欧洲的超级计算中心。",
+    "features": [
+      "AWS 区域",
+      "伦敦",
+      "数据中心",
+      "服务可用性"
+    ]
+  },
+  "external key store": {
+    "definition": "外部密钥存储，用于存储和管理加密密钥，这些密钥托管在 AWS 之外的系统中，例如硬件安全模块（HSM）。",
+    "analogy": "就像一个独立的保险箱，用于保护你的重要钥匙。",
+    "features": [
+      "密钥管理",
+      "外部存储",
+      "安全",
+      "密钥保护"
+    ]
+  },
+  "io1": {
+    "definition": "一种为 Amazon EBS 卷提供的性能优化选项，提供高 IOPS 和低延迟。",
+    "analogy": "就像汽车引擎的赛车模式，提供更快的性能。",
+    "features": [
+      "高IOPS",
+      "低延迟",
+      "EBS卷",
+      "性能优化"
+    ]
+  },
+  "ip-ranges.json": {
+    "definition": "AWS 提供的 JSON 文件，包含 AWS 全球范围内使用的所有 IP 地址范围，用于防火墙规则或网络配置。",
+    "analogy": "就像一份 AWS 的地址簿，告诉你 AWS 使用了哪些 IP 地址。",
+    "features": [
+      "IP 地址范围",
+      "JSON 格式",
+      "AWS 服务",
+      "网络配置"
+    ]
+  },
+  "kms:Decrypt": {
+    "definition": "AWS Key Management Service（KMS）中用于解密数据的 API 操作。",
+    "analogy": "就像用钥匙打开一个锁，访问被加密的数据。",
+    "features": [
+      "解密操作",
+      "KMS 服务",
+      "数据保护",
+      "API调用"
+    ]
+  },
+  "multipart uploads": {
+    "definition": "Amazon S3 的一种上传方法，允许将大文件分成多个部分并行上传，提高上传效率和可靠性。",
+    "analogy": "就像将大包裹分成几个小包裹，分批运送。",
+    "features": [
+      "分块上传",
+      "S3",
+      "提高效率",
+      "增强可靠性"
+    ]
+  },
+  "nslookup": {
+    "definition": "一个用于查询域名系统（DNS）信息的命令行工具，用于查找域名的 IP 地址和其他 DNS 记录。",
+    "analogy": "就像一个电话号码查询工具，查找域名对应的 IP 地址。",
+    "features": [
+      "DNS查询",
+      "命令行工具",
+      "域名解析",
+      "IP地址查询"
+    ]
+  },
+  "pg_dump": {
+    "definition": "PostgreSQL 数据库的备份工具，用于创建数据库的逻辑备份。",
+    "analogy": "就像给你的 PostgreSQL 数据库拍一张快照。",
+    "features": [
+      "PostgreSQL",
+      "备份工具",
+      "逻辑备份",
+      "数据库恢复"
+    ]
+  },
+  "pipeline resolvers": {
+    "definition": "AWS AppSync 中的功能，用于在 GraphQL 模式中使用管道解决器来处理请求和响应。",
+    "analogy": "",
+    "features": [
+      "AppSync",
+      "GraphQL",
+      "请求处理",
+      "数据操作"
+    ]
+  },
+  "private": {
+    "definition": "指网络、资源或访问权限的私有状态，仅对特定用户或系统开放，与公共（public）相对。",
+    "analogy": "就像你房间的门锁，只有你有钥匙才能进入。",
+    "features": [
+      "限制访问",
+      "提高安全性",
+      "隔离资源"
+    ]
+  },
+  "recovery": {
+    "definition": "指从故障、数据丢失或其他中断事件中恢复系统或数据的过程。",
+    "analogy": "如同备份你的照片，以便在手机坏掉时找回。",
+    "features": [
+      "备份",
+      "故障转移",
+      "恢复时间目标 (RTO)",
+      "恢复点目标 (RPO)"
+    ]
+  },
+  "root user": {
+    "definition": "AWS 账户的初始用户，拥有对账户内所有资源的完全访问权限，权限最高。",
+    "analogy": "就像一个超级管理员，拥有控制整个公司系统的权力。",
+    "features": [
+      "权限最高",
+      "初始访问",
+      "避免日常使用"
+    ]
+  },
+  "rsync": {
+    "definition": "一个用于文件同步的开源工具，可以在本地和远程系统之间高效地传输文件。",
+    "analogy": "就像一个智能的文件复制器，只复制发生变化的部分，节省时间。",
+    "features": [
+      "增量同步",
+      "远程同步",
+      "高效传输",
+      "开源"
+    ]
+  },
+  "s3 cp": {
+    "definition": "AWS CLI 中用于将对象复制到 Amazon S3 或从 Amazon S3 复制对象的命令。",
+    "analogy": "就像用复制粘贴功能把文件上传到云端储物柜 Amazon S3。",
+    "features": [
+      "上传文件",
+      "下载文件",
+      "复制文件",
+      "命令行工具"
+    ]
+  },
+  "s3 sync": {
+    "definition": "AWS CLI 中用于同步本地目录和 Amazon S3 存储桶的命令，可以检测并传输更改。",
+    "analogy": "就像一个自动化的文件同步助手，保持你的本地文件夹和云端储物柜 Amazon S3 中的内容一致。",
+    "features": [
+      "同步文件",
+      "双向同步",
+      "增量更新",
+      "命令行工具"
+    ]
+  },
+  "s3:ObjectCreated:Put": {
+    "definition": "Amazon S3 事件通知，当新对象被 PUT 到 S3 存储桶时触发。",
+    "analogy": "就像你在云端储物柜 Amazon S3 里放了一个新东西，触发了通知。",
+    "features": [
+      "触发事件",
+      "对象创建",
+      "通知机制",
+      "用于 Lambda 等服务"
+    ]
+  },
+  "s3:PutObjectLegalHold": {
+    "definition": "Amazon S3 的一个 API，用于在 S3 对象上设置或移除法律保留。",
+    "analogy": "就像对你的云端储物柜 Amazon S3 里的文件加上了“禁止删除”的标签。",
+    "features": [
+      "对象锁定",
+      "法律保留",
+      "防止删除",
+      "适用于合规性需求"
+    ]
+  },
+  "s3:x-amz-acl": {
+    "definition": "在上传到 Amazon S3 时，设置对象的访问控制列表 (ACL) 的 HTTP 请求头。",
+    "analogy": "就像你在把东西放进云端储物柜 Amazon S3 时，设置了谁可以访问这个东西的权限。",
+    "features": [
+      "访问控制",
+      "权限设置",
+      "对象级别",
+      "控制用户访问"
+    ]
+  },
+  "st1": {
+    "definition": "Amazon EBS (Elastic Block Storage) 的存储卷类型，提供具有成本效益的 HDD 存储，适用于不经常访问的数据。",
+    "analogy": "就像一个巨大的、便宜的、存着不常用的文件的货架。",
+    "features": [
+      "HDD 存储",
+      "成本效益",
+      "适合冷存储",
+      "吞吐量优化"
+    ]
+  },
+  "us-east-2": {
+    "definition": "一个 AWS 区域的标识符，代表位于美国俄亥俄州的 AWS 数据中心。",
+    "analogy": "就像一个邮政编码，告诉你服务器所在的具体地理位置。",
+    "features": [
+      "AWS 区域",
+      "地理位置",
+      "数据中心",
+      "可用区 (AZ)"
+    ]
+  },
+  "us-west-1": {
+    "definition": "一个 AWS 区域的标识符，代表位于美国加利福尼亚州的 AWS 数据中心。",
+    "analogy": "就像一个邮政编码，告诉你服务器所在的具体地理位置。",
+    "features": [
+      "AWS 区域",
+      "地理位置",
+      "数据中心",
+      "可用区 (AZ)"
+    ]
+  },
+  "us-west-2": {
+    "definition": "一个 AWS 区域的标识符，代表位于美国俄勒冈州的 AWS 数据中心。",
+    "analogy": "就像一个邮政编码，告诉你服务器所在的具体地理位置。",
+    "features": [
+      "AWS 区域",
+      "地理位置",
+      "数据中心",
+      "可用区 (AZ)"
+    ]
+  },
+  "vCPU": {
+    "definition": "虚拟中央处理器，是 AWS EC2 实例分配的 CPU 核心数。",
+    "analogy": "就像是租用的计算资源的核心数量，决定了实例的计算能力。",
+    "features": [
+      "虚拟CPU",
+      "计算能力",
+      "实例配置",
+      "可弹性扩展"
+    ]
+  },
+  "x-amz-server-side-encryption": {
+    "definition": "在上传到 Amazon S3 时，用于指定服务器端加密的 HTTP 请求头。",
+    "analogy": "就像你在把东西放到云端储物柜 Amazon S3 时，设置了密码锁。",
+    "features": [
+      "服务器端加密",
+      "数据安全",
+      "保护静态数据",
+      "多种加密算法"
+    ]
+  },
+  "一致性": {
+    "definition": "指数据在多个副本之间保持同步的状态。在分布式系统中，一致性是确保数据可靠性和准确性的关键。",
+    "analogy": "就像图书馆的书籍，确保每本书在所有分馆都是同一版本。",
+    "features": [
+      "强一致性，弱一致性，最终一致性",
+      "数据复制和同步",
+      "CAP 理论相关"
+    ]
+  },
+  "会话关联": {
+    "definition": "指将用户与特定服务器实例绑定，确保同一用户的后续请求被路由到同一实例。",
+    "analogy": "就像你在同一个餐厅点菜，确保服务员每次都认出你。",
+    "features": [
+      "基于 cookie 的会话粘性",
+      "解决用户状态维护问题",
+      "负载均衡配置选项"
+    ]
+  },
+  "传输中加密": {
+    "definition": "保护数据在网络传输过程中的安全，防止被窃听或篡改。通常使用 TLS/SSL 协议。",
+    "analogy": "就像寄快递时用密封箱包装，确保包裹在运输途中安全。",
+    "features": [
+      "TLS/SSL 协议",
+      "保护数据隐私",
+      "确保数据完整性"
+    ]
+  },
+  "作业书签": {
+    "definition": "记录大数据处理作业的进度，允许从上次中断的地方恢复，提高处理效率和容错能力。",
+    "analogy": "就像你在读小说时，用书签记录阅读进度，方便下次继续。",
+    "features": [
+      "支持断点续传",
+      "优化大数据处理",
+      "提高资源利用率"
+    ]
+  },
+  "侦听器": {
+    "definition": "负载均衡器上，用于监听客户端连接请求的组件，根据配置将流量转发到后端目标。",
+    "analogy": "就像接电话的总机，负责接听电话并转接到合适的部门。",
+    "features": [
+      "监听特定端口",
+      "支持多种协议",
+      "根据规则转发流量"
+    ]
+  },
+  "保留期": {
+    "definition": "指定数据在存储系统中保留的时间长度。到期后，数据将被自动删除。",
+    "analogy": "就像租借图书的借阅期限，到期未还就要罚款。",
+    "features": [
+      "数据备份与归档策略",
+      "合规性要求",
+      "节省存储成本"
+    ]
+  },
+  "健康检查": {
+    "definition": "监控服务器或服务的运行状态，定期检查其是否正常工作，以确保系统可用性。",
+    "analogy": "就像医生定期体检，检查身体状况。",
+    "features": [
+      "监控服务器响应",
+      "判断服务是否可用",
+      "自动恢复或切换故障实例"
+    ]
+  },
+  "公有子网": {
+    "definition": "在 VPC 中，拥有 Internet 网关，可以接收来自 Internet 的流量，允许实例与 Internet 通信。",
+    "analogy": "就像连接到互联网的办公室，可以收发邮件和浏览网页。",
+    "features": [
+      "拥有公网 IP",
+      "可以访问 Internet",
+      "与 Internet 网关关联"
+    ]
+  },
+  "共享存储": {
+    "definition": "允许多个计算实例同时访问和共享的存储设备。例如，Amazon EFS 和 Amazon FSx。",
+    "analogy": "就像办公室里的共享文件服务器，大家都可以访问和修改文件。",
+    "features": [
+      "多实例访问",
+      "数据共享",
+      "文件系统服务"
+    ]
+  },
+  "分区放置组": {
+    "definition": "将 Amazon EC2 实例分布在不同分区，减少实例故障影响范围，提高应用程序的可用性。",
+    "analogy": "就像把货物分成几个仓库存放，避免一个仓库着火导致所有货物受损。",
+    "features": [
+      "提高可用性",
+      "隔离故障影响",
+      "适用于大型分布式应用程序"
+    ]
+  },
+  "前缀": {
+    "definition": "用于组织和分类 Amazon S3 存储桶中的对象。是对象键的一部分。",
+    "analogy": "就像文件目录里的文件夹，用于组织文件。",
+    "features": [
+      "逻辑分组对象",
+      "支持 IAM 权限管理",
+      "用于筛选对象"
+    ]
+  },
+  "前缀列表": {
+    "definition": "一个包含 IP 地址范围的集合，用于简化安全组和路由表的配置。",
+    "analogy": "就像一个预定义的地址簿，用于快速引用常用的 IP 地址范围。",
+    "features": [
+      "简化网络配置",
+      "易于管理",
+      "动态更新 IP 地址范围"
+    ]
+  },
+  "动态伸缩": {
+    "definition": "根据实际负载情况自动调整计算资源的数量，确保应用程序的性能和成本效益。",
+    "analogy": "就像餐厅根据顾客数量增减服务员。",
+    "features": [
+      "自动扩展和缩减",
+      "提高资源利用率",
+      "基于指标进行伸缩"
+    ]
+  },
+  "区域端点": {
+    "definition": "特定于 AWS 区域的服务访问点。例如， Amazon S3 的各个区域的访问地址。",
+    "analogy": "就像各个城市的邮局地址，用于访问邮政服务。",
+    "features": [
+      "特定区域的访问地址",
+      "优化网络延迟",
+      "提高性能"
+    ]
+  },
+  "单点登录": {
+    "definition": "允许用户使用一组凭证访问多个应用程序和服务。例如， AWS Single Sign-On.",
+    "analogy": "就像使用一个钥匙打开多个房间的门。",
+    "features": [
+      "简化用户身份验证",
+      "提高安全性",
+      "简化访问管理"
+    ]
+  },
+  "可扩展性": {
+    "definition": "系统应对增长的负载的能力。AWS 的服务通常设计为可水平扩展，以满足不断变化的需求。",
+    "analogy": "就像一间可以根据需要增加房间的房子。",
+    "features": [
+      "按需增加资源",
+      "自动扩展",
+      "提高系统可用性"
+    ]
+  },
+  "域名": {
+    "definition": "用于识别互联网上一个或多个 IP 地址的易于记忆的名称，例如 example.com。在 AWS 中，可以使用 Route 53 管理域名。",
+    "analogy": "就像您家的地址，方便他人找到您。",
+    "features": [
+      "易于记忆的网站地址",
+      "由 DNS 解析",
+      "Route 53 提供域名注册与管理"
+    ]
+  },
+  "堡垒服务器": {
+    "definition": "位于公有云和私有云之间的安全服务器，作为访问私有云资源的跳板。用于安全管理和控制对私有资源的访问。",
+    "analogy": "就像一座连接外部世界和城堡的安全桥梁，只有经过授权的人才能通过。",
+    "features": [
+      "集中访问控制",
+      "审计日志记录",
+      "提高网络安全性"
+    ]
+  },
+  "增强型网络": {
+    "definition": "利用硬件加速的网络性能，提升 EC2 实例的网络吞吐量、延迟和抖动。适用于对网络性能要求高的应用程序。",
+    "analogy": "就像给你的网线升级了，让网速更快更稳定。",
+    "features": [
+      "低延迟",
+      "高吞吐量",
+      "适用于计算密集型工作负载"
+    ]
+  },
+  "多值应答路由": {
+    "definition": "Route 53 的一种路由策略，用于将用户请求路由到多个资源，并返回所有健康资源的 DNS 记录。通常用于实现负载均衡和故障转移。",
+    "analogy": "就像同时告诉你多个餐馆的选择，你都可以去。",
+    "features": [
+      "返回多个健康资源",
+      "用于负载均衡",
+      "实现故障转移"
+    ]
+  },
+  "字段级加密": {
+    "definition": "对数据中的单个字段进行加密，允许对其他字段进行操作，同时保护敏感数据。例如，在数据库中加密信用卡号码。",
+    "analogy": "就像给文件中的某个单词或句子加密，而不是整个文件。",
+    "features": [
+      "保护敏感数据",
+      "允许对未加密数据进行操作",
+      "细粒度的安全控制"
+    ]
+  },
+  "存储": {
+    "definition": "保存和管理数据的过程。AWS 提供了多种存储服务，如 Amazon S3, Amazon EBS, Amazon EFS 等。",
+    "analogy": "就像一个可以存放各种东西的仓库。",
+    "features": [
+      "数据持久性",
+      "数据访问",
+      "数据备份与恢复"
+    ]
+  },
+  "存储桶策略": {
+    "definition": "应用于 Amazon S3 存储桶的基于资源的策略，用于控制对存储桶中对象的访问权限。",
+    "analogy": "就像控制仓库大门的门禁卡，决定谁能进出。",
+    "features": [
+      "控制对 S3 存储桶的访问",
+      "基于 JSON 格式编写",
+      "授予或拒绝权限"
+    ]
+  },
+  "存储类": {
+    "definition": "Amazon S3 提供不同存储类，用于根据数据访问频率和持久性需求进行存储成本优化。",
+    "analogy": "就像图书馆的书籍分区，根据借阅频率安排位置。",
+    "features": [
+      "不同存储成本",
+      "不同访问性能",
+      "例如 S3 Standard, S3 Intelligent-Tiering, S3 Glacier"
+    ]
+  },
+  "存储类别": {
+    "definition": "参见“存储类”。",
+    "analogy": "",
+    "features": []
+  },
+  "安全": {
+    "definition": "保护数据和系统免受未经授权的访问、使用、泄露、破坏或修改。AWS 提供各种安全服务，如 IAM, KMS, WAF 等。",
+    "analogy": "就像保护家园免受入侵和破坏。",
+    "features": [
+      "数据加密",
+      "身份验证和授权",
+      "安全审计"
+    ]
+  },
+  "密钥策略": {
+    "definition": "应用于 AWS KMS 密钥的策略，用于控制对密钥的访问权限和使用方式。",
+    "analogy": "就像控制保险箱钥匙的保管规则。",
+    "features": [
+      "定义密钥的访问权限",
+      "基于 JSON 格式编写",
+      "管理密钥生命周期"
+    ]
+  },
+  "对等连接": {
+    "definition": "在两个 VPC 之间建立连接，允许在这两个 VPC 之间通过私有 IP 地址进行通信。提供安全、低延迟的连接。",
+    "analogy": "就像在两个朋友的家里建了一条秘密通道，方便他们互相串门。",
+    "features": [
+      "VPC 之间私有连接",
+      "低延迟",
+      "数据传输不经过 Internet"
+    ]
+  },
+  "弹性伸缩": {
+    "definition": "根据需求自动增加或减少计算资源，以满足应用程序的负载。例如，使用 EC2 Auto Scaling 自动调整 EC2 实例数量。",
+    "analogy": "就像一辆可以自动调整座位的公交车，以适应乘客数量的变化。",
+    "features": [
+      "自动调整资源",
+      "提高系统可用性",
+      "降低成本"
+    ]
+  },
+  "成本优化": {
+    "definition": "通过选择最合适的服务、优化资源利用率和实施成本控制措施来降低 AWS 运营成本。",
+    "analogy": "就像精打细算地使用钱，确保钱花在刀刃上。",
+    "features": [
+      "选择合适的实例类型",
+      "使用 Reserved Instances",
+      "优化存储成本"
+    ]
+  },
+  "成本和使用情况报告": {
+    "definition": "AWS 成本和使用情况报告 (CUR) 详细记录了您 AWS 账户的成本和使用情况信息。该报告按小时、天或月汇总，提供了深入的成本分析。",
+    "analogy": "就像您的银行账单，详细记录了您的每一笔支出和消费。",
+    "features": [
+      "详细的成本分解",
+      "可定制的报告格式",
+      "与 Amazon Athena 集成",
+      "可以用来分析和优化成本"
+    ]
+  },
+  "执行角色": {
+    "definition": "IAM 执行角色定义了 AWS 服务（例如 Lambda 函数、EC2 实例）可以在您的 AWS 账户中执行的权限。这些角色允许服务代表您访问其他 AWS 资源。",
+    "analogy": "就像您的员工拥有的权限，允许他们访问公司资源。",
+    "features": [
+      "限制了访问权限",
+      "确保了安全访问",
+      "允许服务间安全交互",
+      "与服务相关联"
+    ]
+  },
+  "折扣共享": {
+    "definition": "AWS 中的折扣共享，通常指的是在多个账户共享预留实例或 Savings Plans 折扣。这样可以更有效地利用成本优化策略。",
+    "analogy": "就像您和朋友共享一个家庭影院的会员资格，降低了每个人的费用。",
+    "features": [
+      "提高成本效益",
+      "简化成本管理",
+      "适用于组织中的多个账户",
+      "最大化折扣利用率"
+    ]
+  },
+  "指标": {
+    "definition": "指标是代表一段时间内对 AWS 资源进行测量的数据。例如，CPU 利用率、延迟时间等。Amazon CloudWatch 用于收集、监控和分析指标。",
+    "analogy": "就像汽车的仪表盘，显示了速度、油量等重要信息。",
+    "features": [
+      "监控资源性能",
+      "可用于告警",
+      "帮助发现问题",
+      "可自定义的图表"
+    ]
+  },
+  "接口 VPC endpoint": {
+    "definition": "接口 VPC endpoint 允许您私密地访问 AWS 服务，而无需使用 Internet 网关、NAT 设备、VPN 连接或 AWS Direct Connect。流量在 Amazon 网络内传输。",
+    "analogy": "就像您通过专用通道访问特定的服务，绕过了公共道路。",
+    "features": [
+      "使用私有 IP 地址",
+      "提高了安全性",
+      "流量在 Amazon 网络内传输",
+      "无需公共 IP"
+    ]
+  },
+  "数据湖": {
+    "definition": "数据湖是一个集中式存储库，用于存储各种格式的结构化和非结构化数据。数据湖通常使用 Amazon S3 来存储原始数据和转换后的数据。",
+    "analogy": "就像一个巨大的水库，存储了各种来源的水，以供后续处理和使用。",
+    "features": [
+      "支持多种数据格式",
+      "存储容量大",
+      "灵活的数据处理",
+      "支持数据分析与机器学习"
+    ]
+  },
+  "文件系统": {
+    "definition": "文件系统是一种用于组织和存储数据的系统。在 AWS 中，可以使用 Amazon EFS 或 Amazon FSx 等服务来创建文件系统。",
+    "analogy": "就像您的电脑硬盘，用于组织和存储文件。",
+    "features": [
+      "数据存储结构",
+      "支持文件的读写操作",
+      "提供访问控制",
+      "不同的实现方式，如EFS和FSx"
+    ]
+  },
+  "日志": {
+    "definition": "日志记录了系统中发生的事件。AWS 服务（例如，EC2，Lambda）会生成日志，这些日志可以用于故障排除、监控和审计。",
+    "analogy": "就像飞行记录仪，记录了飞机的运行状态。",
+    "features": [
+      "记录事件信息",
+      "用于问题诊断",
+      "用于审计",
+      "可以存储在 CloudWatch Logs 或 S3 中"
+    ]
+  },
+  "最小权限": {
+    "definition": "最小权限原则是指只授予用户或服务完成其任务所需的最低权限。这是安全最佳实践，有助于降低安全风险。",
+    "analogy": "就像您只给员工访问他们需要的文件，而不是所有文件。",
+    "features": [
+      "减少潜在的安全漏洞",
+      "提升安全性",
+      "简化权限管理",
+      "降低安全风险"
+    ]
+  },
+  "本地备份": {
+    "definition": "本地备份是指在与原始数据相同或附近的位置创建数据副本。例如，将数据备份到同一数据中心的另一台服务器上。",
+    "analogy": "就像您将重要文件复制到您自己的电脑的另一个文件夹中。",
+    "features": [
+      "快速恢复",
+      "恢复时间短",
+      "数据靠近原始数据",
+      "成本相对较低"
+    ]
+  },
+  "权限集": {
+    "definition": "权限集是 IAM Identity Center (successor to AWS Single Sign-On) 中预定义的权限集合，用于简化用户对 AWS 账户的访问控制。",
+    "analogy": "就像预设的套装权限，方便您快速为员工分配访问权限。",
+    "features": [
+      "简化用户访问管理",
+      "预定义的权限模板",
+      "可以分配给用户和组",
+      "与 IAM Identity Center 集成"
+    ]
+  },
+  "标签策略": {
+    "definition": "标签策略是一种用于强制实施标签使用的策略。它可以帮助您标准化标签的使用，以更好地管理 AWS 资源。",
+    "analogy": "就像一个强制要求所有包裹都贴上特定标签的规定，以便更好地管理和追踪。",
+    "features": [
+      "强制实施标签",
+      "提高资源管理效率",
+      "支持合规性要求",
+      "简化成本分配"
+    ]
+  },
+  "流数据": {
+    "definition": "流数据是指以连续、实时的流方式生成的数据。AWS 服务（如 Kinesis）可以用来处理和分析流数据。",
+    "analogy": "就像水龙头不断流出的水，需要实时处理。",
+    "features": [
+      "实时处理",
+      "高吞吐量",
+      "适用于实时分析",
+      "常用的服务包括 Kinesis"
+    ]
+  },
+  "灾难恢复 (DR)": {
+    "definition": "灾难恢复 (DR) 是一种在发生灾难时恢复应用程序和数据的策略。这包括备份、故障转移和恢复过程。",
+    "analogy": "就像为您的业务准备了应急计划，以应对各种突发事件。",
+    "features": [
+      "提高业务连续性",
+      "减少停机时间",
+      "保护数据",
+      "不同的恢复策略，如备份与恢复，Pilot Light, Warm Standby, Multi-site"
+    ]
+  },
+  "环境变量": {
+    "definition": "环境变量是在操作系统中存储的动态值，应用程序可以访问这些值。在 AWS 中，环境变量可以用来配置 Lambda 函数、EC2 实例等。",
+    "analogy": "就像程序的配置信息，可以在不修改代码的情况下改变程序的行为。",
+    "features": [
+      "存储配置信息",
+      "方便配置更改",
+      "提高代码的可移植性",
+      "与应用程序分离配置"
+    ]
   }
 }
