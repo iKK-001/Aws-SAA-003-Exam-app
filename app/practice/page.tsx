@@ -167,7 +167,8 @@ function PracticeContent() {
     }
 
     if (mode === 'order' || mode === 'topic') {
-      setList([...base].sort((a, b) => a.id - b.id));
+      const newList = [...base].sort((a, b) => a.id - b.id);
+      setList(newList);
       const total = base.length;
       if (total === 0) {
         setIndex(0);
@@ -188,14 +189,28 @@ function PracticeContent() {
         saved.index > 0 &&
         saved.index < saved.total;
       if (resumable) {
-        setIndex(saved!.index);
-        setToastMessage(`已从第 ${saved!.index + 1} 题继续`);
+        const idx = saved!.index;
+        setIndex(idx);
+        const question = newList[idx];
+        const p = question ? getProgress()[question.id] : null;
+        if (p?.answered) {
+          const answered = String(p.answered).trim();
+          const sel = answered.includes(',')
+            ? answered.split(',').map((s) => s.trim().toUpperCase())
+            : [answered.toUpperCase()];
+          setSelected(sel);
+          setShowExplanation(true);
+        } else {
+          setSelected([]);
+          setShowExplanation(false);
+        }
+        setToastMessage(`已从第 ${idx + 1} 题继续`);
         setTimeout(() => setToastMessage(null), 2500);
       } else {
         setIndex(0);
+        setSelected([]);
+        setShowExplanation(false);
       }
-      setSelected([]);
-      setShowExplanation(false);
     } else {
       setList(shuffleArray(base));
       setIndex(0);
@@ -284,12 +299,28 @@ function PracticeContent() {
     }
   };
 
+  /** 根据进度恢复某题的已选选项与解析展示状态（从答题卡/上一题/下一题切回时用） */
+  const getStateForIndex = (i: number) => {
+    const question = list[i];
+    if (!question) return { selected: [] as string[], showExplanation: false };
+    const p = getProgress()[question.id];
+    if (!p?.answered) return { selected: [] as string[], showExplanation: false };
+    const answered = String(p.answered).trim();
+    if (!answered) return { selected: [] as string[], showExplanation: false };
+    const selected = answered.includes(',')
+      ? answered.split(',').map((s) => s.trim().toUpperCase())
+      : [answered.toUpperCase()];
+    return { selected, showExplanation: true };
+  };
+
   const handleNext = () => {
     const isLastQuestion = index === list.length - 1;
-    setSelected([]);
-    setShowExplanation(false);
+    const nextIndex = (index + 1) % list.length;
+    setIndex(nextIndex);
+    const state = getStateForIndex(nextIndex);
+    setSelected(state.selected);
+    setShowExplanation(state.showExplanation);
     setMascotPhrase(null);
-    setIndex((i) => (i + 1) % list.length);
     if (isLastQuestion && list.length > 0) {
       const completionMessage =
         mode === 'topic' && tagParam
@@ -301,10 +332,12 @@ function PracticeContent() {
   };
 
   const handlePrev = () => {
-    setSelected([]);
-    setShowExplanation(false);
+    const prevIndex = (index - 1 + list.length) % list.length;
+    setIndex(prevIndex);
+    const state = getStateForIndex(prevIndex);
+    setSelected(state.selected);
+    setShowExplanation(state.showExplanation);
     setMascotPhrase(null);
-    setIndex((i) => (i - 1 + list.length) % list.length);
   };
 
   if (loading) {
@@ -699,8 +732,9 @@ function PracticeContent() {
         currentIndex={index}
         onSelectIndex={(i) => {
           setIndex(i);
-          setSelected([]);
-          setShowExplanation(false);
+          const state = getStateForIndex(i);
+          setSelected(state.selected);
+          setShowExplanation(state.showExplanation);
           setMascotPhrase(null);
         }}
         onClearProgress={() => {

@@ -92,7 +92,7 @@ export function AnswerSheet({
                       : status === 'correct'
                         ? 'border border-emerald-500/50 bg-emerald-500 text-white'
                         : status === 'wrong'
-                          ? 'border border-amber-400/50 bg-amber-500 text-white'
+                          ? 'border border-red-500/50 bg-red-500 text-white'
                           : 'border border-aws-navy/15 bg-aws-navy/5 text-aws-navy/70'
                     }
                   `}
@@ -104,7 +104,7 @@ export function AnswerSheet({
             })}
           </div>
           <p className="mt-4 text-center text-xs text-aws-navy/50">
-            绿=答对 · 橙=答错 · 红框=当前题 · 灰=未做
+            绿=答对 · 红=答错 · 红框=当前题 · 灰=未做
           </p>
         </div>
       </div>
