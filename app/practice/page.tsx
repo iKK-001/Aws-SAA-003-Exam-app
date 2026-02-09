@@ -685,6 +685,11 @@ function PracticeContent() {
             <Search className="h-4 w-4 -rotate-6" aria-hidden />
             看透真相 🔍
           </p>
+          {isMultiple && (
+            <p className="mb-2 text-sm font-medium text-aws-navy">
+              本题需选 {answerCount} 项 · 正确答案：<span className="font-semibold text-emerald-700">{getBestAnswerArray(q).join('、')}</span>
+            </p>
+          )}
           {mascotPhrasesEnabled && (
             <p className="mb-3 rounded-xl bg-amber-50/80 px-3 py-2 text-xs font-medium text-amber-800">
               小助手：{explanationPhrases[q.id % explanationPhrases.length]}

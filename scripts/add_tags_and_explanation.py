@@ -77,13 +77,28 @@ def load_glossary_keys() -> set[str]:
         return set()
 
 
+def _correct_answer_letters(correct: str) -> set[str]:
+    """将 correct_answer 规范为选项字母集合，支持单选 'A' 与多选 'CD'。"""
+    if not correct:
+        return set()
+    letters = set()
+    for c in (correct if isinstance(correct, str) else "").strip().upper():
+        if c in "ABCDE":
+            letters.add(c)
+    return letters
+
+
 def build_enrich_prompt(item: dict) -> str:
-    """单题：根据题干、选项、正确答案，生成 tags、explanation、related_terms。"""
+    """单题：根据题干、选项、正确答案，生成 tags、explanation、related_terms。多选时按字母拆 correct_answer，避免 wrong_opts 误含正确选项。"""
     q_cn = item.get("question_cn", "")
     opts_cn = item.get("options_cn") or {}
     opts_str = "\n".join(f"{k}. {v}" for k, v in sorted(opts_cn.items()))
-    correct = item.get("correct_answer", "")
-    wrong_opts = [k for k in sorted(opts_cn.keys()) if k != correct]
+    correct_raw = item.get("correct_answer", "")
+    correct_set = _correct_answer_letters(correct_raw)
+    if not correct_set and correct_raw:
+        correct_set = {c for c in str(correct_raw).strip().upper() if c in "ABCDE"}
+    correct_str = "、".join(sorted(correct_set)) if correct_set else (correct_raw or "")
+    wrong_opts = [k for k in sorted(opts_cn.keys()) if k not in correct_set]
     wrong_list = "、".join(wrong_opts) if wrong_opts else "其余选项"
     return f"""你是一位 AWS SAA-C03 备考解析助手。根据以下题目与正确答案，输出 JSON（仅此 JSON，无其他文字）。
 
@@ -91,8 +106,8 @@ def build_enrich_prompt(item: dict) -> str:
 1. tags：考点/服务名数组，如 ["Amazon S3", "S3 Transfer Acceleration"]，用英文服务名。
 2. explanation：对象，包含三键（均简体中文，技术术语保留英文）。解析请写详细，避免一两句带过；适当做知识点串联（如对比正确方案与错误方案、点出与其它 AWS 概念的关系）。
    - analysis：用 1～2 句话概括考查点，并点出与哪些相关知识有关（如「考查 X；与 Y、Z 的选型/对比相关」）。
-   - why_correct：详细说明正确选项（本题为选项 {correct}）为何正确：适用场景、与题目条件的对应、关键特性或原理；可简要对比「为什么在这种场景下选它而不是其它方案」。不要写错误选项。约 2～4 句。
-   - why_wrong：详细说明错误选项（本题为选项 {wrong_list}）为何错误：逐项或分组写不适用原因、与题目需求的矛盾、或与正确方案的对比。严禁在 why_wrong 里提及、批评或贬低正确选项 {correct}。约 2～4 句，可带知识点串联（如某选项为何在安全/可靠性上不足）。
+   - why_correct：详细说明正确选项（本题为选项 {correct_str}）为何正确：适用场景、与题目条件的对应、关键特性或原理；可简要对比「为什么在这种场景下选它而不是其它方案」。不要写错误选项。约 2～4 句。
+   - why_wrong：详细说明错误选项（本题为选项 {wrong_list}）为何错误：逐项或分组写不适用原因、与题目需求的矛盾、或与正确方案的对比。严禁在 why_wrong 里提及、批评或贬低正确选项 {correct_str}。约 2～4 句，可带知识点串联（如某选项为何在安全/可靠性上不足）。
 3. related_terms：题干/选项/解析中出现的 AWS 服务名、产品名数组，用英文（如 Amazon S3, S3, Lambda, EC2, EBS），便于与词库对齐。
 
 题目（中文）：
@@ -101,28 +116,32 @@ def build_enrich_prompt(item: dict) -> str:
 选项：
 {opts_str}
 
-正确答案：{correct}（why_correct 只写选项 {correct} 为何对；why_wrong 只写选项 {wrong_list} 为何错，不要写选项 {correct}）
+正确答案：{correct_str}（why_correct 只写选项 {correct_str} 为何对；why_wrong 只写选项 {wrong_list} 为何错，不要写选项 {correct_str}）
 
 输出 JSON 格式（仅此对象）：
 {{"tags": ["..."], "explanation": {{"analysis": "...", "why_correct": "...", "why_wrong": "..."}}, "related_terms": ["..."]}}"""
 
 
 def build_enrich_batch_prompt(items: list[dict]) -> str:
-    """多题一批的 prompt，要求返回 JSON 数组，顺序与输入一致。"""
+    """多题一批的 prompt，要求返回 JSON 数组，顺序与输入一致。多选时按字母拆 correct_answer。"""
     n = len(items)
     parts = []
     for i, item in enumerate(items, 1):
         q_cn = item.get("question_cn", "")
         opts_cn = item.get("options_cn") or {}
         opts_str = "\n   ".join(f"{k}. {v}" for k, v in sorted(opts_cn.items()))
-        correct = item.get("correct_answer", "")
-        wrong_opts = [k for k in sorted(opts_cn.keys()) if k != correct]
+        correct_raw = item.get("correct_answer", "")
+        correct_set = _correct_answer_letters(correct_raw)
+        if not correct_set and correct_raw:
+            correct_set = {c for c in str(correct_raw).strip().upper() if c in "ABCDE"}
+        correct_str = "、".join(sorted(correct_set)) if correct_set else (correct_raw or "")
+        wrong_opts = [k for k in sorted(opts_cn.keys()) if k not in correct_set]
         wrong_list = "、".join(wrong_opts) if wrong_opts else "其余选项"
         parts.append(
             f"--- 题目 {i} ---\n"
             f"题干: {q_cn}\n"
             f"选项:\n   {opts_str}\n"
-            f"正确答案: {correct}（why_correct 只写选项 {correct} 为何对；why_wrong 只写选项 {wrong_list} 为何错，不要写选项 {correct}）"
+            f"正确答案: {correct_str}（why_correct 只写选项 {correct_str} 为何对；why_wrong 只写选项 {wrong_list} 为何错，不要写选项 {correct_str}）"
         )
     body = "\n\n".join(parts)
     return f"""你是一位 AWS SAA-C03 备考解析助手。根据以下 {n} 道题目与各自正确答案，输出一个 JSON 数组（仅此数组，无其他文字）。数组必须恰好 {n} 个元素，顺序与题目 1～{n} 一一对应。
@@ -164,6 +183,23 @@ def parse_enrich_response(text: str) -> dict | None:
         return None
 
 
+def _normalize_explanation(o: dict) -> dict | None:
+    """将单题对象中的 explanation 规范为 { analysis, why_correct, why_wrong }；若模型把 explanation 当字符串、why_correct/why_wrong 放顶层则兼容。"""
+    exp = o.get("explanation")
+    if isinstance(exp, dict) and exp.get("analysis") and exp.get("why_correct"):
+        if "why_wrong" not in exp:
+            exp["why_wrong"] = ""
+        return exp
+    # 容错：explanation 为字符串，why_correct/why_wrong 在对象顶层（如题 92 的 API 返回）
+    if isinstance(exp, str) and o.get("why_correct"):
+        return {
+            "analysis": (exp or "").strip(),
+            "why_correct": (o.get("why_correct") or "").strip(),
+            "why_wrong": (o.get("why_wrong") or "").strip(),
+        }
+    return None
+
+
 def parse_enrich_batch_response(text: str, expected_len: int) -> list[dict] | None:
     """解析多题一批的 JSON 数组，长度须与 expected_len 一致。"""
     text = text.strip()
@@ -174,15 +210,21 @@ def parse_enrich_batch_response(text: str, expected_len: int) -> list[dict] | No
         arr = json.loads(text)
         if not isinstance(arr, list) or len(arr) != expected_len:
             return None
+        out = []
         for i, o in enumerate(arr):
-            if not isinstance(o, dict) or "tags" not in o or "explanation" not in o or "related_terms" not in o:
+            if not isinstance(o, dict) or "tags" not in o or "related_terms" not in o:
                 return None
-            exp = o["explanation"]
-            if not isinstance(exp, dict) or "analysis" not in exp or "why_correct" not in exp:
+            if "explanation" not in o and "why_correct" not in o:
                 return None
-            if "why_wrong" not in exp:
-                exp["why_wrong"] = ""
-        return arr
+            exp = _normalize_explanation(o)
+            if exp is None:
+                return None
+            out.append({
+                "tags": o.get("tags") if isinstance(o.get("tags"), list) else [],
+                "explanation": exp,
+                "related_terms": o.get("related_terms") if isinstance(o.get("related_terms"), list) else [],
+            })
+        return out
     except (json.JSONDecodeError, TypeError):
         return None
 

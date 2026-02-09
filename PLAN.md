@@ -83,7 +83,7 @@
 
 ### 阶段 1 要点（已做）
 
-- **源 PDF**：`ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`。只抽取「Question #N、题干、选项 A.–D.、Correct Answer、Community vote distribution」，不抽取社区讨论（upvoted、Highly Voted、Selected Answer、用户评论等）。
+- **源 PDF**：`$HOME/AWS-SAA/AWS-SAA-C03 en.pdf`（PDF 在用户目录下 AWS-SAA 时；否则用绝对路径）。只抽取「Question #N、题干、选项 A.–E.、Correct Answer（支持多字母如 BD）、Community vote distribution」，不抽取社区讨论（upvoted、Highly Voted、Selected Answer、用户评论等）。
 - **题块截断**：在「Correct Answer:」处切开，题干+选项只取前半段；讨论区特征（如 `upvoted X times`、`Highly Voted`、`X year ago`）出现时截断块，不纳入题干/选项。
 - **空字符修复**：PDF 提取中 `\u0000`（原为 "fi"）统一替换为 "fi"，修复 "files"、"Configure"、"profile" 等。
 
@@ -121,7 +121,7 @@
 
 - **题目与词库**：`public/data/questions_v2.json`（含 question_en、options_en）、`glossary.json`；可选多选细化数据 `questions_v2_refined.json`
 - **数据清洗中间文件**：`public/data/raw_questions_en.json`（阶段 1）、`public/data/questions_bilingual.json`（阶段 2）、`public/data/questions_bilingual_enriched.json`（阶段 3）
-- **数据清洗脚本与计划**：`scripts/DATA_CLEANING_PLAN.md`；`scripts/extract_pdf_en.py`（阶段 1）、`scripts/translate_en_to_cn.py`（阶段 2）、`scripts/add_tags_and_explanation.py`（阶段 3）、`scripts/build_app_questions.py`（阶段 4）；辅助：`scripts/fix_options_en_mismatch.py`、`scripts/analyze_enrich_failures.py`；英文 PDF 路径示例：`ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`
+- **数据清洗脚本与计划**：`scripts/DATA_CLEANING_PLAN.md`；`scripts/extract_pdf_en.py`（阶段 1）、`scripts/translate_en_to_cn.py`（阶段 2）、`scripts/add_tags_and_explanation.py`（阶段 3）、`scripts/build_app_questions.py`（阶段 4）；辅助：`scripts/fix_options_en_mismatch.py`、`scripts/analyze_enrich_failures.py`；英文 PDF 路径示例：`$HOME/AWS-SAA/AWS-SAA-C03 en.pdf`（在用户目录下 AWS-SAA 时，否则用绝对路径）
 - **脚本**：`scripts/refine_data.py` 等
 - **App 根目录**：工作区内的 `exam-app/`
 - **核心逻辑**：`lib/data.ts`（progress、错题/收藏、多选/判分、今日题数、里程碑、主题、音效、练习位置等）；题目卡片与选项：`components/QuestionCard.tsx`（支持当前语言题干/选项）；练习页：`app/practice/page.tsx`（中文/EN toggle）；解析术语高亮：`components/HighlightTerms.tsx`；抽认卡页：`app/glossary/flashcard/page.tsx`；音效：`lib/sound.ts`

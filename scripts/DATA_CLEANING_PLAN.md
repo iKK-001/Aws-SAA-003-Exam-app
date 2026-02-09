@@ -12,7 +12,7 @@
 
 | 项目 | 说明 |
 |------|------|
-| **英文 PDF 路径** | `ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`（或你机器上的实际路径） |
+| **英文 PDF 路径** | `$HOME/AWS-SAA/AWS-SAA-C03 en.pdf`（PDF 在用户目录下 AWS-SAA 时；否则用绝对路径） |
 | **只抽取（截图 1 对应内容）** | 问题 ID、题目正文、选项 A/B/C/D、正确答案（以社区投票率为准） |
 | **不抽取（截图 2 对应内容）** | 社区讨论、用户评论、Selected Answer、upvoted、Highly Voted 等 |
 
@@ -71,12 +71,12 @@
 ### 3.3 实现要点
 
 1. **用 pdfplumber 打开 PDF**，按页或按全文取文本；若排版稳定，可优先按「每页一题」或「Question #N」分块。
-2. **题块识别**：用正则匹配 `Question #(\d+)`、`Topic (\d+)`、`Correct Answer:\s*([A-D])`、`Community vote distribution` 及条形图旁百分比（如 `C (100%)`），确定每题的起止范围。
-3. **选项解析**：在题块内匹配 `A.` `B.` `C.` `D.` 作为选项起始，到下一选项或到 `Correct Answer` 为止截取为对应选项正文；注意选项可能多行。
+2. **题块识别**：用正则匹配 `Question #(\d+)`、`Topic (\d+)`、`Correct Answer:\s*([A-E]+)`（多选为 BD 等）、`Community vote distribution` 及条形图旁百分比，确定每题的起止范围。
+3. **选项解析**：在题块内匹配 `A.`～`E.` 作为选项起始（多选题多为 A-E 五选二），到下一选项或到 `Correct Answer` 为止截取为对应选项正文；注意选项可能多行。**正确答案**：`Correct Answer: BD` 等需完整抽取多字母（`[A-E]+`），不要只取首字母。
 4. **讨论区过滤**：一旦出现 `upvoted`、`Highly Voted`、用户名校验（或已知讨论区页眉/版式），则当前题块在该页的后续内容不再当作题干/选项；下一题以下一个 `Question #(\d+)` 开始。
 5. **脚本位置与用法建议**：`scripts/extract_pdf_en.py`，用法示例：
    ```bash
-   python3 scripts/extract_pdf_en.py "/path/to/AWS Certified Solutions Architect - Associate SAA-C03 1019题 题目+答案+讨论.pdf"
+   python3 scripts/extract_pdf_en.py "$HOME/AWS-SAA/AWS-SAA-C03 en.pdf"
    ```
    输出默认 `public/data/raw_questions_en.json`（或通过参数指定）。
 
@@ -198,7 +198,8 @@
 | `extract_pdf_en.py` | 英文 PDF 路径 | `raw_questions_en.json` | 只抽题目+选项+正确答案+投票，不抽讨论 |
 | `translate_en_to_cn.py` | `raw_questions_en.json` | `questions_bilingual.json` | Gemini 翻译，术语保留英文 |
 | `add_tags_and_explanation.py`（可选） | `questions_bilingual.json` | 同文件或新文件 | 打标 + 生成解析 + related_terms |
-| `build_app_questions.py` | `questions_bilingual.json` | `questions_v2.json` | 生成 App 所需格式（含中英字段） |
+| `build_app_questions.py` | `questions_bilingual_enriched.json`（或 bilingual） | `questions_v2.json` | 生成 App 所需格式（含中英字段） |
+| `sync_multi_choice_from_raw.py` | `raw_questions_en.json` | **questions_bilingual_enriched.json** | 将多字母 correct_answer（如 BD）同步到 enriched；同步后需再运行 build_app_questions 生成 v2 |
 
 ### 中间/最终文件
 
@@ -211,9 +212,10 @@
 ## 八、执行顺序与注意事项
 
 1. **顺序**：阶段 1 → 2 → 4 必做；阶段 3 可与 4 合并或延后。
-2. **PDF 路径**：`ikaken/AWS-SAA/` 在项目外，脚本通过**命令行参数或配置文件**接收 PDF 路径，避免写死。
-3. **API Key**：Gemini 的 key 用环境变量（如 `GEMINI_API_KEY`）或本地配置文件，不要提交到仓库。
-4. **备份**：全量覆盖 `questions_v2.json` 前，先备份当前 `questions_v2.json` 和 `glossary.json`；若词库与题目强绑定，可等题目稳定后再决定是否重跑 glossary。
-5. **术语列表**：翻译前整理一份「保留英文」的术语列表（AWS 服务名、产品名、缩写），在阶段 2 的 prompt 中显式列出，可显著减少误译。
+2. **PDF 路径**：PDF 在项目外时，脚本通过**命令行参数**接收路径；在用户目录下 AWS-SAA 时用 `$HOME/AWS-SAA/AWS-SAA-C03 en.pdf`，否则用绝对路径，避免写死。
+3. **多选题答案修正**：若重新抽取 PDF 后 raw 含多字母 correct_answer（如 BD），用 `sync_multi_choice_from_raw.py` 同步到 **questions_bilingual_enriched.json**（只更新 correct_answer），再运行 `build_app_questions.py` 重新生成 questions_v2.json；解析重写脚本 `re_explain_multiple_choice.py` 读写 questions_v2.json。
+4. **API Key**：Gemini 的 key 用环境变量（如 `GEMINI_API_KEY`）或本地配置文件，不要提交到仓库。
+5. **备份**：全量覆盖 `questions_v2.json` 前，先备份当前 `questions_v2.json` 和 `glossary.json`；若词库与题目强绑定，可等题目稳定后再决定是否重跑 glossary。
+6. **术语列表**：翻译前整理一份「保留英文」的术语列表（AWS 服务名、产品名、缩写），在阶段 2 的 prompt 中显式列出，可显著减少误译。
 
 按此计划即可从英文 PDF 从零清洗到支持中英双语的 App 数据；先实现阶段 1 与 2，再视需要补阶段 3 与 4。

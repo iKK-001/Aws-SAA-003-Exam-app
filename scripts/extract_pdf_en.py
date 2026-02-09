@@ -4,7 +4,7 @@
 
 用法:
   pip install pdfplumber
-  python3 scripts/extract_pdf_en.py "/path/to/AWS Certified Solutions Architect - Associate SAA-C03 1019题 题目+答案+讨论.pdf"
+  python3 scripts/extract_pdf_en.py "$HOME/AWS-SAA/AWS-SAA-C03 en.pdf"
   python3 scripts/extract_pdf_en.py "/path/to/file.pdf" public/data/raw_questions_en.json
 """
 
@@ -33,7 +33,7 @@ def extract_text_from_pdf(pdf_path: str) -> str:
 
 def split_question_blocks(full_text: str) -> list[dict]:
     """
-    按 "Question #N" 分块，每块内解析：题干、选项 A-D、Correct Answer、Community vote。
+    按 "Question #N" 分块，每块内解析：题干、选项 A-E、Correct Answer（支持多字母如 BD）、Community vote。
     遇到讨论区特征（如 upvoted、Highly Voted）则截断当前块，不纳入题干/选项。
     """
     pattern = re.compile(r"Question\s*#\s*(\d+)", re.IGNORECASE)
@@ -42,7 +42,7 @@ def split_question_blocks(full_text: str) -> list[dict]:
         r"upvoted\s+\d+\s+times",
         r"Highly\s+Voted",
         r"Most\s+Recent",
-        r"Selected\s+Answer\s*:\s*[A-D]",
+        r"Selected\s+Answer\s*:\s*[A-E]",
         r"\d+\s+(?:year|month|day)s?\s+ago",
     ]
     for m in pattern.finditer(full_text):
@@ -66,8 +66,8 @@ def parse_one_block(block_text: str, default_id: int) -> dict | None:
     """
     解析单题块：题干只取到第一个选项 "A." 之前；选项只取 "Correct Answer:" 之前。
     """
-    # 在 "Correct Answer:" 处切开，题干+选项只在前半段
-    correct_pos = re.search(r"\bCorrect\s+Answer\s*:\s*[A-D]", block_text, re.IGNORECASE)
+    # 在 "Correct Answer:" 处切开，题干+选项只在前半段；多选答案为 BD 等形式
+    correct_pos = re.search(r"\bCorrect\s+Answer\s*:\s*[A-E]+", block_text, re.IGNORECASE)
     if correct_pos:
         before_correct = block_text[: correct_pos.start()].strip()
         after_correct = block_text[correct_pos.start() :]
@@ -82,21 +82,25 @@ def parse_one_block(block_text: str, default_id: int) -> dict | None:
 
     correct_answer = ""
     vote_percentage = ""
-    correct_m = re.search(r"Correct\s+Answer\s*:\s*([A-D])", after_correct, re.IGNORECASE)
+    # 多选答案为 BD、BC 等，单选为 B；统一按字母顺序输出如 "BD"
+    correct_m = re.search(r"Correct\s+Answer\s*:\s*([A-E]+)", after_correct, re.IGNORECASE)
     if correct_m:
-        correct_answer = correct_m.group(1).upper()
+        letters = sorted(correct_m.group(1).upper())
+        correct_answer = "".join(letters)
     vote_m = re.search(
-        r"([A-D])\s*\(\s*(\d+)%?\s*\)",
+        r"([A-E]+)\s*\(\s*(\d+)%?\s*\)",
         after_correct,
         re.IGNORECASE,
     )
     if vote_m:
         vote_percentage = vote_m.group(2) + "%"
         if not correct_answer:
-            correct_answer = vote_m.group(1).upper()
+            letters = sorted(vote_m.group(1).upper())
+            correct_answer = "".join(letters)
 
     lines = [ln.strip() for ln in before_correct.splitlines() if ln.strip()]
-    option_pattern = re.compile(r"^([A-D])\.\s*", re.IGNORECASE)
+    # 支持选项 E（多选题多为 A-E 五选二）
+    option_pattern = re.compile(r"^([A-E])\.\s*", re.IGNORECASE)
     question_parts = []
     options = {}
     current_option = None
@@ -146,13 +150,15 @@ def main():
 
     if len(sys.argv) < 2:
         print(__doc__)
-        print(f"示例: python3 {sys.argv[0]} '/path/to/PDF.pdf'")
+        print(f"示例: python3 {sys.argv[0]} \"$HOME/AWS-SAA/AWS-SAA-C03 en.pdf\"")
         print(f"输出默认: {default_output}")
         sys.exit(1)
 
     pdf_path = Path(sys.argv[1]).expanduser().resolve()
     if not pdf_path.exists():
         print(f"文件不存在: {pdf_path}")
+        print("提示: 若 PDF 在「用户名/AWS-SAA/」下，请用: $HOME/AWS-SAA/AWS-SAA-C03 en.pdf")
+        print("      若在「用户名/ikaken/AWS-SAA/」下，请用绝对路径，如: /Users/你的用户名/ikaken/AWS-SAA/AWS-SAA-C03 en.pdf")
         sys.exit(1)
 
     output_path = Path(sys.argv[2]).resolve() if len(sys.argv) > 2 else default_output

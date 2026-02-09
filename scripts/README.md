@@ -13,16 +13,16 @@
 
 ```bash
 pip install pdfplumber
-# 英文 PDF 在 ikaken/AWS-SAA/AWS-SAA-C03 en.pdf 时（请按你机器实际路径改）：
-python3 scripts/extract_pdf_en.py "$HOME/ikaken/AWS-SAA/AWS-SAA-C03 en.pdf"
-# 或绝对路径，例如：
-# python3 scripts/extract_pdf_en.py "/Users/ikaken/AWS-SAA/AWS-SAA-C03 en.pdf"
+# 英文 PDF 在用户目录下 AWS-SAA 文件夹时（$HOME 已是 /Users/你的用户名，不要写成 $HOME/ikaken/... 会变成两层）：
+python3 scripts/extract_pdf_en.py "$HOME/AWS-SAA/AWS-SAA-C03 en.pdf"
+# 若 PDF 在别的盘或路径，用绝对路径，例如：
+# python3 scripts/extract_pdf_en.py "/Users/你的用户名/ikaken/AWS-SAA/AWS-SAA-C03 en.pdf"
 
 # 输出默认: public/data/raw_questions_en.json
 python3 scripts/extract_pdf_en.py "/path/to/file.pdf" public/data/raw_questions_en.json
 ```
 
-PDF 路径在项目外时，请传入绝对路径或 `$HOME/ikaken/AWS-SAA/AWS-SAA-C03 en.pdf` 等形式。若解析出的题目数/选项与 PDF 不一致，需根据实际排版调整脚本内正则与分块逻辑。
+PDF 路径在项目外时，请传入绝对路径或 `$HOME/AWS-SAA/AWS-SAA-C03 en.pdf`（PDF 在用户目录下 AWS-SAA 文件夹时）。若解析出的题目数/选项与 PDF 不一致，需根据实际排版调整脚本内正则与分块逻辑。
 
 ### translate_en_to_cn.py 用法（阶段 2，Gemini 翻译）
 
@@ -145,6 +145,72 @@ python3 scripts/fill_glossary.py --only-stubs
 ```
 
 每批完成后会立即写回 `glossary.json`，中断后可用 `--resume` 继续。
+
+---
+
+## 多选题审计与答案补全（audit / fix_multiple_choice）
+
+题干为「选二/Choose two」但 `best_answer` 仅 1 个的题目会导致多选只显示一个正确答案、解析也只写一个。先用审计脚本列出问题题，再用 Gemini 推断并补全第二（及第三）个正确选项。
+
+### audit_multiple_choice.py
+
+统计题干多选但答案数量不符的题目，输出 `public/data/multiple_choice_audit.json`。
+
+```bash
+python3 scripts/audit_multiple_choice.py
+python3 scripts/audit_multiple_choice.py -o my_audit.json
+```
+
+### fix_multiple_choice_answers.py
+
+根据题干+选项+解析，用 Gemini 推断全部正确选项字母并写回 `questions_v2.json`。
+
+```bash
+export GEMINI_API_KEY="你的API密钥"
+python3 scripts/fix_multiple_choice_answers.py          # 全量
+python3 scripts/fix_multiple_choice_answers.py --limit 5   # 试跑 5 题
+python3 scripts/fix_multiple_choice_answers.py --dry-run   # 只打印建议，不写回
+```
+
+补全后 App 解析区会显示「本题需选 2 项 · 正确答案：B、C」（多选时固定展示）。
+
+### 从 PDF 重新抽取多选题答案（推荐）
+
+英文 PDF 中「Correct Answer: BD」等双选答案，若第一次抽取时只抽到单字母，可重新抽取后同步到 **questions_bilingual_enriched.json**，再运行 build 生成 questions_v2，最后重写解析。
+
+1. **extract_pdf_en.py** 已支持多字母正确答案与选项 E：正则改为 `Correct\s+Answer\s*:\s*([A-E]+)`，选项支持 A-E。
+2. **重新抽取 PDF**：`python3 scripts/extract_pdf_en.py "$HOME/AWS-SAA/AWS-SAA-C03 en.pdf"` → 得到含 `correct_answer: "BD"` 等的 `raw_questions_en.json`（若 PDF 在别处请用绝对路径）。
+3. **sync_multi_choice_from_raw.py**：从 raw 同步「选项含 E」的题的正确答案到 **questions_bilingual_enriched.json**（只更新 correct_answer）。同步后需运行 **build_app_questions.py** 根据 enriched 重新生成 questions_v2.json。
+4. **re_explain_multiple_choice.py**：对 best_answer 为两字母及以上的题，用 Gemini 重新生成解析（why_correct 说明全部正确选项，why_wrong 说明其余选项）；读写的为 questions_v2.json。
+
+```bash
+# 1. 重新抽取 PDF（输出 raw_questions_en.json）
+python3 scripts/extract_pdf_en.py "$HOME/AWS-SAA/AWS-SAA-C03 en.pdf"
+
+# 2. 同步多选题答案到 questions_bilingual_enriched.json（选项含 E 的题）
+python3 scripts/sync_multi_choice_from_raw.py --dry-run   # 只预览
+python3 scripts/sync_multi_choice_from_raw.py
+# 2.5 根据 enriched 重新生成 questions_v2.json
+python3 scripts/build_app_questions.py
+
+# 3. 对多选题重新生成解析（需 GEMINI_API_KEY，读写 questions_v2.json）
+export GEMINI_API_KEY="你的API密钥"
+python3 scripts/re_explain_multiple_choice.py
+python3 scripts/re_explain_multiple_choice.py --limit 5   # 试跑 5 题
+python3 scripts/re_explain_multiple_choice.py --dry-run   # 只列出将处理的题
+```
+
+### 解析与答案一致性（最小化「答案 CD 但解析写 BD」）
+
+- **原因**：阶段 3 多选时若把 `correct_answer` 当整体（如 `"CD"`），`wrong_opts` 会误含 C、D，导致 prompt 里「错误选项」包含正确选项，模型易写错。
+- **已做**：`add_tags_and_explanation.py` 中多选时按字母拆 `correct_answer`（如 `"CD"` → C、D），`wrong_opts` 只含真正错误选项，prompt 中正确/错误选项明确，减少解析与答案不一致。
+- **校验**：`validate_explanation_answer_match.py` 检测「解析中写到的正确选项」与 `best_answer` 是否一致，并列出多选题中解析为空（更新失败）的题。  
+  `python3 scripts/validate_explanation_answer_match.py`  
+  `python3 scripts/validate_explanation_answer_match.py --output-ids` → 只输出需重跑的题号（逗号分隔）。
+- **重跑**：只对需重跑的题重写解析（保证一致 + 修失败）：  
+  `python3 scripts/re_explain_multiple_choice.py --ids 73,92,94,...`  
+  上次运行有失败时：`python3 scripts/re_explain_multiple_choice.py --retry-failed`。解析失败时 API 原始响应会追加到 `public/data/.re_explain_fail_log.txt`。
+- **失败原因与修复**：见 `scripts/RE_EXPLAIN_FAIL_ANALYSIS.md`。
 
 ---
 

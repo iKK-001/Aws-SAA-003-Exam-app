@@ -21,7 +21,7 @@ AWS SAA-C03 备考移动端 Web App。支持按题练习、按分类刷题、百
 
 - **原因**：此前用中文 PDF + pdfplumber 提取，中文翻译本身不佳，题干/选项与 PDF 原文不一致，导致 AI 解析也出现偏差；且无法支持中英文切换。改为**英文 PDF 提取 + API 翻译**，可提高正确性并支持双语。
 - **步骤**：详见 `scripts/DATA_CLEANING_PLAN.md`。简要：(1) 阶段 1 `extract_pdf_en.py` → `raw_questions_en.json`；(2) 阶段 2 `translate_en_to_cn.py`（Gemini 2 Flash Lite，术语保留英文）→ `questions_bilingual.json`；(3) 阶段 3 `add_tags_and_explanation.py`（打标+解析+related_terms，每 15 题一批 API，支持 `--fill-empty` 补漏）→ `questions_bilingual_enriched.json`；(4) 阶段 4 `build_app_questions.py` → `questions_v2.json`。可选：`fix_options_en_mismatch.py` 修复 options_en 与 options_cn 选项数不一致；`analyze_enrich_failures.py` 分析阶段 3 未完成题目的失败原因。
-- **源文件**：英文 PDF 路径如 `ikaken/AWS-SAA/AWS-SAA-C03 en.pdf`；只抽「题目 ID、题干、选项 A–D、正确答案（社区投票率为准）」，不抽社区讨论（Selected Answer、upvoted、Highly Voted 等）。
+- **源文件**：英文 PDF 在用户目录下 AWS-SAA 时用 `$HOME/AWS-SAA/AWS-SAA-C03 en.pdf`（勿写 `$HOME/ikaken/...` 会多一层目录）；否则传绝对路径。只抽「题目 ID、题干、选项 A–E、正确答案（Correct Answer 支持多字母如 BD）」，不抽社区讨论（Selected Answer、upvoted、Highly Voted 等）。
 - **翻译**：Gemini API Key 从环境变量 `GEMINI_API_KEY` 读取；翻译时保持可读性与准确度，AWS 服务名、产品名、专有名词保留英文。
 
 ## 设计原则

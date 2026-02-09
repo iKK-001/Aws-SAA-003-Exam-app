@@ -47,3 +47,4 @@ public/data/.translate_progress.json
 public/data/.enrich_progress.json
 public/data/.fill_glossary_progress.json
 public/data/.enrich_parse_fail_log.txt
+public/data/.re_explain_fail_log.txt
