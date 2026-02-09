@@ -192,6 +192,7 @@ export function clearMockHistory(): void {
 
 export type PracticeState = {
   order?: { index: number; total: number };
+  orderMultiple?: { index: number; total: number };
   topic?: Record<string, { index: number; total: number }>;
 };
 
@@ -228,9 +229,21 @@ export function setPracticeStateTopic(tag: string, index: number, total: number)
   setPracticeStateRaw(state);
 }
 
+export function setPracticeStateOrderMultiple(index: number, total: number) {
+  const state = getPracticeStateRaw();
+  state.orderMultiple = { index, total };
+  setPracticeStateRaw(state);
+}
+
 export function clearPracticeStateOrder() {
   const state = getPracticeStateRaw();
   delete state.order;
+  setPracticeStateRaw(state);
+}
+
+export function clearPracticeStateOrderMultiple() {
+  const state = getPracticeStateRaw();
+  delete state.orderMultiple;
   setPracticeStateRaw(state);
 }
 

@@ -16,7 +16,9 @@ import {
   setPracticeStateOrder,
   setPracticeStateTopic,
   clearPracticeStateOrder,
+  clearPracticeStateOrderMultiple,
   clearPracticeStateTopic,
+  setPracticeStateOrderMultiple,
   getBestAnswerArray,
   isQuestionMultiple,
   getAnswerCount,
@@ -154,6 +156,8 @@ function PracticeContent() {
     } else if (filter === 'favorite') {
       const favIds = getFavoriteIds();
       base = questions.filter((q) => favIds.includes(q.id));
+    } else if (filter === 'multiple') {
+      base = questions.filter((q) => isQuestionMultiple(q));
     } else {
       base = questions;
     }
@@ -178,11 +182,13 @@ function PracticeContent() {
       }
       const state = getPracticeState();
       const saved =
-        mode === 'order'
-          ? state.order
-          : mode === 'topic' && tagParam
-            ? state.topic?.[tagParam]
-            : null;
+        mode === 'order' && filter === 'multiple'
+          ? state.orderMultiple
+          : mode === 'order'
+            ? state.order
+            : mode === 'topic' && tagParam
+              ? state.topic?.[tagParam]
+              : null;
       const resumable =
         saved &&
         saved.total === total &&
@@ -221,10 +227,12 @@ function PracticeContent() {
 
   useEffect(() => {
     if (!list.length) return;
-    if (mode === 'order') setPracticeStateOrder(index, list.length);
+    if (mode === 'order' && filter === 'multiple')
+      setPracticeStateOrderMultiple(index, list.length);
+    else if (mode === 'order') setPracticeStateOrder(index, list.length);
     else if (mode === 'topic' && tagParam)
       setPracticeStateTopic(tagParam, index, list.length);
-  }, [index, list.length, mode, tagParam]);
+  }, [index, list.length, mode, tagParam, filter]);
 
   const setMode = (m: PracticeMode, tag?: string) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -323,9 +331,11 @@ function PracticeContent() {
     setMascotPhrase(null);
     if (isLastQuestion && list.length > 0) {
       const completionMessage =
-        mode === 'topic' && tagParam
-          ? `${tagParam} 全部刷完！🎉`
-          : '本组题目全部刷完！🎉';
+        filter === 'multiple'
+          ? '多选题全部刷完！🎉'
+          : mode === 'topic' && tagParam
+            ? `${tagParam} 全部刷完！🎉`
+            : '本组题目全部刷完！🎉';
       setToastMessage(completionMessage);
       setTimeout(() => setToastMessage(null), 3000);
     }
@@ -399,10 +409,23 @@ function PracticeContent() {
               <p className="text-sm text-aws-navy/60">先选考点（如 S3、ALB）再做题</p>
             </div>
           </button>
+          <button
+            type="button"
+            onClick={() => router.replace('/practice?filter=multiple&mode=order', { scroll: false })}
+            className="flex w-full items-center gap-4 rounded-2xl bg-white p-4 text-left shadow-soft transition-shadow hover:shadow-card active:scale-[0.99]"
+          >
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-amber-700">
+              <LayoutGrid className="h-6 w-6" />
+            </span>
+            <div>
+              <p className="font-medium text-aws-navy">多选题专项</p>
+              <p className="text-sm text-aws-navy/60">只练「选两个」等多选题，单独刷</p>
+            </div>
+          </button>
         </div>
         {filter && (
           <p className="mt-4 text-center text-xs text-aws-navy/50">
-            {filter === 'wrong' ? '当前将只练习错题' : '当前将只练习收藏题'}
+            {filter === 'wrong' ? '当前将只练习错题' : filter === 'favorite' ? '当前将只练习收藏题' : filter === 'multiple' ? '当前为多选题专项' : null}
           </p>
         )}
       </div>
@@ -528,11 +551,13 @@ function PracticeContent() {
     questionLang === 'en' ? (q.question_en ?? q.question_cn) : q.question_cn;
 
   const modeLabel =
-    mode === 'topic' && tagParam
-      ? `按分类 · ${tagParam}`
-      : mode === 'order'
-        ? '顺序 · 全部题目'
-        : '乱序 · 全部题目';
+    filter === 'multiple'
+      ? '多选题专项'
+      : mode === 'topic' && tagParam
+        ? `按分类 · ${tagParam}`
+        : mode === 'order'
+          ? '顺序 · 全部题目'
+          : '乱序 · 全部题目';
   const filterLabel = filter === 'wrong' ? '错题本' : filter === 'favorite' ? '收藏' : null;
 
   return (
@@ -595,7 +620,8 @@ function PracticeContent() {
             <button
               type="button"
               onClick={() => {
-                if (mode === 'order') clearPracticeStateOrder();
+                if (filter === 'multiple') clearPracticeStateOrderMultiple();
+                else if (mode === 'order') clearPracticeStateOrder();
                 else if (mode === 'topic' && tagParam)
                   clearPracticeStateTopic(tagParam);
                 setIndex(0);
@@ -743,7 +769,8 @@ function PracticeContent() {
           setMascotPhrase(null);
         }}
         onClearProgress={() => {
-          if (mode === 'order') clearPracticeStateOrder();
+          if (filter === 'multiple') clearPracticeStateOrderMultiple();
+          else if (mode === 'order') clearPracticeStateOrder();
           else if (mode === 'topic' && tagParam)
             clearPracticeStateTopic(tagParam);
           setIndex(0);

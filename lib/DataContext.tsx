@@ -24,8 +24,8 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     setError(null);
     try {
       const [qRes, gRes] = await Promise.all([
-        fetch('/data/questions_v2.json'),
-        fetch('/data/glossary.json'),
+        fetch('/data/questions_v2.json', { cache: 'no-store' }),
+        fetch('/data/glossary.json', { cache: 'no-store' }),
       ]);
       if (!qRes.ok) throw new Error('题目数据加载失败');
       if (!gRes.ok) throw new Error('词库加载失败');

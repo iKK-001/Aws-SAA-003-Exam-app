@@ -7,7 +7,7 @@
 - [x] 术语提取与词库生成（generate_questions.py → questions_v2.json + glossary.json）
 - [x] App 基础脚手架（Next.js 14 + Tailwind，Mobile-First + PWA）
 - [x] 首页、练习、百科、我的、模拟考入口
-- [x] 练习：顺序 / 乱序 / 按分类（上位概念合并，按题数从多到少）；进入练习前先选刷题方式
+- [x] 练习：顺序 / 乱序 / 按分类（上位概念合并，按题数从多到少）、**多选题专项**（仅练多选）；进入练习前先选刷题方式
 - [x] 百科：按类别分组、可折叠、收藏术语；我的页展示收藏术语
 - [x] 解析展示：why_correct + why_wrong；选项对错用勾叉图标；相关术语去重
 - [x] 设置抽屉：关于 + 清除本地数据
@@ -44,8 +44,8 @@
 ### 题目与练习
 
 - **题目数据结构**：`id`, `question_cn`/`question_en`（题干中英）, `options_cn`/`options_en`（选项键值中英）, `best_answer`（单选 string / 多选 string 如 "AB" 或数组）, `tags`（分类）, `related_terms`（解析中可高亮术语）, `explanation`（`analysis`, `why_correct`, `why_wrong`）。练习页支持「中文 | EN」切换题干与选项。
-- **练习页 URL 约定**：`/practice?filter=wrong|favorite|all&mode=order|shuffle|topic&tag=分类名&sample=N`。`filter` 决定题源（错题/收藏/全部）；`mode` 决定顺序/乱序/按分类；`sample` 存在且合法时在 base 上先 shuffle 再 slice(0, N)，实现「随机抽 N 题再练」；有 filter 无 mode 时建议默认 `mode=order` 以便从「我的」/首页直达练习。
-- **列表构建顺序**：先按 filter 取 base（错题 id 列表 / 收藏 id 列表 / 全部）；再按 mode+tag 过滤（topic 时按 tag 筛）；再按 sample 随机截断；最后 order 模式按 id 排序、shuffle 模式打乱。
+- **练习页 URL 约定**：`/practice?filter=wrong|favorite|all|multiple&mode=order|shuffle|topic&tag=分类名&sample=N`。`filter` 决定题源（错题/收藏/全部/**multiple=仅多选题**）；`mode` 决定顺序/乱序/按分类；`sample` 存在且合法时在 base 上先 shuffle 再 slice(0, N)，实现「随机抽 N 题再练」；有 filter 无 mode 时建议默认 `mode=order` 以便从「我的」/首页直达练习。多选题专项：`filter=multiple&mode=order`，进度单独存为 `orderMultiple`。
+- **列表构建顺序**：先按 filter 取 base（错题 id 列表 / 收藏 id 列表 / 全部 / **仅多选题**）；再按 mode+tag 过滤（topic 时按 tag 筛）；再按 sample 随机截断；最后 order 模式按 id 排序、shuffle 模式打乱。
 
 ### 术语与记忆
 
@@ -104,6 +104,7 @@
 
 ## Immediate Tasks
 
+- [x] **多选题专项训练**：按题练习入口增加「多选题专项」；`filter=multiple&mode=order` 仅练多选题，进度单独存 `orderMultiple`；支持从第一题开始、完成 toast「多选题全部刷完！🎉」
 - [x] **translate_en_to_cn.py**：阶段 2 已跑通，生成 `questions_bilingual.json`
 - [x] **add_tags_and_explanation.py**：阶段 3 打标与解析，输出 `questions_bilingual_enriched.json`
 - [x] **build_app_questions.py**：阶段 4 已实现，输出 App 用 `questions_v2.json`
