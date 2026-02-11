@@ -14,13 +14,10 @@ import {
   setNickname,
   getMascotPhrasesEnabled,
   setMascotPhrasesEnabled,
-  getTheme,
-  setTheme,
   getSoundEnabled,
   setSoundEnabled,
   clearAllLocalData,
 } from '@/lib/data';
-import type { ThemeId } from '@/lib/data';
 import { useDrawer } from '@/lib/DrawerContext';
 import { useGlossary } from '@/lib/DataContext';
 import { Target, BookOpen, Heart, XCircle, Star, ChevronRight, User, MessageCircle, Layers, Info, Trash2 } from 'lucide-react';
@@ -32,7 +29,6 @@ export default function ProfilePage() {
   const [examDate, setExamDate] = useState('');
   const [nicknameInput, setNicknameInput] = useState('');
   const [mascotPhrasesOn, setMascotPhrasesOn] = useState(true);
-  const [theme, setThemeState] = useState<ThemeId>('relaxed');
   const [soundOn, setSoundOn] = useState(false);
   const [savedToast, setSavedToast] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -45,7 +41,6 @@ export default function ProfilePage() {
     setExamDate(getExamDateTarget());
     setNicknameInput(getNickname());
     setMascotPhrasesOn(getMascotPhrasesEnabled());
-    setThemeState(getTheme());
     setSoundOn(getSoundEnabled());
     setFavTerms(getFavoriteTerms());
   }, []);
@@ -119,6 +114,23 @@ export default function ProfilePage() {
 
       <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
         <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-aws-navy">
+          <Target className="h-5 w-5 text-aws-blue-deep" />
+          考试日期目标
+        </h2>
+        <div className="flex gap-2">
+          <input
+            type="date"
+            value={examDate}
+            onChange={(e) => setExamDate(e.target.value)}
+            onBlur={handleSaveDate}
+            className="flex-1 rounded-2xl border border-aws-blue-light/50 bg-aws-slate-soft px-4 py-3 text-aws-navy focus:border-aws-blue-deep focus:outline-none"
+          />
+        </div>
+        <p className="mt-2 text-xs text-aws-navy/60">选择后自动保存到本地</p>
+      </section>
+
+      <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
+        <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-aws-navy">
           <MessageCircle className="h-5 w-5 text-aws-blue-deep" />
           小助手设置
         </h2>
@@ -150,27 +162,6 @@ export default function ProfilePage() {
         <p className="mb-4 text-sm text-aws-navy/70">
           AWS SAA 备考 App，支持按题练习、按分类刷题、百科词库与错题/收藏。数据仅存于本机，可随时清除。
         </p>
-        <h3 className="mb-2 text-sm font-medium text-aws-navy/90">主题 / 皮肤</h3>
-        <div className="mb-4 flex gap-2">
-          <button
-            type="button"
-            onClick={() => { setTheme('relaxed'); setThemeState('relaxed'); }}
-            className={`flex-1 rounded-xl py-2.5 text-sm font-medium transition-colors ${
-              theme === 'relaxed' ? 'bg-amber-100 text-amber-800 ring-2 ring-amber-400' : 'bg-aws-navy/10 text-aws-navy/80 hover:bg-aws-navy/20'
-            }`}
-          >
-            轻松
-          </button>
-          <button
-            type="button"
-            onClick={() => { setTheme('focus'); setThemeState('focus'); }}
-            className={`flex-1 rounded-xl py-2.5 text-sm font-medium transition-colors ${
-              theme === 'focus' ? 'bg-blue-100 text-blue-800 ring-2 ring-blue-400' : 'bg-aws-navy/10 text-aws-navy/80 hover:bg-aws-navy/20'
-            }`}
-          >
-            专注
-          </button>
-        </div>
         <label className="flex cursor-pointer items-center justify-between gap-3 rounded-xl bg-aws-blue-light/20 py-3 pr-2">
           <span className="text-sm text-aws-navy/90">答对 / 答错音效</span>
           <button
@@ -219,23 +210,6 @@ export default function ProfilePage() {
             <ChevronRight className="h-5 w-5 text-aws-navy/40" />
           </Link>
         </div>
-      </section>
-
-      <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
-        <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-aws-navy">
-          <Target className="h-5 w-5 text-aws-blue-deep" />
-          考试日期目标
-        </h2>
-        <div className="flex gap-2">
-          <input
-            type="date"
-            value={examDate}
-            onChange={(e) => setExamDate(e.target.value)}
-            onBlur={handleSaveDate}
-            className="flex-1 rounded-2xl border border-aws-blue-light/50 bg-aws-slate-soft px-4 py-3 text-aws-navy focus:border-aws-blue-deep focus:outline-none"
-          />
-        </div>
-        <p className="mt-2 text-xs text-aws-navy/60">选择后自动保存到本地</p>
       </section>
 
       <section className="rounded-3xl bg-white p-5 shadow-card">

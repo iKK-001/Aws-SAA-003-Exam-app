@@ -1,9 +1,10 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { BookOpen, ClipboardList, BookMarked, Target, ChevronRight, Info, Lightbulb, XCircle, Heart } from 'lucide-react';
 import { useQuestions } from '@/lib/DataContext';
-import { getProgress, getWrongIds, getFavoriteIds, getExamDateTarget, getTodayPracticeCount, getNickname } from '@/lib/data';
+import { getProgress, getWrongIds, getFavoriteIds, getExamDateTarget, setExamDateTarget, getTodayPracticeCount, getNickname } from '@/lib/data';
 import { getHomeGreeting } from '@/lib/mascotPhrases';
 import { HomeSkeleton } from '@/components/Skeleton';
 
@@ -12,7 +13,12 @@ export default function HomePage() {
   const progress = getProgress();
   const wrongIds = getWrongIds();
   const favoriteIds = getFavoriteIds();
-  const examDate = getExamDateTarget();
+  const [examDate, setExamDate] = useState('');
+  const [goalInputValue, setGoalInputValue] = useState('');
+
+  useEffect(() => {
+    setExamDate(getExamDateTarget() ?? '');
+  }, []);
 
   const done = Object.keys(progress).length;
   const correct = Object.values(progress).filter((v) => v.correct).length;
@@ -35,8 +41,42 @@ export default function HomePage() {
     );
   }
 
+  const handleSaveGoalDate = () => {
+    const v = goalInputValue.trim();
+    if (!v) return;
+    setExamDateTarget(v);
+    setExamDate(v);
+  };
+
   return (
     <div className="mx-auto max-w-lg px-4 py-6">
+      {!examDate && (
+        <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
+          <h2 className="mb-2 flex items-center gap-2 text-lg font-semibold text-aws-navy">
+            <Target className="h-5 w-5 text-aws-blue-deep" />
+            设定考试目标日期
+          </h2>
+          <p className="mb-3 text-xs text-aws-navy/60">
+            选一个目标考试日，首页会显示倒计时，激励你按计划备考
+          </p>
+          <div className="flex gap-2">
+            <input
+              type="date"
+              value={goalInputValue}
+              onChange={(e) => setGoalInputValue(e.target.value)}
+              className="flex-1 rounded-2xl border border-aws-blue-light/50 bg-aws-slate-soft px-4 py-3 text-aws-navy focus:border-aws-blue-deep focus:outline-none"
+            />
+            <button
+              type="button"
+              onClick={handleSaveGoalDate}
+              disabled={!goalInputValue.trim()}
+              className="rounded-2xl bg-aws-orange px-4 py-3 font-medium text-white shadow-soft disabled:opacity-50 active:scale-[0.98]"
+            >
+              保存
+            </button>
+          </div>
+        </section>
+      )}
       <p className="mb-4 text-sm text-aws-navy/70">
         {nickname ? (
           <>

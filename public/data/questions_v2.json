@@ -5173,13 +5173,13 @@
   {
     "id": 125,
     "topic": "1",
-    "question_cn": "一家公司在 AWS 上运行其两层电商网站。Web 层由一个负载均衡器组成，该负载均衡器将流量发送到 Amazon EC2 实例。数据库层使用 Amazon RDS 数据库实例。EC2 实例和 RDS 数据库实例不应暴露给公共互联网。EC2 实例需要互联网访问权限，才能通过第三方 Web 服务完成订单的支付处理。该应用程序必须具有高可用性。哪种配置选项组合将满足这些要求？（选择两个。）",
+    "question_cn": "一家公司在 AWS 上运行其两层电子商务网站。Web 层由一个负载均衡器组成，该负载均衡器将流量发送到 Amazon EC2 实例。数据库层使用 Amazon RDS 数据库实例。EC2 实例和 RDS 数据库实例都不应暴露给公共互联网。EC2 实例需要访问互联网以完成订单的支付处理。应用程序必须是高可用的。哪种组合的配置选项将满足这些要求？（选择两个。）",
     "question_en": "A company runs its two-tier ecommerce website on AWS. The web tier consists of a load balancer that sends trafic to Amazon EC2 instances. The database tier uses an Amazon RDS DB instance. The EC2 instances and the RDS DB instance should not be exposed to the public internet. The EC2 instances require internet access to complete payment processing of orders through a third-party web service. The application must be highly available. Which combination of configuration options will meet these requirements? (Choose two.)",
     "options_cn": {
-      "A": "使用 Auto Scaling 组在私有子网中启动 EC2 实例。在私有子网中部署 RDS 多可用区数据库实例。",
-      "B": "使用两个私有子网和两个跨两个可用区的 NAT Gateway 配置一个 VPC。在私有子网中部署 Application Load Balancer。",
-      "C": "使用 Auto Scaling 组在跨两个可用区的公共子网中启动 EC2 实例。在私有子网中部署 RDS 多可用区数据库实例。",
-      "D": "配置一个 VPC，其中包含两个公共子网、两个私有子网和两个跨两个可用区的 NAT Gateway。在公共子网中部署 Application Load Balancer。"
+      "A": "使用自动扩展组在私有子网中启动 EC2 实例。在私有子网中部署 RDS 多可用区数据库实例。",
+      "B": "配置具有两个私有子网和两个跨两个可用区的 NAT 网关的 VPC。在私有子网中部署应用程序负载均衡器。",
+      "C": "使用自动扩展组在两个可用区的公共子网中启动 EC2 实例。在私有子网中部署 RDS 多可用区数据库实例。",
+      "D": "配置具有两个公有子网、两个私有子网与两个 NAT 网关（跨两个可用区）的 VPC；在公有子网中部署应用程序负载均衡器。"
     },
     "options_en": {
       "A": "Use an Auto Scaling group to launch the EC2 instances in private subnets. Deploy an RDS Multi-AZ DB instance in private subnets.",
@@ -5187,8 +5187,8 @@
       "C": "Use an Auto Scaling group to launch the EC2 instances in public subnets across two Availability Zones. Deploy an RDS Multi-AZ DB instance in private subnets.",
       "D": "Configure a VPC with two public subnets, two private subnets, and two NAT gateways across two Availability Zones. Deploy an Application Load Balancer in the public subnets."
     },
-    "best_answer": "C",
-    "official_answer": "C",
+    "best_answer": "AD",
+    "official_answer": "AD",
     "vote_percentage": "61%",
     "tags": [
       "VPC",
@@ -5200,8 +5200,8 @@
     ],
     "explanation": {
       "analysis": "为了满足高可用性需求，Web 层和数据库层都需要在多个可用区部署。为确保安全性，EC2 实例和 RDS 数据库实例应位于私有子网，并使用 NAT Gateway 或其他方式提供互联网访问。Application Load Balancer 部署在公有子网，负责接收外部流量，并将流量导向后端 EC2 实例。",
-      "why_correct": "选项 C 提供了满足要求的组合。Auto Scaling 组在跨两个可用区的公有子网中启动 EC2 实例，用于处理外部流量。RDS 多可用区数据库实例部署在私有子网中，保证了数据库的高可用性和安全性。",
-      "why_wrong": "选项 A 错误，缺少 NAT Gateway 或者其他方式，EC2 实例无法访问互联网以完成订单支付处理。选项 B 错误，Application Load Balancer 应该在公有子网，才能接收外部流量。选项 D 错误，Application Load Balancer 应该在公有子网。"
+      "why_correct": "选项 A：在私有子网中启动 EC2 并部署 RDS Multi-AZ，满足不暴露于公网的要求；需配合 NAT 等实现 EC2 出网。选项 D：VPC 含两个公有子网、两个私有子网及跨两可用区的两个 NAT 网关，ALB 在公有子网，满足高可用与 EC2 需出网的需求。A 与 D 组合满足题目要求。",
+      "why_wrong": "选项 B 错误，Application Load Balancer 应部署在公有子网才能接收外部流量。选项 C 错误，EC2 放在公有子网会暴露于公共互联网，不符合「不应暴露给公共互联网」的要求。"
     },
     "related_terms": [
       "EC2",
@@ -12645,8 +12645,8 @@
       "D": "Deploy an Auto Sealing group of Amazon EC2 instances in Local Zones for content delivery and caching",
       "E": "Deploy an Auto Scaling group of Amazon EC2 instances to convert the video files to more appropriate formats."
     },
-    "best_answer": "A",
-    "official_answer": "A",
+    "best_answer": "AC",
+    "official_answer": "AC",
     "vote_percentage": "57%",
     "tags": [
       "CloudFront",
@@ -16929,8 +16929,8 @@
       "D": "Use a target tracking scaling policy to scale the Auto Scaling group based on instance CPU utilization",
       "E": "Use scheduled scaling to change the Auto Scaling group minimum, maximum, and desired capacity to zero for weekends. Revert to the default values at the start of the week."
     },
-    "best_answer": "D",
-    "official_answer": "D",
+    "best_answer": "DE",
+    "official_answer": "DE",
     "vote_percentage": "18%",
     "tags": [
       "EC2",
@@ -26716,8 +26716,8 @@
       "C": "Use the AWS Certificate Manager (ACM) console to request a public and private certificate for the apex top domain example.com.",
       "D": "Validate domain ownership by email address. Switch to DNS validation by adding the required DNS records to the DNS provider. E. Validate domain ownership for the domain by adding the required DNS records to the DNS provider."
     },
-    "best_answer": "A",
-    "official_answer": "A",
+    "best_answer": "AE",
+    "official_answer": "AE",
     "vote_percentage": "",
     "tags": [
       "ACM",
