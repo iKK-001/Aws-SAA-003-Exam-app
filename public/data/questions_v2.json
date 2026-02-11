@@ -19872,16 +19872,16 @@
     "question_cn": "一个团队需要列出 Amazon S3 存储桶并从中删除对象的权限。 一位管理员创建了以下 IAM 策略以提供对该存储桶的访问权限，并将该策略应用于该团队。 该团队无法删除存储桶中的对象。 公司遵循最小权限访问规则。 解决方案架构师应该向该策略添加哪条语句来纠正存储桶访问？",
     "question_en": "A group requires permissions to list an Amazon S3 bucket and delete objects from that bucket. An administrator has created the following IAM policy to provide access to the bucket and applied that policy to the group. The group is not able to delete objects in the bucket. The company follows least-privilege access rules. Which statement should a solutions architect add to the policy to correct bucket access?",
     "options_cn": {
-      "A": " ",
-      "B": " ",
-      "C": " ",
-      "D": " "
+      "A": "添加一条语句：Effect 为 Allow，Action 为 s3:ListBucket，Resource 为该存储桶的 ARN。",
+      "B": "添加一条语句：Effect 为 Allow，Action 为 s3:GetObject，Resource 为该存储桶对象 ARN（bucket/*）。",
+      "C": "添加一条语句：Effect 为 Allow，Action 为 s3:DeleteObject，Resource 为该存储桶对象 ARN（bucket/*）。",
+      "D": "添加一条语句：Effect 为 Allow，Action 为 s3:*，Resource 为 *。"
     },
     "options_en": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Add a statement with Effect Allow, Action s3:ListBucket, Resource the bucket ARN.",
+      "B": "Add a statement with Effect Allow, Action s3:GetObject, Resource the bucket objects ARN (bucket/*).",
+      "C": "Add a statement with Effect Allow, Action s3:DeleteObject, Resource the bucket objects ARN (bucket/*).",
+      "D": "Add a statement with Effect Allow, Action s3:*, Resource *."
     },
     "best_answer": "C",
     "official_answer": "C",

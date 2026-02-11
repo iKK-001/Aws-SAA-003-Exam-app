@@ -14,13 +14,15 @@ import {
   setNickname,
   getMascotPhrasesEnabled,
   setMascotPhrasesEnabled,
+  getUiTheme,
+  setUiTheme,
   getSoundEnabled,
   setSoundEnabled,
   clearAllLocalData,
 } from '@/lib/data';
 import { useDrawer } from '@/lib/DrawerContext';
 import { useGlossary } from '@/lib/DataContext';
-import { Target, BookOpen, Heart, XCircle, Star, ChevronRight, User, MessageCircle, Layers, Info, Trash2 } from 'lucide-react';
+import { Target, BookOpen, Heart, XCircle, Star, ChevronRight, User, MessageCircle, Layers, Info, Trash2, Palette } from 'lucide-react';
 
 const MASCOT_PHRASES_TOGGLED = 'mascot-phrases-toggled';
 
@@ -33,6 +35,8 @@ export default function ProfilePage() {
   const [savedToast, setSavedToast] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [favTerms, setFavTerms] = useState<string[]>([]);
+  const [showClearConfirm, setShowClearConfirm] = useState(false);
+  const [uiThemeState, setUiThemeState] = useState<'default' | 'morandi'>('default');
   const { openTermDrawer } = useDrawer();
   const { glossary } = useGlossary();
 
@@ -43,6 +47,7 @@ export default function ProfilePage() {
     setMascotPhrasesOn(getMascotPhrasesEnabled());
     setSoundOn(getSoundEnabled());
     setFavTerms(getFavoriteTerms());
+    setUiThemeState(getUiTheme());
   }, []);
 
   const handleSaveNickname = () => {
@@ -156,6 +161,34 @@ export default function ProfilePage() {
       </section>
 
       <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
+        <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-aws-navy">
+          <Palette className="h-5 w-5 text-aws-blue-deep" /> 界面风格
+        </h2>
+        <div className="flex flex-col gap-2">
+          <button
+            type="button"
+            onClick={() => { setUiTheme('default'); setUiThemeState('default'); }}
+            className={`flex flex-col items-start rounded-xl px-4 py-3 text-left transition-colors ${
+              uiThemeState === 'default' ? 'bg-aws-blue-light/60 text-aws-blue-deep ring-2 ring-aws-blue-deep/50' : 'bg-aws-blue-light/20 text-aws-navy/80 hover:bg-aws-blue-light/40'
+            }`}
+          >
+            <span className="font-semibold">经典</span>
+            <span className="text-xs opacity-90">蓝橙对比鲜明，白天刷题更清晰</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => { setUiTheme('morandi'); setUiThemeState('morandi'); }}
+            className={`flex flex-col items-start rounded-xl px-4 py-3 text-left transition-colors ${
+              uiThemeState === 'morandi' ? 'bg-aws-blue-light/60 text-aws-blue-deep ring-2 ring-aws-blue-deep/50' : 'bg-aws-blue-light/20 text-aws-navy/80 hover:bg-aws-blue-light/40'
+            }`}
+          >
+            <span className="font-semibold">莫兰迪</span>
+            <span className="text-xs opacity-90">晚上做题对眼睛更友好</span>
+          </button>
+        </div>
+      </section>
+
+      <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
         <h2 className="mb-2 flex items-center gap-2 text-lg font-semibold text-aws-navy">
           <Info className="h-5 w-5 text-aws-blue-deep" /> 关于
         </h2>
@@ -212,7 +245,7 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      <section className="rounded-3xl bg-white p-5 shadow-card">
+      <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
         <h2 className="mb-4 text-lg font-semibold text-aws-navy">学习数据</h2>
         <div className="grid grid-cols-2 gap-3">
           <div className="flex items-center gap-3 rounded-2xl bg-aws-blue-light/30 p-3">
@@ -247,34 +280,48 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      <section className="mb-6 rounded-3xl border border-red-200 bg-red-50/50 p-5 shadow-card">
+      <section className="mb-6 rounded-3xl bg-white p-5 shadow-card">
         <h2 className="mb-2 flex items-center gap-2 text-lg font-semibold text-aws-navy">
-          <Trash2 className="h-4 w-4 text-red-600" /> 清除本地数据
+          <Trash2 className="h-5 w-5 text-aws-navy/70" /> 清除本地数据
         </h2>
-        <p className="mb-3 text-xs text-aws-navy/70">
+        <p className="mb-4 text-xs text-aws-navy/60">
           将清除做题进度、错题、收藏题、收藏术语、考试日期目标。操作不可恢复。
         </p>
-        <div className="flex gap-2">
+        {!showClearConfirm ? (
           <button
             type="button"
-            onClick={() => {}}
-            className="rounded-xl border border-aws-navy/20 bg-white px-4 py-2 text-sm font-medium text-aws-navy/80 hover:bg-aws-blue-light/30"
+            onClick={() => setShowClearConfirm(true)}
+            className="rounded-2xl border border-aws-navy/20 bg-aws-slate-soft px-4 py-3 text-sm font-medium text-aws-navy/80 transition-colors hover:bg-aws-blue-light/30"
           >
-            暂不
+            清除本地数据
           </button>
-          <button
-            type="button"
-            onClick={() => {
-              if (typeof window !== 'undefined' && window.confirm('确定清除全部本地数据吗？做题进度、错题、收藏、考试日期、收藏术语将全部清空。')) {
-                clearAllLocalData();
-                router.refresh();
-              }
-            }}
-            className="rounded-xl bg-red-100 px-4 py-2 text-sm font-medium text-red-700 hover:bg-red-200"
-          >
-            确定清除
-          </button>
-        </div>
+        ) : (
+          <div className="rounded-2xl border border-aws-navy/10 bg-aws-slate-soft/80 p-4">
+            <p className="mb-4 text-sm font-medium text-aws-navy">
+              确定要清除全部本地数据吗？此操作不可恢复。
+            </p>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => setShowClearConfirm(false)}
+                className="flex-1 rounded-xl border border-aws-navy/20 bg-white px-4 py-2.5 text-sm font-medium text-aws-navy/80 hover:bg-aws-blue-light/30"
+              >
+                取消
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  clearAllLocalData();
+                  setShowClearConfirm(false);
+                  router.refresh();
+                }}
+                className="flex-1 rounded-xl bg-red-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-red-600"
+              >
+                确定清除
+              </button>
+            </div>
+          </div>
+        )}
       </section>
 
       {favTerms.length > 0 && (

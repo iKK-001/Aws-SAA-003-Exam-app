@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { BookOpen, ClipboardList, BookMarked, Target, ChevronRight, Info, Lightbulb, XCircle, Heart } from 'lucide-react';
+import { BookOpen, ClipboardList, BookMarked, Target, ChevronRight, Info, Lightbulb, XCircle, Heart, Quote, RefreshCw } from 'lucide-react';
 import { useQuestions } from '@/lib/DataContext';
 import { getProgress, getWrongIds, getFavoriteIds, getExamDateTarget, setExamDateTarget, getTodayPracticeCount, getNickname } from '@/lib/data';
 import { getHomeGreeting } from '@/lib/mascotPhrases';
+import { getQuoteOfDay, getRandomQuote, type DailyQuote } from '@/lib/dailyQuotes';
 import { HomeSkeleton } from '@/components/Skeleton';
 
 export default function HomePage() {
@@ -15,9 +16,14 @@ export default function HomePage() {
   const favoriteIds = getFavoriteIds();
   const [examDate, setExamDate] = useState('');
   const [goalInputValue, setGoalInputValue] = useState('');
+  const [dailyQuote, setDailyQuote] = useState<DailyQuote | null>(null);
 
   useEffect(() => {
     setExamDate(getExamDateTarget() ?? '');
+  }, []);
+
+  useEffect(() => {
+    setDailyQuote(getQuoteOfDay());
   }, []);
 
   const done = Object.keys(progress).length;
@@ -131,6 +137,26 @@ export default function HomePage() {
           </p>
         )}
       </section>
+
+      {dailyQuote && (
+        <section className="mb-6 rounded-3xl border border-aws-blue-light/60 bg-white p-4 shadow-card">
+          <div className="mb-3 flex items-center justify-between">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-aws-blue-light/50 px-3 py-1 text-xs font-semibold text-aws-blue-deep">
+              <Quote className="h-3.5 w-3.5" /> 每日一句
+            </span>
+            <button
+              type="button"
+              onClick={() => setDailyQuote(getRandomQuote())}
+              className="flex items-center gap-1.5 rounded-xl bg-aws-blue-light/40 px-3 py-2 text-xs font-medium text-aws-blue-deep transition-colors hover:bg-aws-blue-light/60 active:scale-[0.98]"
+              aria-label="换一句"
+            >
+              <RefreshCw className="h-3.5 w-3.5" /> 换一句
+            </button>
+          </div>
+          <p className="text-sm leading-relaxed text-aws-navy/90">「{dailyQuote.text}」</p>
+          <p className="mt-2 text-right text-xs text-aws-navy/60">— {dailyQuote.author}</p>
+        </section>
+      )}
 
       <nav className="space-y-2">
         <Link

@@ -11,13 +11,14 @@ const config: Config = {
         sans: ['var(--font-quicksand)', 'system-ui', 'sans-serif'],
       },
       colors: {
+        /* 主题色由 globals.css 的 --ui-* 控制，支持 data-theme 切换（含莫兰迪） */
         aws: {
-          navy: '#232F3E',
-          orange: '#FF9900',
-          'blue-deep': '#146EB4',
-          'blue-soft': '#1E88E5',
-          'blue-light': '#E8F4FC',
-          'slate-soft': '#F7F9FC',
+          navy: 'rgb(var(--ui-navy) / <alpha-value>)',
+          orange: 'rgb(var(--ui-orange) / <alpha-value>)',
+          'blue-deep': 'rgb(var(--ui-blue-deep) / <alpha-value>)',
+          'blue-soft': 'rgb(var(--ui-blue-soft) / <alpha-value>)',
+          'blue-light': 'rgb(var(--ui-blue-light) / <alpha-value>)',
+          'slate-soft': 'rgb(var(--ui-slate-soft) / <alpha-value>)',
         },
         mint: {
           DEFAULT: '#99E6C9',
@@ -40,10 +41,10 @@ const config: Config = {
         '4xl': '40px',
       },
       boxShadow: {
-        soft: '0 2px 8px rgba(20, 110, 180, 0.08)',
-        card: '0 4px 12px rgba(35, 47, 62, 0.06)',
-        drawer: '0 -4px 24px rgba(35, 47, 62, 0.12)',
-        float: '0 8px 24px rgba(251, 146, 60, 0.18)',
+        soft: '0 2px 8px rgb(var(--ui-blue-deep) / 0.08)',
+        card: '0 4px 12px rgb(var(--ui-navy) / 0.06)',
+        drawer: '0 -4px 24px rgb(var(--ui-navy) / 0.12)',
+        float: '0 8px 24px rgb(var(--ui-orange) / 0.18)',
         'float-mint': '0 8px 24px rgba(16, 185, 129, 0.2)',
         'float-lavender': '0 6px 20px rgba(167, 139, 250, 0.2)',
       },

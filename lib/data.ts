@@ -85,10 +85,28 @@ const STORAGE_KEYS = {
   mascotPhrases: 'aws-exam-mascot-phrases',
   nickname: 'aws-exam-nickname',
   theme: 'aws-exam-theme',
+  uiTheme: 'aws-ui-theme',
   sound: 'aws-exam-sound',
 } as const;
 
 export type ThemeId = 'relaxed' | 'focus';
+
+export type UiThemeId = 'default' | 'morandi';
+
+/** 界面风格：default 默认蓝橙、morandi 莫兰迪色系。默认 default */
+export function getUiTheme(): UiThemeId {
+  if (typeof window === 'undefined') return 'default';
+  const v = localStorage.getItem(STORAGE_KEYS.uiTheme);
+  if (v === 'morandi' || v === 'default') return v;
+  return 'default';
+}
+
+export function setUiTheme(theme: UiThemeId): void {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem(STORAGE_KEYS.uiTheme, theme);
+    document.documentElement.dataset.theme = theme === 'morandi' ? 'morandi' : getTheme();
+  }
+}
 
 /** 主题：relaxed 轻松（暖色）、focus 专注（冷色）。默认 relaxed */
 export function getTheme(): ThemeId {
@@ -101,7 +119,7 @@ export function getTheme(): ThemeId {
 export function setTheme(theme: ThemeId): void {
   if (typeof window !== 'undefined') {
     localStorage.setItem(STORAGE_KEYS.theme, theme);
-    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.theme = getUiTheme() === 'morandi' ? 'morandi' : theme;
   }
 }
 

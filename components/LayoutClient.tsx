@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, BookOpen, ClipboardList, BookMarked, User, Menu } from 'lucide-react';
 import { DrawerProvider } from '@/lib/DrawerContext';
-import { getTheme } from '@/lib/data';
+import { getTheme, getUiTheme, setUiTheme } from '@/lib/data';
 import { BottomNav } from './BottomNav';
 import { Sidebar } from './Sidebar';
 import { Drawer } from './Drawer';
@@ -18,12 +18,20 @@ const navItems = [
   { href: '/profile', label: '我的', icon: User },
 ];
 
+function applyTheme(theme: string) {
+  if (typeof document === 'undefined') return;
+  document.documentElement.dataset.theme = theme;
+}
+
 export function LayoutClient({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerContent, setDrawerContent] = useState<'term' | null>(null);
   const [drawerPayload, setDrawerPayload] = useState<{ termKey?: string } | null>(null);
+  const [devUiTheme, setDevUiTheme] = useState<'default' | 'morandi'>(() =>
+    typeof window !== 'undefined' ? getUiTheme() : 'default'
+  );
 
   const openTermDrawer = (termKey: string) => {
     setDrawerPayload({ termKey });
@@ -38,8 +46,15 @@ export function LayoutClient({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
-    document.documentElement.dataset.theme = getTheme();
+    const theme = getUiTheme() === 'morandi' ? 'morandi' : getTheme();
+    applyTheme(theme);
+    setDevUiTheme(getUiTheme());
   }, []);
+
+  const handleDevUiPreview = (theme: 'default' | 'morandi') => {
+    setUiTheme(theme);
+    setDevUiTheme(theme);
+  };
 
   return (
     <DrawerProvider
@@ -88,6 +103,34 @@ export function LayoutClient({ children }: { children: React.ReactNode }) {
           variant={drawerContent}
           payload={drawerPayload}
         />
+
+        {/* 仅开发环境：UI 风格切换，便于对比莫兰迪与默认样式 */}
+        {process.env.NODE_ENV === 'development' && (
+          <div
+            className="fixed bottom-20 left-3 z-50 flex flex-col gap-1 rounded-2xl border border-aws-navy/10 bg-white/95 p-1.5 shadow-card backdrop-blur"
+            style={{ marginBottom: 'env(safe-area-inset-bottom, 0)' }}
+          >
+            <span className="px-2 py-0.5 text-[10px] font-medium text-aws-navy/50">UI 预览</span>
+            <button
+              type="button"
+              onClick={() => handleDevUiPreview('default')}
+              className={`rounded-xl px-3 py-1.5 text-xs font-medium transition-colors ${
+                devUiTheme === 'default' ? 'bg-aws-blue-light/60 text-aws-blue-deep' : 'text-aws-navy/70 hover:bg-aws-blue-light/30'
+              }`}
+            >
+              默认
+            </button>
+            <button
+              type="button"
+              onClick={() => handleDevUiPreview('morandi')}
+              className={`rounded-xl px-3 py-1.5 text-xs font-medium transition-colors ${
+                devUiTheme === 'morandi' ? 'bg-aws-blue-light/60 text-aws-blue-deep' : 'text-aws-navy/70 hover:bg-aws-blue-light/30'
+              }`}
+            >
+              莫兰迪
+            </button>
+          </div>
+        )}
       </div>
     </DrawerProvider>
   );

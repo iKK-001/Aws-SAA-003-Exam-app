@@ -2,38 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --aws-navy: #232F3E;
-  --aws-blue: #146EB4;
-  --aws-blue-soft: #1E88E5;
-  --aws-bg: #F7F9FC;
-  --aws-blue-light: #E8F4FC;
+/* 主题色：使用 RGB 通道以便 Tailwind 透明度修饰符生效 */
+:root,
+[data-theme="relaxed"],
+[data-theme="focus"] {
+  /* 默认 / 轻松 / 专注：当前 AWS 风格 */
+  --ui-navy: 35 47 62;
+  --ui-orange: 255 153 0;
+  --ui-blue-deep: 20 110 180;
+  --ui-blue-soft: 30 136 229;
+  --ui-blue-light: 232 244 252;
+  --ui-slate-soft: 247 249 252;
+  --ui-white: 255 255 255;
   --radius: 1rem;
 }
-
-/* 专注主题：冷色、略深背景，仅换主色与少量背景 */
 [data-theme="focus"] {
-  --aws-navy: #1e3a5f;
-  --aws-bg: #eef2f7;
+  --ui-navy: 30 58 95;
+  --ui-blue-deep: 13 90 158;
+  --ui-slate-soft: 238 242 247;
+  --ui-blue-light: 224 234 245;
 }
 [data-theme="focus"] body {
-  background-color: #eef2f7;
+  background-color: rgb(238 242 247);
 }
-[data-theme="focus"] .bg-aws-slate-soft {
-  background-color: #eef2f7;
+
+/* 莫兰迪色系：低饱和度、柔和，缓解视觉疲劳 */
+[data-theme="morandi"] {
+  --ui-navy: 92 86 81;
+  --ui-orange: 184 149 107;
+  --ui-blue-deep: 125 139 153;
+  --ui-blue-soft: 156 168 180;
+  --ui-blue-light: 232 230 227;
+  --ui-slate-soft: 242 239 234;
+  --ui-white: 250 248 245;
 }
-[data-theme="focus"] .bg-white {
-  background-color: #f0f4f8;
+[data-theme="morandi"] body {
+  background-color: rgb(242 239 234);
 }
-[data-theme="focus"] .border-aws-blue-deep\/30 {
-  border-color: rgba(13, 90, 158, 0.3);
-}
-[data-theme="focus"] .text-aws-blue-deep {
-  color: #0d5a9e;
-}
-[data-theme="focus"] .bg-aws-blue-light\/20,
-[data-theme="focus"] .bg-aws-blue-light\/50 {
-  background-color: rgba(224, 234, 245, 0.5);
+[data-theme="morandi"] .bg-white {
+  background-color: rgb(var(--ui-white));
 }
 
 * {
@@ -45,7 +52,10 @@ html {
 }
 
 body {
-  @apply bg-aws-slate-soft text-aws-navy antialiased;
+  background-color: rgb(var(--ui-slate-soft));
+  color: rgb(var(--ui-navy));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
