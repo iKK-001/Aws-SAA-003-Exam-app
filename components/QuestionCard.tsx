@@ -163,10 +163,7 @@ export function QuestionCard({
                 <span className="min-w-0 flex-1">
                   <span className="font-semibold text-aws-navy">{key}. </span>
                   {optionImg ? (
-                    <span className="block">
-                      <img src={optionImg} alt={text} className="mt-1 max-h-32 w-auto rounded-lg border border-aws-navy/10 bg-white object-contain" />
-                      <span className="mt-1 block text-xs text-aws-navy/70">{text}</span>
-                    </span>
+                    <img src={optionImg} alt={`选项 ${key}`} className="mt-1 max-h-40 w-auto rounded-lg border border-aws-navy/10 bg-white object-contain" />
                   ) : (
                     <span className="text-aws-navy">{text}</span>
                   )}
