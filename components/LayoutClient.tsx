@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, BookOpen, ClipboardList, BookMarked, User, Menu } from 'lucide-react';
+import { Home, BookOpen, TrendingUp, BookMarked, User, Menu } from 'lucide-react';
 import { DrawerProvider } from '@/lib/DrawerContext';
 import { getTheme, getUiTheme, setUiTheme } from '@/lib/data';
 import { BottomNav } from './BottomNav';
@@ -13,7 +13,7 @@ import { Drawer } from './Drawer';
 const navItems = [
   { href: '/', label: '首页', icon: Home },
   { href: '/practice', label: '练习', icon: BookOpen },
-  { href: '/mock', label: '模拟考', icon: ClipboardList },
+  { href: '/progress', label: '进步', icon: TrendingUp },
   { href: '/glossary', label: '百科', icon: BookMarked },
   { href: '/profile', label: '我的', icon: User },
 ];

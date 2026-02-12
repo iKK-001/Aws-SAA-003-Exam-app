@@ -80,23 +80,30 @@ def parse_one_block(block_text: str, default_id: int) -> dict | None:
     if topic_m:
         topic = topic_m.group(1)
 
+    # PDF 中可能同时出现：
+    # - Correct Answer: C
+    # - Community vote distribution: D (100%)
+    # 之前我们只保存一个 correct_answer 字段，现在增加 community_answer，方便后续比对。
     correct_answer = ""
+    community_answer = ""
     vote_percentage = ""
+
     # 多选答案为 BD、BC 等，单选为 B；统一按字母顺序输出如 "BD"
     correct_m = re.search(r"Correct\s+Answer\s*:\s*([A-E]+)", after_correct, re.IGNORECASE)
     if correct_m:
         letters = sorted(correct_m.group(1).upper())
         correct_answer = "".join(letters)
-    vote_m = re.search(
-        r"([A-E]+)\s*\(\s*(\d+)%?\s*\)",
-        after_correct,
-        re.IGNORECASE,
-    )
+
+    # Community vote distribution 一般形如 "D (100%)" 或 "ACF (96%)"
+    vote_m = re.search(r"([A-E]+)\s*\(\s*(\d+)%?\s*\)", after_correct, re.IGNORECASE)
     if vote_m:
+        community_letters = sorted(vote_m.group(1).upper())
+        community_answer = "".join(community_letters)
         vote_percentage = vote_m.group(2) + "%"
+
+        # 某些题目 PDF 没有显式 Correct Answer，只写了投票结果，此时用社区答案回填 correct_answer
         if not correct_answer:
-            letters = sorted(vote_m.group(1).upper())
-            correct_answer = "".join(letters)
+            correct_answer = community_answer
 
     lines = [ln.strip() for ln in before_correct.splitlines() if ln.strip()]
     # 支持选项 E（多选题多为 A-E 五选二）
@@ -140,6 +147,9 @@ def parse_one_block(block_text: str, default_id: int) -> dict | None:
         "question_en": question_en,
         "options_en": options,
         "correct_answer": correct_answer or "",
+        # 新增字段：社区投票最高的选项（按字母排序）
+        "community_answer": community_answer or "",
+        # 仍保留原有字段名，含社区最高票的百分比（如 "96%"、"100%"）
         "vote_percentage": vote_percentage or "",
     }
 

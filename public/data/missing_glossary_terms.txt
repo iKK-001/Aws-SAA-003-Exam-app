@@ -1,0 +1,821 @@
+# 题目中出现但 glossary 中缺失的词条（共 818 个）
+# 可在 glossary.json 中为这些词条添加 definition / analogy / features
+
+.NET
+.NET Core
+0.0.0.0/0
+1 Gbps
+403
+A2C
+ACU
+AI
+AMIs
+API Gateway Lambda Authorizer
+API Key
+API Keys
+APIGateway
+AS2
+ASP.NET
+AWS Account
+AWS Account Factory
+AWS App Mesh
+AWS App Runner
+AWS App2Container
+AWS AppConfig
+AWS AppSync
+AWS Application Discovery Service
+AWS Application Migration Service
+AWS Auto Scaling
+AWS Billing and Cost Management
+AWS Certificate Manager
+AWS Client VPN
+AWS CloudHSM
+AWS CloudHSM 集群
+AWS Cognito
+AWS Cost Anomaly Detection
+AWS Cost and Usage Reports
+AWS DMS Serverless
+AWS Data Exchange
+AWS Data Pipeline
+AWS Directory Service for Microsoft Active Directory
+AWS Elastic Disaster Recovery
+AWS Elastic IP
+AWS Glue DataBrew
+AWS Glue DynamoDB Export Connector
+AWS Glue Studio
+AWS Hosted Connection Direct Connect Program
+AWS IAM Identity Center (AWS Single Sign-On)
+AWS Identity and Access Management (IAM) Access Analyzer
+AWS Load Balancer Controller
+AWS Local Zones
+AWS Managed IAM Policy
+AWS Managed Key
+AWS Managed Services (AMS)
+AWS Management Console
+AWS Mitigation Hub Refactor Spaces
+AWS Network Firewall
+AWS ParallelCluster
+AWS Pricing Calculator
+AWS Region
+AWS Resource Groups
+AWS Schema Conversion Tool
+AWS Shield Standard
+AWS Single Sign-On
+AWS Site-to-Site VPN
+AWS Systems Manager Patch Manager
+AWS Systems Manager Session Manager
+AWS Systems Manager State Manager
+AWS Transfer for SFTP
+AWS Wavelength Zones
+AWS managed keys
+AWS owned keys
+AWSEC2-PatchLoadBalanacerInstance
+Accept-Language
+Access Point
+Account
+Account Drift
+Active Directory Connector
+ActiveMQ
+AdministratorAccess
+All Upfront reserved database instance
+Amazon AMI
+Amazon Aurora Global Database
+Amazon Aurora Serverless
+Amazon Aurora Serverless for MySQL
+Amazon Aurora Serverless v2
+Amazon CloudWatch Events
+Amazon Cognito Identity Pools
+Amazon DLM
+Amazon Data Lifecycle Manager
+Amazon Data Lifecycle Manager (Amazon DLM)
+Amazon Detective
+Amazon DocumentDB
+Amazon EC2 Auto Scaling
+Amazon EC2 On-Demand Instances
+Amazon EC2 Spot Instances
+Amazon EC2 实例存储
+Amazon ECS Anywhere
+Amazon ElastiCache for Memcached
+Amazon Elastic Block Store (Amazon EBS)
+Amazon Elastic Container Service (Amazon ECS)
+Amazon Elastic File System (Amazon EFS)
+Amazon Elastic Kubernetes Service (Amazon EKS)
+Amazon Elastic Transcoder
+Amazon EventBridge Scheduler
+Amazon FSx for NetApp ONTAP
+Amazon FSx for OpenZFS
+Amazon Kinesis
+Amazon Kinesis Agent
+Amazon Kinesis Data Stream
+Amazon Lightsail
+Amazon Linux
+Amazon MSK
+Amazon Machine Image
+Amazon Machine Image (AMI)
+Amazon Machine Images
+Amazon Machine Images (AMIs)
+Amazon OpenSearch Service (Amazon Elasticsearch Service)
+Amazon QLDB
+Amazon RDS Custom for Oracle
+Amazon RDS MySQL
+Amazon RDS for MySQL
+Amazon Redshift Serverless
+Amazon Redshift Spectrum
+Amazon S3 File Gateway
+Amazon S3 Glacier Deep Archive
+Amazon S3 Glacier Flexible Retrieval
+Amazon S3 Glacier Instant Retrieval
+Amazon S3 网站终端节点
+Amazon Simple Notification Service (Amazon SNS)
+Amazon Simple Queue Service (Amazon SQS)
+Amazon Transcribe Medical
+Amazon VPC
+Amplify
+Amplify Hosting
+Apache Parquet
+Apache Spark SQL
+Apache SparkSQL
+AppFlow
+Application Auto Scaling
+Application Load Balancer (ALB)
+Application Manager
+Architecture
+AssumeRole
+Athena DynamoDB Connector
+Audit Manager
+Aurora Clone
+Aurora I/O-Optimized
+Aurora Replicas
+Aurora 全局数据库
+Authentication
+Authorization
+Automatic rotation
+BYOL
+Babelfish
+Backup Vault Lock
+Backup plan
+Bastion Host
+BatchGetSecretValue API
+Billing
+Billing and Cost Management
+Budgets
+C 系列实例
+CAPEX
+CMK
+CMS
+CNAME
+CNI
+COTS
+CPU Utilization
+CPU utilization
+CPU 利用率
+CSE-Custom
+CSE-KMS
+CSI
+CSS
+CUR
+Cache
+CacheControl
+CachingDisabled
+CapacityReservation
+Certificate
+Clickstream data
+Client-Side Encryption
+CloudFront Field-Level Encryption
+CloudFront Functions
+CloudFront Origin Access Identity (OAI)
+CloudFront Signed Cookies
+CloudFront Signed URLs
+CloudFront logs
+CloudFront 签名 URL
+CloudHSM
+CloudWatch Alarm
+CloudWatch Logs Insights
+CloudWatch Logs subscription
+CloudWatch Metrics
+CloudWatchReadOnlyAccess
+Cognito Identity Pools
+Cognito User Pools
+Composite Alarm
+Comprehend
+Compute Optimizer
+Compute Savings Plan
+Concurrency
+Config
+Connect
+Container
+Container Insights
+Containerization
+Control Tower
+Cookies
+Copy Object
+Corporate Network
+Cost Allocation Tags
+Cost Explorer
+Cost Optimization
+Cost and Usage Report
+CreateAccount
+CreateImage API
+Cross-Account Access
+Cross-Region Replication
+Cross-account access
+Cross-site scripting
+Custom Domain Name
+Custom Endpoint
+Customer Gateway
+Customer Managed Key
+Customer managed keys
+DRT
+Data Center
+Data Encryption
+Data Filter
+Data Migration
+Data Transfer
+Data lake
+Data sharing
+DataBrew
+Database Cluster
+Database Connection Pooling
+Database Credentials
+Database Encryption
+Database Instance
+Database Migration
+Database Replication
+Database Snapshot
+Database snapshot
+Dead-letter queue
+Decryption
+Dedicated Hosts
+Dedicated Instance
+Dedicated Instances
+Dedicated On-Demand Hosts
+Dedicated On-Demand Instances
+Dedicated Reserved Hosts
+Dedicated Reserved Instances
+Dedicated tenancy
+Delete Protection
+DeleteKey
+Directory Service
+Directory Service for Microsoft Active Directory
+Disaster Recovery
+DocumentDB
+Dynamic Scaling
+DynamoDB Auto Scaling
+DynamoDB Backup
+DynamoDB Capacity Mode
+DynamoDB On-Demand
+DynamoDB On-Demand Mode
+DynamoDB Provisioned Mode
+DynamoDB Reserved Capacity
+DynamoDB Standard
+DynamoDB Standard-IA
+DynamoDB 表导出
+EBS Direct API
+EBS Multi-Attach
+EBS Snapshots
+EBS Snapshots Archive
+EBS Volume
+EBS 快速快照恢复
+EC2 Auto Recovery
+EC2 Auto Scaling Group
+EC2 Dedicated Host
+EC2 Instance
+EC2 Instance Connect
+EC2 Instance Savings Plans
+EC2 Instances
+EC2 On-Demand Instances
+EC2 Reserved Instances
+EC2 Savings Plans
+EC2 Spot Instances
+EC2 instance profile
+EC2 instance types
+EC2 instances
+EFS One Zone-IA
+EFS Standard
+EFS Standard-IA
+EFS to EFS backup
+EMR File System (EMRFS)
+Egress-only Internet Gateway
+ElastiCache for Memcached
+Elastic Block Store
+Elastic Container Service (ECS)
+Elastic Fabric Adapter (EFA)
+Elastic IP Address
+Elasticity
+Email
+Email validation
+Encryption Key
+Endpoint
+Environment Variables
+EventBridge Scheduler
+Express.js
+Extended Client Library
+FIFO queue
+FSBP
+FSx File Gateway
+FSx for ONTAP
+Failover Routing
+Fargate Spot
+Fast Snapshot Restore
+Federated Query
+File Gateway
+File System
+Firewall Manager
+Function Scaling
+GPS
+GWLB
+Gateway Endpoint
+Gateway Load Balancer
+Gateway Load Balancer (GWLB)
+Gateway VPC Endpoint
+General Purpose
+General Purpose SSD (gp2)
+Geo-restriction
+Geolocation Routing
+Geolocation Routing Policy
+GetSessionToken
+GiB
+Global Database
+Global Secondary Index
+Global Tables
+GraphQL
+Group
+HTML
+HTTP APIs
+HTTP Header
+Hadoop
+Health Check
+Hibernate
+High Availability
+Hive
+Horizontal Pod Autoscaling (HPA)
+IA
+IAM Access Analyzer
+IAM Group
+IAM Identity Center (AWS Single Sign-On)
+IAM Policy
+IAM Role for Service Accounts
+IAM Roles
+IAM Trust Relationship
+IAM User
+IAM database authentication
+IAM 实例配置文件
+IP Address
+IP 地址类型
+IPsec
+IPsec VPN
+IPv4
+ISCSI
+IdP
+Inline Policy
+Instance Metadata Service Version 2 (IMDSv2)
+Instance Profile
+Instance Savings Plans
+Instance Scheduler
+Instance Store
+Instances
+Interface Endpoint
+Interface VPC Endpoint
+Internet bandwidth
+InviteAccountToOrganization
+JDBC
+JS
+JSON Web Token (JWT)
+Java Spring Boot
+JavaScript
+KMS Key Policy
+KPL
+Key Rotation
+Kinesis Agent
+Kubernetes Cluster Autoscaler
+Kubernetes Metrics Server
+Kubernetes Secrets
+Kubernetes 服务帐户
+LVM
+Lambda Event Source Mapping
+Lambda Function URL
+Lambda Provisioned Concurrency
+Lambda Reserved Concurrency
+Lambda SnapStart
+Lambda cold start
+Lambda pre-provisioned concurrency
+Latency
+Latency Routing
+Latency Routing Policy
+Latency-Based Routing
+Launch Permissions
+Launch Template
+Lazy Loading
+LeaveOrganization
+Legal Hold
+Lex
+Lifecycle
+Lifecycle Configuration
+Lifecycle Hooks
+Lifecycle Policies
+Lifecycle Policy
+Lifecycle policy
+Lifecycle rules
+Linux EC2
+Lustre
+M5
+MFA Delete
+MQ
+MSP
+Managed Node Groups
+Management Account
+Management VPC
+MariaDB
+Mbps
+Memcached
+Memory Utilization
+Microservices
+Microsoft Active Directory
+Microsoft Windows Server
+Mount Target
+Multi-Attach
+Multi-Region Access Points
+Multi-region secret replication
+Multipart Uploads
+Multivalue Answer Routing Policy
+MySQL to Aurora
+NAT Instance
+NIST
+Neptune
+Neptune Streams
+Network
+Network Bandwidth
+Network Load Balancer (NLB)
+NetworkACL
+Node.js
+OAC
+OIDC
+ONTAP
+Object Lambda
+Object Lock
+On-Demand Capacity Mode
+On-Demand Instances
+On-Demand Mode
+One Zone-IA
+One Zone-Infrequent Access (One Zone-IA)
+OpenAPI
+OpenZFS
+OpsCenter
+Oracle APEX
+Oracle Database
+Organizations
+PITR
+PL/SQL
+Packet Loss
+Parquet
+PartiQL
+Patch Manager
+Patching
+Payment Processing
+Performance
+Performance Insights
+Permissions
+Permissions Boundary
+Pilot Light
+Placement Group
+Placement Groups
+Point-in-time Recovery
+Point-in-time Recovery, PITR
+Point-in-time recovery
+Policy
+PowerUsers
+Pre-provisioned Concurrency
+Predictive Scaling
+Private Subnet
+Production VPC
+Provisioned
+Provisioned Capacity Mode
+Provisioned IOPS
+Provisioned IOPS SSD (io2)
+Provisioned Mode
+Public Subnet
+PutObject
+PySpark
+Python
+Query
+Queue
+QuickSight SPICE
+R5
+RBAC
+RDS API
+RDS Blue/Green deployments
+RDS Custom
+RDS Storage Auto Scaling
+RDS for Microsoft SQL Server
+RDS for MySQL
+RDS for PostgreSQL
+REST APIs
+RESTful API
+RESTful APIs
+RESTful Web 服务
+RTMP
+Read Capacity
+Read Replicas
+ReadIOPS
+Reader Endpoint
+Recovery
+Redshift ML
+Regional Reserved Instances
+Regions
+RemoveAccountFromOrganization
+Requester Pays
+Reserved
+Reserved Instance
+Reserved Instance Marketplace
+Reserved Instances
+Resolver
+Resource Access Manager
+Resource Groups Tag Editor
+Resource Policy
+Response Header
+Restore
+Role
+Route 53 Geolocation Routing
+Route 53 Resolver DNS Firewall
+Route Table
+Route Tables
+Routing Table
+Routing Tables
+Run Command
+S3 Access Points
+S3 Batch Operations
+S3 Bucket Policy
+S3 Cross-Region Replication
+S3 Deep Archive
+S3 Default Encryption
+S3 Expedited retrievals
+S3 File Gateway
+S3 Glacier Instant Retrieval
+S3 Glacier Select
+S3 Inventory
+S3 Lifecycle
+S3 Lifecycle Policies
+S3 Lifecycle Policy
+S3 Lifecycle policies
+S3 Multi-Region Access Point
+S3 Multipart Upload
+S3 Object Lock
+S3 One Zone-IA
+S3 One Zone-Infrequent Access
+S3 One Zone-Infrequent Access (S3 One Zone-IA)
+S3 PUT events
+S3 Replication
+S3 Standard
+S3 Standard retrievals
+S3 Standard-Infrequent Access
+S3 Standard-Infrequent Access (S3 Standard-IA)
+S3 Storage Lens
+S3 VPC endpoint
+S3 Versioning
+S3 lifecycle
+S3 lifecycle policy
+S3 pre-signed URL
+S3 同区域复制
+S3 存储桶
+S3 存储桶策略
+S3 批量操作
+S3 服务器访问日志记录
+S3 标准-不频繁访问
+S3 清单
+S3 版本控制
+S3 生命周期
+S3 生命周期规则
+S3 签名 Cookie
+S3 访问点
+SCPS
+SCPs
+SCT
+SMB File Server
+SMTP
+SQL Injection
+SQL injection
+SQL注入
+SQS FIFO
+SQS Standard
+SSE-SQS
+SSL 终止
+SSL/TLS certificates
+SUSE Linux Enterprise Server
+SageMaker Pipelines
+Salesforce
+Savings Plan
+Savings Plans
+Scalability
+Scaling Policy
+Scheduled Actions
+Scheduled Reserved Instances
+Scheduled Scaling
+Security
+Security Configuration
+Security Groups
+Security Hub
+Security Lake
+Security Token Service
+Server-Side Encryption
+Serverless v2
+Service Auto Scaling
+Service Catalog
+Service Control Policies (SCP)
+Service Control Policies (SCPs)
+Session Manager
+Session State
+Shared Storage
+Shared tenancy
+Shield
+Shield Advanced
+Signed URL
+Simple Email Service
+Simple Routing Policy
+Single-AZ
+SnapMirror
+Snapshots
+Snowmobile
+Spot Blocks
+Spot Fleet
+Spot Instance
+Spot Instances
+Spot instances
+Spread Placement Group
+Standard Reserved Instances
+Standard queue
+State Manager
+Static Website Hosting
+Storage
+Storage Gateway File Gateway
+Storage Gateway Tape Gateway
+Storage Gateway Volume Gateway
+Storage Gateway for files
+Storage Gateway for volumes
+Storage Gateway卷网关
+Storage Lens
+StorageClass
+Streams
+Sub-millisecond latency
+Synchronous workflow
+SystemAdministrator
+Systems Manager Session Manager
+T 系列实例
+T3
+TLSv1.3
+Tag Policies
+Tagging
+Tape Gateway
+Target Tracking
+Task Definition
+Task Role
+Time Point Recovery
+Traffic Mirroring
+Transfer Acceleration
+Transfer for SFTP
+Transit VPC
+URLs
+User Data
+User-Agent
+VPC Flow Logs
+VPC Interconnection
+VPC Lattice
+VPC endpoint
+VPC gateway endpoint
+VPC 网关终端节点
+Version Control
+Virtual Machine
+Virtual Private Gateway
+Virtual Private Gateway (VGW)
+Volume Gateway
+Vulnerability scanning
+WCU
+Warm Standby
+Web Application
+Web Application Server
+Web Server
+Web application
+Web server
+WebSocket API
+Website Hosting
+Weighted Routing
+Windows container
+WorkMail
+Worker
+Workload Discovery
+Write Capacity
+Write-Through
+X-API-Key
+XSS
+ZDR
+ap-northeast-3
+ap-southeast-1
+ap-southeast-2
+aws:PrincipalOrgID
+aws:PrincipalOrgPaths
+aws:PrincipalTag
+aws:SecureTransport
+aws_s3 extension
+backup
+binlog
+blob
+canary release
+cron job
+crontab
+database
+database clone
+database instance
+endpoint
+eu-central-1
+eu-west-1
+eu-west-2
+external key store
+io1
+ip-ranges.json
+kms:Decrypt
+multipart uploads
+nslookup
+pg_dump
+pipeline resolvers
+private
+recovery
+root user
+rsync
+s3 cp
+s3 sync
+s3:ObjectCreated:Put
+s3:PutObjectLegalHold
+s3:x-amz-acl
+st1
+us-east-2
+us-west-1
+us-west-2
+vCPU
+x-amz-server-side-encryption
+一致性
+会话关联
+传输中加密
+作业书签
+侦听器
+保留期
+健康检查
+公有子网
+共享存储
+分区放置组
+前缀
+前缀列表
+动态伸缩
+区域端点
+单点登录
+可扩展性
+域名
+堡垒服务器
+增强型网络
+多值应答路由
+字段级加密
+存储
+存储桶策略
+存储类
+存储类别
+安全
+密钥策略
+对等连接
+弹性伸缩
+成本优化
+成本和使用情况报告
+执行角色
+折扣共享
+指标
+接口 VPC endpoint
+数据湖
+文件系统
+日志
+最小权限
+本地备份
+权限集
+标签策略
+流数据
+灾难恢复 (DR)
+环境变量
+目标跟踪策略
+瞬态集群
+私有密钥
+签名 URL
+管理账户
+网关 endpoint
+耐用性
+自定义域名
+自定义密钥存储
+计算优化
+计算节省计划
+读取
+跨区域复制 (CRR)
+跨账户访问
+身份验证
+转接网关
+运行状况检查
+通配符证书
+长期运行
+静态加密
+预测式扩展
+预签名 URL
+预置 IOPS

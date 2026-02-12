@@ -88,6 +88,15 @@ export function QuestionCard({
         <p className="whitespace-pre-wrap font-medium text-aws-navy pr-10">
           {questionText ?? q.question_cn}
         </p>
+        {q.question_image && (
+          <div className="mt-3 rounded-xl overflow-hidden border border-aws-navy/10 bg-aws-navy/5">
+            <img
+              src={q.question_image}
+              alt="题目附图"
+              className="w-full max-w-md mx-auto block"
+            />
+          </div>
+        )}
       </div>
 
       {/* 空闲小话：题目下方、选项上方，不挡题干 */}
@@ -110,6 +119,7 @@ export function QuestionCard({
           const showRight = showExplanation && isCorrect;
           const showWrong = showExplanation && isChosen && !isCorrect;
           const disabled = showExplanation || (!isMultiple && selected.length > 0);
+          const optionImg = q.options_image?.[key];
 
           return (
             <li key={key}>
@@ -150,9 +160,16 @@ export function QuestionCard({
                     <X className="h-3 w-3" aria-hidden />
                   </span>
                 )}
-                <span>
+                <span className="min-w-0 flex-1">
                   <span className="font-semibold text-aws-navy">{key}. </span>
-                  <span className="text-aws-navy">{text}</span>
+                  {optionImg ? (
+                    <span className="block">
+                      <img src={optionImg} alt={text} className="mt-1 max-h-32 w-auto rounded-lg border border-aws-navy/10 bg-white object-contain" />
+                      <span className="mt-1 block text-xs text-aws-navy/70">{text}</span>
+                    </span>
+                  ) : (
+                    <span className="text-aws-navy">{text}</span>
+                  )}
                 </span>
               </button>
             </li>

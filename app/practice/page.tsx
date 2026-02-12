@@ -94,6 +94,12 @@ function PracticeContent() {
     return () => window.removeEventListener('mascot-phrases-toggled', handler);
   }, []);
 
+  /** 切题后滚动到顶部，方便看题干 */
+  useEffect(() => {
+    const main = document.querySelector('main');
+    if (main) main.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [index]);
+
   const todayCount = getTodayPracticeCount();
   const practiceGreeting = getNickname()
     ? getHomeGreeting(getNickname())

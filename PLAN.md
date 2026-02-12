@@ -27,6 +27,10 @@
 - [x] **数据清洗四阶段**：阶段 1 `extract_pdf_en.py` → raw_questions_en.json；阶段 2 `translate_en_to_cn.py`（Gemini，断点/重试/retry-failed）→ questions_bilingual.json；阶段 3 `add_tags_and_explanation.py`（打标+解析+related_terms，--fill-empty）→ questions_bilingual_enriched.json；阶段 4 `build_app_questions.py` → questions_v2.json；辅助脚本 `fix_options_en_mismatch.py`、`analyze_enrich_failures.py`
 - [x] **题干/选项中英切换**：`Question` 含 `question_en`、`options_en`；练习页「中文 | EN」toggle；QuestionCard 支持当前语言题干与选项显示
 - [x] **百科与可点词条说明**：百科词条来自 `glossary.json` 未在清洗中重新生成；题干/解析内可点词条 = 该题 `related_terms` ∪ glossary 键，清洗后可能增减（见 `public/data/README.md`）
+- [x] **题干/选项附图**：`Question` 支持 `question_image`、`options_image`（A/B/C/D）；QuestionCard 题干下展示题干图、选项区展示选项图+文字。96/423/429/494 已补题干图，477 已补题干图 + 四选项图；`build_app_questions.py` 透传两字段；见 `public/data/README_QUESTION_IMAGES.md`
+- [x] **进步曲线**：答题记录 `answerHistory` + `addAnswerRecord`；`/progress` 页按日、每 20/50 题正确率；底部导航中间改为「进步」；侧栏同步
+- [x] **切题滚动**：练习页上一题/下一题（继续冒险）时主内容区滚动到顶部
+- [x] **答案以社区投票为准**：多题（如 450/451/455/493/598/929/592）答案与解析已按社区投票修正；解析中标注「本题以社区投票为准」；脚本 `apply_community_answers.py`、`re_explain_community_answers.py`
 
 ## UX/UI 规范（已落地）
 
@@ -111,6 +115,18 @@
 - [ ] **refine_data.py**（可选）：拆解每个错误选项的详细解析；对 related_terms 去重或规范化
 - [ ] **generate_glossary.py**（可选）：若词库需增补或重跑，可调整后重新生成
 
+## 答案与社区投票率约定（2025-02 补充）
+
+- **以社区投票率最高的选项为准**：英文 PDF 中标注的 "Correct Answer" 可能与社区投票不一致（例如 592 题 PDF 标 C、社区 100% 选 D）。经排查，源数据 PDF 也可能存在错误，**约定以社区投票率最高的选项作为准确答案**，并在此基础上编写/修正解析。
+- **选三题补全**：题干为「选择三个」但源数据仅含 2 个答案时，按社区投票最高的三项补全并更新解析。已按社区投票修正的题号与答案：
+  - **450**：ACF（三层 Web 应用迁 AWS、Well-Architected）
+  - **451**：BCF（ECS + Direct Connect + RDS，运营团队责任）
+  - **455**：BDF（AWS Budgets + 预算阈值告警与阻止配置）
+  - **493**：DEF（AI 客服电话质量：Transcribe → Translate → Comprehend）
+  - **598**：ACF（SMB → S3 File Gateway + Glue 爬虫 + Athena 查询，社区 96% ACF；原 PDF 标 CEF）
+  - **929**：ADF（Lambda 发布到加密 SNS：SNS 资源策略 + ARN + KMS 权限）
+- **592**：社区 100% D（S3 + CloudFront 地理限制 + 签名 URL），已改为 D 并统一解析。
+
 ## Known Issues
 
 - PDF 提取曾存在字符前置/重影，已通过 enrich 阶段修复
@@ -120,6 +136,7 @@
 
 ## 数据与脚本位置（供新对话参考）
 
+- **更新日志**：`CHANGELOG.md`（近期更新：题干/选项附图、进步曲线、切题滚动、答案以社区投票为准等）
 - **题目与词库**：`public/data/questions_v2.json`（含 question_en、options_en）、`glossary.json`；可选多选细化数据 `questions_v2_refined.json`
 - **数据清洗中间文件**：`public/data/raw_questions_en.json`（阶段 1）、`public/data/questions_bilingual.json`（阶段 2）、`public/data/questions_bilingual_enriched.json`（阶段 3）
 - **数据清洗脚本与计划**：`scripts/DATA_CLEANING_PLAN.md`；`scripts/extract_pdf_en.py`（阶段 1）、`scripts/translate_en_to_cn.py`（阶段 2）、`scripts/add_tags_and_explanation.py`（阶段 3）、`scripts/build_app_questions.py`（阶段 4）；辅助：`scripts/fix_options_en_mismatch.py`、`scripts/analyze_enrich_failures.py`；英文 PDF 路径示例：`$HOME/AWS-SAA/AWS-SAA-C03 en.pdf`（在用户目录下 AWS-SAA 时，否则用绝对路径）

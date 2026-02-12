@@ -4,6 +4,10 @@ export type Question = {
   question_en?: string;
   options_cn: Record<string, string>;
   options_en?: Record<string, string>;
+  /** 题目附图（如 PDF 中为图片的 policy/图表），相对 public 的路径，如 /data/images/96.png */
+  question_image?: string;
+  /** 选项附图，键为选项字母（A-D），值为图片路径，如 /data/images/477_A.png */
+  options_image?: Record<string, string>;
   /** 单选为 string，多选兼容格式为 string[] */
   best_answer: string | string[];
   official_answer?: string | string[];
@@ -87,7 +91,35 @@ const STORAGE_KEYS = {
   theme: 'aws-exam-theme',
   uiTheme: 'aws-ui-theme',
   sound: 'aws-exam-sound',
+  answerHistory: 'aws-answer-history',
 } as const;
+
+const ANSWER_HISTORY_MAX = 5000;
+
+export type AnswerRecord = { correct: boolean; date: string };
+
+function getAnswerHistoryRaw(): AnswerRecord[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.answerHistory);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function getAnswerHistory(): AnswerRecord[] {
+  return getAnswerHistoryRaw();
+}
+
+export function addAnswerRecord(correct: boolean): void {
+  if (typeof window === 'undefined') return;
+  const list = getAnswerHistoryRaw();
+  const date = new Date().toISOString().slice(0, 10);
+  list.push({ correct, date });
+  if (list.length > ANSWER_HISTORY_MAX) list.splice(0, list.length - ANSWER_HISTORY_MAX);
+  localStorage.setItem(STORAGE_KEYS.answerHistory, JSON.stringify(list));
+}
 
 export type ThemeId = 'relaxed' | 'focus';
 
@@ -289,6 +321,7 @@ export function setProgress(id: number, answered: string, correct: boolean) {
   if (typeof window !== 'undefined') {
     localStorage.setItem(STORAGE_KEYS.progress, JSON.stringify(p));
     incrementTodayPracticeCount();
+    addAnswerRecord(correct);
   }
 }
 

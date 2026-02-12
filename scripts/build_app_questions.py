@@ -30,7 +30,7 @@ def to_app_item(item: dict) -> dict:
             "why_correct": explanation.get("why_correct", ""),
             "why_wrong": explanation.get("why_wrong", ""),
         }
-    return {
+    out = {
         "id": item.get("id"),
         "topic": item.get("topic", ""),
         "question_cn": item.get("question_cn", ""),
@@ -44,6 +44,11 @@ def to_app_item(item: dict) -> dict:
         "explanation": explanation,
         "related_terms": item.get("related_terms") if isinstance(item.get("related_terms"), list) else [],
     }
+    if item.get("question_image"):
+        out["question_image"] = item["question_image"]
+    if item.get("options_image") and isinstance(item["options_image"], dict):
+        out["options_image"] = item["options_image"]
+    return out
 
 
 def main():

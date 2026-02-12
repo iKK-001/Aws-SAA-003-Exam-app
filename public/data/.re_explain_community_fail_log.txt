@@ -1,0 +1,134 @@
+
+============================================================
+id 163
+============================================================
+```json
+{
+  "explanation": {
+    "analysis": "考查在 AWS 上大规模部署容器化应用程序，并实现高可用性和运营开销最小化的方案选择。",
+    "why_correct": "选项 A 选择了 Amazon ECR 存储镜像，Amazon ECS with AWS Fargate 启动类型运行容器。Fargate 提供了无服务器计算，无需管理底层基础设施，极大地简化了运维。目标跟踪的自动扩展策略可以根据需求自动调整容器数量，满足高可用性和弹性需求。",
+    "why_wrong": "选项 B 使用了 Amazon EC2 启动类型，需要用户管理 EC2 实例，增加了运维负担，不符合题目的“最大限度地减少运营开销”的要求。选项 C 使用 EC2 实例上的存储库，不如 Amazon ECR 方便和安全，并且手工设置自动扩展，不如 ECS 的自动化。选项 D 使用 AMI，增加了维护复杂性，并且也是基于 EC2 实例，管理复杂。另外，基于 CPU 利用率的扩展策略不够灵活，不如目标跟踪。",
+  },
+  "related_terms": ["Amazon ECR", "Amazon ECS", "AWS Fargate", "Amazon EC2", "Auto Scaling", "Amazon CloudWatch", "Amazon Machine Image (AMI)"]
+}
+```
+
+============================================================
+id 280
+============================================================
+```json
+{
+  "explanation": {
+    "analysis": "考查如何使用 AWS 服务分析 CloudFront 日志并构建可视化图表。",
+    "why_correct": "Amazon Athena 适用于对存储在 Amazon S3 中的数据执行交互式查询。QuickSight 是一款业务智能服务，可用于创建交互式仪表板和可视化，并可以连接到 Athena 查询结果。因此，该组合满足了对日志执行高级分析和构建可视化的需求。",
+    "why_wrong": "选项 A 和 C 错误的原因在于，AWS Glue 不直接用于结果可视化，更主要用于 ETL 任务。选项 C 和 D 错误的原因在于，Amazon DynamoDB 不是分析 CloudFront 日志的合适选择，日志存储在 S3 中，应该用 Athena 来查询。DynamoDB 是 NoSQL 数据库，不适用于这种分析场景。",
+  },
+  "related_terms": ["Amazon CloudFront", "Amazon S3", "Amazon Athena", "AWS Glue", "Amazon QuickSight", "Amazon DynamoDB", "SQL"]
+}
+```
+
+============================================================
+id 280
+============================================================
+```json
+{
+  "explanation": {
+    "analysis": "考察使用 Amazon CloudFront 日志进行高级分析与可视化的解决方案。要求选择能够有效分析 S3 中 CloudFront 日志，并实现数据可视化的服务组合。",
+    "why_correct": "Amazon Athena 能够直接查询 S3 中的日志文件，并支持标准 SQL，适用于日志的分析。Amazon QuickSight 能够连接 Athena 并进行数据可视化，满足构建可视化的需求。因此，Athena 结合 QuickSight 是理想的解决方案。",
+    "why_wrong": "选项 A 使用 AWS Glue 可视化结果，虽然 Glue 可以进行数据转换，但其主要功能不是可视化，QuickSight 提供了更直接的可视化功能。选项 C 和 D 使用 DynamoDB。DynamoDB 是 NoSQL 数据库，不适用于对 CloudFront 日志这类结构化数据进行 SQL 查询，且日志数据通常很大，不适合存储在 DynamoDB 中。因此，A、C、D 均不适用。",
+  },
+  "related_terms": [
+    "Amazon CloudFront",
+    "Amazon S3",
+    "Amazon Athena",
+    "AWS Glue",
+    "Amazon QuickSight",
+    "Amazon DynamoDB",
+    "SQL"
+  ]
+}
+```
+
+============================================================
+id 291
+============================================================
+```json
+{
+  "explanation": {
+    "analysis": "考查 CloudFront 保护 S3 视频内容的访问控制，特别是针对不支持 cookies 和无法修改 URL 的用户场景。",
+    "why_correct": "签名 cookies 和签名 URLs 都是 CloudFront 提供的内容访问控制机制。签名 URLs 通过在 URL 中嵌入签名信息来限制对内容的访问，适用于用户无法修改 URL 的情况。签名 cookies 通过在 HTTP 请求头中设置 cookie 来进行访问控制，适用于支持 cookies 的客户端。",
+    "why_wrong": "AWS AppSync 用于构建 API，与保护 S3 视频内容访问无关。JSON Web Token (JWT) 是一种常用的身份验证和授权机制，但需要客户端的支持和配置，不符合用户无法修改 URL 的场景。AWS Secrets Manager 用于存储和管理密码等敏感信息，不直接用于控制 CloudFront 访问。",
+    },
+  "related_terms": ["Amazon CloudFront", "Amazon S3", "cookies", "URLs", "AWS AppSync", "JSON Web Token (JWT)", "AWS Secrets Manager"]
+}
+```
+
+============================================================
+id 348
+============================================================
+```json
+{
+  "explanation": {
+    "analysis": "考查 DynamoDB 的容量模式选择，以及如何以成本效益的方式满足恒定且可预测的工作负载需求。",
+    "why_correct": "选项 B 使用预置模式，允许用户根据预估的 RCU 和 WCU 来预留容量。由于题干指出数据工作负载恒定且可预测，预置模式可以精确地匹配需求，从而优化成本。通过预先配置容量，可以确保预算的稳定性。",
+    "why_wrong": "选项 A 错误，因为 DynamoDB Standard-IA 适用于不频繁访问的数据，而题干没有提及数据不频繁访问的需求。选项 C 错误，因为按需模式适用于工作负载不可预测的情况，而题干的工作负载是可预测的，按需模式通常成本更高。选项 D 错误，按需模式不支持预留容量的概念，无法使用预留容量，因此无法降低成本。预留容量仅适用于预置模式。",
+  },
+  "related_terms": ["Amazon DynamoDB", "DynamoDB Standard-IA", "RCU", "WCU", "Provisioned mode", "On-demand mode", "Reserved Capacity"]
+}
+```
+
+============================================================
+id 381
+============================================================
+```json
+{
+  "explanation": {
+    "analysis": "考查如何通过优化数据库架构来加速报告生成，同时避免影响生产环境的文档读写操作。",
+    "why_correct": "Amazon Aurora PostgreSQL 数据库集群非常适合这种场景，因为它提供了快速的只读副本。通过创建一个 Aurora 副本，报告过程可以查询该副本，从而避免对主数据库的性能产生影响。Aurora 副本与主数据库的数据同步，确保报告数据的准确性。这种方案对应用程序代码的更改最小。",
+    "why_wrong": "A 选项，Amazon DocumentDB 数据库不直接与 PostgreSQL 数据库兼容，且不能直接用于解决 PostgreSQL 数据库的性能问题，迁移成本较高。C 选项，Amazon RDS for PostgreSQL 的多可用区配置主要用于高可用性和容错，其辅助节点在性能优化方面不如 Aurora 副本。D 选项，Amazon DynamoDB 适用于键值存储，不适合存储文档的元数据，无法满足关系查询的需求，并且需要大幅修改应用程序代码。",
+  },
+  "related_terms": ["Amazon S3", "PostgreSQL", "Amazon DocumentDB", "MongoDB", "Amazon Aurora PostgreSQL", "Amazon RDS for PostgreSQL", "DynamoDB"]
+}
+```
+
+
+============================================================
+id 405
+============================================================
+```json
+{
+  "explanation": {
+    "analysis": "考察 Auto Scaling 组的配置和扩展策略，以应对流量变化的需求，特别是针对时间段内的伸缩需求。",
+    "why_correct": "D. 目标跟踪扩展策略能够根据 EC2 实例的 CPU 利用率自动调整 Auto Scaling 组的实例数量，从而满足高峰时期的负载。 这是一种动态伸缩方法，可以有效应对流量的变化，确保资源供应。E. 计划扩展允许预先配置 Auto Scaling 组的容量，例如在周末将实例数量设置为 0，从而避免资源浪费。 该策略可以根据时间表自动调整容量，满足周期性的需求变化。",
+    "why_wrong": "A. ALB 自身不具备容量调整的功能，AWS Auto Scaling 无法直接根据请求速率调整 ALB 容量，ALB 自身会自动处理流量。B. 扩展 VPC 互联网网关的容量通常不是常见的需求，互联网网关通常设计为能够处理大部分流量。 Auto Scaling 主要用于管理 EC2 实例的容量。C. 在多个 AWS 区域中启动 EC2 实例是为了实现高可用性和容错能力，而不是为了解决特定时间段的流量波动问题。 题干描述的环境不需要跨区域部署，且会引入额外的复杂性。",
+    },
+  "related_terms": ["Application Load Balancer (ALB)", "Auto Scaling", "Amazon EC2", "VPC", "Internet Gateway", "CPU utilization", "AWS Auto Scaling", "Auto Scaling group", "target tracking scaling policy", "scheduled scaling"]
+}
+```
+
+
+============================================================
+id 766
+============================================================
+```json
+{
+  "explanation": {
+    "analysis": "考查通过 Systems Manager Session Manager (SSM Session Manager) 安全且经济高效地访问 EC2 实例。",
+    "why_correct": "选项 D 利用 AWS Systems Manager Session Manager，允许开发人员安全地通过 SSM 访问私有子网中的 EC2 实例。Session Manager 不需要公网 IP，也不需要维护堡垒主机。它使用 IAM 角色进行身份验证和授权，是满足安全性和成本效益要求的最佳选择。",
+    "why_wrong": "选项 A 涉及堡垒主机，增加了管理复杂性和成本。授予 ec2:CreateVpnConnection 权限是不必要的。选项 B 引入了 Site-to-Site VPN，这比 Session Manager 更复杂，并且需要维护 VPN 连接。选项 C 虽然也涉及堡垒主机，但仍增加了复杂性和管理负担，且无法完全保证安全性，不如 Session Manager 方便。",
+  },
+  "related_terms": [
+    "Amazon EC2",
+    "SSH",
+    "VPC",
+    "NAT Gateway",
+    "AWS Site-to-Site VPN",
+    "IAM",
+    "ec2:CreateVpnConnection",
+    "EC2 Instance Connect",
+    "AmazonSSMManagedInstanceCore",
+    "AWS Systems Manager Session Manager",
+    "SSM Session Manager"
+  ]
+}
+```
